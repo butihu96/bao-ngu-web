@@ -1,0 +1,42 @@
+name: Bot Bao Ngu Sneaker
+
+on:
+  schedule:
+    - cron: '0 */4 * * *' # Tự động chạy 4 tiếng 1 lần
+  workflow_dispatch: # Tạo nút bấm chạy thủ công
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lấy code từ kho về
+        uses: actions/checkout@v4
+
+      - name: Cài đặt môi trường Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Cài đặt thư viện Google
+        run: pip install gspread google-api-python-client google-auth-httplib2 google-auth-oauthlib
+
+      - name: Lấy Chìa khóa từ Két sắt
+        env:
+          CREDENTIALS_B64: ${{ secrets.CREDENTIALS_B64 }}
+          TOKEN_B64: ${{ secrets.TOKEN_B64 }}
+        run: |
+          echo "$CREDENTIALS_B64" | base64 --decode > credentials.json
+          echo "$TOKEN_B64" | base64 --decode > token.pickle
+
+      - name: Gọi Bot chui vào 3 kho lấy Data
+        run: python sync_data.py
+
+      - name: Đóng gói Data mới lên Web
+        run: |
+          git config --global user.name "BaoNgu-Bot"
+          git config --global user.email "bot@baongu.store"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🚀 Bot tự động cập nhật kho giày" && git push)
