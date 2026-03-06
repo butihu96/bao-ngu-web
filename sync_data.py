@@ -271,8 +271,3 @@ def sync_data():
 
 if __name__ == "__main__":
     sync_data()
-    if not os.getenv("GITHUB_ACTIONS"):
-        try:
-            input("\nNhấn Enter để thoát...")
-        except:
-            pass
