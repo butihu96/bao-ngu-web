@@ -8,7 +8,7 @@
         * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333;}
         
-        /* HEADER TỔNG (ĐÃ NÂNG CẤP SMART STICKY) */
+        /* HEADER TỔNG (SMART STICKY) */
         header { 
             background: #fff; 
             padding: 15px 20px; 
@@ -16,14 +16,24 @@
             position: sticky; 
             top: 0; 
             z-index: 100;
-            transition: transform 0.3s ease-in-out; /* Hiệu ứng trượt mượt mà */
+            transition: transform 0.3s ease-in-out; 
         }
         .header-hidden {
-            transform: translateY(-100%); /* Giấu header lên trên */
+            transform: translateY(-100%); 
         }
 
-        h1 { text-align: center; text-transform: uppercase; color: #111; margin: 0 0 15px 0; font-weight: 900; letter-spacing: 1px; font-size: 26px;}
+        h1 { text-align: center; text-transform: uppercase; color: #111; margin: 0 0 5px 0; font-weight: 900; letter-spacing: 1px; font-size: 26px;}
         
+        /* SLOGAN MỚI THÊM */
+        .slogan {
+            text-align: center;
+            color: #e74c3c;
+            font-size: 14px;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+            font-style: italic;
+        }
+
         /* 2 TAB CHÍNH CẤP 1 */
         .main-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;}
         .main-tab-btn { padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; border: 2px solid #111; background: #fff; color: #111; font-size: 15px; transition: 0.3s;}
@@ -35,16 +45,16 @@
         .search-box input { width: 100%; padding: 12px 20px; border-radius: 30px; border: 1px solid #ccc; font-size: 15px; outline: none; transition: 0.3s; background: #f9f9f9;}
         .search-box input:focus { border-color: #111; background: #fff; box-shadow: 0 0 8px rgba(0,0,0,0.05); }
 
-        /* THANH MENU HÃNG CẤP 2 (VUỐT NGANG TRÊN MOBILE) */
+        /* THANH MENU HÃNG CẤP 2 (VUỐT NGANG) */
         .tabs-container { 
             display: flex; 
             gap: 8px; 
-            overflow-x: auto; /* Cho phép cuộn ngang */
-            white-space: nowrap; /* Không rớt dòng */
-            -webkit-overflow-scrolling: touch; /* Cuộn mượt trên iOS */
+            overflow-x: auto; 
+            white-space: nowrap; 
+            -webkit-overflow-scrolling: touch; 
             padding-bottom: 5px;
         }
-        .tabs-container::-webkit-scrollbar { display: none; } /* Giấu thanh cuộn cho đẹp */
+        .tabs-container::-webkit-scrollbar { display: none; }
         
         @media (min-width: 601px) {
             .tabs-container { justify-content: center; flex-wrap: wrap; overflow-x: visible; }
@@ -71,7 +81,7 @@
         
         .empty-state { text-align: center; padding: 50px 20px; color: #666; font-size: 16px; width: 100%; grid-column: 1 / -1;}
         
-        /* PLUGINS ZALO / FB NỔI DƯỚI GÓC */
+        /* PLUGINS ZALO / FB (GÓC PHẢI DƯỚI) */
         .floating-social { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 999;}
         .social-btn { width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; text-decoration: none; color: white; font-weight: bold; font-size: 11px; text-align: center; animation: pulse 2s infinite;}
         .btn-zalo { background: #0068ff; }
@@ -80,19 +90,48 @@
         
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(0, 104, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); } }
 
-        /* =========================================================
-           TỐI ƯU HÓA CỰC MẠNH CHO MOBILE (MÀN HÌNH NHỎ DƯỚI 600PX)
-           ========================================================= */
+        /* PLUGIN VỀ ĐẦU TRANG (GÓC TRÁI DƯỚI) */
+        #backToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+            background-color: #111;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #backToTopBtn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        #backToTopBtn:hover {
+            background-color: #e74c3c;
+            transform: translateY(-3px);
+        }
+
+        /* TỐI ƯU HÓA MOBILE */
         @media (max-width: 600px) { 
             header { padding: 10px 15px; }
-            h1 { font-size: 20px; margin-bottom: 10px; }
+            h1 { font-size: 20px; margin-bottom: 5px; }
+            .slogan { font-size: 11.5px; margin-bottom: 10px; padding: 0 5px; }
             .main-tabs { gap: 8px; margin-bottom: 10px; }
             .main-tab-btn { padding: 8px 12px; font-size: 13px; }
             .search-box input { padding: 10px 15px; font-size: 13px; }
             .tab-btn { padding: 6px 14px; font-size: 12px; }
             
             .container { padding: 10px; }
-            /* Chia 2 cột trên điện thoại để nhìn được nhiều hàng hơn */
             .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             
             .product-card { padding: 12px; border-radius: 12px; }
@@ -106,6 +145,8 @@
 
             .floating-social { bottom: 15px; right: 15px; }
             .social-btn { width: 40px; height: 40px; font-size: 10px; }
+            
+            #backToTopBtn { bottom: 15px; left: 15px; width: 40px; height: 40px; font-size: 18px; }
         }
     </style>
 </head>
@@ -113,6 +154,8 @@
 
     <header id="main-header">
         <h1>👟 Bào Ngư Sneaker 👟</h1>
+        <!-- Slogan Tăng Độ Uy Tín Của Khách Lên Tận Nóc -->
+        <p class="slogan">Chuyên order các sản phẩm chính hãng, cam kết trọn đời cho cả nhà 🤟🤟</p>
         
         <div class="main-tabs">
             <button class="main-tab-btn active" onclick="switchMainTab('SAN')">📦 HÀNG SẴN KHO</button>
@@ -123,7 +166,6 @@
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="🔍 Nhập mã code hoặc tên giày..." onkeyup="handleSearch()">
             </div>
-            <!-- VUỐT NGANG ĐỂ CHỌN HÃNG TRÊN MOBILE -->
             <div class="tabs-container" id="tabs-container"></div>
         </div>
     </header>
@@ -132,11 +174,14 @@
         <div class="grid-container" id="product-grid"></div>
     </div>
 
-    <!-- PLUGIN ZALO / FB (NHỚ SỬA LẠI LINK CỦA MÀY) -->
+    <!-- PLUGIN CHỐT ĐƠN -->
     <div class="floating-social">
         <a href="https://zalo.me/84912345678" target="_blank" class="social-btn btn-zalo">Zalo</a>
         <a href="https://m.me/fanpagecuamay" target="_blank" class="social-btn btn-fb">MSG</a>
     </div>
+
+    <!-- PLUGIN VỀ ĐẦU TRANG -->
+    <button id="backToTopBtn" onclick="scrollToTop()" title="Lên đầu trang">⬆️</button>
 
     <script>
         let globalData = [];
@@ -145,22 +190,39 @@
         let currentSearch = '';
         let isOrderMode = false;
 
-        // BỘ NÃO SMART HEADER: GIẤU KHI CUỘN XUỐNG, HIỆN KHI CUỘN LÊN
+        // BỘ NÃO CUỘN TRANG (SMART HEADER + BACK TO TOP)
         let lastScrollTop = 0;
+        let backToTopBtn = document.getElementById("backToTopBtn");
+
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             let header = document.getElementById("main-header");
             
-            // Nếu cuộn xuống dưới và đã vượt qua 100px thì giấu Header
-            if (currentScroll > lastScrollTop && currentScroll > 100) {
+            // 1. Ẩn/Hiện Header khi cuộn
+            if (currentScroll > lastScrollTop && currentScroll > 150) {
                 header.classList.add("header-hidden");
             } else {
-                // Nếu cuộn ngược lên thì thả Header ra
                 header.classList.remove("header-hidden");
             }
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Reset nếu dội ngược
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+            // 2. Ẩn/Hiện Nút Về Đầu Trang
+            if (currentScroll > 300) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
         }, false);
 
+        // HÀM BẮN LÊN ĐẦU TRANG SIÊU MƯỢT
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // Lấy Dữ Liệu
         fetch('data.json')
             .then(res => res.json())
             .then(data => {
@@ -249,7 +311,7 @@
                             ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${p.name.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
                         </div>
                     </div>
-                    <button class="order-btn" onclick="order('${p.name.replace(/'/g, "\\'")}')">Chốt Đơn Zalo</button>
+                    <button class="order-btn" onclick="order('${p.name.replace(/'/g, "\\'")}')">Liên hệ</button>
                 `;
                 grid.appendChild(card);
             });
