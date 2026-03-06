@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bào Ngư Sneaker - Hàng Sẵn Kho</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; }
+        h1 { text-align: center; text-transform: uppercase; color: #111; margin-bottom: 20px; font-weight: 800;}
+        
+        /* THANH MENU TABS PHÂN LOẠI */
+        .tabs-container {
+            display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 10px 25px; background: #e0e0e0; border: none; border-radius: 30px;
+            font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.3s; color: #333;
+        }
+        .tab-btn:hover { background: #d0d0d0; }
+        .tab-btn.active { background: #000; color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+        /* BỐ CỤC LƯỚI GIÀY */
+        .grid-container {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto;
+        }
+        
+        .product-card {
+            background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center; transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+        
+        .product-name { font-size: 17px; font-weight: bold; margin: 15px 0 5px 0; color: #222; min-height: 40px;}
+        .brand-tag { font-size: 12px; background: #eee; padding: 4px 10px; border-radius: 20px; color: #555; display: inline-block; margin-bottom: 10px;}
+        .price { color: #e74c3c; font-size: 24px; font-weight: 800; margin: 10px 0; min-height: 35px; }
+        
+        .size-container { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; }
+        .size-btn {
+            padding: 8px 14px; border: 1px solid #ccc; background: #fff; cursor: pointer;
+            border-radius: 6px; font-weight: bold; transition: 0.2s;
+        }
+        .size-btn:hover { background: #f0f0f0; border-color: #999; }
+        .size-btn.active { background: #000; color: #fff; border-color: #000; }
+        
+        .order-btn {
+            background: #2563eb; color: white; padding: 14px 20px; border: none;
+            border-radius: 8px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; transition: background 0.3s;
+        }
+        .order-btn:hover { background: #1d4ed8; }
+
+        @media (max-width: 900px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .grid-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <h1>🔥 Bào Ngư Sneaker 🔥</h1>
+    
+    <!-- THANH MENU -->
+    <div class="tabs-container" id="tabs-container">
+        <button class="tab-btn active" onclick="filterBrand('Tất cả', this)">Tất cả</button>
+        <button class="tab-btn" onclick="filterBrand('Nike', this)">Nike</button>
+        <button class="tab-btn" onclick="filterBrand('Adidas', this)">Adidas</button>
+        <button class="tab-btn" onclick="filterBrand('Asics', this)">Asics</button>
+        <button class="tab-btn" onclick="filterBrand('Khác', this)">Khác</button>
+    </div>
+
+    <!-- KHU VỰC HIỂN THỊ GIÀY -->
+    <div class="grid-container" id="product-grid">
+        <!-- JS Sẽ đổ dữ liệu vào đây -->
+    </div>
+
+    <script>
+        let globalData = [];
+        let currentSelections = {}; 
+
+        // Lấy dữ liệu từ file JSON
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) throw new Error("Không tìm thấy file data.json");
+                return response.json();
+            })
+            .then(data => {
+                globalData = data;
+                renderGrid('Tất cả'); // Mặc định hiển thị tất cả
+            })
+            .catch(error => {
+                document.getElementById('product-grid').innerHTML = `<h3 style="color:red; text-align:center;">Lỗi tải dữ liệu. Hãy chạy lại Python Bot.</h3>`;
+                console.error(error);
+            });
+
+        // Hàm lọc hãng giày
+        function filterBrand(brand, btnElement) {
+            if (btnElement) {
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                btnElement.classList.add('active');
+            }
+            renderGrid(brand);
+        }
+
+        // Hàm vẽ giao diện
+        function renderGrid(brandFilter) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = ''; 
+            currentSelections = {}; // Reset lại các size đã chọn
+
+            // Lọc data theo hãng
+            let filteredData = globalData;
+            if (brandFilter !== 'Tất cả') {
+                filteredData = globalData.filter(item => item.brand === brandFilter);
+            }
+
+            if (filteredData.length === 0) {
+                grid.innerHTML = `<h3 style="text-align:center; grid-column: 1 / -1; color: #666;">Hiện tại chưa có mẫu ${brandFilter} nào sẵn kho.</h3>`;
+                return;
+            }
+            
+            filteredData.forEach((product, pIndex) => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                
+                let prices = product.variants.map(v => v.price);
+                let minPrice = Math.min(...prices);
+                let maxPrice = Math.max(...prices);
+                
+                let priceRangeDisplay = minPrice === maxPrice 
+                    ? `${minPrice.toLocaleString('vi-VN')}đ` 
+                    : `${minPrice.toLocaleString('vi-VN')}đ - ${maxPrice.toLocaleString('vi-VN')}đ`;
+
+                let sizeButtonsHTML = '';
+                product.variants.forEach((v, vIndex) => {
+                    sizeButtonsHTML += `<button class="size-btn" onclick="updatePrice(this, ${pIndex}, '${v.price_display}', '${v.size}', '${product.name.replace(/'/g, "\\'")}')">${v.size}</button>`;
+                });
+
+                card.innerHTML = `
+                    <div>
+                        <div class="brand-tag">${product.brand}</div>
+                        <div class="product-name">${product.name}</div>
+                        <div class="price" id="price-${pIndex}">${priceRangeDisplay}</div>
+                        <div class="size-container">${sizeButtonsHTML}</div>
+                    </div>
+                    <button class="order-btn" onclick="order('${product.name.replace(/'/g, "\\'")}')">Chốt Đơn Zalo</button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Hàm click size nhảy giá
+        function updatePrice(btn, pIndex, priceDisplay, sizeStr, productName) {
+            const container = btn.parentElement;
+            container.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            document.getElementById(`price-${pIndex}`).innerText = priceDisplay;
+            currentSelections[productName] = sizeStr;
+        }
+
+        // Hàm chốt đơn qua Zalo
+        function order(productName) {
+            const size = currentSelections[productName];
+            if (!size) {
+                alert("Bạn ơi, chọn giúp mình một Size trước khi liên hệ để mình báo giá chuẩn nhất nhé!");
+                return;
+            }
+            
+            const text = `Chào shop, mình muốn xem mẫu ${productName} - Size: ${size}`;
+            // ======================================================
+            // THAY SỐ ĐIỆN THOẠI ZALO CỦA MÀY VÀO ĐÂY (BỎ SỐ 0 ĐẦU TIÊN)
+            // ======================================================
+            const zaloLink = `https://zalo.me/84912345678?text=${encodeURIComponent(text)}`;
+            window.open(zaloLink, '_blank');
+        }
+    </script>
+</body>
+</html>
