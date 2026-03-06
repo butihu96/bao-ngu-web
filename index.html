@@ -3,172 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bào Ngư Sneaker - Hàng Sẵn Kho</title>
+    <title>Bào Ngư Sneaker - Hàng Sẵn Kho & Order</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; }
-        h1 { text-align: center; text-transform: uppercase; color: #111; margin-bottom: 20px; font-weight: 800;}
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333;}
         
-        /* THANH MENU TABS PHÂN LOẠI */
-        .tabs-container {
-            display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;
-        }
-        .tab-btn {
-            padding: 10px 25px; background: #e0e0e0; border: none; border-radius: 30px;
-            font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.3s; color: #333;
-        }
-        .tab-btn:hover { background: #d0d0d0; }
-        .tab-btn.active { background: #000; color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        /* HEADER TỔNG */
+        header { background: #fff; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100;}
+        h1 { text-align: center; text-transform: uppercase; color: #111; margin: 0 0 15px 0; font-weight: 900; letter-spacing: 1px; font-size: 28px;}
+        
+        /* 2 TAB CHÍNH CẤP 1 */
+        .main-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;}
+        .main-tab-btn { padding: 12px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; border: 2px solid #111; background: #fff; color: #111; font-size: 16px; transition: 0.3s;}
+        .main-tab-btn.active { background: #111; color: #fff; }
+        .main-tab-btn:hover { background: #333; color: #fff;}
 
-        /* BỐ CỤC LƯỚI GIÀY */
-        .grid-container {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto;
-        }
-        
-        .product-card {
-            background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center; transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between;
-        }
-        .product-card:hover { transform: translateY(-5px); }
-        
-        .product-name { font-size: 17px; font-weight: bold; margin: 15px 0 5px 0; color: #222; min-height: 40px;}
-        .brand-tag { font-size: 12px; background: #eee; padding: 4px 10px; border-radius: 20px; color: #555; display: inline-block; margin-bottom: 10px;}
-        .price { color: #e74c3c; font-size: 24px; font-weight: 800; margin: 10px 0; min-height: 35px; }
-        
-        .size-container { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; }
-        .size-btn {
-            padding: 8px 14px; border: 1px solid #ccc; background: #fff; cursor: pointer;
-            border-radius: 6px; font-weight: bold; transition: 0.2s;
-        }
-        .size-btn:hover { background: #f0f0f0; border-color: #999; }
-        .size-btn.active { background: #000; color: #fff; border-color: #000; }
-        
-        .order-btn {
-            background: #2563eb; color: white; padding: 14px 20px; border: none;
-            border-radius: 8px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; transition: background 0.3s;
-        }
-        .order-btn:hover { background: #1d4ed8; }
+        /* THANH TÌM KIẾM */
+        .search-box { max-width: 600px; margin: 0 auto 15px auto; display: flex; justify-content: center;}
+        .search-box input { width: 100%; padding: 12px 20px; border-radius: 30px; border: 1px solid #ccc; font-size: 16px; outline: none; transition: 0.3s;}
+        .search-box input:focus { border-color: #111; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
 
-        @media (max-width: 900px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 500px) { .grid-container { grid-template-columns: 1fr; } }
+        /* THANH MENU HÃNG CẤP 2 */
+        .tabs-container { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+        .tab-btn { padding: 8px 18px; background: #f0f0f0; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; transition: 0.3s; color: #555;}
+        .tab-btn.active { background: #e74c3c; color: #fff; }
+        
+        /* LƯỚI SẢN PHẨM */
+        .container { padding: 20px; max-width: 1300px; margin: 0 auto;}
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        
+        .product-card { background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-align: center; transition: all 0.3s; display: flex; flex-direction: column; border: 1px solid #eee;}
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .brand-tag { font-size: 11px; background: #f9f9f9; padding: 4px 12px; border-radius: 20px; color: #888; display: inline-block; margin-bottom: 10px; font-weight: bold; text-transform: uppercase;}
+        .product-name { font-size: 17px; font-weight: bold; margin-bottom: 10px; color: #111; min-height: 40px; display: flex; align-items: center; justify-content: center;}
+        .price { color: #e74c3c; font-size: 24px; font-weight: 900; margin: 10px 0; }
+        
+        .size-container { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 15px; min-height: 70px;}
+        .size-btn { padding: 8px 12px; border: 1px solid #eee; background: #fdfdfd; cursor: pointer; border-radius: 8px; font-size: 13px; font-weight: bold; color: #444;}
+        .size-btn.active { background: #111; color: #fff; border-color: #111; }
+        
+        .order-btn { background: #2563eb; color: white; padding: 14px; border: none; border-radius: 12px; cursor: pointer; width: 100%; font-size: 15px; font-weight: bold;}
+        
+        /* HIỆU ỨNG RỖNG / ORDER */
+        .empty-state { text-align: center; padding: 50px 20px; color: #666; font-size: 18px; width: 100%; grid-column: 1 / -1;}
+        
+        /* PLUGINS ZALO / FB NỔI DƯỚI GÓC */
+        .floating-social { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 999;}
+        .social-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; text-decoration: none; color: white; font-weight: bold; font-size: 12px; text-align: center; animation: pulse 2s infinite;}
+        .btn-zalo { background: #0068ff; }
+        .btn-fb { background: #0866FF; }
+        .social-btn:hover { transform: scale(1.1); }
+        
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(0, 104, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); } }
+
+        @media (max-width: 600px) { h1 {font-size: 22px;} .main-tab-btn {padding: 10px 20px; font-size: 14px;} }
     </style>
 </head>
 <body>
 
-    <h1>🔥 Bào Ngư Sneaker 🔥</h1>
-    
-    <!-- THANH MENU -->
-    <div class="tabs-container" id="tabs-container">
-        <button class="tab-btn active" onclick="filterBrand('Tất cả', this)">Tất cả</button>
-        <button class="tab-btn" onclick="filterBrand('Nike', this)">Nike</button>
-        <button class="tab-btn" onclick="filterBrand('Adidas', this)">Adidas</button>
-        <button class="tab-btn" onclick="filterBrand('Asics', this)">Asics</button>
-        <button class="tab-btn" onclick="filterBrand('Khác', this)">Khác</button>
+    <header>
+        <h1>👟 Bào Ngư Sneaker 👟</h1>
+        
+        <div class="main-tabs">
+            <button class="main-tab-btn active" onclick="switchMainTab('SAN')">📦 HÀNG SẴN KHO</button>
+            <button class="main-tab-btn" onclick="switchMainTab('ORDER')">✈️ HÀNG ORDER</button>
+        </div>
+
+        <div id="filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Nhập mã code hoặc tên giày để tìm..." onkeyup="handleSearch()">
+            </div>
+            <div class="tabs-container" id="tabs-container"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid-container" id="product-grid"></div>
     </div>
 
-    <!-- KHU VỰC HIỂN THỊ GIÀY -->
-    <div class="grid-container" id="product-grid">
-        <!-- JS Sẽ đổ dữ liệu vào đây -->
+    <!-- PLUGIN ZALO / FB CỦA MÀY NẰM Ở ĐÂY -->
+    <div class="floating-social">
+        <a href="https://zalo.me/0363535838" target="_blank" class="social-btn btn-zalo">Zalo</a>
+        <a href="https://m.me/baongusneaker" target="_blank" class="social-btn btn-fb">MSG</a>
     </div>
 
     <script>
         let globalData = [];
-        let currentSelections = {}; 
+        let selections = {}; 
+        let currentBrand = 'Tất cả';
+        let currentSearch = '';
+        let isOrderMode = false;
 
-        // Lấy dữ liệu từ file JSON
         fetch('data.json')
-            .then(response => {
-                if (!response.ok) throw new Error("Không tìm thấy file data.json");
-                return response.json();
-            })
+            .then(res => res.json())
             .then(data => {
                 globalData = data;
-                renderGrid('Tất cả'); // Mặc định hiển thị tất cả
-            })
-            .catch(error => {
-                document.getElementById('product-grid').innerHTML = `<h3 style="color:red; text-align:center;">Lỗi tải dữ liệu. Hãy chạy lại Python Bot.</h3>`;
-                console.error(error);
+                renderTabs();
+                renderGrid();
             });
 
-        // Hàm lọc hãng giày
-        function filterBrand(brand, btnElement) {
-            if (btnElement) {
-                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-                btnElement.classList.add('active');
+        // Chuyển đổi giữa HÀNG SẴN và HÀNG ORDER
+        function switchMainTab(mode) {
+            const btns = document.querySelectorAll('.main-tab-btn');
+            btns[0].classList.toggle('active', mode === 'SAN');
+            btns[1].classList.toggle('active', mode === 'ORDER');
+            
+            isOrderMode = (mode === 'ORDER');
+            document.getElementById('filter-section').style.display = isOrderMode ? 'none' : 'block';
+            
+            if (isOrderMode) {
+                document.getElementById('product-grid').innerHTML = `
+                    <div class="empty-state">
+                        <h2>🚀 Tính năng Hàng Order đang được nâng cấp!</h2>
+                        <p>Sắp tới Bào Ngư Sneaker sẽ tự động cập nhật data từ Nike, Adidas và Taobao về đây.<br>Quý khách chờ xem nhé!</p>
+                    </div>`;
+            } else {
+                renderGrid();
             }
-            renderGrid(brand);
         }
 
-        // Hàm vẽ giao diện
-        function renderGrid(brandFilter) {
+        function renderTabs() {
+            const tabContainer = document.getElementById('tabs-container');
+            const brandsInData = [...new Set(globalData.map(p => p.brand))];
+            const order = ["Nike", "Adidas", "Asics", "Onitsuka Tiger", "Skechers", "On", "Lacoste", "Babolat", "Wilson"];
+            
+            brandsInData.sort((a, b) => (order.indexOf(a) !== -1 ? order.indexOf(a) : 99) - (order.indexOf(b) !== -1 ? order.indexOf(b) : 99));
+            const allBrands = ['Tất cả', ...brandsInData];
+            
+            tabContainer.innerHTML = allBrands.map(b => `
+                <button class="tab-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">${b}</button>
+            `).join('');
+        }
+
+        function filterBrand(brand, btn) {
+            currentBrand = brand;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderGrid();
+        }
+
+        function handleSearch() {
+            currentSearch = document.getElementById('searchInput').value.toLowerCase().trim();
+            renderGrid();
+        }
+
+        function renderGrid() {
+            if (isOrderMode) return; // Nếu đang ở tab Order thì bỏ qua
+            
             const grid = document.getElementById('product-grid');
             grid.innerHTML = ''; 
-            currentSelections = {}; // Reset lại các size đã chọn
 
-            // Lọc data theo hãng
-            let filteredData = globalData;
-            if (brandFilter !== 'Tất cả') {
-                filteredData = globalData.filter(item => item.brand === brandFilter);
-            }
-
-            if (filteredData.length === 0) {
-                grid.innerHTML = `<h3 style="text-align:center; grid-column: 1 / -1; color: #666;">Hiện tại chưa có mẫu ${brandFilter} nào sẵn kho.</h3>`;
-                return;
+            let filtered = globalData;
+            
+            // Lọc theo Hãng
+            if (currentBrand !== 'Tất cả') {
+                filtered = filtered.filter(p => p.brand === currentBrand);
             }
             
-            filteredData.forEach((product, pIndex) => {
+            // Lọc theo Thanh Tìm Kiếm
+            if (currentSearch !== '') {
+                filtered = filtered.filter(p => p.name.toLowerCase().includes(currentSearch) || p.brand.toLowerCase().includes(currentSearch));
+            }
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="empty-state">Không tìm thấy mã giày nào phù hợp 🥲</div>`;
+                return;
+            }
+
+            filtered.forEach((p, idx) => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
-                
-                let prices = product.variants.map(v => v.price);
-                let minPrice = Math.min(...prices);
-                let maxPrice = Math.max(...prices);
-                
-                let priceRangeDisplay = minPrice === maxPrice 
-                    ? `${minPrice.toLocaleString('vi-VN')}đ` 
-                    : `${minPrice.toLocaleString('vi-VN')}đ - ${maxPrice.toLocaleString('vi-VN')}đ`;
-
-                let sizeButtonsHTML = '';
-                product.variants.forEach((v, vIndex) => {
-                    sizeButtonsHTML += `<button class="size-btn" onclick="updatePrice(this, ${pIndex}, '${v.price_display}', '${v.size}', '${product.name.replace(/'/g, "\\'")}')">${v.size}</button>`;
-                });
+                const prices = p.variants.map(v => v.price);
+                const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
 
                 card.innerHTML = `
                     <div>
-                        <div class="brand-tag">${product.brand}</div>
-                        <div class="product-name">${product.name}</div>
-                        <div class="price" id="price-${pIndex}">${priceRangeDisplay}</div>
-                        <div class="size-container">${sizeButtonsHTML}</div>
+                        <div class="brand-tag">${p.brand}</div>
+                        <div class="product-name">${p.name}</div>
+                        <div class="price" id="price-${idx}">${displayPrice}</div>
+                        <div class="size-container">
+                            ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${p.name.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
+                        </div>
                     </div>
-                    <button class="order-btn" onclick="order('${product.name.replace(/'/g, "\\'")}')">Chốt Đơn Zalo</button>
+                    <button class="order-btn" onclick="order('${p.name.replace(/'/g, "\\'")}')">Chốt Đơn Zalo</button>
                 `;
                 grid.appendChild(card);
             });
         }
 
-        // Hàm click size nhảy giá
-        function updatePrice(btn, pIndex, priceDisplay, sizeStr, productName) {
-            const container = btn.parentElement;
-            container.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        function selSize(btn, idx, pr, sz, nm) {
+            btn.parentElement.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
-            document.getElementById(`price-${pIndex}`).innerText = priceDisplay;
-            currentSelections[productName] = sizeStr;
+            document.getElementById(`price-${idx}`).innerText = pr;
+            selections[nm] = sz;
         }
 
-        // Hàm chốt đơn qua Zalo
-        function order(productName) {
-            const size = currentSelections[productName];
-            if (!size) {
-                alert("Bạn ơi, chọn giúp mình một Size trước khi liên hệ để mình báo giá chuẩn nhất nhé!");
-                return;
-            }
-            
-            const text = `Chào shop, mình muốn xem mẫu ${productName} - Size: ${size}`;
-            // ======================================================
-            // THAY SỐ ĐIỆN THOẠI ZALO CỦA MÀY VÀO ĐÂY (BỎ SỐ 0 ĐẦU TIÊN)
-            // ======================================================
-            const zaloLink = `https://zalo.me/84912345678?text=${encodeURIComponent(text)}`;
-            window.open(zaloLink, '_blank');
+        function order(nm) {
+            const sz = selections[nm];
+            if (!sz) return alert("Chọn size trước nhé!");
+            const zalo = `https://zalo.me/84912345678?text=${encodeURIComponent('Chào shop, mình muốn chốt mã ' + nm + ' size ' + sz)}`;
+            window.open(zalo, '_blank');
         }
     </script>
 </body>
