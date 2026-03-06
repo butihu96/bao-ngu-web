@@ -5,70 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bào Ngư Sneaker - Hàng Sẵn Kho & Order</title>
     <style>
+        /* ... (GIỮ NGUYÊN TOÀN BỘ PHẦN CSS TỪ ĐẦU CHO ĐẾN CHỖ NÀY) ... */
         * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333;}
         
-        /* HEADER TỔNG (SMART STICKY) */
-        header { 
-            background: #fff; 
-            padding: 15px 20px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08); 
-            position: sticky; 
-            top: 0; 
-            z-index: 100;
-            transition: transform 0.3s ease-in-out; 
-        }
-        .header-hidden {
-            transform: translateY(-100%); 
-        }
+        header { background: #fff; padding: 15px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; transition: transform 0.3s ease-in-out; }
+        .header-hidden { transform: translateY(-100%); }
 
         h1 { text-align: center; text-transform: uppercase; color: #111; margin: 0 0 5px 0; font-weight: 900; letter-spacing: 1px; font-size: 26px;}
-        
-        /* SLOGAN MỚI THÊM */
-        .slogan {
-            text-align: center;
-            color: #e74c3c;
-            font-size: 14px;
-            margin: 0 0 15px 0;
-            font-weight: 700;
-            font-style: italic;
-        }
+        .slogan { text-align: center; color: #e74c3c; font-size: 14px; margin: 0 0 15px 0; font-weight: 700; font-style: italic;}
 
-        /* 2 TAB CHÍNH CẤP 1 */
         .main-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;}
         .main-tab-btn { padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; border: 2px solid #111; background: #fff; color: #111; font-size: 15px; transition: 0.3s;}
         .main-tab-btn.active { background: #111; color: #fff; }
         .main-tab-btn:hover { background: #333; color: #fff;}
 
-        /* THANH TÌM KIẾM */
         .search-box { max-width: 600px; margin: 0 auto 15px auto; display: flex; justify-content: center;}
         .search-box input { width: 100%; padding: 12px 20px; border-radius: 30px; border: 1px solid #ccc; font-size: 15px; outline: none; transition: 0.3s; background: #f9f9f9;}
         .search-box input:focus { border-color: #111; background: #fff; box-shadow: 0 0 8px rgba(0,0,0,0.05); }
 
-        /* THANH MENU HÃNG CẤP 2 (VUỐT NGANG) */
-        .tabs-container { 
-            display: flex; 
-            gap: 8px; 
-            overflow-x: auto; 
-            white-space: nowrap; 
-            -webkit-overflow-scrolling: touch; 
-            padding-bottom: 5px;
-        }
+        .tabs-container { display: flex; gap: 8px; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 5px;}
         .tabs-container::-webkit-scrollbar { display: none; }
-        
-        @media (min-width: 601px) {
-            .tabs-container { justify-content: center; flex-wrap: wrap; overflow-x: visible; }
-        }
-
+        @media (min-width: 601px) { .tabs-container { justify-content: center; flex-wrap: wrap; overflow-x: visible; } }
         .tab-btn { padding: 8px 16px; background: #f0f0f0; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; transition: 0.3s; color: #555;}
         .tab-btn.active { background: #e74c3c; color: #fff; }
         
-        /* LƯỚI SẢN PHẨM */
         .container { padding: 20px; max-width: 1300px; margin: 0 auto;}
         .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
         
-        .product-card { background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-align: center; transition: all 0.3s; display: flex; flex-direction: column; border: 1px solid #eee;}
+        .product-card { background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-align: center; transition: all 0.3s; display: flex; flex-direction: column; border: 1px solid #eee; overflow: hidden;}
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
+        /* CSS MỚI CHO ẢNH GIÀY */
+        .product-img-wrapper { width: 100%; height: 220px; margin-bottom: 15px; overflow: hidden; border-radius: 12px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; }
+        .product-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .product-card:hover .product-img { transform: scale(1.08); } /* Zoom nhẹ khi trỏ chuột */
+
         .brand-tag { font-size: 11px; background: #f9f9f9; padding: 4px 12px; border-radius: 20px; color: #888; display: inline-block; margin-bottom: 10px; font-weight: bold; text-transform: uppercase;}
         .product-name { font-size: 16px; font-weight: bold; margin-bottom: 10px; color: #111; min-height: 44px; display: flex; align-items: center; justify-content: center;}
         .price { color: #e74c3c; font-size: 22px; font-weight: 900; margin: 10px 0; }
@@ -81,47 +53,17 @@
         
         .empty-state { text-align: center; padding: 50px 20px; color: #666; font-size: 16px; width: 100%; grid-column: 1 / -1;}
         
-        /* PLUGINS ZALO / FB (GÓC PHẢI DƯỚI) */
         .floating-social { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 999;}
         .social-btn { width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; text-decoration: none; color: white; font-weight: bold; font-size: 11px; text-align: center; animation: pulse 2s infinite;}
         .btn-zalo { background: #0068ff; }
         .btn-fb { background: #0866FF; }
         .social-btn:hover { transform: scale(1.1); }
-        
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(0, 104, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); } }
 
-        /* PLUGIN VỀ ĐẦU TRANG (GÓC TRÁI DƯỚI) */
-        #backToTopBtn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 999;
-            background-color: #111;
-            color: white;
-            border: none;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #backToTopBtn.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        #backToTopBtn:hover {
-            background-color: #e74c3c;
-            transform: translateY(-3px);
-        }
+        #backToTopBtn { position: fixed; bottom: 20px; left: 20px; z-index: 999; background-color: #111; color: white; border: none; width: 45px; height: 45px; border-radius: 50%; font-size: 20px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: all 0.3s ease; opacity: 0; visibility: hidden; display: flex; justify-content: center; align-items: center;}
+        #backToTopBtn.show { opacity: 1; visibility: visible; }
+        #backToTopBtn:hover { background-color: #e74c3c; transform: translateY(-3px); }
 
-        /* TỐI ƯU HÓA MOBILE */
         @media (max-width: 600px) { 
             header { padding: 10px 15px; }
             h1 { font-size: 20px; margin-bottom: 5px; }
@@ -135,6 +77,10 @@
             .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             
             .product-card { padding: 12px; border-radius: 12px; }
+            
+            /* Tinh chỉnh ảnh trên Mobile cho cân đối */
+            .product-img-wrapper { height: 140px; margin-bottom: 10px; border-radius: 8px;}
+
             .brand-tag { font-size: 9px; padding: 3px 8px; margin-bottom: 6px; }
             .product-name { font-size: 13px; min-height: 38px; margin-bottom: 5px; line-height: 1.3; }
             .price { font-size: 15px; margin: 5px 0 10px 0; }
@@ -145,7 +91,6 @@
 
             .floating-social { bottom: 15px; right: 15px; }
             .social-btn { width: 40px; height: 40px; font-size: 10px; }
-            
             #backToTopBtn { bottom: 15px; left: 15px; width: 40px; height: 40px; font-size: 18px; }
         }
     </style>
@@ -154,7 +99,6 @@
 
     <header id="main-header">
         <h1>👟 Bào Ngư Sneaker 👟</h1>
-        <!-- Slogan Tăng Độ Uy Tín Của Khách Lên Tận Nóc -->
         <p class="slogan">Chuyên order các sản phẩm chính hãng, cam kết trọn đời cho cả nhà 🤟🤟</p>
         
         <div class="main-tabs">
@@ -174,13 +118,11 @@
         <div class="grid-container" id="product-grid"></div>
     </div>
 
-    <!-- PLUGIN CHỐT ĐƠN -->
     <div class="floating-social">
         <a href="https://zalo.me/84912345678" target="_blank" class="social-btn btn-zalo">Zalo</a>
         <a href="https://m.me/fanpagecuamay" target="_blank" class="social-btn btn-fb">MSG</a>
     </div>
 
-    <!-- PLUGIN VỀ ĐẦU TRANG -->
     <button id="backToTopBtn" onclick="scrollToTop()" title="Lên đầu trang">⬆️</button>
 
     <script>
@@ -190,7 +132,6 @@
         let currentSearch = '';
         let isOrderMode = false;
 
-        // BỘ NÃO CUỘN TRANG (SMART HEADER + BACK TO TOP)
         let lastScrollTop = 0;
         let backToTopBtn = document.getElementById("backToTopBtn");
 
@@ -198,7 +139,6 @@
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             let header = document.getElementById("main-header");
             
-            // 1. Ẩn/Hiện Header khi cuộn
             if (currentScroll > lastScrollTop && currentScroll > 150) {
                 header.classList.add("header-hidden");
             } else {
@@ -206,7 +146,6 @@
             }
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
-            // 2. Ẩn/Hiện Nút Về Đầu Trang
             if (currentScroll > 300) {
                 backToTopBtn.classList.add("show");
             } else {
@@ -214,15 +153,10 @@
             }
         }, false);
 
-        // HÀM BẮN LÊN ĐẦU TRANG SIÊU MƯỢT
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         }
 
-        // Lấy Dữ Liệu
         fetch('data.json')
             .then(res => res.json())
             .then(data => {
@@ -282,11 +216,9 @@
             grid.innerHTML = ''; 
 
             let filtered = globalData;
-            
             if (currentBrand !== 'Tất cả') {
                 filtered = filtered.filter(p => p.brand === currentBrand);
             }
-            
             if (currentSearch !== '') {
                 filtered = filtered.filter(p => p.name.toLowerCase().includes(currentSearch) || p.brand.toLowerCase().includes(currentSearch));
             }
@@ -302,7 +234,18 @@
                 const prices = p.variants.map(v => v.price);
                 const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
 
+                // ẢNH MẶC ĐỊNH NẾU CHƯA CÓ ẢNH (Fallback Image)
+                // Tao để sẵn một cái ảnh placeholder xám. Có thể thay bằng link Logo của mày.
+                const defaultFallbackImg = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=BAO+NGU+SNEAKER';
+                
+                // TỰ ĐỘNG MAP TÊN FILE THEO MÃ CODE (Mã Code p.name làm tên file .jpg)
+                const imgSrc = `images/${p.name}.jpg`;
+
+                // Nếu ảnh lỗi (không tìm thấy file), thuộc tính onerror sẽ tự động đẩy ảnh mặc định vào
                 card.innerHTML = `
+                    <div class="product-img-wrapper">
+                        <img src="${imgSrc}" class="product-img" alt="${p.name}" onerror="this.onerror=null; this.src='${defaultFallbackImg}';">
+                    </div>
                     <div>
                         <div class="brand-tag">${p.brand}</div>
                         <div class="product-name">${p.name}</div>
@@ -311,7 +254,7 @@
                             ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${p.name.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
                         </div>
                     </div>
-                    <button class="order-btn" onclick="order('${p.name.replace(/'/g, "\\'")}')">Liên hệ</button>
+                    <button class="order-btn" onclick="order('${p.name.replace(/'/g, "\\'")}')">Liên Hệ</button>
                 `;
                 grid.appendChild(card);
             });
@@ -328,8 +271,6 @@
             const sz = selections[nm];
             if (!sz) return alert("Bạn ơi, chọn giúp shop 1 Size trước khi chốt đơn nhé!");
             const text = `Chào shop, mình muốn chốt mã ${nm} - Size: ${sz}`;
-            
-            // NHỚ ĐỔI LẠI SĐT CỦA MÀY VÀO ĐÂY
             const zalo = `https://zalo.me/84912345678?text=${encodeURIComponent(text)}`;
             window.open(zalo, '_blank');
         }
