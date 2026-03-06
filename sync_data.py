@@ -2,6 +2,8 @@ import gspread
 import json
 import os
 import re
+import sys
+import traceback
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pickle
@@ -30,16 +32,41 @@ SHEETS_CONFIG = [
     {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6}
 ]
 
+# =========================================================
+# HỆ THỐNG XÁC THỰC BỌC THÉP CHO GITHUB ACTIONS
+# =========================================================
 def get_creds():
     creds = None
     if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token: creds = pickle.load(token)
+        with open('token.pickle', 'rb') as token: 
+            creds = pickle.load(token)
+            
     if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token: creds.refresh(Request())
+        if creds and creds.expired and creds.refresh_token: 
+            creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
-            creds = flow.run_local_server(port=0)
-        with open('token.pickle', 'wb') as token: pickle.dump(creds, token)
+            # KIỂM TRA MÔI TRƯỜNG: Nếu đang ở trên GitHub thì cấm mở trình duyệt
+            if os.getenv("GITHUB_ACTIONS"):
+                print("\n" + "="*60)
+                print("❌ LỖI CHÍ MẠNG TRÊN GITHUB ACTIONS:")
+                print("Không tìm thấy file 'token.pickle' hợp lệ, hoặc token đã bị hết hạn.")
+                print("Hệ thống máy chủ ảo không thể tự mở trình duyệt để đăng nhập Google.")
+                print("👉 CÁCH SỬA:")
+                print("1. Chạy file sync_data.py này ở máy tính cá nhân của mày.")
+                print("2. Đăng nhập Google để nó tạo ra file 'token.pickle' mới nhất.")
+                print("3. Commit và Đẩy file 'token.pickle' đó lên kho GitHub.")
+                print("="*60 + "\n")
+                sys.exit(1) # Báo lỗi ra ngoài hệ thống để dừng ngay lập tức
+            else:
+                if not os.path.exists('credentials.json'):
+                    print("❌ LỖI: Không tìm thấy file credentials.json trên máy tính!")
+                    sys.exit(1)
+                flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
+                creds = flow.run_local_server(port=0)
+        
+        with open('token.pickle', 'wb') as token: 
+            pickle.dump(creds, token)
+            
     return creds
 
 def normalize_key(text):
@@ -98,7 +125,6 @@ def loc_ma_giay(ten_rac):
     return ten_rac
 
 def nhan_dien_hang(original_name, dict_key):
-    # Nhận diện hãng dựa trên TÊN GỐC (chưa bị gọt) để không lọt lưới
     name = str(original_name).upper()
     full_str = f"{original_name} {dict_key}".upper()
 
@@ -127,7 +153,9 @@ def sync_data():
             try:
                 sheet_doc = client.open_by_key(config["id"])
                 worksheets = sheet_doc.worksheets()
-            except: continue
+            except Exception as e: 
+                print(f"Bỏ qua kho {config['name']} vì lỗi: {e}")
+                continue
             
             for i, ws in enumerate(worksheets):
                 if config["type"] == "kho_1" and i in [1, 2]: continue
@@ -155,7 +183,6 @@ def sync_data():
                             if final_price < 1000000: continue 
                             
                             dict_key = normalize_key(raw_code)
-                            # Cấp phát "Bộ nhớ kép"
                             if dict_key not in sneaker_dict: 
                                 sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": raw_code.upper(), "variants": {}}
                             
@@ -197,7 +224,6 @@ def sync_data():
                         final_price = int(round((p_max * 1000) + 300000, -4))
                         if final_price < 1000000: continue 
                         
-                        # Cấp phát "Bộ nhớ kép" cho Kho 3
                         if dict_key not in sneaker_dict: 
                             sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": name_size_val.upper(), "variants": {}}
                         
@@ -211,7 +237,6 @@ def sync_data():
                         for r in data[1:]:
                             n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
                             
-                            # CHỐT CHẶN: Chỉ cắt block khi dòng đó HOÀN TOÀN TRỐNG (Ranh giới ảnh)
                             if not any([n,s,q,p]):
                                 if curr["names"] or curr["sizes"]:
                                     blocks.append(curr)
@@ -240,7 +265,6 @@ def sync_data():
                         if fp < 1000000: continue 
                         
                         dk = normalize_key(code_c)
-                        # Cấp phát "Bộ nhớ kép" cho Kho 2: Giữ trọn full_text để nhận diện hãng
                         if dk not in sneaker_dict: 
                             sneaker_dict[dk] = {"display_name": code_c.upper(), "original_name": full_text.upper(), "variants": {}}
                             
@@ -254,9 +278,7 @@ def sync_data():
         for dk, info in sneaker_dict.items():
             if not info["variants"]: continue
             
-            # Khúc này truyền TÊN GỐC vào để soi chữ "Roger Pro" nè:
             brand = nhan_dien_hang(info["original_name"], dk)
-            
             if brand == 'Khác': continue 
             
             sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
@@ -267,7 +289,11 @@ def sync_data():
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
         print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã tiệt tiêu 100% size rác.")
-    except Exception as e: print(f"❌ Lỗi: {e}")
+        
+    except Exception as e: 
+        print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
+        traceback.print_exc()
+        sys.exit(1) # Bắn lỗi ra ngoài cho GitHub biết
 
 if __name__ == "__main__":
     sync_data()
