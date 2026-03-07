@@ -210,13 +210,11 @@
         let currentSearch = '';
         let isOrderMode = false;
 
-        // BỘ NHỚ LƯU TRỮ CÁC MÃ BỊ THIẾU ẢNH (ĐỂ ĐẨY VÀO TAB "KHÁC")
         let missingImages = new Set(); 
 
-        // ⚠️⚠️ DÁN LINK GOOGLE SHEET CSV CỦA MÀY VÀO ĐÂY ⚠️⚠️
+        // LINK GOOGLE SHEET CSV CỦA BẠN ĐÃ ĐƯỢC GIỮ NGUYÊN
         const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
 
-        // Scroll Logic
         let lastScrollTop = 0;
         let backToTopBtn = document.getElementById("backToTopBtn");
         window.addEventListener("scroll", function() {
@@ -235,8 +233,8 @@
             document.getElementById('sidebarOverlay').classList.toggle('show');
         }
 
-        // TẢI DATA
-       Promise.all([
+        // TẢI DATA VÀ FIX LỖI SIZE DÍNH CHÙM TẠI ĐÂY
+        Promise.all([
             fetch('data.json').then(res => res.json()),
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
@@ -290,24 +288,7 @@
 
             globalData = jsonData;
 
-            // BỘ NHAI CSV XỊN XÒ (XỬ LÝ ĐƯỢC 3 CỘT) - Vượt qua mọi thể loại ngoặc kép
-            let lines = csvText.split('\n');
-            for(let i = 1; i < lines.length; i++) {
-                let line = lines[i].trim();
-                if(!line) continue;
-                
-                let parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                if(parts.length >= 2) {
-                    let fullName = parts[0].replace(/^"|"$/g, '').trim(); 
-                    let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
-                    let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
-                    dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode });
-                }
-            }
-
-            renderSidebarFilters();
-            renderGrid();
-
+            // BỘ NHAI CSV XỊN XÒ TỪ GOOGLE SHEET
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
                 let line = lines[i].trim();
@@ -325,8 +306,9 @@
             renderGrid();
         }).catch(err => {
             console.log("Lỗi mạng: ", err);
-            fetch('data.json').then(res => res.json()).then(data => {
-                globalData = data; renderSidebarFilters(); renderGrid();
+            // Xử lý khi lỗi mạng (ví dụ Google Sheet bị nghẽn)
+            fetch('data.json').then(res => res.json()).then(jsonData => {
+                globalData = jsonData; renderSidebarFilters(); renderGrid();
             });
         });
 
@@ -349,15 +331,12 @@
             }
         }
 
-        // TẠO BỘ LỌC BÊN TRÁI TỰ ĐỘNG
         function renderSidebarFilters() {
-            // 1. TẠO MENU THƯƠNG HIỆU
             const brandContainer = document.getElementById('brand-filters');
             const brandsInData = [...new Set(globalData.map(p => p.brand))];
             const order = ["Nike", "Adidas", "Asics", "Onitsuka Tiger", "Skechers", "On", "Lacoste", "Babolat", "Wilson"];
             brandsInData.sort((a, b) => (order.indexOf(a) !== -1 ? order.indexOf(a) : 99) - (order.indexOf(b) !== -1 ? order.indexOf(b) : 99));
             
-            // Ép thêm tab "Khác" vào cuối danh sách
             const allBrands = ['Tất cả', ...brandsInData, 'Khác']; 
             
             brandContainer.innerHTML = allBrands.map(b => `
@@ -366,12 +345,10 @@
                 </button>
             `).join('');
 
-            // 2. TẠO BẢNG SIZE (Lọc ra các size không trùng nhau và sắp xếp)
             const sizeContainer = document.getElementById('size-filters');
             let allSizes = new Set();
             globalData.forEach(p => p.variants.forEach(v => allSizes.add(v.size)));
             
-            // Thuật toán sắp xếp Size (số xếp trước, chữ xếp sau)
             let sortedSizes = Array.from(allSizes).sort((a,b) => {
                let na = parseFloat(a); let nb = parseFloat(b);
                if(!isNaN(na) && !isNaN(nb)) return na - nb;
@@ -383,12 +360,11 @@
             `).join('');
         }
 
-        // CÁC HÀM XỬ LÝ KHI CLICK BỘ LỌC
         function filterBrand(brand, btn) {
             currentBrand = brand;
             document.querySelectorAll('.brand-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active'); 
-            if(window.innerWidth <= 900) toggleSidebar(); // Đóng sidebar trên mobile sau khi chọn
+            if(window.innerWidth <= 900) toggleSidebar(); 
             renderGrid();
         }
 
@@ -404,7 +380,6 @@
             document.querySelectorAll('.size-filter-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
             
-            // Hiển thị/Ẩn nút "Xóa lọc" size
             document.getElementById('clear-size').style.display = size === 'ALL' ? 'none' : 'inline';
             renderGrid();
         }
@@ -414,22 +389,19 @@
             renderGrid();
         }
 
-        // ⚠️ TUYỆT CHIÊU BỌC THÉP: XỬ LÝ ẢNH LỖI (CHUYỂN SANG TAB KHÁC)
+        // XỬ LÝ ẢNH LỖI (CHUYỂN SANG TAB KHÁC)
         window.handleImgErr = function(img, shoeCode, originalBrand) {
-            img.onerror = null; // Ngăn nó lặp vô hạn
+            img.onerror = null; 
             img.src = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=CHUA+CO+ANH';
             
-            // Ghi nhớ đôi này bị mù ảnh
             missingImages.add(shoeCode);
             
-            // ĐỘT BIẾN: Nếu đang đứng ở Thương hiệu gốc (VD: Nike) mà nó bị mù, thì GIẤU nó đi luôn!
             if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
                 let card = img.closest('.product-card');
                 if (card) card.style.display = 'none';
             }
         };
 
-        // HIỂN THỊ LƯỚI SẢN PHẨM
         function renderGrid() {
             if (isOrderMode) return; 
             
@@ -439,19 +411,12 @@
             let filtered = globalData.filter(p => {
                 const shoeCode = p.name.trim();
                 
-                // 1. CHUYỂN NHÀ: Nếu mã này đã từng bị lỗi ảnh -> Phán nó thuộc thương hiệu 'Khác'
                 const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
                 
-                // Lọc Thương hiệu
                 if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
-                
-                // Lọc Size
                 if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
-
-                // Lọc Tìm kiếm
                 if (currentSearch !== '' && !p.name.toLowerCase().includes(currentSearch) && !p.brand.toLowerCase().includes(currentSearch)) return false;
 
-                // Lọc Giá
                 if (currentPriceRange !== 'ALL') {
                     let minPrice = Math.min(...p.variants.map(v => v.price));
                     if (currentPriceRange === '1-2') return minPrice >= 1000000 && minPrice <= 2000000;
@@ -482,7 +447,6 @@
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                 const displayImg = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 
-                // Lưu ý dòng onerror gọi hàm handleImgErr tao vừa viết ở trên
                 card.innerHTML = `
                     <div class="product-img-wrapper">
                         <img src="${displayImg}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
