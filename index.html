@@ -246,7 +246,7 @@
     <button id="backToTopBtn" onclick="scrollToTop()" title="Lên đầu trang">⬆️</button>
 
     <script>
-let globalData = [];
+        let globalData = [];
         let dictionaryData = []; 
         let selections = {}; 
         let currentBrand = 'Tất cả';
@@ -279,18 +279,22 @@ let globalData = [];
         ]).then(([jsonData, csvText]) => {
             globalData = jsonData;
 
-            // BỘ NHAI CSV BỌC THÉP MỚI: Bất chấp Google Sheet có ngoặc kép hay không
+            // BỘ NHAI CSV XỊN XÒ (XỬ LÝ ĐƯỢC 3 CỘT) - Vượt qua mọi thể loại ngoặc kép
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
                 let line = lines[i].trim();
                 if(!line) continue;
                 
-                // Tách dựa vào dấu phẩy cuối cùng (vì link ảnh không có dấu phẩy)
-                let lastCommaIndex = line.lastIndexOf(',');
-                if (lastCommaIndex !== -1) {
-                    let fullName = line.substring(0, lastCommaIndex).replace(/^"|"$/g, '').trim();
-                    let imgUrl = line.substring(lastCommaIndex + 1).replace(/^"|"$/g, '').trim();
-                    dictionaryData.push({ fullName: fullName, image: imgUrl });
+                // Thuật toán băm CSV chuẩn: Tách bằng dấu phẩy nhưng bỏ qua dấu phẩy trong ngoặc kép
+                let parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                if(parts.length >= 2) {
+                    let fullName = parts[0].replace(/^"|"$/g, '').trim(); // Cột A
+                    let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); // Cột B
+                    
+                    // NẾU CÓ CỘT C THÌ LẤY CỘT C, NẾU KHÔNG THÌ LẤY CỘT A ĐỂ ĐI TÌM
+                    let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
+                    
+                    dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode });
                 }
             }
 
@@ -382,10 +386,13 @@ let globalData = [];
                 const prices = p.variants.map(v => v.price);
                 const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
 
-                const shoeCode = p.name.trim(); // Mã trong kho JSON
+                const shoeCode = p.name.trim(); // Mã trong kho JSON (Ví dụ: Giày On THE ROGER PRO 2 TRẮNG XANH Chính Hãng)
                 
-                // MẮT THẦN NÂNG CẤP: Không quan tâm hoa/thường, cứ chứa mã là lụm!
-                const matchedItem = dictionaryData.find(d => d.fullName.toLowerCase().includes(shoeCode.toLowerCase()));
+                // MẮT THẦN NÂNG CẤP LẦN 2: Ưu tiên khớp chính xác 100% với Cột C, nếu không thấy mới đi tìm ở Cột A
+                const matchedItem = dictionaryData.find(d => 
+                    (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
+                    d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
+                );
                 
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                 const displayImg = matchedItem ? matchedItem.image : `images/${shoeCode}.jpg`;
