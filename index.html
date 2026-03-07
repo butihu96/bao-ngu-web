@@ -246,15 +246,15 @@
     <button id="backToTopBtn" onclick="scrollToTop()" title="Lên đầu trang">⬆️</button>
 
     <script>
-       let globalData = [];
-        let dictionaryData = []; // BỘ NHỚ TỪ ĐIỂN TỪ GOOGLE SHEET
+let globalData = [];
+        let dictionaryData = []; 
         let selections = {}; 
         let currentBrand = 'Tất cả';
         let currentPriceRange = 'ALL'; 
         let currentSearch = '';
         let isOrderMode = false;
 
-        // DÁN LINK GOOGLE SHEET (ĐUÔI .CSV) CỦA MÀY VÀO ĐÂY:
+        // DÁN LINK GOOGLE SHEET (ĐUÔI .CSV) CHUẨN VÀO ĐÂY:
         const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
 
         let lastScrollTop = 0;
@@ -273,22 +273,23 @@
 
         function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
 
-        // TUYỆT CHIÊU KÉO 2 NGUỒN DATA CÙNG LÚC (KHO JSON + TỪ ĐIỂN SHEET)
         Promise.all([
             fetch('data.json').then(res => res.json()),
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
             globalData = jsonData;
 
-            // Xử lý Google Sheet thành Từ Điển
+            // BỘ NHAI CSV BỌC THÉP MỚI: Bất chấp Google Sheet có ngoặc kép hay không
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
                 let line = lines[i].trim();
                 if(!line) continue;
-                let parts = line.split('","');
-                if(parts.length >= 2) {
-                    let fullName = parts[0].replace(/^"/, ''); // Cột 1: Tên gộp Mã
-                    let imgUrl = parts[1].replace(/"$/, ''); // Cột 2: Link Ảnh
+                
+                // Tách dựa vào dấu phẩy cuối cùng (vì link ảnh không có dấu phẩy)
+                let lastCommaIndex = line.lastIndexOf(',');
+                if (lastCommaIndex !== -1) {
+                    let fullName = line.substring(0, lastCommaIndex).replace(/^"|"$/g, '').trim();
+                    let imgUrl = line.substring(lastCommaIndex + 1).replace(/^"|"$/g, '').trim();
                     dictionaryData.push({ fullName: fullName, image: imgUrl });
                 }
             }
@@ -296,8 +297,7 @@
             renderTabs();
             renderGrid();
         }).catch(err => {
-            console.log("Lỗi tải data: ", err);
-            // Nếu lỗi mạng không tải được Google Sheet thì vẫn load kho JSON lên
+            console.log("Lỗi mạng hoặc sai Link CSV: ", err);
             fetch('data.json').then(res => res.json()).then(data => {
                 globalData = data; renderTabs(); renderGrid();
             });
@@ -382,16 +382,11 @@
                 const prices = p.variants.map(v => v.price);
                 const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
 
-                // ==========================================
-                // THUẬT TOÁN ĐỒNG BỘ: TÌM KIẾM THEO CODE
-                // ==========================================
-                const shoeCode = p.name; // Mã code lấy từ file data.json (Ví dụ: 1041A330-400)
+                const shoeCode = p.name.trim(); // Mã trong kho JSON
                 
-                // Lục tung Google Sheet xem có cái Tên nào chứa đoạn Code này không
-                const matchedItem = dictionaryData.find(d => d.fullName.includes(shoeCode));
+                // MẮT THẦN NÂNG CẤP: Không quan tâm hoa/thường, cứ chứa mã là lụm!
+                const matchedItem = dictionaryData.find(d => d.fullName.toLowerCase().includes(shoeCode.toLowerCase()));
                 
-                // NẾU TÌM THẤY: Lấy tên dài và Link ảnh nét từ đối thủ. 
-                // NẾU KHÔNG THẤY: Tự động ghép tên chữa cháy và dùng ảnh up GitHub (như cũ).
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                 const displayImg = matchedItem ? matchedItem.image : `images/${shoeCode}.jpg`;
                 
