@@ -9,6 +9,18 @@
     <meta property="og:title" content="Bào Ngư Sneaker - Hệ Thống Giày Chính Hãng">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/111111/ffffff?text=BAO+NGU+SNEAKER">
     
+    <!-- ========================================== -->
+    <!-- MẮT THẦN GOOGLE ANALYTICS (ĐO LƯỜNG TRAFFIC) -->
+    <!-- Đã lắp mã G-VC1LQJN5S6 của đại ca! -->
+    <!-- ========================================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC1LQJN5S6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VC1LQJN5S6'); 
+    </script>
+    
     <style>
         * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333;}
@@ -24,10 +36,10 @@
         .main-tab-btn.active { background: #111; color: #fff; }
         .main-tab-btn:hover { background: #333; color: #fff;}
 
-        /* LAYOUT CHÍNH: CHIA 2 CỘT */
+        /* LAYOUT CHÍNH */
         .layout-wrapper { display: flex; max-width: 1350px; margin: 20px auto; gap: 25px; padding: 0 15px; align-items: flex-start;}
         
-        /* SIDEBAR (CỘT TRÁI) */
+        /* SIDEBAR */
         .sidebar { width: 260px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); flex-shrink: 0; position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto;}
         .sidebar::-webkit-scrollbar { width: 4px; }
         .sidebar::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
@@ -39,14 +51,15 @@
         .filter-item { background: transparent; border: none; text-align: left; font-size: 14px; color: #555; cursor: pointer; padding: 8px 12px; border-radius: 6px; transition: 0.2s; font-weight: 600;}
         .filter-item:hover { background: #f5f5f5; color: #111; }
         .filter-item.active { background: #111; color: #fff; }
+        .brand-btn-hot { color: #e74c3c !important; font-weight: 800; }
+        .brand-btn-hot.active { background: #e74c3c !important; color: #fff !important; }
 
-        /* BỘ LỌC SIZE DẠNG LƯỚI */
         .size-grid-filter { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
         .size-filter-btn { border: 1px solid #ddd; background: #fff; border-radius: 6px; padding: 8px 0; text-align: center; font-size: 12px; font-weight: 700; cursor: pointer; transition: 0.2s; color: #444;}
         .size-filter-btn:hover { border-color: #111; color: #111; }
         .size-filter-btn.active { background: #111; color: #fff; border-color: #111;}
 
-        /* MAIN CONTENT (CỘT PHẢI) */
+        /* MAIN CONTENT */
         .main-content { flex-grow: 1; min-width: 0; }
         
         .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
@@ -57,12 +70,16 @@
         .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
         
         /* CARD SẢN PHẨM */
-        .product-card { background: #fff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; border: 1px solid #f0f0f0; overflow: hidden;}
+        .product-card { background: #fff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; border: 1px solid #f0f0f0; overflow: hidden; position: relative;}
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-color: #e0e0e0;}
         
         .product-img-wrapper { width: 100%; height: 260px; margin-bottom: 12px; overflow: hidden; border-radius: 10px; background: #fdfdfd; display: flex; align-items: center; justify-content: center; position: relative;}
         .product-img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; }
         .product-card:hover .product-img { transform: scale(1.05); }
+
+        /* TEM HOT / NEW */
+        .hot-badge { position: absolute; top: 10px; right: 10px; background: #e74c3c; color: white; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 900; z-index: 10; box-shadow: 0 4px 10px rgba(231,76,60,0.5); text-transform: uppercase; animation: pulse-hot 1.5s infinite; letter-spacing: 1px;}
+        @keyframes pulse-hot { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 
         .brand-tag { font-size: 10px; background: #f5f5f5; padding: 3px 10px; border-radius: 20px; color: #999; display: inline-block; margin-bottom: 6px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;}
         .product-name { font-size: 13.5px; font-weight: 600; margin-bottom: 3px; color: #222; min-height: 40px; display: flex; align-items: center; justify-content: center; line-height: 1.4; padding: 0 5px;}
@@ -83,7 +100,7 @@
         
         .empty-state { text-align: center; padding: 50px 20px; color: #666; font-size: 16px; width: 100%; grid-column: 1 / -1;}
         
-        /* PLUGINS */
+        /* PLUGINS MẠNG XÃ HỘI */
         .floating-social { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 999;}
         .social-btn { height: 42px; padding: 0 16px; border-radius: 25px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: 0.3s; text-decoration: none; color: white; font-weight: bold; font-size: 13px; animation: pulse 2s infinite;}
         .btn-zalo { background: #0068ff; }
@@ -96,7 +113,6 @@
         #backToTopBtn.show { opacity: 1; visibility: visible; }
         #backToTopBtn:hover { background-color: #e74c3c; transform: translateY(-3px); }
 
-        /* OVERLAY CHO MOBILE SIDEBAR */
         .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.6); z-index: 99998; opacity: 0; visibility: hidden; transition: 0.3s; }
         .sidebar-overlay.show { opacity: 1; visibility: visible; }
         .close-sidebar-btn { display: none; background: #e74c3c; color: #fff; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-weight: bold;}
@@ -104,15 +120,11 @@
         /* MOBILE RESPONSIVE */
         @media (max-width: 900px) { 
             .layout-wrapper { flex-direction: column; padding: 10px; margin: 0 auto;}
-            
-            /* Biến Sidebar thành Menu Trượt */
             .sidebar { position: fixed; top: 0; left: -100%; width: 280px; height: 100vh; max-height: 100vh; z-index: 99999; border-radius: 0; transition: 0.3s ease; box-shadow: 5px 0 15px rgba(0,0,0,0.1); }
             .sidebar.open { left: 0; }
             .close-sidebar-btn { display: block; }
-
             .btn-mobile-filter { display: block; }
             .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            
             .product-card { padding: 8px; border-radius: 10px; }
             .product-img-wrapper { height: 160px; margin-bottom: 8px;}
             .brand-tag { font-size: 8.5px; padding: 2px 7px; margin-bottom: 5px; }
@@ -120,11 +132,11 @@
             .price { font-size: 14px; }
             .size-btn { padding: 4px 6px; font-size: 10px; }
             .order-btn { padding: 8px; font-size: 11px; }
-            
             .floating-social { bottom: 15px; right: 15px; gap: 10px;}
             .social-btn { height: 36px; font-size: 11px; padding: 0 12px;}
             .social-icon { width: 15px; height: 15px; margin-right: 5px; }
             #backToTopBtn { bottom: 15px; left: 15px; width: 38px; height: 38px; font-size: 16px; }
+            .hot-badge { font-size: 9px; padding: 3px 8px; top: 5px; right: 5px;}
         }
     </style>
 </head>
@@ -152,7 +164,8 @@
             <div class="filter-group">
                 <div class="filter-title">Thương Hiệu</div>
                 <div class="filter-list" id="brand-filters">
-                    </div>
+                    <!-- JS sẽ đẩy danh sách vào đây -->
+                </div>
             </div>
 
             <div class="filter-group">
@@ -168,7 +181,8 @@
             <div class="filter-group">
                 <div class="filter-title">Kích Cỡ (Size) <span id="clear-size" style="font-size: 10px; color:#e74c3c; cursor:pointer; display:none;" onclick="filterSize('ALL', null)">Xóa lọc</span></div>
                 <div class="size-grid-filter" id="size-filters">
-                    </div>
+                    <!-- JS sẽ đẩy bảng size vào đây -->
+                </div>
             </div>
         </aside>
 
@@ -182,6 +196,7 @@
         </main>
     </div>
 
+    <!-- NÚT MẠNG XÃ HỘI (Zalo & Messenger Cá Nhân) -->
     <div class="floating-social">
         <a href="https://zalo.me/0363535838" target="_blank" class="social-btn btn-zalo">
             <svg class="social-icon" viewBox="0 0 24 24"><path d="M21.4 10.6C21.4 6 17.2 2.2 12 2.2C6.8 2.2 2.6 6 2.6 10.6C2.6 13 3.8 15.2 5.8 16.7L4.6 19.8L7.9 18.5C9.2 19 10.6 19.3 12 19.3C17.2 19.3 21.4 15.6 21.4 10.6ZM12 17.8C10.7 17.8 9.5 17.6 8.3 17.1L8 16.9L5.8 17.8L6.6 15.7L6.3 15.4C4.6 14.1 3.6 12.4 3.6 10.6C3.6 6.8 7.4 3.7 12 3.7C16.6 3.7 20.4 6.8 20.4 10.6C20.4 14.4 16.6 17.8 12 17.8ZM16.3 8.3L13.1 11.7L10.3 9.4L4.8 15.4L8.1 12L10.8 14.3L16.3 8.3Z"/></svg>
@@ -207,10 +222,9 @@
 
         let missingImages = new Set(); 
         
-        // CÁC HÃNG GIÀY CHUẨN ĐỂ ĐỒNG BỘ
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Onitsuka Tiger", "Skechers", "On", "Lacoste", "Babolat", "Wilson"];
 
-        // LINK GOOGLE SHEET CSV
+        // LINK GOOGLE SHEET (Nguồn từ điển & Tag)
         const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
 
         let lastScrollTop = 0;
@@ -231,13 +245,12 @@
             document.getElementById('sidebarOverlay').classList.toggle('show');
         }
 
-        // TẢI DATA VÀ FIX LỖI
         Promise.all([
             fetch('data.json').then(res => res.json()),
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
             
-            // 1. NHAI DATA TỪ GOOGLE SHEET TRƯỚC (Để lấy tên xịn)
+            // 1. NHAI DATA TỪ GOOGLE SHEET (CÓ THÊM CỘT D ĐỂ ĐỌC TAG)
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
                 let line = lines[i].trim();
@@ -247,11 +260,12 @@
                     let fullName = parts[0].replace(/^"|"$/g, '').trim(); 
                     let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
                     let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
-                    dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode });
+                    let hotTag = parts[3] ? parts[3].replace(/^"|"$/g, '').trim() : ''; // CỘT D
+                    dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode, tag: hotTag });
                 }
             }
 
-            // 2. GIẢI PHẪU DỮ LIỆU JSON (Chữa dính chùm + Ép hãng chuẩn + Gộp size)
+            // 2. GIẢI PHẪU DỮ LIỆU KHO (Chữa dính chùm + Ép hãng + Ép size)
             jsonData.forEach(p => {
                 let variantMap = {}; 
                 p.variants.forEach(v => {
@@ -273,7 +287,6 @@
                     if (cleanSizes.length === 0) cleanSizes = [sizeStr]; 
 
                     cleanSizes.forEach(sz => {
-                        // GỘP SIZE DỊ TỰ ĐỘNG
                         if (sz.endsWith('.6')) sz = sz.slice(0, -2) + '.5'; // 38.6 -> 38.5
                         if (sz.endsWith('.3')) sz = sz.slice(0, -2);        // 37.3 -> 37
 
@@ -289,7 +302,6 @@
                     return a.size.localeCompare(b.size);
                 });
 
-                // TÍNH NĂNG MỚI: PHÂN LOẠI HÃNG TỰ ĐỘNG (Dựa vào tên)
                 const shoeCode = p.name.trim();
                 const matchedItem = dictionaryData.find(d => 
                     (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
@@ -300,17 +312,11 @@
                 let detectedBrand = null;
                 for (let b of TARGET_BRANDS) {
                     if (b === 'On') {
-                        if (/\bOn\b/i.test(searchString) && !/Onitsuka/i.test(searchString)) {
-                            detectedBrand = b; break;
-                        }
+                        if (/\bOn\b/i.test(searchString) && !/Onitsuka/i.test(searchString)) { detectedBrand = b; break; }
                     } else if (b === 'Onitsuka Tiger') {
-                        if (/Onitsuka/i.test(searchString)) {
-                            detectedBrand = b; break;
-                        }
+                        if (/Onitsuka/i.test(searchString)) { detectedBrand = b; break; }
                     } else {
-                        if (searchString.toLowerCase().includes(b.toLowerCase())) {
-                            detectedBrand = b; break;
-                        }
+                        if (searchString.toLowerCase().includes(b.toLowerCase())) { detectedBrand = b; break; }
                     }
                 }
                 if (detectedBrand) p.brand = detectedBrand;
@@ -347,17 +353,20 @@
 
         function renderSidebarFilters() {
             const brandContainer = document.getElementById('brand-filters');
-            // Xuất ra 9 hãng chuẩn + Khác
             const brandsInData = [...new Set(globalData.map(p => p.brand))];
             brandsInData.sort((a, b) => (TARGET_BRANDS.indexOf(a) !== -1 ? TARGET_BRANDS.indexOf(a) : 99) - (TARGET_BRANDS.indexOf(b) !== -1 ? TARGET_BRANDS.indexOf(b) : 99));
             
-            const allBrands = ['Tất cả', ...brandsInData, 'Khác']; 
+            // THÊM NÚT HÀNG HOT VÀO MENU
+            const allBrands = ['Tất cả', '🔥 HÀNG HOT', ...brandsInData, 'Khác']; 
             
-            brandContainer.innerHTML = allBrands.map(b => `
-                <button class="filter-item brand-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">
-                    ${b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Khác (Hàng hiếm/Chưa phân loại)' : '🔸 ' + b)}
-                </button>
-            `).join('');
+            brandContainer.innerHTML = allBrands.map(b => {
+                let label = b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === '🔥 HÀNG HOT' ? '🔥 Hàng Mới / HOT' : (b === 'Khác' ? '📦 Khác' : '🔸 ' + b));
+                let extraClass = b === '🔥 HÀNG HOT' ? 'brand-btn-hot' : '';
+                return `
+                <button class="filter-item brand-btn ${extraClass} ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">
+                    ${label}
+                </button>`;
+            }).join('');
 
             const sizeContainer = document.getElementById('size-filters');
             let allSizes = new Set();
@@ -403,14 +412,11 @@
             renderGrid();
         }
 
-        // XỬ LÝ ẢNH LỖI (CHUYỂN SANG TAB KHÁC)
         window.handleImgErr = function(img, shoeCode, originalBrand) {
             img.onerror = null; 
             img.src = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=CHUA+CO+ANH';
-            
             missingImages.add(shoeCode);
-            
-            if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
+            if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác' && currentBrand !== '🔥 HÀNG HOT') {
                 let card = img.closest('.product-card');
                 if (card) card.style.display = 'none';
             }
@@ -424,10 +430,19 @@
 
             let filtered = globalData.filter(p => {
                 const shoeCode = p.name.trim();
+                const matchedItem = dictionaryData.find(d => 
+                    (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
+                    d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
+                );
                 
-                const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
-                
-                if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
+                // LỌC THEO TAB (Bao gồm cả Tab HÀNG HOT)
+                if (currentBrand === '🔥 HÀNG HOT') {
+                    if (!matchedItem || !matchedItem.tag || matchedItem.tag === '') return false;
+                } else {
+                    const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
+                    if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
+                }
+
                 if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
                 if (currentSearch !== '' && !p.name.toLowerCase().includes(currentSearch) && !p.brand.toLowerCase().includes(currentSearch)) return false;
 
@@ -446,13 +461,10 @@
             }
 
             filtered.forEach((p, idx) => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
                 const prices = p.variants.map(v => v.price);
                 const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
 
                 const shoeCode = p.name.trim();
-                
                 const matchedItem = dictionaryData.find(d => 
                     (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
@@ -461,8 +473,14 @@
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                 const displayImg = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 
+                // KIỂM TRA XEM CÓ TAG TRONG SHEET KHÔNG ĐỂ HIỂN THỊ TEM ĐỎ
+                const tagHtml = (matchedItem && matchedItem.tag && matchedItem.tag !== '') ? `<div class="hot-badge">${matchedItem.tag}</div>` : '';
+
+                const card = document.createElement('div');
+                card.className = 'product-card';
                 card.innerHTML = `
                     <div class="product-img-wrapper">
+                        ${tagHtml}
                         <img src="${displayImg}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
                     </div>
                     <div>
