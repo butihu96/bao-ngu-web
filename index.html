@@ -3,148 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bào Ngư Sneaker - Hàng Sẵn Kho & Order</title>
+    <title>Bào Ngư Sneaker - Hệ Thống Giày Chính Hãng</title>
     
     <meta name="description" content="Bào Ngư Sneaker - Chuyên săn sale, order và có sẵn các dòng Sneaker chính hãng Nike, Adidas, Asics, On, Skechers... Cam kết chuẩn Auth trọn đời.">
-    <meta name="keywords" content="bào ngư sneaker, giày sneaker auth, order giày chính hãng, giày nike, giày adidas, giày asics, giày lacoste">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://baongu.store/"> 
     <meta property="og:title" content="Bào Ngư Sneaker - Hệ Thống Giày Chính Hãng">
-    <meta property="og:description" content="Chuyên order các sản phẩm chính hãng, cam kết trọn đời cho cả nhà 🤟🤟">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/111111/ffffff?text=BAO+NGU+SNEAKER">
+    
     <style>
         * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333;}
         
-        /* HEADER TỔNG (SMART STICKY) */
-        header { 
-            background: #fff; 
-            padding: 15px 20px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08); 
-            position: sticky; 
-            top: 0; 
-            z-index: 100;
-            transition: transform 0.3s ease-in-out; 
-        }
+        /* HEADER */
+        header { background: #fff; padding: 15px 20px 10px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; transition: transform 0.3s ease;}
         .header-hidden { transform: translateY(-100%); }
-
         h1 { text-align: center; text-transform: uppercase; color: #111; margin: 0 0 5px 0; font-weight: 900; letter-spacing: 1px; font-size: 26px;}
         .slogan { text-align: center; color: #e74c3c; font-size: 14px; margin: 0 0 15px 0; font-weight: 700; font-style: italic;}
 
-        .main-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;}
+        .main-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 10px;}
         .main-tab-btn { padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; border: 2px solid #111; background: #fff; color: #111; font-size: 15px; transition: 0.3s;}
         .main-tab-btn.active { background: #111; color: #fff; }
         .main-tab-btn:hover { background: #333; color: #fff;}
 
-        .search-box { max-width: 600px; margin: 0 auto 15px auto; display: flex; justify-content: center;}
-        .search-box input { width: 100%; padding: 12px 20px; border-radius: 30px; border: 1px solid #ccc; font-size: 15px; outline: none; transition: 0.3s; background: #f9f9f9;}
-        .search-box input:focus { border-color: #111; background: #fff; box-shadow: 0 0 8px rgba(0,0,0,0.05); }
+        /* LAYOUT CHÍNH: CHIA 2 CỘT */
+        .layout-wrapper { display: flex; max-width: 1350px; margin: 20px auto; gap: 25px; padding: 0 15px; align-items: flex-start;}
+        
+        /* SIDEBAR (CỘT TRÁI) */
+        .sidebar { width: 260px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); flex-shrink: 0; position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto;}
+        .sidebar::-webkit-scrollbar { width: 4px; }
+        .sidebar::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+        
+        .filter-group { margin-bottom: 25px; }
+        .filter-title { font-size: 15px; font-weight: 800; text-transform: uppercase; color: #111; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center;}
+        
+        .filter-list { display: flex; flex-direction: column; gap: 6px; }
+        .filter-item { background: transparent; border: none; text-align: left; font-size: 14px; color: #555; cursor: pointer; padding: 8px 12px; border-radius: 6px; transition: 0.2s; font-weight: 600;}
+        .filter-item:hover { background: #f5f5f5; color: #111; }
+        .filter-item.active { background: #111; color: #fff; }
 
-        .tabs-container { display: flex; gap: 8px; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 5px;}
-        .tabs-container::-webkit-scrollbar { display: none; }
-        .price-container { margin-top: 10px; margin-bottom: 5px;} 
+        /* BỘ LỌC SIZE DẠNG LƯỚI */
+        .size-grid-filter { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .size-filter-btn { border: 1px solid #ddd; background: #fff; border-radius: 6px; padding: 8px 0; text-align: center; font-size: 12px; font-weight: 700; cursor: pointer; transition: 0.2s; color: #444;}
+        .size-filter-btn:hover { border-color: #111; color: #111; }
+        .size-filter-btn.active { background: #111; color: #fff; border-color: #111;}
 
-        @media (min-width: 601px) { .tabs-container { justify-content: center; flex-wrap: wrap; overflow-x: visible; } }
+        /* MAIN CONTENT (CỘT PHẢI) */
+        .main-content { flex-grow: 1; min-width: 0; }
         
-        .tab-btn { padding: 8px 16px; background: #f0f0f0; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; transition: 0.3s; color: #555;}
-        .tab-btn.active { background: #e74c3c; color: #fff; }
-        .price-btn.active { background: #2563eb; color: #fff; }
+        .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
+        .search-box input { flex-grow: 1; padding: 12px 20px; border-radius: 30px; border: 1px solid #ccc; font-size: 15px; outline: none; transition: 0.3s; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.02);}
+        .search-box input:focus { border-color: #111; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .btn-mobile-filter { display: none; background: #111; color: #fff; border: none; padding: 0 20px; border-radius: 30px; font-weight: bold; cursor: pointer;}
+
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
         
-        /* LƯỚI SẢN PHẨM */
-        .container { padding: 20px; max-width: 1300px; margin: 0 auto;}
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        
-        /* TÚT LẠI THẺ SẢN PHẨM - TINH TẾ & GỌN GÀNG */
-        .product-card { 
-            background: #fff; 
-            padding: 15px; /* Giảm padding để dành đất cho ảnh */
-            border-radius: 12px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
-            text-align: center; 
-            transition: all 0.3s ease; 
-            display: flex; 
-            flex-direction: column; 
-            border: 1px solid #f0f0f0; 
-            overflow: hidden;
-        }
+        /* CARD SẢN PHẨM */
+        .product-card { background: #fff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; border: 1px solid #f0f0f0; overflow: hidden;}
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-color: #e0e0e0;}
         
-        /* CẢI TIẾN 1: ẢNH TO VẬT VÃ (TỪ 220PX LÊN 300PX) */
-        .product-img-wrapper { 
-            width: 100%; 
-            height: 300px; /* Tăng chiều cao để ảnh làm chủ */
-            margin-bottom: 12px; 
-            overflow: hidden; 
-            border-radius: 10px; 
-            background: #fdfdfd; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-        }
-        .product-img { width: 100%; height: 100%; object-fit: contain; /* Giữ nguyên tỷ lệ, không bị cắt */ transition: transform 0.5s ease; }
+        .product-img-wrapper { width: 100%; height: 260px; margin-bottom: 12px; overflow: hidden; border-radius: 10px; background: #fdfdfd; display: flex; align-items: center; justify-content: center; position: relative;}
+        .product-img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; }
         .product-card:hover .product-img { transform: scale(1.05); }
 
-        /* CẢI TIẾN 2: THÔNG SỐ KHÁC NHỎ LẠI ĐỂ CÂN ĐỐI */
-        .brand-tag { 
-            font-size: 10px; /* Nhỏ lại */
-            background: #f5f5f5; 
-            padding: 3px 10px; 
-            border-radius: 20px; 
-            color: #999; 
-            display: inline-block; 
-            margin-bottom: 6px; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px;
-        }
-        .product-name { 
-            font-size: 14px; /* Nhỏ lại từ 16px */
-            font-weight: 600; 
-            margin-bottom: 3px; 
-            color: #222; 
-            min-height: 40px; /* Giảm độ cao tối thiểu */
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            line-height: 1.4; 
-            padding: 0 5px;
-        }
+        .brand-tag { font-size: 10px; background: #f5f5f5; padding: 3px 10px; border-radius: 20px; color: #999; display: inline-block; margin-bottom: 6px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;}
+        .product-name { font-size: 13.5px; font-weight: 600; margin-bottom: 3px; color: #222; min-height: 40px; display: flex; align-items: center; justify-content: center; line-height: 1.4; padding: 0 5px;}
         
-        .price-container-card { margin: 5px 0 12px 0; }
-        .price { 
-            color: #d32f2f; /* Màu đỏ mận sang hơn */
-            font-size: 18px; /* Nhỏ lại từ 22px */
-            font-weight: 800; 
-        }
+        .price-container-card { margin: 5px 0 10px 0; }
+        .price { color: #d32f2f; font-size: 17px; font-weight: 800; }
         
-        /* Cụm Bảng Size tinh chỉnh lại */
-        .size-section { border-top: 1px solid #f0f0f0; padding-top: 12px; margin-bottom: 12px; }
-        .size-label { display: block; font-size: 10px; color: #aaa; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .size-container { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; min-height: 50px; align-content: flex-start;}
+        .size-section { border-top: 1px solid #f0f0f0; padding-top: 10px; margin-bottom: 10px; }
+        .size-label { display: block; font-size: 9.5px; color: #aaa; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .size-container { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; min-height: 45px; align-content: flex-start;}
         
-        /* Nút Size nhỏ gọn */
-        .size-btn { 
-            padding: 6px 10px; /* Nhỏ lại */
-            border: 1px solid #e8e8e8; 
-            background: #fff; 
-            cursor: pointer; 
-            border-radius: 6px; 
-            font-size: 12px; /* Nhỏ lại từ 13px */
-            font-weight: 600; 
-            color: #444; 
-            transition: all 0.2s ease;
-        }
+        .size-btn { padding: 5px 8px; border: 1px solid #e8e8e8; background: #fff; cursor: pointer; border-radius: 5px; font-size: 11px; font-weight: 700; color: #444; transition: 0.2s;}
         .size-btn:hover { border-color: #111; color: #111; }
         .size-btn.active { background: #111; color: #fff; border-color: #111; }
         
-        .order-btn { background: #2563eb; color: white; padding: 12px; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 13px; font-weight: bold; margin-top: auto; transition: 0.3s;}
+        .order-btn { background: #2563eb; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 13px; font-weight: bold; margin-top: auto; transition: 0.3s;}
         .order-btn:hover { background: #1d4ed8; }
         
         .empty-state { text-align: center; padding: 50px 20px; color: #666; font-size: 16px; width: 100%; grid-column: 1 / -1;}
         
-        /* PLUGINS ZALO / FB DẠNG PILL */
+        /* PLUGINS */
         .floating-social { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 999;}
         .social-btn { height: 42px; padding: 0 16px; border-radius: 25px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: 0.3s; text-decoration: none; color: white; font-weight: bold; font-size: 13px; animation: pulse 2s infinite;}
         .btn-zalo { background: #0068ff; }
@@ -153,47 +92,35 @@
         .social-icon { width: 18px; height: 18px; fill: white; margin-right: 7px; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.4); } 70% { box-shadow: 0 0 0 8px rgba(0, 104, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); } }
 
-        /* PLUGIN VỀ ĐẦU TRANG */
-        #backToTopBtn { position: fixed; bottom: 20px; left: 20px; z-index: 999; background-color: #111; color: white; border: none; width: 42px; height: 42px; border-radius: 50%; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease; opacity: 0; visibility: hidden; display: flex; justify-content: center; align-items: center;}
+        #backToTopBtn { position: fixed; bottom: 20px; left: 20px; z-index: 999; background-color: #111; color: white; border: none; width: 42px; height: 42px; border-radius: 50%; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s; opacity: 0; visibility: hidden; display: flex; justify-content: center; align-items: center;}
         #backToTopBtn.show { opacity: 1; visibility: visible; }
         #backToTopBtn:hover { background-color: #e74c3c; transform: translateY(-3px); }
 
-        /* =========================================================
-           TỐI ƯU HÓA MOBILE (SỬA LẠI ĐỂ ẢNH TO HƠN, THÔNG SỐ NHỎ LẠI)
-           ========================================================= */
-        @media (max-width: 600px) { 
-            header { padding: 10px 15px; }
-            h1 { font-size: 20px; margin-bottom: 5px; }
-            .slogan { font-size: 11.5px; margin-bottom: 10px; padding: 0 5px; }
-            .main-tabs { gap: 8px; margin-bottom: 10px; }
-            .main-tab-btn { padding: 8px 12px; font-size: 13px; }
-            .search-box input { padding: 10px 15px; font-size: 13px; }
-            .tab-btn { padding: 6px 14px; font-size: 12px; }
+        /* OVERLAY CHO MOBILE SIDEBAR */
+        .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.6); z-index: 99998; opacity: 0; visibility: hidden; transition: 0.3s; }
+        .sidebar-overlay.show { opacity: 1; visibility: visible; }
+        .close-sidebar-btn { display: none; background: #e74c3c; color: #fff; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-weight: bold;}
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 900px) { 
+            .layout-wrapper { flex-direction: column; padding: 10px; margin: 0 auto;}
             
-            .price-container { margin-top: 5px; } 
-            
-            .container { padding: 10px; }
+            /* Biến Sidebar thành Menu Trượt */
+            .sidebar { position: fixed; top: 0; left: -100%; width: 280px; height: 100vh; max-height: 100vh; z-index: 99999; border-radius: 0; transition: 0.3s ease; box-shadow: 5px 0 15px rgba(0,0,0,0.1); }
+            .sidebar.open { left: 0; }
+            .close-sidebar-btn { display: block; }
+
+            .btn-mobile-filter { display: block; }
             .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             
-            .product-card { padding: 10px; border-radius: 10px; }
-            
-            /* CẢI TIẾN MOBILE: ẢNH CAO HƠN (TỪ 140PX LÊN 180PX) */
-            .product-img-wrapper { height: 180px; margin-bottom: 8px; border-radius: 8px;}
-            
-            /* CẢI TIẾN MOBILE: THÔNG SỐ NHỎ LẠI NỮA */
+            .product-card { padding: 8px; border-radius: 10px; }
+            .product-img-wrapper { height: 160px; margin-bottom: 8px;}
             .brand-tag { font-size: 8.5px; padding: 2px 7px; margin-bottom: 5px; }
-            .product-name { font-size: 12px; min-height: 36px; margin-bottom: 2px; line-height: 1.3; padding: 0;}
-            
-            .price-container-card { margin: 3px 0 8px 0; }
+            .product-name { font-size: 11.5px; min-height: 34px; line-height: 1.3; margin-bottom: 2px;}
             .price { font-size: 14px; }
+            .size-btn { padding: 4px 6px; font-size: 10px; }
+            .order-btn { padding: 8px; font-size: 11px; }
             
-            .size-section { border-top: 1px solid #f5f5f5; padding-top: 8px; margin-bottom: 10px; }
-            .size-label { font-size: 8.5px; margin-bottom: 6px; }
-            .size-container { gap: 4px; min-height: 40px; }
-            .size-btn { padding: 4px 6px; font-size: 10px; border-radius: 5px; }
-            
-            .order-btn { padding: 9px; font-size: 11px; border-radius: 7px; }
-
             .floating-social { bottom: 15px; right: 15px; gap: 10px;}
             .social-btn { height: 36px; font-size: 11px; padding: 0 12px;}
             .social-icon { width: 15px; height: 15px; margin-right: 5px; }
@@ -205,33 +132,61 @@
 
     <header id="main-header">
         <h1>👟 Bào Ngư Sneaker 👟</h1>
-        <p class="slogan">Chuyên order các sản phẩm chính hãng, cam kết trọn đời cho cả nhà 🤟🤟</p>
-        
+        <p class="slogan">Chuyên order các sản phẩm chính hãng, cam kết trọn đời cho cả nhà 🤟</p>
         <div class="main-tabs">
             <button class="main-tab-btn active" onclick="switchMainTab('SAN')">📦 HÀNG SẴN KHO</button>
             <button class="main-tab-btn" onclick="switchMainTab('ORDER')">✈️ HÀNG ORDER</button>
         </div>
-
-        <div id="filter-section">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Nhập mã code hoặc tên giày..." onkeyup="handleSearch()">
-            </div>
-            
-            <div class="tabs-container" id="tabs-container"></div>
-            
-            <div class="tabs-container price-container" id="price-container">
-                <button class="tab-btn price-btn active" onclick="filterPrice('ALL', this)">Tất cả giá</button>
-                <button class="tab-btn price-btn" onclick="filterPrice('1-2', this)">Từ 1tr - 2tr</button>
-                <button class="tab-btn price-btn" onclick="filterPrice('2-3', this)">Từ 2tr - 3tr</button>
-                <button class="tab-btn price-btn" onclick="filterPrice('3+', this)">Trên 3tr</button>
-            </div>
-        </div>
     </header>
 
-    <div class="container">
-        <div class="grid-container" id="product-grid"></div>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <div class="layout-wrapper" id="main-layout">
+        
+        <!-- SIDEBAR BỘ LỌC -->
+        <aside class="sidebar" id="sidebar">
+            <div class="filter-title">
+                <span>⚙️ Bộ Lọc</span>
+                <button class="close-sidebar-btn" onclick="toggleSidebar()">Đóng X</button>
+            </div>
+            
+            <div class="filter-group">
+                <div class="filter-title">Thương Hiệu</div>
+                <div class="filter-list" id="brand-filters">
+                    <!-- Javascript sẽ nhả nút Brands vào đây -->
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-title">Mức Giá</div>
+                <div class="filter-list" id="price-filters">
+                    <button class="filter-item price-btn active" onclick="filterPrice('ALL', this)">Tất cả giá</button>
+                    <button class="filter-item price-btn" onclick="filterPrice('1-2', this)">Từ 1tr - 2tr</button>
+                    <button class="filter-item price-btn" onclick="filterPrice('2-3', this)">Từ 2tr - 3tr</button>
+                    <button class="filter-item price-btn" onclick="filterPrice('3+', this)">Trên 3tr</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-title">Kích Cỡ (Size) <span id="clear-size" style="font-size: 10px; color:#e74c3c; cursor:pointer; display:none;" onclick="filterSize('ALL', null)">Xóa lọc</span></div>
+                <div class="size-grid-filter" id="size-filters">
+                    <!-- Javascript sẽ nhả bảng Size vào đây -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- KHU VỰC SẢN PHẨM -->
+        <main class="main-content">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Nhập mã code hoặc tên giày..." onkeyup="handleSearch()">
+                <button class="btn-mobile-filter" onclick="toggleSidebar()">⚙️ Lọc</button>
+            </div>
+            
+            <div class="grid-container" id="product-grid"></div>
+        </main>
     </div>
 
+    <!-- Mạng xã hội & Back to top -->
     <div class="floating-social">
         <a href="https://zalo.me/0363535838" target="_blank" class="social-btn btn-zalo">
             <svg class="social-icon" viewBox="0 0 24 24"><path d="M21.4 10.6C21.4 6 17.2 2.2 12 2.2C6.8 2.2 2.6 6 2.6 10.6C2.6 13 3.8 15.2 5.8 16.7L4.6 19.8L7.9 18.5C9.2 19 10.6 19.3 12 19.3C17.2 19.3 21.4 15.6 21.4 10.6ZM12 17.8C10.7 17.8 9.5 17.6 8.3 17.1L8 16.9L5.8 17.8L6.6 15.7L6.3 15.4C4.6 14.1 3.6 12.4 3.6 10.6C3.6 6.8 7.4 3.7 12 3.7C16.6 3.7 20.4 6.8 20.4 10.6C20.4 14.4 16.6 17.8 12 17.8ZM16.3 8.3L13.1 11.7L10.3 9.4L4.8 15.4L8.1 12L10.8 14.3L16.3 8.3Z"/></svg>
@@ -242,68 +197,70 @@
             Fanpage
         </a>
     </div>
-
     <button id="backToTopBtn" onclick="scrollToTop()" title="Lên đầu trang">⬆️</button>
 
     <script>
         let globalData = [];
         let dictionaryData = []; 
         let selections = {}; 
+        
         let currentBrand = 'Tất cả';
         let currentPriceRange = 'ALL'; 
+        let currentSize = 'ALL';
         let currentSearch = '';
         let isOrderMode = false;
 
-        // DÁN LINK GOOGLE SHEET (ĐUÔI .CSV) CHUẨN VÀO ĐÂY:
+        // BỘ NHỚ LƯU TRỮ CÁC MÃ BỊ THIẾU ẢNH (ĐỂ ĐẨY VÀO TAB "KHÁC")
+        let missingImages = new Set(); 
+
+        // ⚠️⚠️ DÁN LINK GOOGLE SHEET CSV CỦA MÀY VÀO ĐÂY ⚠️⚠️
         const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
 
+        // Scroll Logic
         let lastScrollTop = 0;
         let backToTopBtn = document.getElementById("backToTopBtn");
-
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             let header = document.getElementById("main-header");
-            if (currentScroll > lastScrollTop && currentScroll > 200) header.classList.add("header-hidden");
+            if (currentScroll > lastScrollTop && currentScroll > 150) header.classList.add("header-hidden");
             else header.classList.remove("header-hidden");
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-
             if (currentScroll > 300) backToTopBtn.classList.add("show");
             else backToTopBtn.classList.remove("show");
         }, false);
-
         function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
 
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+            document.getElementById('sidebarOverlay').classList.toggle('show');
+        }
+
+        // TẢI DATA
         Promise.all([
             fetch('data.json').then(res => res.json()),
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
             globalData = jsonData;
 
-            // BỘ NHAI CSV XỊN XÒ (XỬ LÝ ĐƯỢC 3 CỘT) - Vượt qua mọi thể loại ngoặc kép
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
                 let line = lines[i].trim();
                 if(!line) continue;
-                
-                // Thuật toán băm CSV chuẩn: Tách bằng dấu phẩy nhưng bỏ qua dấu phẩy trong ngoặc kép
                 let parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
                 if(parts.length >= 2) {
-                    let fullName = parts[0].replace(/^"|"$/g, '').trim(); // Cột A
-                    let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); // Cột B
-                    
-                    // NẾU CÓ CỘT C THÌ LẤY CỘT C, NẾU KHÔNG THÌ LẤY CỘT A ĐỂ ĐI TÌM
+                    let fullName = parts[0].replace(/^"|"$/g, '').trim(); 
+                    let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
                     let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
-                    
                     dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode });
                 }
             }
 
-            renderTabs();
+            renderSidebarFilters();
             renderGrid();
         }).catch(err => {
-            console.log("Lỗi mạng hoặc sai Link CSV: ", err);
+            console.log("Lỗi mạng: ", err);
             fetch('data.json').then(res => res.json()).then(data => {
-                globalData = data; renderTabs(); renderGrid();
+                globalData = data; renderSidebarFilters(); renderGrid();
             });
         });
 
@@ -313,40 +270,77 @@
             btns[1].classList.toggle('active', mode === 'ORDER');
             
             isOrderMode = (mode === 'ORDER');
-            document.getElementById('filter-section').style.display = isOrderMode ? 'none' : 'block';
+            document.getElementById('sidebar').style.display = isOrderMode ? 'none' : 'block';
             
             if (isOrderMode) {
                 document.getElementById('product-grid').innerHTML = `
                     <div class="empty-state">
                         <h2>🚀 Danh sách Hàng Order đang được cập nhật!</h2>
+                        <p>Vui lòng liên hệ Fanpage hoặc Zalo để shop tư vấn trực tiếp nhé!</p>
                     </div>`;
             } else {
                 renderGrid();
             }
         }
 
-        function renderTabs() {
-            const tabContainer = document.getElementById('tabs-container');
+        // TẠO BỘ LỌC BÊN TRÁI TỰ ĐỘNG
+        function renderSidebarFilters() {
+            // 1. TẠO MENU THƯƠNG HIỆU
+            const brandContainer = document.getElementById('brand-filters');
             const brandsInData = [...new Set(globalData.map(p => p.brand))];
             const order = ["Nike", "Adidas", "Asics", "Onitsuka Tiger", "Skechers", "On", "Lacoste", "Babolat", "Wilson"];
             brandsInData.sort((a, b) => (order.indexOf(a) !== -1 ? order.indexOf(a) : 99) - (order.indexOf(b) !== -1 ? order.indexOf(b) : 99));
-            const allBrands = ['Tất cả', ...brandsInData];
             
-            tabContainer.innerHTML = allBrands.map(b => `
-                <button class="tab-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">${b}</button>
+            // Ép thêm tab "Khác" vào cuối danh sách
+            const allBrands = ['Tất cả', ...brandsInData, 'Khác']; 
+            
+            brandContainer.innerHTML = allBrands.map(b => `
+                <button class="filter-item brand-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">
+                    ${b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Khác (Hàng hiếm/Chưa phân loại)' : '🔸 ' + b)}
+                </button>
+            `).join('');
+
+            // 2. TẠO BẢNG SIZE (Lọc ra các size không trùng nhau và sắp xếp)
+            const sizeContainer = document.getElementById('size-filters');
+            let allSizes = new Set();
+            globalData.forEach(p => p.variants.forEach(v => allSizes.add(v.size)));
+            
+            // Thuật toán sắp xếp Size (số xếp trước, chữ xếp sau)
+            let sortedSizes = Array.from(allSizes).sort((a,b) => {
+               let na = parseFloat(a); let nb = parseFloat(b);
+               if(!isNaN(na) && !isNaN(nb)) return na - nb;
+               return a.localeCompare(b);
+            });
+
+            sizeContainer.innerHTML = sortedSizes.map(s => `
+                <button class="size-filter-btn" onclick="filterSize('${s}', this)">${s}</button>
             `).join('');
         }
 
+        // CÁC HÀM XỬ LÝ KHI CLICK BỘ LỌC
         function filterBrand(brand, btn) {
             currentBrand = brand;
-            document.querySelectorAll('#tabs-container .tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active'); renderGrid();
+            document.querySelectorAll('.brand-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active'); 
+            if(window.innerWidth <= 900) toggleSidebar(); // Đóng sidebar trên mobile sau khi chọn
+            renderGrid();
         }
 
         function filterPrice(range, btn) {
             currentPriceRange = range;
             document.querySelectorAll('.price-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active'); renderGrid();
+            btn.classList.add('active'); 
+            renderGrid();
+        }
+
+        function filterSize(size, btn) {
+            currentSize = size;
+            document.querySelectorAll('.size-filter-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            
+            // Hiển thị/Ẩn nút "Xóa lọc" size
+            document.getElementById('clear-size').style.display = size === 'ALL' ? 'none' : 'inline';
+            renderGrid();
         }
 
         function handleSearch() {
@@ -354,29 +348,55 @@
             renderGrid();
         }
 
+        // ⚠️ TUYỆT CHIÊU BỌC THÉP: XỬ LÝ ẢNH LỖI (CHUYỂN SANG TAB KHÁC)
+        window.handleImgErr = function(img, shoeCode, originalBrand) {
+            img.onerror = null; // Ngăn nó lặp vô hạn
+            img.src = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=CHUA+CO+ANH';
+            
+            // Ghi nhớ đôi này bị mù ảnh
+            missingImages.add(shoeCode);
+            
+            // ĐỘT BIẾN: Nếu đang đứng ở Thương hiệu gốc (VD: Nike) mà nó bị mù, thì GIẤU nó đi luôn!
+            if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
+                let card = img.closest('.product-card');
+                if (card) card.style.display = 'none';
+            }
+        };
+
+        // HIỂN THỊ LƯỚI SẢN PHẨM
         function renderGrid() {
             if (isOrderMode) return; 
             
             const grid = document.getElementById('product-grid');
             grid.innerHTML = ''; 
 
-            let filtered = globalData;
-            
-            if (currentBrand !== 'Tất cả') filtered = filtered.filter(p => p.brand === currentBrand);
-            if (currentSearch !== '') filtered = filtered.filter(p => p.name.toLowerCase().includes(currentSearch) || p.brand.toLowerCase().includes(currentSearch));
+            let filtered = globalData.filter(p => {
+                const shoeCode = p.name.trim();
+                
+                // 1. CHUYỂN NHÀ: Nếu mã này đã từng bị lỗi ảnh -> Phán nó thuộc thương hiệu 'Khác'
+                const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
+                
+                // Lọc Thương hiệu
+                if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
+                
+                // Lọc Size
+                if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
 
-            if (currentPriceRange !== 'ALL') {
-                filtered = filtered.filter(p => {
+                // Lọc Tìm kiếm
+                if (currentSearch !== '' && !p.name.toLowerCase().includes(currentSearch) && !p.brand.toLowerCase().includes(currentSearch)) return false;
+
+                // Lọc Giá
+                if (currentPriceRange !== 'ALL') {
                     let minPrice = Math.min(...p.variants.map(v => v.price));
                     if (currentPriceRange === '1-2') return minPrice >= 1000000 && minPrice <= 2000000;
                     if (currentPriceRange === '2-3') return minPrice > 2000000 && minPrice <= 3000000;
                     if (currentPriceRange === '3+') return minPrice > 3000000;
-                    return true;
-                });
-            }
+                }
+                return true;
+            });
 
             if (filtered.length === 0) {
-                grid.innerHTML = `<div class="empty-state">Không tìm thấy mã giày nào phù hợp với bộ lọc 🥲</div>`;
+                grid.innerHTML = `<div class="empty-state"><h3>Không tìm thấy mẫu nào phù hợp 🥲</h3><p>Hãy thử xóa bộ lọc hoặc tìm mã khác xem sao nhé!</p></div>`;
                 return;
             }
 
@@ -386,23 +406,20 @@
                 const prices = p.variants.map(v => v.price);
                 const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
 
-                const shoeCode = p.name.trim(); // Mã trong kho JSON (Ví dụ: Giày On THE ROGER PRO 2 TRẮNG XANH Chính Hãng)
+                const shoeCode = p.name.trim();
                 
-                // MẮT THẦN NÂNG CẤP LẦN 2: Ưu tiên khớp chính xác 100% với Cột C, nếu không thấy mới đi tìm ở Cột A
                 const matchedItem = dictionaryData.find(d => 
                     (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
                 );
                 
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
-                // Nếu Cột B có link thì dùng Cột B. Nếu Cột B BỊ BỎ TRỐNG thì tự động lấy ảnh up trên GitHub!
-const displayImg = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
+                const displayImg = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 
-                const defaultFallbackImg = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=BAO+NGU+SNEAKER';
-
+                // Lưu ý dòng onerror gọi hàm handleImgErr tao vừa viết ở trên
                 card.innerHTML = `
                     <div class="product-img-wrapper">
-                        <img src="${displayImg}" class="product-img" alt="${shoeCode}" onerror="this.onerror=null; this.src='${defaultFallbackImg}';">
+                        <img src="${displayImg}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
                     </div>
                     <div>
                         <div class="brand-tag">${p.brand}</div>
