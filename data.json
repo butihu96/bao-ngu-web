@@ -2528,12 +2528,17 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "39.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
                 "size": "39",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             },
             {
-                "size": "39.5",
+                "size": "40",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             },
@@ -2543,7 +2548,7 @@
                 "price_display": "3,300,000đ"
             },
             {
-                "size": "40",
+                "size": "41.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             },
@@ -2554,6 +2559,11 @@
             },
             {
                 "size": "42.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "43.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             },
@@ -2590,6 +2600,11 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "40",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
                 "size": "40.5",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
@@ -2601,6 +2616,11 @@
             },
             {
                 "size": "42",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
+                "size": "42.5",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
             },
