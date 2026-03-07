@@ -395,7 +395,8 @@
                 );
                 
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
-                const displayImg = matchedItem ? matchedItem.image : `images/${shoeCode}.jpg`;
+                // Nếu Cột B có link thì dùng Cột B. Nếu Cột B BỊ BỎ TRỐNG thì tự động lấy ảnh up trên GitHub!
+const displayImg = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 
                 const defaultFallbackImg = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=BAO+NGU+SNEAKER';
 
