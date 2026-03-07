@@ -2979,6 +2979,17 @@
         ]
     },
     {
+        "name": "1041A510-001",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "39",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            }
+        ]
+    },
+    {
         "name": "1041A510-101",
         "brand": "Asics",
         "variants": [
@@ -3039,12 +3050,12 @@
                 "price_display": "2,400,000đ"
             },
             {
-                "size": "42",
+                "size": "42.5",
                 "price": 2400000,
                 "price_display": "2,400,000đ"
             },
             {
-                "size": "42.5",
+                "size": "42",
                 "price": 2400000,
                 "price_display": "2,400,000đ"
             },
@@ -5014,6 +5025,11 @@
         "name": "3ME10574274",
         "brand": "On",
         "variants": [
+            {
+                "size": "37.5",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
             {
                 "size": "38",
                 "price": 3900000,
