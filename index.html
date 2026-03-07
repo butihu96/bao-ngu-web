@@ -236,11 +236,77 @@
         }
 
         // TẢI DATA
-        Promise.all([
+       Promise.all([
             fetch('data.json').then(res => res.json()),
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
+            
+            // =========================================================
+            // BỘ MÁY GIẢI PHẪU DỮ LIỆU LỖI (CHỮA BỆNH DÍNH CHÙM SIZE)
+            // =========================================================
+            jsonData.forEach(p => {
+                let variantMap = {}; 
+                p.variants.forEach(v => {
+                    let sizeStr = v.size.toString();
+                    
+                    // 1. Dao mổ Regex: Cắt chỗ dính nhau (VD: 23.537 -> 23.5 và 37)
+                    let fixedStr = sizeStr.replace(/(\d{2}(?:\.\d)?)(3[4-9]|4[0-9])/g, '$1 $2');
+                    
+                    // 2. Chém hết dấu phẩy, gạch chéo, xuống dòng thành khoảng trắng
+                    fixedStr = fixedStr.replace(/[,/\n\r\t-]/g, ' ');
+                    
+                    // 3. Tách thành các cục size nhỏ
+                    let allSubSizes = fixedStr.split(/\s+/).filter(s => s !== '');
+                    
+                    // 4. Mắt thần: Quét xem đây có phải giày người lớn (Có size >= 35 không)
+                    let hasAdultEur = allSubSizes.some(s => parseFloat(s) >= 35 && parseFloat(s) <= 49);
+
+                    // 5. Lọc rác: Giữ size EUR, thẳng tay VỨT size CM (từ 20 đến 33.5) đi cho sạch web
+                    let cleanSizes = allSubSizes.filter(s => {
+                        let num = parseFloat(s);
+                        if (isNaN(num)) return true; // Giữ lại chữ (S, M, Free size)
+                        if (hasAdultEur && num >= 20 && num <= 33.5) return false; // Vứt size CM
+                        return true;
+                    });
+
+                    if (cleanSizes.length === 0) cleanSizes = [sizeStr]; // Dự phòng lỗi
+
+                    // 6. Gộp các size lại, tự động lấy giá tốt nhất nếu bị trùng
+                    cleanSizes.forEach(sz => {
+                        if (!variantMap[sz] || v.price < variantMap[sz].price) {
+                            variantMap[sz] = { size: sz, price: v.price, price_display: v.price_display };
+                        }
+                    });
+                });
+
+                // Cập nhật lại mảng Size đã được giặt sạch, sắp xếp từ bé đến lớn
+                p.variants = Object.values(variantMap).sort((a, b) => {
+                    let na = parseFloat(a.size); let nb = parseFloat(b.size);
+                    if (!isNaN(na) && !isNaN(nb)) return na - nb;
+                    return a.size.localeCompare(b.size);
+                });
+            });
+            // =========================================================
+
             globalData = jsonData;
+
+            // BỘ NHAI CSV XỊN XÒ (XỬ LÝ ĐƯỢC 3 CỘT) - Vượt qua mọi thể loại ngoặc kép
+            let lines = csvText.split('\n');
+            for(let i = 1; i < lines.length; i++) {
+                let line = lines[i].trim();
+                if(!line) continue;
+                
+                let parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                if(parts.length >= 2) {
+                    let fullName = parts[0].replace(/^"|"$/g, '').trim(); 
+                    let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
+                    let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
+                    dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode });
+                }
+            }
+
+            renderSidebarFilters();
+            renderGrid();
 
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
