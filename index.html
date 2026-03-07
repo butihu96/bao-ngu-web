@@ -9,10 +9,7 @@
     <meta property="og:title" content="Bào Ngư Sneaker - Hệ Thống Giày Chính Hãng">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/111111/ffffff?text=BAO+NGU+SNEAKER">
     
-    <!-- ========================================== -->
-    <!-- MẮT THẦN GOOGLE ANALYTICS (ĐO LƯỜNG TRAFFIC) -->
-    <!-- Đã lắp mã G-VC1LQJN5S6 của đại ca! -->
-    <!-- ========================================== -->
+    <!-- MẮT THẦN GOOGLE ANALYTICS G-VC1LQJN5S6 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC1LQJN5S6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -77,7 +74,11 @@
         .product-img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; }
         .product-card:hover .product-img { transform: scale(1.05); }
 
-        /* TEM HOT / NEW */
+        /* NÚT SHARE GÓC TRÁI */
+        .share-btn { position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 10; transition: all 0.2s; font-size: 15px;}
+        .share-btn:hover { background: #111; color: #fff; transform: scale(1.1); }
+
+        /* TEM HOT GÓC PHẢI */
         .hot-badge { position: absolute; top: 10px; right: 10px; background: #e74c3c; color: white; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 900; z-index: 10; box-shadow: 0 4px 10px rgba(231,76,60,0.5); text-transform: uppercase; animation: pulse-hot 1.5s infinite; letter-spacing: 1px;}
         @keyframes pulse-hot { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 
@@ -137,6 +138,7 @@
             .social-icon { width: 15px; height: 15px; margin-right: 5px; }
             #backToTopBtn { bottom: 15px; left: 15px; width: 38px; height: 38px; font-size: 16px; }
             .hot-badge { font-size: 9px; padding: 3px 8px; top: 5px; right: 5px;}
+            .share-btn { width: 28px; height: 28px; font-size: 13px; top: 5px; left: 5px; }
         }
     </style>
 </head>
@@ -164,7 +166,7 @@
             <div class="filter-group">
                 <div class="filter-title">Thương Hiệu</div>
                 <div class="filter-list" id="brand-filters">
-                    <!-- JS sẽ đẩy danh sách vào đây -->
+                    <!-- JS đẩy danh sách vào đây -->
                 </div>
             </div>
 
@@ -181,7 +183,7 @@
             <div class="filter-group">
                 <div class="filter-title">Kích Cỡ (Size) <span id="clear-size" style="font-size: 10px; color:#e74c3c; cursor:pointer; display:none;" onclick="filterSize('ALL', null)">Xóa lọc</span></div>
                 <div class="size-grid-filter" id="size-filters">
-                    <!-- JS sẽ đẩy bảng size vào đây -->
+                    <!-- JS đẩy bảng size vào đây -->
                 </div>
             </div>
         </aside>
@@ -196,7 +198,6 @@
         </main>
     </div>
 
-    <!-- NÚT MẠNG XÃ HỘI (Zalo & Messenger Cá Nhân) -->
     <div class="floating-social">
         <a href="https://zalo.me/0363535838" target="_blank" class="social-btn btn-zalo">
             <svg class="social-icon" viewBox="0 0 24 24"><path d="M21.4 10.6C21.4 6 17.2 2.2 12 2.2C6.8 2.2 2.6 6 2.6 10.6C2.6 13 3.8 15.2 5.8 16.7L4.6 19.8L7.9 18.5C9.2 19 10.6 19.3 12 19.3C17.2 19.3 21.4 15.6 21.4 10.6ZM12 17.8C10.7 17.8 9.5 17.6 8.3 17.1L8 16.9L5.8 17.8L6.6 15.7L6.3 15.4C4.6 14.1 3.6 12.4 3.6 10.6C3.6 6.8 7.4 3.7 12 3.7C16.6 3.7 20.4 6.8 20.4 10.6C20.4 14.4 16.6 17.8 12 17.8ZM16.3 8.3L13.1 11.7L10.3 9.4L4.8 15.4L8.1 12L10.8 14.3L16.3 8.3Z"/></svg>
@@ -224,7 +225,7 @@
         
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Onitsuka Tiger", "Skechers", "On", "Lacoste", "Babolat", "Wilson"];
 
-        // LINK GOOGLE SHEET (Nguồn từ điển & Tag)
+        // LINK GOOGLE SHEET CSV CỦA BẠN
         const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
 
         let lastScrollTop = 0;
@@ -250,7 +251,7 @@
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
             
-            // 1. NHAI DATA TỪ GOOGLE SHEET (CÓ THÊM CỘT D ĐỂ ĐỌC TAG)
+            // 1. DATA GOOGLE SHEET
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
                 let line = lines[i].trim();
@@ -260,17 +261,16 @@
                     let fullName = parts[0].replace(/^"|"$/g, '').trim(); 
                     let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
                     let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
-                    let hotTag = parts[3] ? parts[3].replace(/^"|"$/g, '').trim() : ''; // CỘT D
+                    let hotTag = parts[3] ? parts[3].replace(/^"|"$/g, '').trim() : ''; 
                     dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode, tag: hotTag });
                 }
             }
 
-            // 2. GIẢI PHẪU DỮ LIỆU KHO (Chữa dính chùm + Ép hãng + Ép size)
+            // 2. GIẢI PHẪU KHO 
             jsonData.forEach(p => {
                 let variantMap = {}; 
                 p.variants.forEach(v => {
                     let sizeStr = v.size.toString();
-                    
                     let fixedStr = sizeStr.replace(/(\d{2}(?:\.\d)?)(3[4-9]|4[0-9])/g, '$1 $2');
                     fixedStr = fixedStr.replace(/[,/\n\r\t-]/g, ' ');
                     
@@ -287,8 +287,8 @@
                     if (cleanSizes.length === 0) cleanSizes = [sizeStr]; 
 
                     cleanSizes.forEach(sz => {
-                        if (sz.endsWith('.6')) sz = sz.slice(0, -2) + '.5'; // 38.6 -> 38.5
-                        if (sz.endsWith('.3')) sz = sz.slice(0, -2);        // 37.3 -> 37
+                        if (sz.endsWith('.6')) sz = sz.slice(0, -2) + '.5'; 
+                        if (sz.endsWith('.3')) sz = sz.slice(0, -2);        
 
                         if (!variantMap[sz] || v.price < variantMap[sz].price) {
                             variantMap[sz] = { size: sz, price: v.price, price_display: v.price_display };
@@ -356,7 +356,6 @@
             const brandsInData = [...new Set(globalData.map(p => p.brand))];
             brandsInData.sort((a, b) => (TARGET_BRANDS.indexOf(a) !== -1 ? TARGET_BRANDS.indexOf(a) : 99) - (TARGET_BRANDS.indexOf(b) !== -1 ? TARGET_BRANDS.indexOf(b) : 99));
             
-            // THÊM NÚT HÀNG HOT VÀO MENU
             const allBrands = ['Tất cả', '🔥 HÀNG HOT', ...brandsInData, 'Khác']; 
             
             brandContainer.innerHTML = allBrands.map(b => {
@@ -435,7 +434,6 @@
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
                 );
                 
-                // LỌC THEO TAB (Bao gồm cả Tab HÀNG HOT)
                 if (currentBrand === '🔥 HÀNG HOT') {
                     if (!matchedItem || !matchedItem.tag || matchedItem.tag === '') return false;
                 } else {
@@ -473,13 +471,15 @@
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                 const displayImg = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 
-                // KIỂM TRA XEM CÓ TAG TRONG SHEET KHÔNG ĐỂ HIỂN THỊ TEM ĐỎ
                 const tagHtml = (matchedItem && matchedItem.tag && matchedItem.tag !== '') ? `<div class="hot-badge">${matchedItem.tag}</div>` : '';
 
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.innerHTML = `
                     <div class="product-img-wrapper">
+                        <!-- NÚT SHARE -->
+                        <button class="share-btn" onclick="shareProduct('${displayFullName.replace(/'/g, "\\'")}')" title="Chia sẻ mẫu này">🔗</button>
+                        
                         ${tagHtml}
                         <img src="${displayImg}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
                     </div>
@@ -515,6 +515,29 @@
             const text = `Hi shop, mình cần tư vấn mẫu: ${nm} (Size: ${sz})`;
             const zalo = `https://zalo.me/0363535838?text=${encodeURIComponent(text)}`;
             window.open(zalo, '_blank');
+        }
+
+        // HÀM CHIA SẺ SẢN PHẨM GỌN GÀNG
+        function shareProduct(productName) {
+            const shareData = {
+                title: productName,
+                text: productName,
+                url: 'https://baongu.store'
+            };
+            
+            // Nếu khách dùng Mobile (Sẽ nảy bảng Zalo, Messenger, IG gốc của máy)
+            if (navigator.share) {
+                navigator.share(shareData).catch(err => {
+                    console.log('Khách hủy share:', err);
+                });
+            } else {
+                // Nếu khách dùng PC -> Tự động copy nội dung
+                navigator.clipboard.writeText(`${shareData.text} \nLink: ${shareData.url}`).then(() => {
+                    alert('✅ Đã copy thông tin sản phẩm! Bạn dán (Ctrl+V) để gửi cho bạn bè nhé.');
+                }).catch(err => {
+                    alert('❌ Trình duyệt không hỗ trợ, bạn tự copy link baongu.store nhé!');
+                });
+            }
         }
     </script>
 </body>
