@@ -282,11 +282,6 @@
                 "price_display": "1,500,000đ"
             },
             {
-                "size": "36",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 1500000,
                 "price_display": "1,500,000đ"
@@ -643,6 +638,11 @@
             },
             {
                 "size": "37.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "38",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
             },
@@ -5231,6 +5231,42 @@
         ]
     },
     {
+        "name": "3WF30031217",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "40",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            }
+        ]
+    },
+    {
         "name": "3WF30032626",
         "brand": "On",
         "variants": [
@@ -5374,6 +5410,37 @@
         ]
     },
     {
+        "name": "THE ROGER PRO FIRE XÁM ĐEN",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "41",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "44",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            }
+        ]
+    },
+    {
         "name": "VP12TRAWSNG",
         "brand": "On",
         "variants": [
@@ -5440,6 +5507,37 @@
                 "size": "42.5",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
+            }
+        ]
+    },
+    {
+        "name": "751SMA000311C",
+        "brand": "Lacoste",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
             }
         ]
     },
@@ -5924,6 +6022,37 @@
                 "size": "44",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
+            }
+        ]
+    },
+    {
+        "name": "WRS338580U",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2690000,
+                "price_display": "2,690,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2690000,
+                "price_display": "2,690,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2690000,
+                "price_display": "2,690,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2690000,
+                "price_display": "2,690,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2690000,
+                "price_display": "2,690,000đ"
             }
         ]
     },
