@@ -246,12 +246,16 @@
     <button id="backToTopBtn" onclick="scrollToTop()" title="Lên đầu trang">⬆️</button>
 
     <script>
-        let globalData = [];
+       let globalData = [];
+        let dictionaryData = []; // BỘ NHỚ TỪ ĐIỂN TỪ GOOGLE SHEET
         let selections = {}; 
         let currentBrand = 'Tất cả';
         let currentPriceRange = 'ALL'; 
         let currentSearch = '';
         let isOrderMode = false;
+
+        // DÁN LINK GOOGLE SHEET (ĐUÔI .CSV) CỦA MÀY VÀO ĐÂY:
+        const DICTIONARY_SHEET_URL = "LINK_GOOGLE_SHEET_CSV_CUA_MAY_O_DAY";
 
         let lastScrollTop = 0;
         let backToTopBtn = document.getElementById("backToTopBtn");
@@ -259,32 +263,45 @@
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             let header = document.getElementById("main-header");
-            
-            if (currentScroll > lastScrollTop && currentScroll > 200) {
-                header.classList.add("header-hidden");
-            } else {
-                header.classList.remove("header-hidden");
-            }
+            if (currentScroll > lastScrollTop && currentScroll > 200) header.classList.add("header-hidden");
+            else header.classList.remove("header-hidden");
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
-            if (currentScroll > 300) {
-                backToTopBtn.classList.add("show");
-            } else {
-                backToTopBtn.classList.remove("show");
-            }
+            if (currentScroll > 300) backToTopBtn.classList.add("show");
+            else backToTopBtn.classList.remove("show");
         }, false);
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
 
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => {
-                globalData = data;
-                renderTabs();
-                renderGrid();
+        // TUYỆT CHIÊU KÉO 2 NGUỒN DATA CÙNG LÚC (KHO JSON + TỪ ĐIỂN SHEET)
+        Promise.all([
+            fetch('data.json').then(res => res.json()),
+            fetch(DICTIONARY_SHEET_URL).then(res => res.text())
+        ]).then(([jsonData, csvText]) => {
+            globalData = jsonData;
+
+            // Xử lý Google Sheet thành Từ Điển
+            let lines = csvText.split('\n');
+            for(let i = 1; i < lines.length; i++) {
+                let line = lines[i].trim();
+                if(!line) continue;
+                let parts = line.split('","');
+                if(parts.length >= 2) {
+                    let fullName = parts[0].replace(/^"/, ''); // Cột 1: Tên gộp Mã
+                    let imgUrl = parts[1].replace(/"$/, ''); // Cột 2: Link Ảnh
+                    dictionaryData.push({ fullName: fullName, image: imgUrl });
+                }
+            }
+
+            renderTabs();
+            renderGrid();
+        }).catch(err => {
+            console.log("Lỗi tải data: ", err);
+            // Nếu lỗi mạng không tải được Google Sheet thì vẫn load kho JSON lên
+            fetch('data.json').then(res => res.json()).then(data => {
+                globalData = data; renderTabs(); renderGrid();
             });
+        });
 
         function switchMainTab(mode) {
             const btns = document.querySelectorAll('.main-tab-btn');
@@ -298,7 +315,6 @@
                 document.getElementById('product-grid').innerHTML = `
                     <div class="empty-state">
                         <h2>🚀 Danh sách Hàng Order đang được cập nhật!</h2>
-                        <p>Hàng ngàn mẫu mã chính hãng chuẩn Authentic đang được Bào Ngư Sneaker tuyển chọn.<br>Quý khách vui lòng liên hệ trực tiếp qua Zalo hoặc Fanpage để được tư vấn nhé!</p>
                     </div>`;
             } else {
                 renderGrid();
@@ -309,7 +325,6 @@
             const tabContainer = document.getElementById('tabs-container');
             const brandsInData = [...new Set(globalData.map(p => p.brand))];
             const order = ["Nike", "Adidas", "Asics", "Onitsuka Tiger", "Skechers", "On", "Lacoste", "Babolat", "Wilson"];
-            
             brandsInData.sort((a, b) => (order.indexOf(a) !== -1 ? order.indexOf(a) : 99) - (order.indexOf(b) !== -1 ? order.indexOf(b) : 99));
             const allBrands = ['Tất cả', ...brandsInData];
             
@@ -321,15 +336,13 @@
         function filterBrand(brand, btn) {
             currentBrand = brand;
             document.querySelectorAll('#tabs-container .tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderGrid();
+            btn.classList.add('active'); renderGrid();
         }
 
         function filterPrice(range, btn) {
             currentPriceRange = range;
             document.querySelectorAll('.price-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderGrid();
+            btn.classList.add('active'); renderGrid();
         }
 
         function handleSearch() {
@@ -345,13 +358,8 @@
 
             let filtered = globalData;
             
-            if (currentBrand !== 'Tất cả') {
-                filtered = filtered.filter(p => p.brand === currentBrand);
-            }
-            
-            if (currentSearch !== '') {
-                filtered = filtered.filter(p => p.name.toLowerCase().includes(currentSearch) || p.brand.toLowerCase().includes(currentSearch));
-            }
+            if (currentBrand !== 'Tất cả') filtered = filtered.filter(p => p.brand === currentBrand);
+            if (currentSearch !== '') filtered = filtered.filter(p => p.name.toLowerCase().includes(currentSearch) || p.brand.toLowerCase().includes(currentSearch));
 
             if (currentPriceRange !== 'ALL') {
                 filtered = filtered.filter(p => {
@@ -374,17 +382,28 @@
                 const prices = p.variants.map(v => v.price);
                 const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
 
+                // ==========================================
+                // THUẬT TOÁN ĐỒNG BỘ: TÌM KIẾM THEO CODE
+                // ==========================================
+                const shoeCode = p.name; // Mã code lấy từ file data.json (Ví dụ: 1041A330-400)
+                
+                // Lục tung Google Sheet xem có cái Tên nào chứa đoạn Code này không
+                const matchedItem = dictionaryData.find(d => d.fullName.includes(shoeCode));
+                
+                // NẾU TÌM THẤY: Lấy tên dài và Link ảnh nét từ đối thủ. 
+                // NẾU KHÔNG THẤY: Tự động ghép tên chữa cháy và dùng ảnh up GitHub (như cũ).
+                const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
+                const displayImg = matchedItem ? matchedItem.image : `images/${shoeCode}.jpg`;
+                
                 const defaultFallbackImg = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=BAO+NGU+SNEAKER';
-                const imgSrc = `images/${p.name}.jpg`;
 
-                // Render UI mới: Ảnh khổng lồ, thông tin compact sang trọng
                 card.innerHTML = `
                     <div class="product-img-wrapper">
-                        <img src="${imgSrc}" class="product-img" alt="${p.name}" onerror="this.onerror=null; this.src='${defaultFallbackImg}';">
+                        <img src="${displayImg}" class="product-img" alt="${shoeCode}" onerror="this.onerror=null; this.src='${defaultFallbackImg}';">
                     </div>
                     <div>
                         <div class="brand-tag">${p.brand}</div>
-                        <div class="product-name">Giày ${p.brand} ${p.name}</div>
+                        <div class="product-name">${displayFullName}</div>
                         <div class="price-container-card">
                             <span class="price" id="price-${idx}">${displayPrice}</span>
                         </div>
@@ -392,11 +411,11 @@
                         <div class="size-section">
                             <span class="size-label">Bảng Size (Click để chọn)</span>
                             <div class="size-container">
-                                ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${p.name.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
+                                ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${shoeCode.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
                             </div>
                         </div>
                     </div>
-                    <button class="order-btn" onclick="order('${p.name.replace(/'/g, "\\'")}')">Liên Hệ</button>
+                    <button class="order-btn" onclick="order('${displayFullName.replace(/'/g, "\\'")}')">Liên Hệ</button>
                 `;
                 grid.appendChild(card);
             });
@@ -410,9 +429,8 @@
         }
 
         function order(nm) {
-            const sz = selections[nm];
-            if (!sz) return alert("Bạn ơi, chọn giúp shop 1 Size trước khi chốt đơn nhé!");
-            const text = `Hi shop, mình cần tư vấn mã ${nm} size ${sz}`;
+            const sz = selections[nm] || "chưa chọn size";
+            const text = `Hi shop, mình cần tư vấn mẫu: ${nm} (Size: ${sz})`;
             const zalo = `https://zalo.me/0363535838?text=${encodeURIComponent(text)}`;
             window.open(zalo, '_blank');
         }
