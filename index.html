@@ -517,22 +517,22 @@
             window.open(zalo, '_blank');
         }
 
-        // HÀM CHIA SẺ SẢN PHẨM GỌN GÀNG
+        // HÀM CHIA SẺ SẢN PHẨM GỌN GÀNG (ĐÃ FIX LỖI LẶP CHỮ)
         function shareProduct(productName) {
+            // Chỉ gửi text chứa tên giày và gửi riêng URL để tránh Zalo/Mess cộng gộp
             const shareData = {
-                title: productName,
                 text: productName,
                 url: 'https://baongu.store'
             };
             
-            // Nếu khách dùng Mobile (Sẽ nảy bảng Zalo, Messenger, IG gốc của máy)
+            // Nếu khách dùng điện thoại (Gọi bảng share gốc của máy)
             if (navigator.share) {
                 navigator.share(shareData).catch(err => {
                     console.log('Khách hủy share:', err);
                 });
             } else {
-                // Nếu khách dùng PC -> Tự động copy nội dung
-                navigator.clipboard.writeText(`${shareData.text} \nLink: ${shareData.url}`).then(() => {
+                // Nếu khách dùng máy tính (Tự động copy link)
+                navigator.clipboard.writeText(`${productName}\nhttps://baongu.store`).then(() => {
                     alert('✅ Đã copy thông tin sản phẩm! Bạn dán (Ctrl+V) để gửi cho bạn bè nhé.');
                 }).catch(err => {
                     alert('❌ Trình duyệt không hỗ trợ, bạn tự copy link baongu.store nhé!');
