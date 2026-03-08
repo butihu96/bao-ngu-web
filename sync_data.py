@@ -196,6 +196,18 @@ def sync_data():
                         elif config["type"] == "kho_3":
                             name_size_val = get_val(row, config["col_name_size"])
                             price_val = get_val(row, config["col_price"])
+                            qty_val = get_val(row, config["col_qty"])
+                            
+                            # ---- CHỐT CHẶN SỐ LƯỢNG KHO 3 ----
+                            try:
+                                so_luong = int(float(qty_val))
+                            except ValueError:
+                                so_luong = 0
+                            
+                            if so_luong < 1: 
+                                continue # Nếu số lượng = 0, âm, hoặc chữ thì vứt luôn
+                            # ----------------------------------
+
                             if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
                             
                             raw_code = loc_ma_giay(name_size_val)
