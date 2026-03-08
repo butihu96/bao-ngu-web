@@ -1175,11 +1175,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "41",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
@@ -1743,11 +1738,6 @@
         "name": "HV1453-100",
         "brand": "Nike",
         "variants": [
-            {
-                "size": "41",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
             {
                 "size": "42.5",
                 "price": 2800000,
@@ -3088,14 +3078,14 @@
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "39",
+                "size": "39.5",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "39.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "size": "39",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
             },
             {
                 "size": "40",
@@ -3344,8 +3334,8 @@
             },
             {
                 "size": "37.5",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
+                "price": 2090000,
+                "price_display": "2,090,000đ"
             },
             {
                 "size": "38",
@@ -3607,11 +3597,6 @@
         "name": "1074A045-403",
         "brand": "Asics",
         "variants": [
-            {
-                "size": "36",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
-            },
             {
                 "size": "37",
                 "price": 1590000,
@@ -3903,16 +3888,6 @@
         "name": "1183A201-254",
         "brand": "Onitsuka Tiger",
         "variants": [
-            {
-                "size": "37",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
             {
                 "size": "39",
                 "price": 3290000,
@@ -4332,11 +4307,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "37",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -4348,11 +4318,6 @@
             },
             {
                 "size": "38",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
-                "size": "39",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
@@ -4440,11 +4405,6 @@
         "name": "1183C102-751",
         "brand": "Onitsuka Tiger",
         "variants": [
-            {
-                "size": "36",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
             {
                 "size": "37",
                 "price": 3290000,
@@ -5012,11 +4972,6 @@
             },
             {
                 "size": "38.5",
-                "price": 4200000,
-                "price_display": "4,200,000đ"
-            },
-            {
-                "size": "39",
                 "price": 4200000,
                 "price_display": "4,200,000đ"
             }
@@ -5700,6 +5655,32 @@
                 "size": "40",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
+            }
+        ]
+    },
+    {
+        "name": "WRS338500",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "41.3",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "42.6",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "43.3",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
             }
         ]
     },
