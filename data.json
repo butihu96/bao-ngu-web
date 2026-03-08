@@ -2059,11 +2059,6 @@
         "brand": "Adidas",
         "variants": [
             {
-                "size": "40",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
@@ -2120,17 +2115,6 @@
                 "size": "40",
                 "price": 1800000,
                 "price_display": "1,800,000đ"
-            }
-        ]
-    },
-    {
-        "name": "IH2559",
-        "brand": "Adidas",
-        "variants": [
-            {
-                "size": "42",
-                "price": 2200000,
-                "price_display": "2,200,000đ"
             }
         ]
     },
@@ -4103,11 +4087,6 @@
                 "size": "39",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
             }
         ]
     },
@@ -4151,11 +4130,6 @@
         "name": "1183C015-202",
         "brand": "Onitsuka Tiger",
         "variants": [
-            {
-                "size": "35.5",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
-            },
             {
                 "size": "37",
                 "price": 4000000,
