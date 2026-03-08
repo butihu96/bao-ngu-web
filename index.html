@@ -287,8 +287,14 @@
                     if (cleanSizes.length === 0) cleanSizes = [sizeStr]; 
 
                     cleanSizes.forEach(sz => {
-                        if (sz.endsWith('.6')) sz = sz.slice(0, -2) + '.5'; 
-                        if (sz.endsWith('.3')) sz = sz.slice(0, -2);        
+                        // CHUẨN HÓA LẠI QUY TẮC SIZE ADIDAS:
+                        if (sz.endsWith('.6')) {
+                            // Đuôi 2/3 (.6) -> Gộp thành size .5 (Ví dụ 36.6 -> 36.5)
+                            sz = sz.slice(0, -2) + '.5'; 
+                        } else if (sz.endsWith('.3')) {
+                            // Đuôi 1/3 (.3) -> Gộp thành size chẵn (Ví dụ 36.3 -> 36)
+                            sz = sz.slice(0, -2);        
+                        }
 
                         if (!variantMap[sz] || v.price < variantMap[sz].price) {
                             variantMap[sz] = { size: sz, price: v.price, price_display: v.price_display };
@@ -517,21 +523,18 @@
             window.open(zalo, '_blank');
         }
 
-        // HÀM CHIA SẺ SẢN PHẨM GỌN GÀNG (ĐÃ FIX LỖI LẶP CHỮ)
+        // HÀM CHIA SẺ SẢN PHẨM GỌN GÀNG 
         function shareProduct(productName) {
-            // Chỉ gửi text chứa tên giày và gửi riêng URL để tránh Zalo/Mess cộng gộp
             const shareData = {
                 text: productName,
                 url: 'https://baongu.store'
             };
             
-            // Nếu khách dùng điện thoại (Gọi bảng share gốc của máy)
             if (navigator.share) {
                 navigator.share(shareData).catch(err => {
                     console.log('Khách hủy share:', err);
                 });
             } else {
-                // Nếu khách dùng máy tính (Tự động copy link)
                 navigator.clipboard.writeText(`${productName}\nhttps://baongu.store`).then(() => {
                     alert('✅ Đã copy thông tin sản phẩm! Bạn dán (Ctrl+V) để gửi cho bạn bè nhé.');
                 }).catch(err => {
