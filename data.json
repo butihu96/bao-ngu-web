@@ -916,12 +916,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
+                "size": "36",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
-                "size": "36",
+                "size": "36.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             },
@@ -5785,11 +5785,6 @@
         "name": "WRS339810U",
         "brand": "Wilson",
         "variants": [
-            {
-                "size": "37",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            },
             {
                 "size": "38",
                 "price": 1990000,
