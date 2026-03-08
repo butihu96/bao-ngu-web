@@ -190,7 +190,8 @@
 
         <main class="main-content">
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Nhập mã code hoặc tên giày..." onkeyup="handleSearch()">
+                <!-- ĐÃ SỬA PLACEHOLDER TÌM KIẾM -->
+                <input type="text" id="searchInput" placeholder="🔍 VD: Vapor 12, CZ0220..." onkeyup="handleSearch()">
                 <button class="btn-mobile-filter" onclick="toggleSidebar()">⚙️ Lọc</button>
             </div>
             
@@ -223,7 +224,8 @@
 
         let missingImages = new Set(); 
         
-        const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Onitsuka Tiger", "Skechers", "On", "Lacoste", "Babolat", "Wilson"];
+        // ĐÃ CẬP NHẬT: Đẩy Onitsuka Tiger xuống vị trí cuối cùng trong mảng
+        const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
 
         // LINK GOOGLE SHEET CSV CỦA BẠN
         const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
@@ -287,14 +289,8 @@
                     if (cleanSizes.length === 0) cleanSizes = [sizeStr]; 
 
                     cleanSizes.forEach(sz => {
-                        // CHUẨN HÓA LẠI QUY TẮC SIZE ADIDAS:
-                        if (sz.endsWith('.6')) {
-                            // Đuôi 2/3 (.6) -> Gộp thành size .5 (Ví dụ 36.6 -> 36.5)
-                            sz = sz.slice(0, -2) + '.5'; 
-                        } else if (sz.endsWith('.3')) {
-                            // Đuôi 1/3 (.3) -> Gộp thành size chẵn (Ví dụ 36.3 -> 36)
-                            sz = sz.slice(0, -2);        
-                        }
+                        if (sz.endsWith('.6')) sz = sz.slice(0, -2) + '.5'; 
+                        if (sz.endsWith('.3')) sz = sz.slice(0, -2);        
 
                         if (!variantMap[sz] || v.price < variantMap[sz].price) {
                             variantMap[sz] = { size: sz, price: v.price, price_display: v.price_display };
@@ -360,6 +356,8 @@
         function renderSidebarFilters() {
             const brandContainer = document.getElementById('brand-filters');
             const brandsInData = [...new Set(globalData.map(p => p.brand))];
+            
+            // Sắp xếp các nút Thương hiệu theo thứ tự có Onitsuka Tiger dưới cùng
             brandsInData.sort((a, b) => (TARGET_BRANDS.indexOf(a) !== -1 ? TARGET_BRANDS.indexOf(a) : 99) - (TARGET_BRANDS.indexOf(b) !== -1 ? TARGET_BRANDS.indexOf(b) : 99));
             
             const allBrands = ['Tất cả', '🔥 HÀNG HOT', ...brandsInData, 'Khác']; 
@@ -440,6 +438,7 @@
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
                 );
                 
+                // Lọc theo Tab (Thương hiệu / HOT)
                 if (currentBrand === '🔥 HÀNG HOT') {
                     if (!matchedItem || !matchedItem.tag || matchedItem.tag === '') return false;
                 } else {
@@ -447,16 +446,40 @@
                     if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
                 }
 
+                // Lọc theo Size
                 if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
-                if (currentSearch !== '' && !p.name.toLowerCase().includes(currentSearch) && !p.brand.toLowerCase().includes(currentSearch)) return false;
-
+                
+                // Lọc theo GIÁ
                 if (currentPriceRange !== 'ALL') {
                     let minPrice = Math.min(...p.variants.map(v => v.price));
                     if (currentPriceRange === '1-2') return minPrice >= 1000000 && minPrice <= 2000000;
                     if (currentPriceRange === '2-3') return minPrice > 2000000 && minPrice <= 3000000;
                     if (currentPriceRange === '3+') return minPrice > 3000000;
                 }
+
+                // BỘ NÃO TÌM KIẾM THÔNG MINH MỚI (TÌM THEO TỪ KHÓA)
+                if (currentSearch !== '') {
+                    const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
+                    const searchTarget = `${displayFullName} ${shoeCode} ${p.brand}`.toLowerCase();
+                    
+                    // Tách từ khóa khách gõ thành mảng (VD: "Vapor 12" -> ["vapor", "12"])
+                    const searchKeywords = currentSearch.split(/\s+/).filter(k => k !== '');
+                    
+                    // Kiểm tra xem TẤT CẢ các từ khóa có nằm trong tên/mã/hãng đôi giày này không
+                    const isMatch = searchKeywords.every(kw => searchTarget.includes(kw));
+                    if (!isMatch) return false;
+                }
+
                 return true;
+            });
+
+            // ÉP SẮP XẾP HIỂN THỊ TẠI LƯỚI: Đẩy Onitsuka Tiger xuống bét bảng
+            filtered.sort((a, b) => {
+                let indexA = TARGET_BRANDS.indexOf(a.brand);
+                let indexB = TARGET_BRANDS.indexOf(b.brand);
+                if (indexA === -1) indexA = 99; // Brand "Khác"
+                if (indexB === -1) indexB = 99;
+                return indexA - indexB;
             });
 
             if (filtered.length === 0) {
