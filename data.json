@@ -431,11 +431,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40.5",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -1974,11 +1969,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2450000,
                 "price_display": "2,450,000đ"
@@ -2204,11 +2194,6 @@
             },
             {
                 "size": "41.3",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "42",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             },
@@ -2992,38 +2977,38 @@
             },
             {
                 "size": "36",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "37",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "37.5",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "38",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "39",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "39.5",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "40",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             }
         ]
     },
@@ -3712,11 +3697,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "37.5",
-                "price": 3560000,
-                "price_display": "3,560,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
@@ -4136,11 +4116,6 @@
         "name": "1183C102-001",
         "brand": "Onitsuka Tiger",
         "variants": [
-            {
-                "size": "36",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
             {
                 "size": "37",
                 "price": 3290000,
@@ -4961,11 +4936,6 @@
         "brand": "On",
         "variants": [
             {
-                "size": "37.5",
-                "price": 4200000,
-                "price_display": "4,200,000đ"
-            },
-            {
                 "size": "38",
                 "price": 4200000,
                 "price_display": "4,200,000đ"
@@ -5744,6 +5714,32 @@
                 "size": "40",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
+            }
+        ]
+    },
+    {
+        "name": "WRS338920",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "38",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "38.6",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "39.3",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40.6",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             }
         ]
     },
