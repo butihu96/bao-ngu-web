@@ -78,8 +78,9 @@
         .share-btn { position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 10; transition: all 0.2s; font-size: 15px;}
         .share-btn:hover { background: #111; color: #fff; transform: scale(1.1); }
 
-        /* TEM HOT GÓC PHẢI */
+        /* TEM HOT / NEW GÓC PHẢI */
         .hot-badge { position: absolute; top: 10px; right: 10px; background: #e74c3c; color: white; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 900; z-index: 10; box-shadow: 0 4px 10px rgba(231,76,60,0.5); text-transform: uppercase; animation: pulse-hot 1.5s infinite; letter-spacing: 1px;}
+        .new-badge { background: #27ae60; box-shadow: 0 4px 10px rgba(39,174,96,0.5); }
         @keyframes pulse-hot { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 
         .brand-tag { font-size: 10px; background: #f5f5f5; padding: 3px 10px; border-radius: 20px; color: #999; display: inline-block; margin-bottom: 6px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;}
@@ -190,7 +191,6 @@
 
         <main class="main-content">
             <div class="search-box">
-                <!-- ĐÃ SỬA PLACEHOLDER TÌM KIẾM -->
                 <input type="text" id="searchInput" placeholder="🔍 VD: Vapor 12, CZ0220..." onkeyup="handleSearch()">
                 <button class="btn-mobile-filter" onclick="toggleSidebar()">⚙️ Lọc</button>
             </div>
@@ -224,10 +224,8 @@
 
         let missingImages = new Set(); 
         
-        // ĐÃ CẬP NHẬT: Đẩy Onitsuka Tiger xuống vị trí cuối cùng trong mảng
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
 
-        // LINK GOOGLE SHEET CSV CỦA BẠN
         const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
 
         let lastScrollTop = 0;
@@ -253,7 +251,6 @@
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
             
-            // 1. DATA GOOGLE SHEET
             let lines = csvText.split('\n');
             for(let i = 1; i < lines.length; i++) {
                 let line = lines[i].trim();
@@ -268,7 +265,6 @@
                 }
             }
 
-            // 2. GIẢI PHẪU KHO 
             jsonData.forEach(p => {
                 let variantMap = {}; 
                 p.variants.forEach(v => {
@@ -357,7 +353,6 @@
             const brandContainer = document.getElementById('brand-filters');
             const brandsInData = [...new Set(globalData.map(p => p.brand))];
             
-            // Sắp xếp các nút Thương hiệu theo thứ tự có Onitsuka Tiger dưới cùng
             brandsInData.sort((a, b) => (TARGET_BRANDS.indexOf(a) !== -1 ? TARGET_BRANDS.indexOf(a) : 99) - (TARGET_BRANDS.indexOf(b) !== -1 ? TARGET_BRANDS.indexOf(b) : 99));
             
             const allBrands = ['Tất cả', '🔥 HÀNG HOT', ...brandsInData, 'Khác']; 
@@ -430,6 +425,9 @@
             
             const grid = document.getElementById('product-grid');
             grid.innerHTML = ''; 
+            
+            const NOW = Math.floor(Date.now() / 1000);
+            const THREE_DAYS = 3 * 24 * 60 * 60; // 3 ngày tính bằng giây
 
             let filtered = globalData.filter(p => {
                 const shoeCode = p.name.trim();
@@ -438,18 +436,20 @@
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
                 );
                 
-                // Lọc theo Tab (Thương hiệu / HOT)
+                // KIỂM TRA ĐIỀU KIỆN "HOT" & "MỚI"
+                const isAutoHot = p.updated_at && (NOW - p.updated_at) <= THREE_DAYS;
+                const hasManualTag = matchedItem && matchedItem.tag && matchedItem.tag !== '';
+
                 if (currentBrand === '🔥 HÀNG HOT') {
-                    if (!matchedItem || !matchedItem.tag || matchedItem.tag === '') return false;
+                    // Trong tab Hàng Hot, chỉ lôi cổ những thằng được gắn Tag bằng tay HOẶC vừa có thay đổi trong 3 ngày
+                    if (!hasManualTag && !isAutoHot) return false;
                 } else {
                     const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
                     if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
                 }
 
-                // Lọc theo Size
                 if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
                 
-                // Lọc theo GIÁ
                 if (currentPriceRange !== 'ALL') {
                     let minPrice = Math.min(...p.variants.map(v => v.price));
                     if (currentPriceRange === '1-2') return minPrice >= 1000000 && minPrice <= 2000000;
@@ -457,15 +457,10 @@
                     if (currentPriceRange === '3+') return minPrice > 3000000;
                 }
 
-                // BỘ NÃO TÌM KIẾM THÔNG MINH MỚI (TÌM THEO TỪ KHÓA)
                 if (currentSearch !== '') {
                     const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                     const searchTarget = `${displayFullName} ${shoeCode} ${p.brand}`.toLowerCase();
-                    
-                    // Tách từ khóa khách gõ thành mảng (VD: "Vapor 12" -> ["vapor", "12"])
                     const searchKeywords = currentSearch.split(/\s+/).filter(k => k !== '');
-                    
-                    // Kiểm tra xem TẤT CẢ các từ khóa có nằm trong tên/mã/hãng đôi giày này không
                     const isMatch = searchKeywords.every(kw => searchTarget.includes(kw));
                     if (!isMatch) return false;
                 }
@@ -473,11 +468,10 @@
                 return true;
             });
 
-            // ÉP SẮP XẾP HIỂN THỊ TẠI LƯỚI: Đẩy Onitsuka Tiger xuống bét bảng
             filtered.sort((a, b) => {
                 let indexA = TARGET_BRANDS.indexOf(a.brand);
                 let indexB = TARGET_BRANDS.indexOf(b.brand);
-                if (indexA === -1) indexA = 99; // Brand "Khác"
+                if (indexA === -1) indexA = 99; 
                 if (indexB === -1) indexB = 99;
                 return indexA - indexB;
             });
@@ -500,15 +494,19 @@
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                 const displayImg = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 
-                const tagHtml = (matchedItem && matchedItem.tag && matchedItem.tag !== '') ? `<div class="hot-badge">${matchedItem.tag}</div>` : '';
+                // HIỂN THỊ TEM (Ưu tiên Tem viết tay > Tem MỚI tự động)
+                let tagHtml = '';
+                if (matchedItem && matchedItem.tag && matchedItem.tag !== '') {
+                    tagHtml = `<div class="hot-badge">${matchedItem.tag}</div>`;
+                } else if (p.updated_at && (NOW - p.updated_at) <= THREE_DAYS) {
+                    tagHtml = `<div class="hot-badge new-badge">MỚI ✨</div>`;
+                }
 
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.innerHTML = `
                     <div class="product-img-wrapper">
-                        <!-- NÚT SHARE -->
                         <button class="share-btn" onclick="shareProduct('${displayFullName.replace(/'/g, "\\'")}')" title="Chia sẻ mẫu này">🔗</button>
-                        
                         ${tagHtml}
                         <img src="${displayImg}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
                     </div>
@@ -546,17 +544,10 @@
             window.open(zalo, '_blank');
         }
 
-        // HÀM CHIA SẺ SẢN PHẨM GỌN GÀNG 
         function shareProduct(productName) {
-            const shareData = {
-                text: productName,
-                url: 'https://baongu.store'
-            };
-            
+            const shareData = { text: productName, url: 'https://baongu.store' };
             if (navigator.share) {
-                navigator.share(shareData).catch(err => {
-                    console.log('Khách hủy share:', err);
-                });
+                navigator.share(shareData).catch(err => { console.log('Khách hủy share:', err); });
             } else {
                 navigator.clipboard.writeText(`${productName}\nhttps://baongu.store`).then(() => {
                     alert('✅ Đã copy thông tin sản phẩm! Bạn dán (Ctrl+V) để gửi cho bạn bè nhé.');
