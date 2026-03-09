@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import traceback
+import time  # ĐÃ THÊM THƯ VIỆN TIME ĐỂ ĐÓNG MỘC THỜI GIAN
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pickle
@@ -286,6 +287,22 @@ def sync_data():
                                 if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
                                     sneaker_dict[dk]["variants"][sc] = fp
 
+        # =========================================================
+        # BỘ NÃO TRÍ NHỚ: ĐỌC DỮ LIỆU CŨ ĐỂ TÌM HÀNG "MỚI/CẬP NHẬT"
+        # =========================================================
+        current_time = int(time.time())
+        old_data_map = {}
+        
+        # Đọc lại trí nhớ từ lần chạy trước
+        if os.path.exists('data.json'):
+            try:
+                with open('data.json', 'r', encoding='utf-8') as f:
+                    old_json = json.load(f)
+                    for item in old_json:
+                        old_data_map[item['name']] = item
+            except: 
+                pass
+
         result = []
         for dk, info in sneaker_dict.items():
             if not info["variants"]: continue
@@ -294,13 +311,30 @@ def sync_data():
             if brand == 'Khác': continue 
             
             sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
-            result.append({"name": info["display_name"], "brand": brand, "variants": sorted_v})
+            
+            disp_name = info["display_name"]
+            last_updated = current_time # Mặc định gán là hàng mới
+            
+            # Thuật toán soi chiếu
+            if disp_name in old_data_map:
+                old_variants = old_data_map[disp_name].get("variants", [])
+                # Nếu mọi thứ (size, giá) y hệt nhau -> Lấy lại mốc thời gian cũ
+                if old_variants == sorted_v:
+                    last_updated = old_data_map[disp_name].get("updated_at", current_time)
+            
+            # Lưu mốc thời gian (updated_at) vào JSON
+            result.append({
+                "name": disp_name, 
+                "brand": brand, 
+                "variants": sorted_v, 
+                "updated_at": last_updated
+            })
 
         priority_order = {"Nike": 1, "Adidas": 2, "Asics": 3, "Onitsuka Tiger": 4, "Skechers": 5, "On": 6, "Lacoste": 7, "Babolat": 8, "Wilson": 9}
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã tiệt tiêu 100% size rác.")
+        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã tiệt tiêu 100% size rác và cập nhật Hàng Mới.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
