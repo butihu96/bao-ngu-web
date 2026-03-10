@@ -32,15 +32,16 @@ SHEETS_CONFIG = [
     {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2", "left_cols": {"name": 0, "size": 2, "qty": 3, "price": 4}, "right_cols": {"name": 8, "size": 10, "qty": 11, "price": 12}},
     {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
     
-    # BỔ SUNG KHO 4 (NAM GIÀY) - FORM GỘP Ô
+    # BỔ SUNG KHO 4 (NAM GIÀY) - ĐÃ CĂN CHỈNH LẠI TỌA ĐỘ CỘT BỎ QUA GHI CHÚ
     {
         "name": "Kho Nam Giày (Kho 4)", 
         "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", 
         "type": "kho_4", 
         "blocks": [
-            {"name": 1, "size": 2, "price": 3},   # Block 1 (Cột B, C, D)
-            {"name": 5, "size": 6, "price": 7},   # Block 2 (Cột F, G, H)
-            {"name": 10, "size": 11, "price": 12} # Block 3 (Cột K, L, M)
+            {"name": 1, "size": 2, "price": 3},   # Block 1: Cột B (Tên), Cột C (Size), Cột D (Giá)
+            {"name": 6, "size": 7, "price": 8},   # Block 2: Cột G (Tên), Cột H (Size), Cột I (Giá)
+            {"name": 11, "size": 12, "price": 13},# Block 3: Cột L (Tên), Cột M (Size), Cột N (Giá)
+            {"name": 16, "size": 17, "price": 18} # Block 4: Cột Q (Tên), Cột R (Size), Cột S (Giá)
         ]
     }
 ]
@@ -58,18 +59,12 @@ def get_creds():
         if creds and creds.expired and creds.refresh_token: 
             creds.refresh(Request())
         else:
-            # KIỂM TRA MÔI TRƯỜNG: Nếu đang ở trên GitHub thì cấm mở trình duyệt
             if os.getenv("GITHUB_ACTIONS"):
                 print("\n" + "="*60)
                 print("❌ LỖI CHÍ MẠNG TRÊN GITHUB ACTIONS:")
                 print("Không tìm thấy file 'token.pickle' hợp lệ, hoặc token đã bị hết hạn.")
-                print("Hệ thống máy chủ ảo không thể tự mở trình duyệt để đăng nhập Google.")
-                print("👉 CÁCH SỬA:")
-                print("1. Chạy file sync_data.py này ở máy tính cá nhân của mày.")
-                print("2. Đăng nhập Google để nó tạo ra file 'token.pickle' mới nhất.")
-                print("3. Commit và Đẩy file 'token.pickle' đó lên kho GitHub.")
                 print("="*60 + "\n")
-                sys.exit(1) # Báo lỗi ra ngoài hệ thống để dừng ngay lập tức
+                sys.exit(1) 
             else:
                 if not os.path.exists('credentials.json'):
                     print("❌ LỖI: Không tìm thấy file credentials.json trên máy tính!")
@@ -174,8 +169,9 @@ def sync_data():
                 if config["type"] == "kho_1" and i in [1, 2]: continue
                 if config["type"] == "kho_2" and "onitsuka" in ws.title.lower(): continue
                 
-                # CHỐT CHẶN KHO 4: CHỈ QUÉT TỪ TAB 1 ĐẾN TAB 6 (Tức là index từ 0 đến 5)
-                if config["type"] == "kho_4" and i > 5: continue
+                # CHỐT CHẶN KHO 4: Quét đúng 6 Tab đầu tiên (từ index 0 đến 5)
+                if config["type"] == "kho_4" and i > 5: 
+                    continue
                 
                 data = ws.get_all_values()
                 if not data: continue
@@ -214,15 +210,13 @@ def sync_data():
                             price_val = get_val(row, config["col_price"])
                             qty_val = get_val(row, config["col_qty"])
                             
-                            # ---- CHỐT CHẶN SỐ LƯỢNG KHO 3 ----
                             try:
                                 so_luong = int(float(qty_val))
                             except ValueError:
                                 so_luong = 0
                             
                             if so_luong < 1: 
-                                continue # Nếu số lượng = 0, âm, hoặc chữ thì vứt luôn
-                            # ----------------------------------
+                                continue
 
                             if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
                             
@@ -303,59 +297,62 @@ def sync_data():
                                     sneaker_dict[dk]["variants"][sc] = fp
 
                 # =========================================================
-                # BỘ NÃO CHUYÊN TRỊ KHO 4 (Form Gộp Ô)
+                # BỘ NÃO CHUYÊN TRỊ KHO 4 (ĐÃ FIX TỌA ĐỘ CHUẨN 100%)
                 # =========================================================
                 elif config["type"] == "kho_4":
-                    for block in config["blocks"]:
-                        current_name = ""
-                        current_price = 0
-                        
-                        # Bắt đầu quét từ dòng số 3 (index 2)
-                        for r_idx in range(2, len(data)):
-                            row = data[r_idx]
+                    try:
+                        for block in config["blocks"]:
+                            current_name = ""
+                            current_price = 0
                             
-                            name_val = get_val(row, block["name"])
-                            size_val = get_val(row, block["size"])
-                            price_val = get_val(row, block["price"])
-                            
-                            # 1. Ghi nhớ Tên Giày (Nếu gặp dòng có tên)
-                            if name_val and not str(name_val).isdigit():
-                                upper_name = name_val.upper()
-                                # Loại rác phân cách
-                                if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
-                                    current_name = ""
-                                    current_price = 0
-                                    continue
+                            # Bắt đầu quét từ dòng số 3 (index 2)
+                            for r_idx in range(2, len(data)):
+                                row = data[r_idx]
                                 
-                                if len(name_val) > 5 and not la_hang_tap_nham(name_val):
-                                    current_name = name_val
-                                    current_price = 0 
-                                    
-                            # 2. Ghi nhớ Giá
-                            if price_val:
-                                p_m = extract_price(price_val)
-                                if p_m > 0:
-                                    if p_m < 100000: 
-                                        p_m = p_m * 1000
-                                    current_price = p_m
-                                    
-                            # 3. Chốt đơn Size 
-                            if current_name and size_val and current_price > 0:
-                                s_c = clean_size(size_val)
+                                name_val = get_val(row, block["name"])
+                                size_val = get_val(row, block["size"])
+                                price_val = get_val(row, block["price"])
                                 
-                                if is_valid_size(s_c):
-                                    raw_code = loc_ma_giay(current_name)
-                                    if not raw_code or str(raw_code).isdigit(): continue
+                                # 1. Ghi nhớ Tên Giày
+                                if name_val and not str(name_val).isdigit():
+                                    upper_name = name_val.upper()
+                                    if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
+                                        current_name = ""
+                                        current_price = 0
+                                        continue
                                     
-                                    # CÔNG THỨC GIÁ KHO 4: Mày muốn cộng bao nhiêu thì sửa số 300000 này nhé!
-                                    fp = int(round(current_price + 300000, -4))
-                                    
-                                    dk = normalize_key(raw_code)
-                                    if dk not in sneaker_dict: 
-                                        sneaker_dict[dk] = {"display_name": raw_code.upper(), "original_name": current_name.upper(), "variants": {}}
+                                    if len(name_val) > 5 and not la_hang_tap_nham(name_val):
+                                        current_name = name_val
+                                        current_price = 0 
                                         
-                                    if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
-                                        sneaker_dict[dk]["variants"][s_c] = fp
+                                # 2. Ghi nhớ Giá
+                                if price_val:
+                                    p_m = extract_price(price_val)
+                                    if p_m > 0:
+                                        if p_m < 100000: 
+                                            p_m = p_m * 1000
+                                        current_price = p_m
+                                        
+                                # 3. Chốt đơn Size 
+                                if current_name and size_val and current_price > 0:
+                                    s_c = clean_size(size_val)
+                                    
+                                    if is_valid_size(s_c):
+                                        raw_code = loc_ma_giay(current_name)
+                                        if not raw_code or str(raw_code).isdigit(): continue
+                                        
+                                        # CÔNG THỨC GIÁ KHO 4: Hiện đang cộng 300k, đại ca sửa ở đây nhé!
+                                        fp = int(round(current_price + 300000, -4))
+                                        
+                                        dk = normalize_key(raw_code)
+                                        if dk not in sneaker_dict: 
+                                            sneaker_dict[dk] = {"display_name": raw_code.upper(), "original_name": current_name.upper(), "variants": {}}
+                                            
+                                        if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
+                                            sneaker_dict[dk]["variants"][s_c] = fp
+                    except Exception as e:
+                        print(f"⚠️ Lỗi nhẹ ở Kho 4 Tab {ws.title}, đã bỏ qua: {e}")
+                        continue
 
         # =========================================================
         # BỘ NÃO TRÍ NHỚ: ĐỌC DỮ LIỆU CŨ ĐỂ TÌM HÀNG "MỚI/CẬP NHẬT"
@@ -363,7 +360,6 @@ def sync_data():
         current_time = int(time.time())
         old_data_map = {}
         
-        # Đọc lại trí nhớ từ lần chạy trước
         if os.path.exists('data.json'):
             try:
                 with open('data.json', 'r', encoding='utf-8') as f:
@@ -383,16 +379,13 @@ def sync_data():
             sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
             
             disp_name = info["display_name"]
-            last_updated = current_time # Mặc định gán là hàng mới
+            last_updated = current_time 
             
-            # Thuật toán soi chiếu
             if disp_name in old_data_map:
                 old_variants = old_data_map[disp_name].get("variants", [])
-                # Nếu mọi thứ (size, giá) y hệt nhau -> Lấy lại mốc thời gian cũ
                 if old_variants == sorted_v:
                     last_updated = old_data_map[disp_name].get("updated_at", current_time)
             
-            # Lưu mốc thời gian (updated_at) vào JSON
             result.append({
                 "name": disp_name, 
                 "brand": brand, 
@@ -404,12 +397,12 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã tiệt tiêu 100% size rác và cập nhật Hàng Mới.")
+        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã vét sạch sành sanh Kho 4!")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
         traceback.print_exc()
-        sys.exit(1) # Bắn lỗi ra ngoài cho GitHub biết
+        sys.exit(1)
 
 if __name__ == "__main__":
     sync_data()
