@@ -14,7 +14,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 # =========================================================
 # VŨ KHÍ BÍ MẬT: SỔ ĐEN & NHẬN DIỆN HÃNG
 # =========================================================
-BLACKLIST_CODES = ["JP7309"] # Ném các mã mày ghét vào đây, cách nhau bằng dấu phẩy
+BLACKLIST_CODES = ["JP7309"] 
 
 CUSTOM_BRAND_MAPPING = {
     "1183A872": "Onitsuka Tiger",     
@@ -88,7 +88,6 @@ def is_valid_size(s):
         match = re.search(r'(\d+[.,]?\d*)', s)
         if match:
             num = float(match.group(1).replace(',', '.'))
-            # BỨC TƯỜNG LỬA SIZE: Chỉ lấy từ 35 đến 49, thằng nào ngoài khoảng này vứt!
             if num < 35 or num > 49: return False
     except: return False
     return True
@@ -166,7 +165,7 @@ def sync_data():
                 if not data: continue
 
                 # =========================================================
-                # KHO 4
+                # KHO 4 - LẤY NGUYÊN VĂN TÊN DÀI SỌC
                 # =========================================================
                 if config["type"] == "kho_4":
                     blocks = []
@@ -203,9 +202,11 @@ def sync_data():
                                     current_price = p_m
                                     
                             if current_name and size_val and current_price > 0:
-                                raw_code = loc_ma_giay(current_name)
-                                # LỌC SỔ ĐEN
-                                if not raw_code or str(raw_code).isdigit() or is_blacklisted(current_name) or is_blacklisted(raw_code): 
+                                # LẤY NGUYÊN VĂN DÒNG TEXT LÀM MÃ SẢN PHẨM LUÔN
+                                raw_code = current_name.strip()
+                                
+                                # Chống lấy phải dòng rác: Phải có ít nhất 1 con số và Không nằm trong Sổ đen
+                                if not raw_code or not any(c.isdigit() for c in raw_code) or is_blacklisted(raw_code): 
                                     continue
                                 
                                 fp = int(round(current_price + 300000, -4))
@@ -223,7 +224,7 @@ def sync_data():
                                     s_c = clean_size(p)
                                     if is_valid_size(s_c):
                                         if dk not in sneaker_dict: 
-                                            sneaker_dict[dk] = {"display_name": raw_code.upper(), "original_name": current_name.upper(), "variants": {}}
+                                            sneaker_dict[dk] = {"display_name": raw_code, "original_name": raw_code, "variants": {}}
                                         if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
                                             sneaker_dict[dk]["variants"][s_c] = fp
 
@@ -380,7 +381,7 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Đã dọn sạch mã rác và khóa size 35-49.")
+        print(f"✅ Xong! Đã dọn sạch mã rác và ép hiển thị CỤM TÊN DÀI cho Kho 4.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
