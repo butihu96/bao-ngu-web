@@ -442,7 +442,6 @@
             let allSizes = new Set();
             catData.forEach(p => p.variants.forEach(v => {
                 let n = parseFloat(v.size);
-                // BỨC TƯỜNG LỬA TRÊN GIAO DIỆN: CHỈ CHO PHÉP HIỂN THỊ CÁC SIZE TỪ 35 ĐẾN 49
                 if (!isNaN(n) && n >= 35 && n <= 49) {
                     allSizes.add(v.size);
                 }
@@ -517,6 +516,7 @@
                 const shoeCode = p.name.trim();
                 const matchedItem = dictionaryData.find(d => 
                     (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
+                    shoeCode.toLowerCase().includes(d.mappingCode.toLowerCase()) || // THÊM LUẬT NÀY ĐỂ BẮT TÊN DÀI
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
                 );
                 
@@ -563,10 +563,19 @@
                 const shoeCode = p.name.trim();
                 const matchedItem = dictionaryData.find(d => 
                     (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
+                    shoeCode.toLowerCase().includes(d.mappingCode.toLowerCase()) || // THÊM LUẬT NÀY ĐỂ BẮT TÊN DÀI
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
                 );
                 
-                const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
+                // --- THUẬT TOÁN LÀM ĐẸP TÊN DÀI TRÁNH TRÙNG LẶP CHỮ ---
+                let displayFullName = matchedItem ? matchedItem.fullName : shoeCode;
+                if (!/giày|giay/i.test(displayFullName)) {
+                    let brandText = (p.brand !== 'Khác' && !displayFullName.toLowerCase().includes(p.brand.toLowerCase())) ? `${p.brand} ` : ``;
+                    displayFullName = `Giày ${brandText}${displayFullName}`;
+                }
+                if (!/chính hãng/i.test(displayFullName)) {
+                    displayFullName = `${displayFullName} Chính Hãng`;
+                }
                 
                 const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 const imgUrls = rawImgStr.split(',').map(url => url.trim()).filter(url => url !== '');
