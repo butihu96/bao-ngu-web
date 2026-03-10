@@ -34,12 +34,25 @@ jobs:
       - name: Gọi Bot chui vào 4 kho lấy Data
         run: python sync_data.py
 
-      - name: Đóng gói Data mới lên Web
+      - name: Đóng gói Data mới lên Web bằng Đòn Hủy Diệt
         run: |
           git config --global user.name "BaoNgu-Bot"
           git config --global user.email "bot@baongu.store"
+          
+          # 1. Cất file data.json (thành quả) ra ngoài vùng an toàn
+          mv data.json ../data.json
+          
+          # 2. Xóa sạch mọi rác rưởi, file tạm (như token, cache) để Git không dỗi
+          git reset --hard
+          git clean -fd
+          
+          # 3. Kéo code mới nhất về (mượt mà 100%)
+          git pull origin main
+          
+          # 4. Trả file data.json lại vị trí cũ
+          mv ../data.json ./data.json
+          
+          # 5. Đóng gói và đẩy lên
           git add data.json
-          git commit -m "🚀 Bot tự động cập nhật kho giày" || echo "Không có data mới để cập nhật"
-          git stash --include-untracked || true
-          git pull --rebase origin main
-          git push
+          git commit -m "🚀 Bot tự động cập nhật kho giày" || echo "Không có thay đổi data"
+          git push origin main
