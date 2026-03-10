@@ -30,14 +30,7 @@ CUSTOM_BRAND_MAPPING = {
 SHEETS_CONFIG = [
     {"name": "Kho Điệp Phạm", "id": "1LguFhRHWfHI87onU-Awobfallk_gtZZdPhpCllnK1eo", "type": "kho_1", "col_hang": 2, "col_code": 3, "col_size": 4, "col_price": 5},
     {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2", "left_cols": {"name": 0, "size": 2, "qty": 3, "price": 4}, "right_cols": {"name": 8, "size": 10, "qty": 11, "price": 12}},
-    {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
-    
-    # BỔ SUNG KHO 4 (NAM GIÀY)
-    {
-        "name": "Kho Nam Giày (Kho 4)", 
-        "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", 
-        "type": "kho_4"
-    }
+    {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6}
 ]
 
 # =========================================================
@@ -53,12 +46,18 @@ def get_creds():
         if creds and creds.expired and creds.refresh_token: 
             creds.refresh(Request())
         else:
+            # KIỂM TRA MÔI TRƯỜNG: Nếu đang ở trên GitHub thì cấm mở trình duyệt
             if os.getenv("GITHUB_ACTIONS"):
                 print("\n" + "="*60)
                 print("❌ LỖI CHÍ MẠNG TRÊN GITHUB ACTIONS:")
                 print("Không tìm thấy file 'token.pickle' hợp lệ, hoặc token đã bị hết hạn.")
+                print("Hệ thống máy chủ ảo không thể tự mở trình duyệt để đăng nhập Google.")
+                print("👉 CÁCH SỬA:")
+                print("1. Chạy file sync_data.py này ở máy tính cá nhân của mày.")
+                print("2. Đăng nhập Google để nó tạo ra file 'token.pickle' mới nhất.")
+                print("3. Commit và Đẩy file 'token.pickle' đó lên kho GitHub.")
                 print("="*60 + "\n")
-                sys.exit(1) 
+                sys.exit(1) # Báo lỗi ra ngoài hệ thống để dừng ngay lập tức
             else:
                 if not os.path.exists('credentials.json'):
                     print("❌ LỖI: Không tìm thấy file credentials.json trên máy tính!")
@@ -163,228 +162,130 @@ def sync_data():
                 if config["type"] == "kho_1" and i in [1, 2]: continue
                 if config["type"] == "kho_2" and "onitsuka" in ws.title.lower(): continue
                 
-                # CHỐT CHẶN KHO 4: Chỉ quét từ Tab 1 đến Tab 6 (Tương đương index từ 0 đến 5)
-                if config["type"] == "kho_4" and i > 5: 
-                    continue
-                
                 data = ws.get_all_values()
                 if not data: continue
 
-                # =========================================================
-                # BỘ NÃO CÁCH LY CHUYÊN TRỊ KHO 4 (TUYỆT ĐỐI KHÔNG ẢNH HƯỞNG KHO KHÁC)
-                # =========================================================
-                if config["type"] == "kho_4":
-                    blocks = []
-                    if i == 0:   # Tab Jordan + Dunk low: Tên B(1) F(5) K(10) | Size C(2) G(6) L(11) | Giá D(3) H(7) M(12)
-                        blocks = [(1, 2, 3), (5, 6, 7), (10, 11, 12)]
-                    elif i == 1: # Tab Pickleball: Tên A(0) E(4) I(8) N(13) | Size B(1) F(5) K(10) O(14) | Giá C(2) G(6) L(11) Q(16)
-                        blocks = [(0, 1, 2), (4, 5, 6), (8, 10, 11), (13, 14, 16)]
-                    elif i in [2, 3]: # Tab AF1 + Jeep: Tên B(1) G(6) L(11) | Size C(2) H(7) M(12) | Giá D(3) I(8) N(13)
-                        blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
-                    elif i in [4, 5]: # Tab Asics + Adidas: Tên B(1) G(6) | Size C(2) H(7) | Giá D(3) I(8)
-                        blocks = [(1, 2, 3), (6, 7, 8)]
+                for row in data[1:]:
+                    try:
+                        raw_code = ""
+                        price_val = ""
+                        s_c = ""
 
-                    for b_name, b_size, b_price in blocks:
-                        current_name = ""
-                        current_price = 0
-                        
-                        for r_idx in range(2, len(data)):
-                            row = data[r_idx]
+                        if config["type"] == "kho_1":
+                            raw_code = get_val(row, config["col_code"]) or get_val(row, config["col_hang"])
+                            if la_hang_tap_nham(raw_code): continue 
                             
-                            name_val = get_val(row, b_name) or get_val(row, b_name - 1)
-                            size_val = get_val(row, b_size)
-                            price_val = get_val(row, b_price)
-                            
-                            # 1. Ghi nhớ Tên Giày (Nguyên cụm)
-                            if name_val and not str(name_val).isdigit():
-                                upper_name = name_val.upper().strip()
-                                if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
-                                    current_name = ""
-                                    current_price = 0
-                                    continue
-                                
-                                # KHÓA CHẶN TRÁNH TRỞ THÀNH "GIÀY NIKE CHÍNH HÃNG" MỒ CÔI
-                                ignore_brands = ["NIKE", "ADIDAS", "ASICS", "SKECHERS", "ONITSUKA TIGER", "WILSON", "BABOLAT", "LACOSTE", "PUMA", "CHAMPION", "JEEP", "MLB", "ON", "NB", "NEW BALANCE"]
-                                if upper_name in ignore_brands or len(upper_name) < 5:
-                                    continue
-                                
-                                if not la_hang_tap_nham(name_val):
-                                    current_name = name_val
-                                    current_price = 0 
-                                    
-                            # 2. Ghi nhớ Giá
-                            if price_val:
-                                p_m = extract_price(price_val)
-                                if p_m > 0:
-                                    if p_m < 100000: 
-                                        p_m = p_m * 1000
-                                    current_price = p_m
-                                    
-                            # 3. Chốt đơn
-                            if current_name and size_val and current_price > 0:
-                                raw_code = current_name.strip() # Lấy toàn bộ tên siêu dài, không cắt xén
-                                
-                                # Sổ đen chỉ áp dụng nội bộ tại đây
-                                if "JP7309" in raw_code.upper():
-                                    continue
-                                
-                                fp = int(round(current_price + 300000, -4))
-                                dk = normalize_key(raw_code)
-                                
-                                size_str = str(size_val).replace(',', '.').replace('\n', ' ')
-                                parts = re.split(r'\s+', size_str.strip())
-                                
-                                for p in parts:
-                                    p = p.strip()
-                                    if not p: continue
-                                    
-                                    # Chẻ đôi size kiểu 36/37
-                                    sub_parts = p.split('/') if '/' in p else [p]
-                                    for sp in sub_parts:
-                                        # Nối dấu chấm cho size kiểu 355
-                                        if re.fullmatch(r'\d{3}', sp) and sp.endswith('5'):
-                                            sp = sp[:2] + '.' + sp[2]
-                                            
-                                        s_c = clean_size(sp)
-                                        
-                                        if is_valid_size(s_c):
-                                            # BỨC TƯỜNG LỬA CHỈ CHO KHO 4 (Chỉ lấy size 35 đến 49)
-                                            try:
-                                                num_check = float(re.search(r'(\d+[.,]?\d*)', s_c).group(1).replace(',', '.'))
-                                                if num_check < 35 or num_check > 49:
-                                                    continue
-                                            except:
-                                                continue
-                                                
-                                            if dk not in sneaker_dict: 
-                                                # Hiển thị giữ nguyên tên gốc dài
-                                                sneaker_dict[dk] = {"display_name": raw_code, "original_name": raw_code, "variants": {}}
-                                                
-                                            if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
-                                                sneaker_dict[dk]["variants"][s_c] = fp
-
-                # =========================================================
-                # XỬ LÝ KHO 1, 2, 3 - GIỮ NGUYÊN TRẠNG 100% THEO CODE CŨ CỦA MÀY
-                # =========================================================
-                else:
-                    for row in data[1:]:
-                        try:
-                            raw_code = ""
-                            price_val = ""
-                            s_c = ""
-
-                            if config["type"] == "kho_1":
-                                raw_code = get_val(row, config["col_code"]) or get_val(row, config["col_hang"])
-                                if la_hang_tap_nham(raw_code): continue 
-                                
-                                price_val = get_val(row, config["col_price"])
-                                sizes_raw = get_val(row, config["col_size"]).split('\n')
-                                p_max = extract_price(price_val)
-                                
-                                if p_max == 0 or not raw_code or str(raw_code).isdigit(): continue
-                                final_price = int(round((p_max * 1000) + 300000, -4))
-                                if final_price < 1000000: continue 
-                                
-                                dict_key = normalize_key(raw_code)
-                                if dict_key not in sneaker_dict: 
-                                    sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": raw_code.upper(), "variants": {}}
-                                
-                                for s in sizes_raw:
-                                    sc = clean_size(s)
-                                    if is_valid_size(sc):
-                                        if sc not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][sc]:
-                                            sneaker_dict[dict_key]["variants"][sc] = final_price
-                                continue
-
-                            elif config["type"] == "kho_3":
-                                name_size_val = get_val(row, config["col_name_size"])
-                                price_val = get_val(row, config["col_price"])
-                                qty_val = get_val(row, config["col_qty"])
-                                
-                                try:
-                                    so_luong = int(float(qty_val))
-                                except ValueError:
-                                    so_luong = 0
-                                
-                                if so_luong < 1: continue
-
-                                if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
-                                
-                                raw_code = loc_ma_giay(name_size_val)
-                                if not raw_code or str(raw_code).isdigit(): continue
-                                
-                                size_match = re.search(r'(?:EU|Size|UK|US)\s*([0-9.,/]+)', name_size_val, re.IGNORECASE)
-                                if size_match: 
-                                    s_c = clean_size(size_match.group(1))
-                                else:
-                                    size_match = re.search(r'\(\s*([0-9.,/]+)\s*\)', name_size_val)
-                                    if size_match: 
-                                        s_c = clean_size(size_match.group(1))
-                                    else:
-                                        size_tail = re.search(r'-\s*([0-9]{2}[.,]?[0-9]{0,2})$', name_size_val.strip())
-                                        if size_tail: s_c = clean_size(size_tail.group(1))
-                                
-                                if not is_valid_size(s_c): continue
-
-                            elif config["type"] == "kho_2":
-                                continue
-
-                            dict_key = normalize_key(raw_code)
+                            price_val = get_val(row, config["col_price"])
+                            sizes_raw = get_val(row, config["col_size"]).split('\n')
                             p_max = extract_price(price_val)
-                            if p_max == 0: continue
                             
+                            if p_max == 0 or not raw_code or str(raw_code).isdigit(): continue
                             final_price = int(round((p_max * 1000) + 300000, -4))
                             if final_price < 1000000: continue 
                             
+                            dict_key = normalize_key(raw_code)
                             if dict_key not in sneaker_dict: 
-                                sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": name_size_val.upper(), "variants": {}}
+                                sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": raw_code.upper(), "variants": {}}
                             
-                            if s_c not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][s_c]:
-                                sneaker_dict[dict_key]["variants"][s_c] = final_price
-                        except: continue
-
-                    if config["type"] == "kho_2":
-                        def parse_side(cols):
-                            blocks = []; curr = {"names": [], "sizes": [], "price_val": 0}
-                            for r in data[1:]:
-                                n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
-                                
-                                if not any([n,s,q,p]):
-                                    if curr["names"] or curr["sizes"]:
-                                        blocks.append(curr)
-                                        curr = {"names": [], "sizes": [], "price_val": 0}
-                                    continue
-                                
-                                if n: curr["names"].append(n)
-                                if p:
-                                    p_m = extract_price(p)
-                                    if p_m > curr["price_val"]: curr["price_val"] = p_m
-                                if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
-                                    curr["sizes"].append(s)
-                                    
-                            if curr["names"] or curr["sizes"]: blocks.append(curr)
-                            return blocks
-                        
-                        for b in parse_side(config["left_cols"]) + parse_side(config["right_cols"]):
-                            if not b["names"] or b["price_val"] == 0: continue
-                            full_text = " ".join(b["names"])
-                            if la_hang_tap_nham(full_text): continue
-                            
-                            code_c = loc_ma_giay(full_text)
-                            if str(code_c).isdigit(): continue
-                            
-                            fp = int(round((b["price_val"] * 1000) + 300000, -4))
-                            if fp < 1000000: continue 
-                            
-                            dk = normalize_key(code_c)
-                            if dk not in sneaker_dict: 
-                                sneaker_dict[dk] = {"display_name": code_c.upper(), "original_name": full_text.upper(), "variants": {}}
-                                
-                            for s in b["sizes"]:
+                            for s in sizes_raw:
                                 sc = clean_size(s)
                                 if is_valid_size(sc):
-                                    if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
-                                        sneaker_dict[dk]["variants"][sc] = fp
+                                    if sc not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][sc]:
+                                        sneaker_dict[dict_key]["variants"][sc] = final_price
+                            continue
+
+                        elif config["type"] == "kho_3":
+                            name_size_val = get_val(row, config["col_name_size"])
+                            price_val = get_val(row, config["col_price"])
+                            qty_val = get_val(row, config["col_qty"])
+                            
+                            # ---- CHỐT CHẶN SỐ LƯỢNG KHO 3 ----
+                            try:
+                                so_luong = int(float(qty_val))
+                            except ValueError:
+                                so_luong = 0
+                            
+                            if so_luong < 1: 
+                                continue # Nếu số lượng = 0, âm, hoặc chữ thì vứt luôn
+                            # ----------------------------------
+
+                            if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
+                            
+                            raw_code = loc_ma_giay(name_size_val)
+                            if not raw_code or str(raw_code).isdigit(): continue
+                            
+                            size_match = re.search(r'(?:EU|Size|UK|US)\s*([0-9.,/]+)', name_size_val, re.IGNORECASE)
+                            if size_match: 
+                                s_c = clean_size(size_match.group(1))
+                            else:
+                                size_match = re.search(r'\(\s*([0-9.,/]+)\s*\)', name_size_val)
+                                if size_match: 
+                                    s_c = clean_size(size_match.group(1))
+                                else:
+                                    size_tail = re.search(r'-\s*([0-9]{2}[.,]?[0-9]{0,2})$', name_size_val.strip())
+                                    if size_tail: s_c = clean_size(size_tail.group(1))
+                            
+                            if not is_valid_size(s_c): continue
+
+                        elif config["type"] == "kho_2":
+                            continue
+
+                        dict_key = normalize_key(raw_code)
+                        p_max = extract_price(price_val)
+                        if p_max == 0: continue
+                        
+                        final_price = int(round((p_max * 1000) + 300000, -4))
+                        if final_price < 1000000: continue 
+                        
+                        if dict_key not in sneaker_dict: 
+                            sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": name_size_val.upper(), "variants": {}}
+                        
+                        if s_c not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][s_c]:
+                            sneaker_dict[dict_key]["variants"][s_c] = final_price
+                    except: continue
+
+                if config["type"] == "kho_2":
+                    def parse_side(cols):
+                        blocks = []; curr = {"names": [], "sizes": [], "price_val": 0}
+                        for r in data[1:]:
+                            n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
+                            
+                            if not any([n,s,q,p]):
+                                if curr["names"] or curr["sizes"]:
+                                    blocks.append(curr)
+                                    curr = {"names": [], "sizes": [], "price_val": 0}
+                                continue
+                            
+                            if n: curr["names"].append(n)
+                            if p:
+                                p_m = extract_price(p)
+                                if p_m > curr["price_val"]: curr["price_val"] = p_m
+                            if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
+                                curr["sizes"].append(s)
+                                
+                        if curr["names"] or curr["sizes"]: blocks.append(curr)
+                        return blocks
+                    
+                    for b in parse_side(config["left_cols"]) + parse_side(config["right_cols"]):
+                        if not b["names"] or b["price_val"] == 0: continue
+                        full_text = " ".join(b["names"])
+                        if la_hang_tap_nham(full_text): continue
+                        
+                        code_c = loc_ma_giay(full_text)
+                        if str(code_c).isdigit(): continue
+                        
+                        fp = int(round((b["price_val"] * 1000) + 300000, -4))
+                        if fp < 1000000: continue 
+                        
+                        dk = normalize_key(code_c)
+                        if dk not in sneaker_dict: 
+                            sneaker_dict[dk] = {"display_name": code_c.upper(), "original_name": full_text.upper(), "variants": {}}
+                            
+                        for s in b["sizes"]:
+                            sc = clean_size(s)
+                            if is_valid_size(sc):
+                                if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
+                                    sneaker_dict[dk]["variants"][sc] = fp
 
         # =========================================================
         # BỘ NÃO TRÍ NHỚ: ĐỌC DỮ LIỆU CŨ ĐỂ TÌM HÀNG "MỚI/CẬP NHẬT"
@@ -392,6 +293,7 @@ def sync_data():
         current_time = int(time.time())
         old_data_map = {}
         
+        # Đọc lại trí nhớ từ lần chạy trước
         if os.path.exists('data.json'):
             try:
                 with open('data.json', 'r', encoding='utf-8') as f:
@@ -411,13 +313,16 @@ def sync_data():
             sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
             
             disp_name = info["display_name"]
-            last_updated = current_time 
+            last_updated = current_time # Mặc định gán là hàng mới
             
+            # Thuật toán soi chiếu
             if disp_name in old_data_map:
                 old_variants = old_data_map[disp_name].get("variants", [])
+                # Nếu mọi thứ (size, giá) y hệt nhau -> Lấy lại mốc thời gian cũ
                 if old_variants == sorted_v:
                     last_updated = old_data_map[disp_name].get("updated_at", current_time)
             
+            # Lưu mốc thời gian (updated_at) vào JSON
             result.append({
                 "name": disp_name, 
                 "brand": brand, 
@@ -429,12 +334,12 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. 3 Kho gốc nguyên vẹn. Kho 4 quét chuẩn tên dài.")
+        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã tiệt tiêu 100% size rác và cập nhật Hàng Mới.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
         traceback.print_exc()
-        sys.exit(1)
+        sys.exit(1) # Bắn lỗi ra ngoài cho GitHub biết
 
 if __name__ == "__main__":
     sync_data()
