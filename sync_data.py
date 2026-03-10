@@ -30,7 +30,19 @@ CUSTOM_BRAND_MAPPING = {
 SHEETS_CONFIG = [
     {"name": "Kho Điệp Phạm", "id": "1LguFhRHWfHI87onU-Awobfallk_gtZZdPhpCllnK1eo", "type": "kho_1", "col_hang": 2, "col_code": 3, "col_size": 4, "col_price": 5},
     {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2", "left_cols": {"name": 0, "size": 2, "qty": 3, "price": 4}, "right_cols": {"name": 8, "size": 10, "qty": 11, "price": 12}},
-    {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6}
+    {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
+    
+    # BỔ SUNG KHO 4 (NAM GIÀY) - FORM GỘP Ô
+    {
+        "name": "Kho Nam Giày (Kho 4)", 
+        "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", 
+        "type": "kho_4", 
+        "blocks": [
+            {"name": 1, "size": 2, "price": 3},   # Block 1 (Cột B, C, D)
+            {"name": 5, "size": 6, "price": 7},   # Block 2 (Cột F, G, H)
+            {"name": 10, "size": 11, "price": 12} # Block 3 (Cột K, L, M)
+        ]
+    }
 ]
 
 # =========================================================
@@ -162,6 +174,9 @@ def sync_data():
                 if config["type"] == "kho_1" and i in [1, 2]: continue
                 if config["type"] == "kho_2" and "onitsuka" in ws.title.lower(): continue
                 
+                # CHỐT CHẶN KHO 4: CHỈ QUÉT TỪ TAB 1 ĐẾN TAB 6 (Tức là index từ 0 đến 5)
+                if config["type"] == "kho_4" and i > 5: continue
+                
                 data = ws.get_all_values()
                 if not data: continue
 
@@ -227,7 +242,7 @@ def sync_data():
                             
                             if not is_valid_size(s_c): continue
 
-                        elif config["type"] == "kho_2":
+                        elif config["type"] == "kho_2" or config["type"] == "kho_4":
                             continue
 
                         dict_key = normalize_key(raw_code)
@@ -286,6 +301,61 @@ def sync_data():
                             if is_valid_size(sc):
                                 if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
                                     sneaker_dict[dk]["variants"][sc] = fp
+
+                # =========================================================
+                # BỘ NÃO CHUYÊN TRỊ KHO 4 (Form Gộp Ô)
+                # =========================================================
+                elif config["type"] == "kho_4":
+                    for block in config["blocks"]:
+                        current_name = ""
+                        current_price = 0
+                        
+                        # Bắt đầu quét từ dòng số 3 (index 2)
+                        for r_idx in range(2, len(data)):
+                            row = data[r_idx]
+                            
+                            name_val = get_val(row, block["name"])
+                            size_val = get_val(row, block["size"])
+                            price_val = get_val(row, block["price"])
+                            
+                            # 1. Ghi nhớ Tên Giày (Nếu gặp dòng có tên)
+                            if name_val and not str(name_val).isdigit():
+                                upper_name = name_val.upper()
+                                # Loại rác phân cách
+                                if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
+                                    current_name = ""
+                                    current_price = 0
+                                    continue
+                                
+                                if len(name_val) > 5 and not la_hang_tap_nham(name_val):
+                                    current_name = name_val
+                                    current_price = 0 
+                                    
+                            # 2. Ghi nhớ Giá
+                            if price_val:
+                                p_m = extract_price(price_val)
+                                if p_m > 0:
+                                    if p_m < 100000: 
+                                        p_m = p_m * 1000
+                                    current_price = p_m
+                                    
+                            # 3. Chốt đơn Size 
+                            if current_name and size_val and current_price > 0:
+                                s_c = clean_size(size_val)
+                                
+                                if is_valid_size(s_c):
+                                    raw_code = loc_ma_giay(current_name)
+                                    if not raw_code or str(raw_code).isdigit(): continue
+                                    
+                                    # CÔNG THỨC GIÁ KHO 4: Mày muốn cộng bao nhiêu thì sửa số 300000 này nhé!
+                                    fp = int(round(current_price + 300000, -4))
+                                    
+                                    dk = normalize_key(raw_code)
+                                    if dk not in sneaker_dict: 
+                                        sneaker_dict[dk] = {"display_name": raw_code.upper(), "original_name": current_name.upper(), "variants": {}}
+                                        
+                                    if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
+                                        sneaker_dict[dk]["variants"][s_c] = fp
 
         # =========================================================
         # BỘ NÃO TRÍ NHỚ: ĐỌC DỮ LIỆU CŨ ĐỂ TÌM HÀNG "MỚI/CẬP NHẬT"
