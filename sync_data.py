@@ -1,640 +1,359 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bào Ngư Sneaker - Chuyên Giày Pickleball & Sneaker Chính Hãng</title>
-    <meta name="description" content="Bào Ngư Sneaker - Chuyên phân phối, săn sale các dòng giày Pickleball, Tennis, Sneaker thời trang chính hãng Nike, Adidas, Asics, Babolat... Cam kết chuẩn Auth.">
-    <meta property="og:title" content="Bào Ngư Sneaker - Hệ Thống Giày Chính Hãng">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/111111/ffffff?text=BAO+NGU+SNEAKER">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC1LQJN5S6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VC1LQJN5S6'); 
-    </script>
-    
-    <style>
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333;}
-        
-        header { background: #fff; padding: 15px 20px 10px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; transition: transform 0.3s ease;}
-        .header-hidden { transform: translateY(-100%); }
-        h1 { text-align: center; text-transform: uppercase; color: #111; margin: 0 0 5px 0; font-weight: 900; letter-spacing: 1px; font-size: 26px;}
-        .slogan { text-align: center; color: #e74c3c; font-size: 14px; margin: 0 0 15px 0; font-weight: 700; font-style: italic;}
+import gspread
+import json
+import os
+import re
+import sys
+import traceback
+import time  
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+import pickle
 
-        .main-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 10px;}
-        .main-tab-btn { padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; border: 2px solid #111; background: #fff; color: #111; font-size: 15px; transition: 0.3s;}
-        .main-tab-btn.active { background: #111; color: #fff; }
-        .main-tab-btn:hover { background: #333; color: #fff;}
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
-        .layout-wrapper { display: flex; max-width: 1350px; margin: 20px auto; gap: 25px; padding: 0 15px; align-items: flex-start;}
-        
-        .sidebar { width: 260px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); flex-shrink: 0; position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto;}
-        .sidebar::-webkit-scrollbar { width: 4px; }
-        .sidebar::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
-        
-        .filter-group { margin-bottom: 25px; }
-        .filter-title { font-size: 15px; font-weight: 800; text-transform: uppercase; color: #111; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center;}
-        
-        .filter-list { display: flex; flex-direction: column; gap: 6px; }
-        .filter-item { background: transparent; border: none; text-align: left; font-size: 14px; color: #555; cursor: pointer; padding: 8px 12px; border-radius: 6px; transition: 0.2s; font-weight: 600;}
-        .filter-item:hover { background: #f5f5f5; color: #111; }
-        .filter-item.active { background: #111; color: #fff; }
+CUSTOM_BRAND_MAPPING = {
+    "1183A872": "Onitsuka Tiger",     
+    "WRS": "Wilson",
+    "SKECHER": "Skechers",
+    "BABOLAT": "Babolat",
+    "WILSON": "Wilson",
+    "LACOSTE": "Lacoste",
+    "ROGER PRO": "On"  
+}
 
-        .size-grid-filter { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-        .size-filter-btn { border: 1px solid #ddd; background: #fff; border-radius: 6px; padding: 8px 0; text-align: center; font-size: 12px; font-weight: 700; cursor: pointer; transition: 0.2s; color: #444;}
-        .size-filter-btn:hover { border-color: #111; color: #111; }
-        .size-filter-btn.active { background: #111; color: #fff; border-color: #111;}
+SHEETS_CONFIG = [
+    {"name": "Kho Điệp Phạm", "id": "1LguFhRHWfHI87onU-Awobfallk_gtZZdPhpCllnK1eo", "type": "kho_1", "col_hang": 2, "col_code": 3, "col_size": 4, "col_price": 5},
+    {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2", "left_cols": {"name": 0, "size": 2, "qty": 3, "price": 4}, "right_cols": {"name": 8, "size": 10, "qty": 11, "price": 12}},
+    {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
+    {"name": "Kho Nam Giày (Kho 4)", "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", "type": "kho_4"}
+]
 
-        .main-content { flex-grow: 1; min-width: 0; }
-        
-        .search-box { display: flex; gap: 10px; margin-bottom: 8px; }
-        .search-box input { flex-grow: 1; padding: 12px 20px; border-radius: 30px; border: 1px solid #ccc; font-size: 15px; outline: none; transition: 0.3s; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.02);}
-        .search-box input:focus { border-color: #111; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        
-        .trending-keywords { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; padding-left: 5px;}
-        .kw-label { font-size: 12px; color: #777; font-weight: bold; margin-top: 4px; }
-        .kw-tag { font-size: 11px; background: #e0e7ff; color: #0984e3; padding: 4px 10px; border-radius: 15px; cursor: pointer; transition: 0.2s; font-weight: 700; border: 1px solid #b2bec3;}
-        .kw-tag:hover { background: #0984e3; color: white; }
+def get_creds():
+    creds = None
+    if os.path.exists('token.pickle'):
+        with open('token.pickle', 'rb') as token: creds = pickle.load(token)
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token: creds.refresh(Request())
+        else:
+            if os.getenv("GITHUB_ACTIONS"): sys.exit(1) 
+            else:
+                if not os.path.exists('credentials.json'): sys.exit(1)
+                flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
+                creds = flow.run_local_server(port=0)
+        with open('token.pickle', 'wb') as token: pickle.dump(creds, token)
+    return creds
 
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-        
-        .product-card { background: #fff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; border: 1px solid #f0f0f0; overflow: hidden; position: relative;}
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-color: #e0e0e0;}
-        
-        .product-img-wrapper { width: 100%; height: 260px; margin-bottom: 12px; overflow: hidden; border-radius: 10px; background: #fdfdfd; position: relative; }
-        
-        .slider-wrapper { position: relative; width: 100%; height: 100%; }
-        .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; width: 100%; height: 100%; scrollbar-width: none; -ms-overflow-style: none; }
-        .slider-container::-webkit-scrollbar { display: none; }
-        .slider-item { flex: 0 0 100%; scroll-snap-align: start; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #fdfdfd; }
-        .product-img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; }
-        .slider-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 10; }
-        .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,0.2); transition: 0.3s; }
-        .dot.active { background: #e74c3c; width: 15px; border-radius: 10px; }
+def normalize_key(text):
+    if not text: return ""
+    return re.sub(r'[^A-Z0-9]', '', str(text).upper())
 
-        .share-btn { position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 20; transition: all 0.2s; font-size: 15px;}
-        .share-btn:hover { background: #111; color: #fff; transform: scale(1.1); }
+def clean_size(s):
+    s = str(s).replace(',', '.')
+    return re.sub(r'\s+', ' ', re.sub(r'[^\d./ -]', '', s)).strip()
 
-        .brand-tag { font-size: 10px; background: #f5f5f5; padding: 3px 10px; border-radius: 20px; color: #999; display: inline-block; margin-bottom: 6px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;}
-        .product-name { font-size: 13.5px; font-weight: 600; margin-bottom: 3px; color: #222; min-height: 40px; display: flex; align-items: center; justify-content: center; line-height: 1.4; padding: 0 5px;}
-        
-        .price-container-card { margin: 5px 0 10px 0; }
-        .price { color: #d32f2f; font-size: 17px; font-weight: 800; }
-        
-        .size-section { border-top: 1px solid #f0f0f0; padding-top: 10px; margin-bottom: 10px; }
-        .size-label { display: block; font-size: 9.5px; color: #aaa; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .size-container { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; min-height: 45px; align-content: flex-start;}
-        .size-btn { padding: 5px 8px; border: 1px solid #e8e8e8; background: #fff; cursor: pointer; border-radius: 5px; font-size: 11px; font-weight: 700; color: #444; transition: 0.2s;}
-        .size-btn:hover { border-color: #111; color: #111; }
-        .size-btn.active { background: #111; color: #fff; border-color: #111; }
-        
-        .order-btn { background: #2563eb; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 13px; font-weight: bold; margin-top: auto; transition: 0.3s;}
-        .order-btn:hover { background: #1d4ed8; }
-        
-        .empty-state { text-align: center; padding: 50px 20px; color: #666; font-size: 16px; width: 100%; grid-column: 1 / -1;}
-        
-        .floating-social { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 999;}
-        .social-btn { height: 42px; padding: 0 16px; border-radius: 25px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: 0.3s; text-decoration: none; color: white; font-weight: bold; font-size: 13px; animation: pulse 2s infinite;}
-        .btn-zalo { background: #0068ff; }
-        .btn-fb { background: #0866FF; animation-delay: 1s; }
-        .social-btn:hover { transform: scale(1.05); }
-        .social-icon { width: 18px; height: 18px; fill: white; margin-right: 7px; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.4); } 70% { box-shadow: 0 0 0 8px rgba(0, 104, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); } }
+def is_valid_size(s):
+    if not s: return False
+    s = str(s).strip()
+    if re.search(r'\d{4}', s): return False
+    if re.fullmatch(r'\d{3}', s): return False
+    try:
+        match = re.search(r'(\d+[.,]?\d*)', s)
+        if match:
+            num = float(match.group(1).replace(',', '.'))
+            if num > 60 or num == 0: return False
+    except: return False
+    return True
 
-        #backToTopBtn { position: fixed; bottom: 20px; left: 20px; z-index: 999; background-color: #111; color: white; border: none; width: 42px; height: 42px; border-radius: 50%; font-size: 18px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s; opacity: 0; visibility: hidden; display: flex; justify-content: center; align-items: center;}
-        #backToTopBtn.show { opacity: 1; visibility: visible; }
-        #backToTopBtn:hover { background-color: #e74c3c; transform: translateY(-3px); }
+def get_val(row, idx):
+    return str(row[idx]).strip() if idx < len(row) else ""
 
-        .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.6); z-index: 99998; opacity: 0; visibility: hidden; transition: 0.3s; }
-        .sidebar-overlay.show { opacity: 1; visibility: visible; }
-        .close-sidebar-btn { display: none; background: #e74c3c; color: #fff; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-weight: bold;}
+def extract_price(price_str):
+    clean_p = price_str.replace('.', '').replace(',', '')
+    nums = re.findall(r'\d+', clean_p)
+    if not nums: return 0
+    return max([int(p) for p in nums])
 
-        .floating-filter-btn { display: none; }
+def la_hang_tap_nham(ten):
+    ten = str(ten).upper()
+    tu_khoa_cam = ['TẤT', 'VỚ', 'QUẦN', 'ÁO', 'SOCK', 'BALO', 'TÚI', 'MŨ', 'CAP', 'HAT', 'SHIRT', 'PANT']
+    for tu in tu_khoa_cam:
+        if tu in ten: return True
+    return False
 
-        @media (max-width: 900px) { 
-            .layout-wrapper { flex-direction: column; padding: 10px; margin: 0 auto;}
-            .sidebar { position: fixed; top: 0; left: -100%; width: 280px; height: 100vh; max-height: 100vh; z-index: 99999; border-radius: 0; transition: 0.3s ease; box-shadow: 5px 0 15px rgba(0,0,0,0.1); }
-            .sidebar.open { left: 0; }
-            .close-sidebar-btn { display: block; }
+def loc_ma_giay(ten_rac):
+    ten_rac = str(ten_rac).upper()
+    match_on = re.search(r'\b(?=.*[A-Z])(?=.*\d)[A-Z0-9]{11}\b', ten_rac)
+    if match_on: return match_on.group(0)
+    match_lacoste = re.search(r'\b\d{2,4}[A-Z]{2,4}[A-Z0-9]{5,8}\b', ten_rac)
+    if match_lacoste: return match_lacoste.group(0)
+    match_babolat = re.search(r'\b[A-Z0-9]{9}-[A-Z0-9]{4}\b', ten_rac)
+    if match_babolat: return match_babolat.group(0)
+    match_skechers = re.search(r'\b\d{6}[A-Z]?[-/]?[A-Z]{3,4}\b', ten_rac)
+    if match_skechers: return match_skechers.group(0)
+    match_wilson = re.search(r'\bWRS[A-Z0-9]{4,8}\b', ten_rac)
+    if match_wilson: return match_wilson.group(0)
+    match_gen = re.search(r'\b[A-Z0-9]{6,8}-[A-Z0-9]{3,4}\b', ten_rac)
+    if match_gen: return match_gen.group(0)
+    match_code = re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', ten_rac)
+    if match_code: return match_code.group(0)
+    return ten_rac
+
+def nhan_dien_hang(original_name, dict_key):
+    name = str(original_name).upper()
+    full_str = f"{original_name} {dict_key}".upper()
+    for keyword, brand in CUSTOM_BRAND_MAPPING.items():
+        if keyword in full_str: return brand
+    if re.search(r'\bON\b', full_str) or re.search(r'\b(?=.*[A-Z])(?=.*\d)[A-Z0-9]{11}\b', name): return 'On'
+    if re.search(r'\b\d{2,4}[A-Z]{2,4}[A-Z0-9]{5,8}\b', name) or "LACOSTE" in full_str: return 'Lacoste'
+    if name.startswith("11") and "-" in name: return 'Onitsuka Tiger'
+    if name.startswith("10") and "-" in name: return 'Asics'
+    if re.search(r'\b[A-Z0-9]{9}-[A-Z0-9]{4}\b', name): return 'Babolat'
+    if re.search(r'\b\d{6}[A-Z]?[-/]?[A-Z]{3,4}\b', name) or "SKECHER" in full_str: return 'Skechers'
+    if re.search(r'\bWRS[A-Z0-9]{4,8}\b', name): return 'Wilson'
+    if re.search(r'\b[A-Z0-9]{6}-[A-Z0-9]{3}\b', name): return 'Nike'
+    if re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', name): return 'Adidas'
+    return 'Khác'
+
+def sync_data():
+    try:
+        print("--- Bot đang quét đa kho... ---")
+        client = gspread.authorize(get_creds())
+        sneaker_dict = {}
+
+        for config in SHEETS_CONFIG:
+            try:
+                sheet_doc = client.open_by_key(config["id"])
+                worksheets = sheet_doc.worksheets()
+            except Exception as e: continue
             
-            .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .product-card { padding: 8px; border-radius: 10px; }
-            .product-img-wrapper { height: 160px; margin-bottom: 8px;}
-            .brand-tag { font-size: 8.5px; padding: 2px 7px; margin-bottom: 5px; }
-            .product-name { font-size: 11.5px; min-height: 34px; line-height: 1.3; margin-bottom: 2px;}
-            .price { font-size: 14px; }
-            .size-btn { padding: 4px 6px; font-size: 10px; }
-            .order-btn { padding: 8px; font-size: 11px; }
-            
-            .floating-social { bottom: 15px; right: 15px; gap: 10px;}
-            .social-btn { height: 36px; font-size: 11px; padding: 0 12px;}
-            .social-icon { width: 15px; height: 15px; margin-right: 5px; }
-            #backToTopBtn { bottom: 15px; left: 15px; width: 38px; height: 38px; font-size: 16px; }
-            .share-btn { width: 28px; height: 28px; font-size: 13px; top: 5px; left: 5px; }
-
-            .floating-filter-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: #111;
-                color: #fff;
-                border: 2px solid #fff;
-                padding: 10px 24px;
-                border-radius: 30px;
-                font-size: 12px;
-                font-weight: 800;
-                cursor: pointer;
-                z-index: 9999;
-                box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-                animation: bounce-filter 2.5s infinite;
-                letter-spacing: 0.5px;
-            }
-            .floating-filter-btn:hover { background: #e74c3c; border-color: #e74c3c;}
-            
-            @keyframes bounce-filter {
-                0%, 100% { transform: translateX(-50%) translateY(0); }
-                50% { transform: translateX(-50%) translateY(-5px); }
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header id="main-header">
-        <h1>👟 Bào Ngư Sneaker 👟</h1>
-        <p class="slogan">Hệ thống phân phối giày Authentic 100%</p>
-        
-        <div class="main-tabs">
-            <button class="main-tab-btn active" onclick="switchCategory('PICKLEBALL')">🎾 GIÀY PICKLEBALL</button>
-            <button class="main-tab-btn" onclick="switchCategory('SNEAKER')">👟 SNEAKER THỜI TRANG</button>
-        </div>
-    </header>
-
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
-
-    <div class="layout-wrapper" id="main-layout">
-        
-        <aside class="sidebar" id="sidebar">
-            <div class="filter-title">
-                <span>⚙️ Bộ Lọc Nhập Môn</span>
-                <button class="close-sidebar-btn" onclick="toggleSidebar()">Đóng X</button>
-            </div>
-            
-            <div class="filter-group">
-                <div class="filter-title">Thương Hiệu</div>
-                <div class="filter-list" id="brand-filters"></div>
-            </div>
-
-            <div class="filter-group">
-                <div class="filter-title">Mức Giá</div>
-                <div class="filter-list" id="price-filters">
-                    <button class="filter-item price-btn active" onclick="filterPrice('ALL', this)">Tất cả giá</button>
-                    <button class="filter-item price-btn" onclick="filterPrice('1-2', this)">Từ 1tr - 2tr</button>
-                    <button class="filter-item price-btn" onclick="filterPrice('2-3', this)">Từ 2tr - 3tr</button>
-                    <button class="filter-item price-btn" onclick="filterPrice('3+', this)">Trên 3tr</button>
-                </div>
-            </div>
-
-            <div class="filter-group">
-                <div class="filter-title">Kích Cỡ (Size) <span id="clear-size" style="font-size: 10px; color:#e74c3c; cursor:pointer; display:none;" onclick="filterSize('ALL', null)">Xóa lọc</span></div>
-                <div class="size-grid-filter" id="size-filters"></div>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Nhập mã giày, tên dòng (VD: Vapor, Asics...)" onkeyup="handleSearch()">
-            </div>
-            
-            <div class="trending-keywords" id="trend-kw-box">
-                <span class="kw-label">Gợi ý:</span>
-            </div>
-            
-            <div class="grid-container" id="product-grid"></div>
-        </main>
-    </div>
-
-    <button class="floating-filter-btn" onclick="toggleSidebar()">⚙️ BỘ LỌC TÌM KIẾM</button>
-
-    <div class="floating-social">
-        <a href="https://zalo.me/0363535838" target="_blank" class="social-btn btn-zalo">
-            <svg class="social-icon" viewBox="0 0 24 24"><path d="M21.4 10.6C21.4 6 17.2 2.2 12 2.2C6.8 2.2 2.6 6 2.6 10.6C2.6 13 3.8 15.2 5.8 16.7L4.6 19.8L7.9 18.5C9.2 19 10.6 19.3 12 19.3C17.2 19.3 21.4 15.6 21.4 10.6ZM12 17.8C10.7 17.8 9.5 17.6 8.3 17.1L8 16.9L5.8 17.8L6.6 15.7L6.3 15.4C4.6 14.1 3.6 12.4 3.6 10.6C3.6 6.8 7.4 3.7 12 3.7C16.6 3.7 20.4 6.8 20.4 10.6C20.4 14.4 16.6 17.8 12 17.8ZM16.3 8.3L13.1 11.7L10.3 9.4L4.8 15.4L8.1 12L10.8 14.3L16.3 8.3Z"/></svg>
-            Zalo
-        </a>
-        <a href="https://www.facebook.com/butihu/" target="_blank" class="social-btn btn-fb">
-            <svg class="social-icon" viewBox="0 0 36 36"><path d="M18 2C9.163 2 2 8.813 2 17.218c0 4.792 2.42 9.065 6.136 11.914v5.356l5.592-3.085c1.35.378 2.784.582 4.272.582 8.837 0 16-6.814 16-15.218C34 8.813 26.837 2 18 2zm1.09 15.346l-4.524-4.832-8.81 4.832 9.68-10.27 4.607 4.832 8.727-4.832-9.68 10.27z"/></svg>
-            Messenger
-        </a>
-    </div>
-    <button id="backToTopBtn" onclick="scrollToTop()" title="Lên đầu trang">⬆️</button>
-
-    <script>
-        let globalData = [];
-        let dictionaryData = []; 
-        let selections = {}; 
-        
-        let currentCategory = 'PICKLEBALL'; 
-        let currentBrand = 'Tất cả';
-        let currentPriceRange = 'ALL'; 
-        let currentSize = 'ALL';
-        let currentSearch = '';
-        let missingImages = new Set(); 
-        
-        const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
-        
-        // Luôn giữ luật phân loại từ khóa chuẩn xác cho Tab Pickleball/Sneaker
-        const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter"];
-        const SNEAKER_KEYWORDS = ["giày thời trang", "onitsuka tiger", "onitsuka"];
-        
-        const TRENDS = {
-            'PICKLEBALL': ["Vapor Pro", "Asics Gel", "Court FF", "Babolat", "Skechers"],
-            'SNEAKER': ["Air Force 1", "Jordan", "Onitsuka", "Samba", "Yeezy"]
-        };
-
-        const DICTIONARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vScpWo4II6HpE0CLIMA-zQSEt8eG4YeE1R_DtkoVvzaeAwPXU1XMEkojSSvOXGukrDxSGMZNOPXgunX/pub?gid=0&single=true&output=csv";
-
-        let lastScrollTop = 0;
-        let backToTopBtn = document.getElementById("backToTopBtn");
-        window.addEventListener("scroll", function() {
-            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            let header = document.getElementById("main-header");
-            if (currentScroll > lastScrollTop && currentScroll > 150) header.classList.add("header-hidden");
-            else header.classList.remove("header-hidden");
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-            if (currentScroll > 300) backToTopBtn.classList.add("show");
-            else backToTopBtn.classList.remove("show");
-        }, false);
-        
-        function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
-        function toggleSidebar() {
-            document.getElementById('sidebar').classList.toggle('open');
-            document.getElementById('sidebarOverlay').classList.toggle('show');
-        }
-
-        Promise.all([
-            fetch('data.json').then(res => res.json()),
-            fetch(DICTIONARY_SHEET_URL).then(res => res.text())
-        ]).then(([jsonData, csvText]) => {
-            
-            let lines = csvText.split('\n');
-            for(let i = 1; i < lines.length; i++) {
-                let line = lines[i].trim();
-                if(!line) continue;
-                let parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                if(parts.length >= 2) {
-                    let fullName = parts[0].replace(/^"|"$/g, '').trim(); 
-                    let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
-                    let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
-                    let hotTag = parts[3] ? parts[3].replace(/^"|"$/g, '').trim() : ''; 
-                    dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode, tag: hotTag });
-                }
-            }
-
-            jsonData.forEach(p => {
-                let variantMap = {}; 
-                p.variants.forEach(v => {
-                    let sizeStr = v.size.toString();
-                    let fixedStr = sizeStr.replace(/(\d{2}(?:\.\d)?)(3[4-9]|4[0-9])/g, '$1 $2');
-                    fixedStr = fixedStr.replace(/[,/\n\r\t-]/g, ' ');
-                    
-                    let allSubSizes = fixedStr.split(/\s+/).filter(s => s !== '');
-                    let hasAdultEur = allSubSizes.some(s => parseFloat(s) >= 35 && parseFloat(s) <= 49);
-
-                    let cleanSizes = allSubSizes.filter(s => {
-                        let num = parseFloat(s);
-                        if (isNaN(num)) return true; 
-                        if (hasAdultEur && num >= 20 && num <= 33.5) return false; 
-                        return true;
-                    });
-
-                    if (cleanSizes.length === 0) cleanSizes = [sizeStr]; 
-
-                    cleanSizes.forEach(sz => {
-                        if (sz.endsWith('.6')) sz = sz.slice(0, -2) + '.5'; 
-                        if (sz.endsWith('.3')) sz = sz.slice(0, -2);        
-
-                        if (!variantMap[sz] || v.price < variantMap[sz].price) {
-                            variantMap[sz] = { size: sz, price: v.price, price_display: v.price_display };
-                        }
-                    });
-                });
-
-                p.variants = Object.values(variantMap).sort((a, b) => {
-                    let na = parseFloat(a.size); let nb = parseFloat(b.size);
-                    if (!isNaN(na) && !isNaN(nb)) return na - nb;
-                    return a.size.localeCompare(b.size);
-                });
-
-                const shoeCode = p.name.trim();
-                const matchedItem = dictionaryData.find(d => 
-                    (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
-                    d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
-                );
+            for i, ws in enumerate(worksheets):
+                if config["type"] == "kho_1" and i in [1, 2]: continue
+                if config["type"] == "kho_2" and "onitsuka" in ws.title.lower(): continue
+                if config["type"] == "kho_4" and i > 5: continue
                 
-                const searchString = matchedItem ? matchedItem.fullName.toLowerCase() : `${p.brand.toLowerCase()} ${shoeCode.toLowerCase()}`;
-                
-                let detectedBrand = null;
-                for (let b of TARGET_BRANDS) {
-                    if (b === 'On') {
-                        if (/\bon\b/i.test(searchString) && !/onitsuka/i.test(searchString)) { detectedBrand = b; break; }
-                    } else if (b === 'Onitsuka Tiger') {
-                        if (/onitsuka/i.test(searchString)) { detectedBrand = b; break; }
-                    } else {
-                        if (searchString.includes(b.toLowerCase())) { detectedBrand = b; break; }
-                    }
-                }
-                if (detectedBrand) p.brand = detectedBrand;
+                data = ws.get_all_values()
+                if not data: continue
 
-                p.category = 'SNEAKER'; 
-                
-                let isPickle = false;
-                for (let kw of PICKLEBALL_KEYWORDS) {
-                    if (searchString.includes(kw.toLowerCase())) {
-                        isPickle = true;
-                        break;
-                    }
-                }
-                if (isPickle) p.category = 'PICKLEBALL';
-                
-                for (let kw of SNEAKER_KEYWORDS) {
-                    if (searchString.includes(kw.toLowerCase())) {
-                        p.category = 'SNEAKER';
-                        break;
-                    }
-                }
-            });
+                # =========================================================
+                # CÁCH LY KHO 4 (Không ảnh hưởng đến 3 kho kia)
+                # =========================================================
+                if config["type"] == "kho_4":
+                    blocks = []
+                    if i == 0: blocks = [(1, 2, 3), (5, 6, 7), (10, 11, 12)]
+                    elif i == 1: blocks = [(0, 1, 2), (4, 5, 6), (8, 10, 11), (13, 14, 16)]
+                    elif i in [2, 3]: blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
+                    elif i in [4, 5]: blocks = [(1, 2, 3), (6, 7, 8)]
 
-            globalData = jsonData;
-            switchCategory('PICKLEBALL'); 
-        }).catch(err => {
-            console.log("Lỗi mạng: ", err);
-        });
-
-        function switchCategory(cat) {
-            currentCategory = cat;
-            
-            const btns = document.querySelectorAll('.main-tab-btn');
-            btns[0].classList.toggle('active', cat === 'PICKLEBALL');
-            btns[1].classList.toggle('active', cat === 'SNEAKER');
-            
-            currentBrand = 'Tất cả';
-            currentPriceRange = 'ALL';
-            currentSize = 'ALL';
-            document.getElementById('searchInput').value = '';
-            currentSearch = '';
-            
-            renderTrends();
-            renderSidebarFilters();
-            renderGrid();
-        }
-
-        function renderTrends() {
-            const box = document.getElementById('trend-kw-box');
-            let kws = TRENDS[currentCategory] || [];
-            
-            let html = `<span class="kw-label">Gợi ý:</span>`;
-            kws.forEach(k => {
-                html += `<span class="kw-tag" onclick="clickTrend('${k}')">${k}</span>`;
-            });
-            box.innerHTML = html;
-        }
-
-        function clickTrend(keyword) {
-            document.getElementById('searchInput').value = keyword;
-            currentSearch = keyword.toLowerCase();
-            renderGrid();
-        }
-
-        function renderSidebarFilters() {
-            const catData = globalData.filter(p => p.category === currentCategory);
-
-            const brandContainer = document.getElementById('brand-filters');
-            const brandsInData = [...new Set(catData.map(p => p.brand))];
-            
-            brandsInData.sort((a, b) => (TARGET_BRANDS.indexOf(a) !== -1 ? TARGET_BRANDS.indexOf(a) : 99) - (TARGET_BRANDS.indexOf(b) !== -1 ? TARGET_BRANDS.indexOf(b) : 99));
-            const allBrands = ['Tất cả', ...brandsInData, 'Khác']; 
-            
-            brandContainer.innerHTML = allBrands.map(b => {
-                let label = b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Khác' : '🔸 ' + b);
-                return `<button class="filter-item brand-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">${label}</button>`;
-            }).join('');
-
-            const sizeContainer = document.getElementById('size-filters');
-            let allSizes = new Set();
-            catData.forEach(p => p.variants.forEach(v => {
-                let n = parseFloat(v.size);
-                // Giữ lại chốt chặn an toàn trên giao diện chỉ hiện size 35-49
-                if (!isNaN(n) && n >= 35 && n <= 49) {
-                    allSizes.add(v.size);
-                }
-            }));
-            
-            let sortedSizes = Array.from(allSizes).sort((a,b) => {
-               return parseFloat(a) - parseFloat(b);
-            });
-
-            sizeContainer.innerHTML = sortedSizes.map(s => `<button class="size-filter-btn" onclick="filterSize('${s}', this)">${s}</button>`).join('');
-            document.getElementById('clear-size').style.display = 'none';
-            document.querySelectorAll('.price-btn').forEach(b => b.classList.remove('active'));
-            document.querySelector('.price-btn').classList.add('active');
-        }
-
-        function filterBrand(brand, btn) {
-            currentBrand = brand;
-            document.querySelectorAll('.brand-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active'); 
-            if(window.innerWidth <= 900) toggleSidebar(); 
-            renderGrid();
-        }
-
-        function filterPrice(range, btn) {
-            currentPriceRange = range;
-            document.querySelectorAll('.price-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active'); 
-            renderGrid();
-        }
-
-        function filterSize(size, btn) {
-            currentSize = size;
-            document.querySelectorAll('.size-filter-btn').forEach(b => b.classList.remove('active'));
-            if (btn) btn.classList.add('active');
-            document.getElementById('clear-size').style.display = size === 'ALL' ? 'none' : 'inline';
-            renderGrid();
-        }
-
-        function handleSearch() {
-            currentSearch = document.getElementById('searchInput').value.toLowerCase().trim();
-            renderGrid();
-        }
-
-        window.handleImgErr = function(img, shoeCode, originalBrand) {
-            img.onerror = null; 
-            img.src = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=CHUA+CO+ANH';
-            missingImages.add(shoeCode);
-            if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
-                let card = img.closest('.product-card');
-                if (card) card.style.display = 'none';
-            }
-        };
-
-        window.updateDots = function(container) {
-            const index = Math.round(container.scrollLeft / container.clientWidth);
-            const dotsContainer = container.nextElementSibling;
-            if (dotsContainer && dotsContainer.classList.contains('slider-dots')) {
-                const dots = dotsContainer.querySelectorAll('.dot');
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-            }
-        };
-
-        function renderGrid() {
-            const grid = document.getElementById('product-grid');
-            grid.innerHTML = ''; 
-            
-            let filtered = globalData.filter(p => {
-                if (p.category !== currentCategory) return false;
-
-                const shoeCode = p.name.trim();
-                const matchedItem = dictionaryData.find(d => 
-                    (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
-                    d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
-                );
-                
-                const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
-                if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
-
-                if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
-                
-                if (currentPriceRange !== 'ALL') {
-                    let minPrice = Math.min(...p.variants.map(v => v.price));
-                    if (currentPriceRange === '1-2') return minPrice >= 1000000 && minPrice <= 2000000;
-                    if (currentPriceRange === '2-3') return minPrice > 2000000 && minPrice <= 3000000;
-                    if (currentPriceRange === '3+') return minPrice > 3000000;
-                }
-
-                if (currentSearch !== '') {
-                    // Hiển thị chuẩn zin như cũ
-                    const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
-                    const searchTarget = `${displayFullName} ${shoeCode} ${p.brand}`.toLowerCase();
-                    const searchKeywords = currentSearch.split(/\s+/).filter(k => k !== '');
-                    const isMatch = searchKeywords.every(kw => searchTarget.includes(kw));
-                    if (!isMatch) return false;
-                }
-
-                return true;
-            });
-
-            filtered.sort((a, b) => {
-                let indexA = TARGET_BRANDS.indexOf(a.brand);
-                let indexB = TARGET_BRANDS.indexOf(b.brand);
-                if (indexA === -1) indexA = 99; 
-                if (indexB === -1) indexB = 99;
-                return indexA - indexB;
-            });
-
-            if (filtered.length === 0) {
-                grid.innerHTML = `<div class="empty-state"><h3>Không tìm thấy mẫu nào phù hợp 🥲</h3><p>Hãy thử xóa bộ lọc hoặc tìm mã khác xem sao nhé!</p></div>`;
-                return;
-            }
-
-            filtered.forEach((p, idx) => {
-                const prices = p.variants.map(v => v.price);
-                const displayPrice = Math.min(...prices) === Math.max(...prices) ? `${Math.min(...prices).toLocaleString()}đ` : `${Math.min(...prices).toLocaleString()}đ - ${Math.max(...prices).toLocaleString()}đ`;
-
-                const shoeCode = p.name.trim();
-                const matchedItem = dictionaryData.find(d => 
-                    (d.mappingCode.toLowerCase() === shoeCode.toLowerCase()) || 
-                    d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
-                );
-                
-                // HIỂN THỊ CHUẨN ZIN ĐÃ CHỐT VỚI ĐẠI CA LÚC ĐẦU
-                const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
-                
-                const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
-                const imgUrls = rawImgStr.split(',').map(url => url.trim()).filter(url => url !== '');
-
-                let imgHtml = '';
-                if (imgUrls.length > 1) {
-                    imgHtml = `
-                    <div class="slider-wrapper">
-                        <div class="slider-container" onscroll="updateDots(this)">
-                            ${imgUrls.map((url, i) => `
-                            <div class="slider-item">
-                                <img src="${url}" class="product-img" alt="${shoeCode}-${i}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
-                            </div>
-                            `).join('')}
-                        </div>
-                        <div class="slider-dots">
-                            ${imgUrls.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}"></div>`).join('')}
-                        </div>
-                    </div>`;
-                } else {
-                    imgHtml = `<img src="${imgUrls[0] || ''}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">`;
-                }
-
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <div class="product-img-wrapper">
-                        <button class="share-btn" onclick="event.stopPropagation(); shareProduct('${displayFullName.replace(/'/g, "\\'")}')" title="Chia sẻ mẫu này">🔗</button>
-                        ${imgHtml}
-                    </div>
-                    <div>
-                        <div class="brand-tag">${p.brand}</div>
-                        <div class="product-name">${displayFullName}</div>
-                        <div class="price-container-card">
-                            <span class="price" id="price-${idx}">${displayPrice}</span>
-                        </div>
+                    for b_name, b_size, b_price in blocks:
+                        current_name = ""
+                        current_price = 0
                         
-                        <div class="size-section">
-                            <span class="size-label">Bảng Size (Click để chọn)</span>
-                            <div class="size-container">
-                                ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${shoeCode.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
-                            </div>
-                        </div>
-                    </div>
-                    <button class="order-btn" onclick="order('${displayFullName.replace(/'/g, "\\'")}')">Liên Hệ</button>
-                `;
-                grid.appendChild(card);
-            });
-        }
+                        for r_idx in range(2, len(data)):
+                            row = data[r_idx]
+                            name_val = get_val(row, b_name)
+                            size_val = get_val(row, b_size)
+                            price_val = get_val(row, b_price)
+                            
+                            if name_val and not str(name_val).isdigit():
+                                upper_name = name_val.upper().strip()
+                                if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
+                                    current_name = ""
+                                    current_price = 0
+                                    continue
+                                if not la_hang_tap_nham(name_val):
+                                    current_name = name_val
+                                    current_price = 0 
+                                    
+                            if price_val:
+                                p_m = extract_price(price_val)
+                                if p_m > 0:
+                                    if p_m < 100000: p_m = p_m * 1000
+                                    current_price = p_m
+                                    
+                            if current_name and size_val and current_price > 0:
+                                raw_code = current_name.strip() 
+                                if "JP7309" in raw_code.upper(): continue # Lọc Sổ đen
+                                
+                                fp = int(round(current_price + 300000, -4))
+                                dk = normalize_key(raw_code)
+                                
+                                size_str = str(size_val).replace(',', '.').replace('\n', ' ')
+                                parts = re.split(r'\s+', size_str.strip())
+                                
+                                for p in parts:
+                                    p = p.strip()
+                                    if not p: continue
+                                    sub_parts = p.split('/') if '/' in p else [p]
+                                    for sp in sub_parts:
+                                        if re.fullmatch(r'\d{3}', sp) and sp.endswith('5'): sp = sp[:2] + '.' + sp[2]
+                                        s_c = clean_size(sp)
+                                        if is_valid_size(s_c):
+                                            if dk not in sneaker_dict: 
+                                                sneaker_dict[dk] = {"display_name": raw_code, "original_name": raw_code, "variants": {}}
+                                            if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
+                                                sneaker_dict[dk]["variants"][s_c] = fp
 
-        function selSize(btn, idx, pr, sz, nm) {
-            btn.parentElement.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            document.getElementById(`price-${idx}`).innerText = pr;
-            selections[nm] = sz;
-        }
+                # =========================================================
+                # 3 KHO CŨ - TRẢ LẠI ZIN 100% NHƯ LÚC BAN ĐẦU
+                # =========================================================
+                else:
+                    for row in data[1:]:
+                        try:
+                            raw_code = ""
+                            price_val = ""
+                            s_c = ""
 
-        function order(nm) {
-            const sz = selections[nm] || "chưa chọn size";
-            const text = `Hi shop, mình cần chốt đơn mẫu: ${nm} (Size: ${sz})`;
-            const zalo = `https://zalo.me/0363535838?text=${encodeURIComponent(text)}`;
-            window.open(zalo, '_blank');
-        }
+                            if config["type"] == "kho_1":
+                                raw_code = get_val(row, config["col_code"]) or get_val(row, config["col_hang"])
+                                if la_hang_tap_nham(raw_code): continue 
+                                if "JP7309" in str(raw_code).upper(): continue # Lọc sổ đen
+                                
+                                price_val = get_val(row, config["col_price"])
+                                sizes_raw = get_val(row, config["col_size"]).split('\n')
+                                p_max = extract_price(price_val)
+                                
+                                if p_max == 0 or not raw_code or str(raw_code).isdigit(): continue
+                                final_price = int(round((p_max * 1000) + 300000, -4))
+                                if final_price < 1000000: continue 
+                                
+                                dict_key = normalize_key(raw_code)
+                                if dict_key not in sneaker_dict: 
+                                    sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": raw_code.upper(), "variants": {}}
+                                
+                                for s in sizes_raw:
+                                    sc = clean_size(s)
+                                    if is_valid_size(sc):
+                                        if sc not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][sc]:
+                                            sneaker_dict[dict_key]["variants"][sc] = final_price
+                                continue
 
-        function shareProduct(productName) {
-            const shareData = { text: productName, url: 'https://baongu.store' };
-            if (navigator.share) {
-                navigator.share(shareData).catch(err => { console.log('Khách hủy share:', err); });
-            } else {
-                navigator.clipboard.writeText(`${productName}\nhttps://baongu.store`).then(() => {
-                    alert('✅ Đã copy thông tin sản phẩm! Bạn dán (Ctrl+V) để gửi cho bạn bè nhé.');
-                }).catch(err => {
-                    alert('❌ Trình duyệt không hỗ trợ, bạn tự copy link baongu.store nhé!');
-                });
-            }
-        }
-    </script>
-</body>
-</html>
+                            elif config["type"] == "kho_3":
+                                name_size_val = get_val(row, config["col_name_size"])
+                                price_val = get_val(row, config["col_price"])
+                                qty_val = get_val(row, config["col_qty"])
+                                
+                                try: so_luong = int(float(qty_val))
+                                except ValueError: so_luong = 0
+                                if so_luong < 1: continue
+
+                                if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
+                                if "JP7309" in str(name_size_val).upper(): continue # Lọc sổ đen
+                                
+                                raw_code = loc_ma_giay(name_size_val)
+                                if not raw_code or str(raw_code).isdigit(): continue
+                                
+                                size_match = re.search(r'(?:EU|Size|UK|US)\s*([0-9.,/]+)', name_size_val, re.IGNORECASE)
+                                if size_match: s_c = clean_size(size_match.group(1))
+                                else:
+                                    size_match = re.search(r'\(\s*([0-9.,/]+)\s*\)', name_size_val)
+                                    if size_match: s_c = clean_size(size_match.group(1))
+                                    else:
+                                        size_tail = re.search(r'-\s*([0-9]{2}[.,]?[0-9]{0,2})$', name_size_val.strip())
+                                        if size_tail: s_c = clean_size(size_tail.group(1))
+                                
+                                if not is_valid_size(s_c): continue
+
+                            elif config["type"] == "kho_2":
+                                continue
+
+                            dict_key = normalize_key(raw_code)
+                            p_max = extract_price(price_val)
+                            if p_max == 0: continue
+                            
+                            final_price = int(round((p_max * 1000) + 300000, -4))
+                            if final_price < 1000000: continue 
+                            
+                            if dict_key not in sneaker_dict: 
+                                sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": name_size_val.upper(), "variants": {}}
+                            
+                            if s_c not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][s_c]:
+                                sneaker_dict[dict_key]["variants"][s_c] = final_price
+                        except: continue
+
+                    if config["type"] == "kho_2":
+                        def parse_side(cols):
+                            blocks = []; curr = {"names": [], "sizes": [], "price_val": 0}
+                            for r in data[1:]:
+                                n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
+                                if not any([n,s,q,p]):
+                                    if curr["names"] or curr["sizes"]:
+                                        blocks.append(curr)
+                                        curr = {"names": [], "sizes": [], "price_val": 0}
+                                    continue
+                                if n: curr["names"].append(n)
+                                if p:
+                                    p_m = extract_price(p)
+                                    if p_m > curr["price_val"]: curr["price_val"] = p_m
+                                if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
+                                    curr["sizes"].append(s)
+                            if curr["names"] or curr["sizes"]: blocks.append(curr)
+                            return blocks
+                        
+                        for b in parse_side(config["left_cols"]) + parse_side(config["right_cols"]):
+                            if not b["names"] or b["price_val"] == 0: continue
+                            full_text = " ".join(b["names"])
+                            if la_hang_tap_nham(full_text): continue
+                            if "JP7309" in full_text.upper(): continue # Lọc sổ đen
+                            
+                            code_c = loc_ma_giay(full_text)
+                            if str(code_c).isdigit(): continue
+                            
+                            fp = int(round((b["price_val"] * 1000) + 300000, -4))
+                            if fp < 1000000: continue 
+                            
+                            dk = normalize_key(code_c)
+                            if dk not in sneaker_dict: 
+                                sneaker_dict[dk] = {"display_name": code_c.upper(), "original_name": full_text.upper(), "variants": {}}
+                                
+                            for s in b["sizes"]:
+                                sc = clean_size(s)
+                                if is_valid_size(sc):
+                                    if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
+                                        sneaker_dict[dk]["variants"][sc] = fp
+
+        current_time = int(time.time())
+        old_data_map = {}
+        
+        if os.path.exists('data.json'):
+            try:
+                with open('data.json', 'r', encoding='utf-8') as f:
+                    old_json = json.load(f)
+                    for item in old_json:
+                        old_data_map[item['name']] = item
+            except: pass
+
+        result = []
+        for dk, info in sneaker_dict.items():
+            if not info["variants"]: continue
+            brand = nhan_dien_hang(info["original_name"], dk)
+            if brand == 'Khác': continue 
+            
+            sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
+            disp_name = info["display_name"]
+            last_updated = current_time 
+            
+            if disp_name in old_data_map:
+                old_variants = old_data_map[disp_name].get("variants", [])
+                if old_variants == sorted_v:
+                    last_updated = old_data_map[disp_name].get("updated_at", current_time)
+            
+            result.append({
+                "name": disp_name, 
+                "brand": brand, 
+                "variants": sorted_v, 
+                "updated_at": last_updated
+            })
+
+        priority_order = {"Nike": 1, "Adidas": 2, "Asics": 3, "Onitsuka Tiger": 4, "Skechers": 5, "On": 6, "Lacoste": 7, "Babolat": 8, "Wilson": 9}
+        result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
+
+        with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
+        print(f"✅ Xong! Đã dọn sạch. Kho 1 2 3 nguyên vẹn, Kho 4 tách riêng.")
+        
+    except Exception as e: 
+        print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
+        traceback.print_exc()
+        sys.exit(1)
+
+if __name__ == "__main__":
+    sync_data()
