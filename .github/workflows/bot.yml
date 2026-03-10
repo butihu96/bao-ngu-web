@@ -31,7 +31,7 @@ jobs:
           echo "$CREDENTIALS_B64" | base64 --decode > credentials.json
           echo "$TOKEN_B64" | base64 --decode > token.pickle
 
-      - name: Gọi Bot chui vào 3 kho lấy Data
+      - name: Gọi Bot chui vào 4 kho lấy Data
         run: python sync_data.py
 
       - name: Đóng gói Data mới lên Web
@@ -39,4 +39,4 @@ jobs:
           git config --global user.name "BaoNgu-Bot"
           git config --global user.email "bot@baongu.store"
           git add data.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🚀 Bot tự động cập nhật kho giày" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🚀 Bot tự động cập nhật kho giày" && git pull --rebase origin main && git push)
