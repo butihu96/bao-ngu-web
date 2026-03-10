@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bào Ngư Sneaker - Chuyên Giày Pickleball & Sneaker Chính Hãng</title>
-    
     <meta name="description" content="Bào Ngư Sneaker - Chuyên phân phối, săn sale các dòng giày Pickleball, Tennis, Sneaker thời trang chính hãng Nike, Adidas, Asics, Babolat... Cam kết chuẩn Auth.">
     <meta property="og:title" content="Bào Ngư Sneaker - Hệ Thống Giày Chính Hãng">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/111111/ffffff?text=BAO+NGU+SNEAKER">
@@ -172,7 +171,7 @@
 
     <header id="main-header">
         <h1>👟 Bào Ngư Sneaker 👟</h1>
-        <p class="slogan">Hệ thống phân phối giày Authentic 100%</p>
+        <p class="slogan">Toàn bộ đều là sản phẩm có sẵn. Chính hãng 100%, ngoài ra em cũng nhận order các sản phẩm khác. Anh chị em cứ yên tâm, tin tưởng gửi gắm ạ</p>
         
         <div class="main-tabs">
             <button class="main-tab-btn active" onclick="switchCategory('PICKLEBALL')">🎾 GIÀY PICKLEBALL</button>
@@ -251,8 +250,12 @@
         let missingImages = new Set(); 
         
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
-        const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter"];
-        const SNEAKER_KEYWORDS = ["giày thời trang", "onitsuka tiger", "onitsuka"];
+        
+        // ĐÃ THÊM TỪ KHÓA "court lite" VÀO PICKLEBALL
+        const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter", "court lite"];
+        
+        // ĐÃ THÊM TỪ KHÓA "giày thể thao" VÀO LỆNH BÀI SNEAKER
+        const SNEAKER_KEYWORDS = ["giày thời trang", "giày thể thao", "onitsuka tiger", "onitsuka"];
         
         const TRENDS = {
             'PICKLEBALL': ["Vapor Pro", "Asics Gel", "Court FF", "Babolat", "Skechers"],
@@ -289,11 +292,8 @@
                 let mCode = d.mappingCode.toLowerCase();
                 let fName = d.fullName.toLowerCase();
                 
-                // Trường hợp 1: Trùng khớp 100% (Dành cho mã ngắn)
                 if (mCode === sCode) return true;
-                // Trường hợp 2: Tên dài Kho 4 chứa mã từ điển (VD: "Onitsuka Mexico 66 1183A872" chứa "1183A872")
                 if (mCode.length > 4 && sCode.includes(mCode)) return true;
-                // Trường hợp 3: Tên từ điển chứa mã (Chống mồ côi)
                 if (sCode.length > 4 && fName.includes(sCode)) return true;
                 
                 return false;
