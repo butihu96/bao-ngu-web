@@ -32,17 +32,11 @@ SHEETS_CONFIG = [
     {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2", "left_cols": {"name": 0, "size": 2, "qty": 3, "price": 4}, "right_cols": {"name": 8, "size": 10, "qty": 11, "price": 12}},
     {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
     
-    # BỔ SUNG KHO 4 (NAM GIÀY) - ĐÃ CĂN CHỈNH LẠI TỌA ĐỘ CỘT BỎ QUA GHI CHÚ
+    # BỔ SUNG KHO 4 (NAM GIÀY) - KHÔNG CẦN SET BLOCKS Ở ĐÂY NỮA, SẼ XỬ LÝ ĐỘNG BÊN DƯỚI
     {
         "name": "Kho Nam Giày (Kho 4)", 
         "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", 
-        "type": "kho_4", 
-        "blocks": [
-            {"name": 1, "size": 2, "price": 3},   # Block 1: Cột B (Tên), Cột C (Size), Cột D (Giá)
-            {"name": 6, "size": 7, "price": 8},   # Block 2: Cột G (Tên), Cột H (Size), Cột I (Giá)
-            {"name": 11, "size": 12, "price": 13},# Block 3: Cột L (Tên), Cột M (Size), Cột N (Giá)
-            {"name": 16, "size": 17, "price": 18} # Block 4: Cột Q (Tên), Cột R (Size), Cột S (Giá)
-        ]
+        "type": "kho_4"
     }
 ]
 
@@ -169,190 +163,212 @@ def sync_data():
                 if config["type"] == "kho_1" and i in [1, 2]: continue
                 if config["type"] == "kho_2" and "onitsuka" in ws.title.lower(): continue
                 
-                # CHỐT CHẶN KHO 4: Quét đúng 6 Tab đầu tiên (từ index 0 đến 5)
+                # CHỐT CHẶN KHO 4: Chỉ quét từ Tab 1 đến Tab 6 (Tương đương index từ 0 đến 5)
                 if config["type"] == "kho_4" and i > 5: 
                     continue
                 
                 data = ws.get_all_values()
                 if not data: continue
 
-                for row in data[1:]:
-                    try:
-                        raw_code = ""
-                        price_val = ""
-                        s_c = ""
-
-                        if config["type"] == "kho_1":
-                            raw_code = get_val(row, config["col_code"]) or get_val(row, config["col_hang"])
-                            if la_hang_tap_nham(raw_code): continue 
-                            
-                            price_val = get_val(row, config["col_price"])
-                            sizes_raw = get_val(row, config["col_size"]).split('\n')
-                            p_max = extract_price(price_val)
-                            
-                            if p_max == 0 or not raw_code or str(raw_code).isdigit(): continue
-                            final_price = int(round((p_max * 1000) + 300000, -4))
-                            if final_price < 1000000: continue 
-                            
-                            dict_key = normalize_key(raw_code)
-                            if dict_key not in sneaker_dict: 
-                                sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": raw_code.upper(), "variants": {}}
-                            
-                            for s in sizes_raw:
-                                sc = clean_size(s)
-                                if is_valid_size(sc):
-                                    if sc not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][sc]:
-                                        sneaker_dict[dict_key]["variants"][sc] = final_price
-                            continue
-
-                        elif config["type"] == "kho_3":
-                            name_size_val = get_val(row, config["col_name_size"])
-                            price_val = get_val(row, config["col_price"])
-                            qty_val = get_val(row, config["col_qty"])
-                            
-                            try:
-                                so_luong = int(float(qty_val))
-                            except ValueError:
-                                so_luong = 0
-                            
-                            if so_luong < 1: 
-                                continue
-
-                            if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
-                            
-                            raw_code = loc_ma_giay(name_size_val)
-                            if not raw_code or str(raw_code).isdigit(): continue
-                            
-                            size_match = re.search(r'(?:EU|Size|UK|US)\s*([0-9.,/]+)', name_size_val, re.IGNORECASE)
-                            if size_match: 
-                                s_c = clean_size(size_match.group(1))
-                            else:
-                                size_match = re.search(r'\(\s*([0-9.,/]+)\s*\)', name_size_val)
-                                if size_match: 
-                                    s_c = clean_size(size_match.group(1))
-                                else:
-                                    size_tail = re.search(r'-\s*([0-9]{2}[.,]?[0-9]{0,2})$', name_size_val.strip())
-                                    if size_tail: s_c = clean_size(size_tail.group(1))
-                            
-                            if not is_valid_size(s_c): continue
-
-                        elif config["type"] == "kho_2" or config["type"] == "kho_4":
-                            continue
-
-                        dict_key = normalize_key(raw_code)
-                        p_max = extract_price(price_val)
-                        if p_max == 0: continue
-                        
-                        final_price = int(round((p_max * 1000) + 300000, -4))
-                        if final_price < 1000000: continue 
-                        
-                        if dict_key not in sneaker_dict: 
-                            sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": name_size_val.upper(), "variants": {}}
-                        
-                        if s_c not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][s_c]:
-                            sneaker_dict[dict_key]["variants"][s_c] = final_price
-                    except: continue
-
-                if config["type"] == "kho_2":
-                    def parse_side(cols):
-                        blocks = []; curr = {"names": [], "sizes": [], "price_val": 0}
-                        for r in data[1:]:
-                            n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
-                            
-                            if not any([n,s,q,p]):
-                                if curr["names"] or curr["sizes"]:
-                                    blocks.append(curr)
-                                    curr = {"names": [], "sizes": [], "price_val": 0}
-                                continue
-                            
-                            if n: curr["names"].append(n)
-                            if p:
-                                p_m = extract_price(p)
-                                if p_m > curr["price_val"]: curr["price_val"] = p_m
-                            if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
-                                curr["sizes"].append(s)
-                                
-                        if curr["names"] or curr["sizes"]: blocks.append(curr)
-                        return blocks
-                    
-                    for b in parse_side(config["left_cols"]) + parse_side(config["right_cols"]):
-                        if not b["names"] or b["price_val"] == 0: continue
-                        full_text = " ".join(b["names"])
-                        if la_hang_tap_nham(full_text): continue
-                        
-                        code_c = loc_ma_giay(full_text)
-                        if str(code_c).isdigit(): continue
-                        
-                        fp = int(round((b["price_val"] * 1000) + 300000, -4))
-                        if fp < 1000000: continue 
-                        
-                        dk = normalize_key(code_c)
-                        if dk not in sneaker_dict: 
-                            sneaker_dict[dk] = {"display_name": code_c.upper(), "original_name": full_text.upper(), "variants": {}}
-                            
-                        for s in b["sizes"]:
-                            sc = clean_size(s)
-                            if is_valid_size(sc):
-                                if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
-                                    sneaker_dict[dk]["variants"][sc] = fp
-
                 # =========================================================
-                # BỘ NÃO CHUYÊN TRỊ KHO 4 (ĐÃ FIX TỌA ĐỘ CHUẨN 100%)
+                # BỘ NÃO CHUYÊN TRỊ KHO 4 (PHÂN LỚP ĐẾN TỪNG TAB)
                 # =========================================================
-                elif config["type"] == "kho_4":
-                    try:
-                        for block in config["blocks"]:
-                            current_name = ""
-                            current_price = 0
+                if config["type"] == "kho_4":
+                    # Tự động set tọa độ block Tên - Size - Giá chuẩn 100% cho từng Tab
+                    blocks = []
+                    if i == 0:   # Tab Jordan + Dunk
+                        blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
+                    elif i == 1: # Tab Pickleball
+                        # Đã nắn lại chuẩn theo Cột J(9) K(10) L(11) và O(14) P(15) Q(16)
+                        blocks = [(0, 1, 2), (4, 5, 6), (9, 10, 11), (14, 15, 16)]
+                    elif i in [2, 3]: # Tab AF1 + Jeep
+                        blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
+                    elif i in [4, 5]: # Tab Asics + Adidas
+                        blocks = [(1, 2, 3), (6, 7, 8)]
+
+                    for b_name, b_size, b_price in blocks:
+                        current_name = ""
+                        current_price = 0
+                        
+                        for r_idx in range(2, len(data)):
+                            row = data[r_idx]
                             
-                            # Bắt đầu quét từ dòng số 3 (index 2)
-                            for r_idx in range(2, len(data)):
-                                row = data[r_idx]
+                            # Quét Tên: Thử cột hiện tại, nếu rỗng do gộp ô thì thử lùi 1 cột
+                            name_val = get_val(row, b_name) or get_val(row, b_name - 1)
+                            size_val = get_val(row, b_size)
+                            price_val = get_val(row, b_price)
+                            
+                            # 1. Ghi nhớ Tên Giày
+                            if name_val and not str(name_val).isdigit():
+                                upper_name = name_val.upper()
+                                if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
+                                    current_name = ""
+                                    current_price = 0
+                                    continue
                                 
-                                name_val = get_val(row, block["name"])
-                                size_val = get_val(row, block["size"])
-                                price_val = get_val(row, block["price"])
+                                if len(name_val) > 5 and not la_hang_tap_nham(name_val):
+                                    current_name = name_val
+                                    current_price = 0 
+                                    
+                            # 2. Ghi nhớ Giá
+                            if price_val:
+                                p_m = extract_price(price_val)
+                                if p_m > 0:
+                                    if p_m < 100000: 
+                                        p_m = p_m * 1000
+                                    current_price = p_m
+                                    
+                            # 3. Chốt đơn Size 
+                            if current_name and size_val and current_price > 0:
+                                raw_code = loc_ma_giay(current_name)
+                                if not raw_code or str(raw_code).isdigit(): continue
                                 
-                                # 1. Ghi nhớ Tên Giày
-                                if name_val and not str(name_val).isdigit():
-                                    upper_name = name_val.upper()
-                                    if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
-                                        current_name = ""
-                                        current_price = 0
-                                        continue
+                                # CỘNG LÃI KHO 4 (Đang để mặc định 300k, đại ca thay đổi ở số 300000 này nhé)
+                                fp = int(round(current_price + 300000, -4))
+                                dk = normalize_key(raw_code)
+                                
+                                # CHIP PHIÊN DỊCH SIZE KHO 4 (Bẻ khóa 355 -> 35.5)
+                                size_str = str(size_val).replace(',', '.').replace('\n', ' ')
+                                parts = re.split(r'\s+', size_str.strip())
+                                
+                                for p in parts:
+                                    p = p.strip()
+                                    if not p: continue
                                     
-                                    if len(name_val) > 5 and not la_hang_tap_nham(name_val):
-                                        current_name = name_val
-                                        current_price = 0 
+                                    # Nếu là 3 số và tận cùng là 5 (vd 355, 405) -> Đục dấu chấm vào giữa (35.5, 40.5)
+                                    if re.fullmatch(r'\d{3}', p) and p.endswith('5'):
+                                        p = p[:2] + '.' + p[2]
                                         
-                                # 2. Ghi nhớ Giá
-                                if price_val:
-                                    p_m = extract_price(price_val)
-                                    if p_m > 0:
-                                        if p_m < 100000: 
-                                            p_m = p_m * 1000
-                                        current_price = p_m
-                                        
-                                # 3. Chốt đơn Size 
-                                if current_name and size_val and current_price > 0:
-                                    s_c = clean_size(size_val)
-                                    
+                                    s_c = clean_size(p)
                                     if is_valid_size(s_c):
-                                        raw_code = loc_ma_giay(current_name)
-                                        if not raw_code or str(raw_code).isdigit(): continue
-                                        
-                                        # CÔNG THỨC GIÁ KHO 4: Hiện đang cộng 300k, đại ca sửa ở đây nhé!
-                                        fp = int(round(current_price + 300000, -4))
-                                        
-                                        dk = normalize_key(raw_code)
                                         if dk not in sneaker_dict: 
                                             sneaker_dict[dk] = {"display_name": raw_code.upper(), "original_name": current_name.upper(), "variants": {}}
                                             
                                         if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
                                             sneaker_dict[dk]["variants"][s_c] = fp
-                    except Exception as e:
-                        print(f"⚠️ Lỗi nhẹ ở Kho 4 Tab {ws.title}, đã bỏ qua: {e}")
-                        continue
+
+                # =========================================================
+                # XỬ LÝ 3 KHO CŨ NHƯ BÌNH THƯỜNG
+                # =========================================================
+                else:
+                    for row in data[1:]:
+                        try:
+                            raw_code = ""
+                            price_val = ""
+                            s_c = ""
+
+                            if config["type"] == "kho_1":
+                                raw_code = get_val(row, config["col_code"]) or get_val(row, config["col_hang"])
+                                if la_hang_tap_nham(raw_code): continue 
+                                
+                                price_val = get_val(row, config["col_price"])
+                                sizes_raw = get_val(row, config["col_size"]).split('\n')
+                                p_max = extract_price(price_val)
+                                
+                                if p_max == 0 or not raw_code or str(raw_code).isdigit(): continue
+                                final_price = int(round((p_max * 1000) + 300000, -4))
+                                if final_price < 1000000: continue 
+                                
+                                dict_key = normalize_key(raw_code)
+                                if dict_key not in sneaker_dict: 
+                                    sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": raw_code.upper(), "variants": {}}
+                                
+                                for s in sizes_raw:
+                                    sc = clean_size(s)
+                                    if is_valid_size(sc):
+                                        if sc not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][sc]:
+                                            sneaker_dict[dict_key]["variants"][sc] = final_price
+                                continue
+
+                            elif config["type"] == "kho_3":
+                                name_size_val = get_val(row, config["col_name_size"])
+                                price_val = get_val(row, config["col_price"])
+                                qty_val = get_val(row, config["col_qty"])
+                                
+                                try:
+                                    so_luong = int(float(qty_val))
+                                except ValueError:
+                                    so_luong = 0
+                                
+                                if so_luong < 1: continue
+
+                                if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
+                                
+                                raw_code = loc_ma_giay(name_size_val)
+                                if not raw_code or str(raw_code).isdigit(): continue
+                                
+                                size_match = re.search(r'(?:EU|Size|UK|US)\s*([0-9.,/]+)', name_size_val, re.IGNORECASE)
+                                if size_match: 
+                                    s_c = clean_size(size_match.group(1))
+                                else:
+                                    size_match = re.search(r'\(\s*([0-9.,/]+)\s*\)', name_size_val)
+                                    if size_match: 
+                                        s_c = clean_size(size_match.group(1))
+                                    else:
+                                        size_tail = re.search(r'-\s*([0-9]{2}[.,]?[0-9]{0,2})$', name_size_val.strip())
+                                        if size_tail: s_c = clean_size(size_tail.group(1))
+                                
+                                if not is_valid_size(s_c): continue
+
+                            elif config["type"] == "kho_2":
+                                continue
+
+                            dict_key = normalize_key(raw_code)
+                            p_max = extract_price(price_val)
+                            if p_max == 0: continue
+                            
+                            final_price = int(round((p_max * 1000) + 300000, -4))
+                            if final_price < 1000000: continue 
+                            
+                            if dict_key not in sneaker_dict: 
+                                sneaker_dict[dict_key] = {"display_name": raw_code.upper(), "original_name": name_size_val.upper(), "variants": {}}
+                            
+                            if s_c not in sneaker_dict[dict_key]["variants"] or final_price < sneaker_dict[dict_key]["variants"][s_c]:
+                                sneaker_dict[dict_key]["variants"][s_c] = final_price
+                        except: continue
+
+                    if config["type"] == "kho_2":
+                        def parse_side(cols):
+                            blocks = []; curr = {"names": [], "sizes": [], "price_val": 0}
+                            for r in data[1:]:
+                                n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
+                                
+                                if not any([n,s,q,p]):
+                                    if curr["names"] or curr["sizes"]:
+                                        blocks.append(curr)
+                                        curr = {"names": [], "sizes": [], "price_val": 0}
+                                    continue
+                                
+                                if n: curr["names"].append(n)
+                                if p:
+                                    p_m = extract_price(p)
+                                    if p_m > curr["price_val"]: curr["price_val"] = p_m
+                                if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
+                                    curr["sizes"].append(s)
+                                    
+                            if curr["names"] or curr["sizes"]: blocks.append(curr)
+                            return blocks
+                        
+                        for b in parse_side(config["left_cols"]) + parse_side(config["right_cols"]):
+                            if not b["names"] or b["price_val"] == 0: continue
+                            full_text = " ".join(b["names"])
+                            if la_hang_tap_nham(full_text): continue
+                            
+                            code_c = loc_ma_giay(full_text)
+                            if str(code_c).isdigit(): continue
+                            
+                            fp = int(round((b["price_val"] * 1000) + 300000, -4))
+                            if fp < 1000000: continue 
+                            
+                            dk = normalize_key(code_c)
+                            if dk not in sneaker_dict: 
+                                sneaker_dict[dk] = {"display_name": code_c.upper(), "original_name": full_text.upper(), "variants": {}}
+                                
+                            for s in b["sizes"]:
+                                sc = clean_size(s)
+                                if is_valid_size(sc):
+                                    if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
+                                        sneaker_dict[dk]["variants"][sc] = fp
 
         # =========================================================
         # BỘ NÃO TRÍ NHỚ: ĐỌC DỮ LIỆU CŨ ĐỂ TÌM HÀNG "MỚI/CẬP NHẬT"
@@ -397,7 +413,7 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã vét sạch sành sanh Kho 4!")
+        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. Đã quét hoàn hảo 4 kho.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
