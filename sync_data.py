@@ -4,13 +4,16 @@ import os
 import re
 import sys
 import traceback
-import time  
+import time  # ĐÃ THÊM THƯ VIỆN TIME ĐỂ ĐÓNG MỘC THỜI GIAN
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pickle
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
+# =========================================================
+# TỰ ĐỊNH NGHĨA PHÂN LOẠI HÃNG (VŨ KHÍ BÍ MẬT)
+# =========================================================
 CUSTOM_BRAND_MAPPING = {
     "1183A872": "Onitsuka Tiger",     
     "WRS": "Wilson",
@@ -18,29 +21,54 @@ CUSTOM_BRAND_MAPPING = {
     "BABOLAT": "Babolat",
     "WILSON": "Wilson",
     "LACOSTE": "Lacoste",
-    "ROGER PRO": "On"  
+    "ROGER PRO": "On"  # Đã gài bẫy bắt Roger Pro
 }
 
+# =========================================================
+# CẤU HÌNH KHO
+# =========================================================
 SHEETS_CONFIG = [
     {"name": "Kho Điệp Phạm", "id": "1LguFhRHWfHI87onU-Awobfallk_gtZZdPhpCllnK1eo", "type": "kho_1", "col_hang": 2, "col_code": 3, "col_size": 4, "col_price": 5},
     {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2", "left_cols": {"name": 0, "size": 2, "qty": 3, "price": 4}, "right_cols": {"name": 8, "size": 10, "qty": 11, "price": 12}},
     {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
-    {"name": "Kho Nam Giày (Kho 4)", "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", "type": "kho_4"}
+    
+    # BỔ SUNG KHO 4 (NAM GIÀY)
+    {
+        "name": "Kho Nam Giày (Kho 4)", 
+        "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", 
+        "type": "kho_4"
+    }
 ]
 
+# =========================================================
+# HỆ THỐNG XÁC THỰC BỌC THÉP CHO GITHUB ACTIONS
+# =========================================================
 def get_creds():
     creds = None
     if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token: creds = pickle.load(token)
+        with open('token.pickle', 'rb') as token: 
+            creds = pickle.load(token)
+            
     if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token: creds.refresh(Request())
+        if creds and creds.expired and creds.refresh_token: 
+            creds.refresh(Request())
         else:
-            if os.getenv("GITHUB_ACTIONS"): sys.exit(1) 
+            if os.getenv("GITHUB_ACTIONS"):
+                print("\n" + "="*60)
+                print("❌ LỖI CHÍ MẠNG TRÊN GITHUB ACTIONS:")
+                print("Không tìm thấy file 'token.pickle' hợp lệ, hoặc token đã bị hết hạn.")
+                print("="*60 + "\n")
+                sys.exit(1) 
             else:
-                if not os.path.exists('credentials.json'): sys.exit(1)
+                if not os.path.exists('credentials.json'):
+                    print("❌ LỖI: Không tìm thấy file credentials.json trên máy tính!")
+                    sys.exit(1)
                 flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
                 creds = flow.run_local_server(port=0)
-        with open('token.pickle', 'wb') as token: pickle.dump(creds, token)
+        
+        with open('token.pickle', 'wb') as token: 
+            pickle.dump(creds, token)
+            
     return creds
 
 def normalize_key(text):
@@ -101,8 +129,10 @@ def loc_ma_giay(ten_rac):
 def nhan_dien_hang(original_name, dict_key):
     name = str(original_name).upper()
     full_str = f"{original_name} {dict_key}".upper()
+
     for keyword, brand in CUSTOM_BRAND_MAPPING.items():
         if keyword in full_str: return brand
+
     if re.search(r'\bON\b', full_str) or re.search(r'\b(?=.*[A-Z])(?=.*\d)[A-Z0-9]{11}\b', name): return 'On'
     if re.search(r'\b\d{2,4}[A-Z]{2,4}[A-Z0-9]{5,8}\b', name) or "LACOSTE" in full_str: return 'Lacoste'
     if name.startswith("11") and "-" in name: return 'Onitsuka Tiger'
@@ -112,6 +142,7 @@ def nhan_dien_hang(original_name, dict_key):
     if re.search(r'\bWRS[A-Z0-9]{4,8}\b', name): return 'Wilson'
     if re.search(r'\b[A-Z0-9]{6}-[A-Z0-9]{3}\b', name): return 'Nike'
     if re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', name): return 'Adidas'
+    
     return 'Khác'
 
 def sync_data():
@@ -124,25 +155,34 @@ def sync_data():
             try:
                 sheet_doc = client.open_by_key(config["id"])
                 worksheets = sheet_doc.worksheets()
-            except Exception as e: continue
+            except Exception as e: 
+                print(f"Bỏ qua kho {config['name']} vì lỗi: {e}")
+                continue
             
             for i, ws in enumerate(worksheets):
                 if config["type"] == "kho_1" and i in [1, 2]: continue
                 if config["type"] == "kho_2" and "onitsuka" in ws.title.lower(): continue
-                if config["type"] == "kho_4" and i > 5: continue
+                
+                # CHỐT CHẶN KHO 4: Chỉ quét từ Tab 1 đến Tab 6 (Tương đương index từ 0 đến 5)
+                if config["type"] == "kho_4" and i > 5: 
+                    continue
                 
                 data = ws.get_all_values()
                 if not data: continue
 
                 # =========================================================
-                # CÁCH LY KHO 4 (Không ảnh hưởng đến 3 kho kia)
+                # BỘ NÃO CÁCH LY CHUYÊN TRỊ KHO 4 (TUYỆT ĐỐI KHÔNG ẢNH HƯỞNG KHO KHÁC)
                 # =========================================================
                 if config["type"] == "kho_4":
                     blocks = []
-                    if i == 0: blocks = [(1, 2, 3), (5, 6, 7), (10, 11, 12)]
-                    elif i == 1: blocks = [(0, 1, 2), (4, 5, 6), (8, 10, 11), (13, 14, 16)]
-                    elif i in [2, 3]: blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
-                    elif i in [4, 5]: blocks = [(1, 2, 3), (6, 7, 8)]
+                    if i == 0:   # Tab Jordan + Dunk low: Tên B(1) F(5) K(10) | Size C(2) G(6) L(11) | Giá D(3) H(7) M(12)
+                        blocks = [(1, 2, 3), (5, 6, 7), (10, 11, 12)]
+                    elif i == 1: # Tab Pickleball: Tên A(0) E(4) I(8) N(13) | Size B(1) F(5) K(10) O(14) | Giá C(2) G(6) L(11) Q(16)
+                        blocks = [(0, 1, 2), (4, 5, 6), (8, 10, 11), (13, 14, 16)]
+                    elif i in [2, 3]: # Tab AF1 + Jeep: Tên B(1) G(6) L(11) | Size C(2) H(7) M(12) | Giá D(3) I(8) N(13)
+                        blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
+                    elif i in [4, 5]: # Tab Asics + Adidas: Tên B(1) G(6) | Size C(2) H(7) | Giá D(3) I(8)
+                        blocks = [(1, 2, 3), (6, 7, 8)]
 
                     for b_name, b_size, b_price in blocks:
                         current_name = ""
@@ -150,29 +190,43 @@ def sync_data():
                         
                         for r_idx in range(2, len(data)):
                             row = data[r_idx]
-                            name_val = get_val(row, b_name)
+                            
+                            name_val = get_val(row, b_name) or get_val(row, b_name - 1)
                             size_val = get_val(row, b_size)
                             price_val = get_val(row, b_price)
                             
+                            # 1. Ghi nhớ Tên Giày (Nguyên cụm)
                             if name_val and not str(name_val).isdigit():
                                 upper_name = name_val.upper().strip()
                                 if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
                                     current_name = ""
                                     current_price = 0
                                     continue
+                                
+                                # KHÓA CHẶN TRÁNH TRỞ THÀNH "GIÀY NIKE CHÍNH HÃNG" MỒ CÔI
+                                ignore_brands = ["NIKE", "ADIDAS", "ASICS", "SKECHERS", "ONITSUKA TIGER", "WILSON", "BABOLAT", "LACOSTE", "PUMA", "CHAMPION", "JEEP", "MLB", "ON", "NB", "NEW BALANCE"]
+                                if upper_name in ignore_brands or len(upper_name) < 5:
+                                    continue
+                                
                                 if not la_hang_tap_nham(name_val):
                                     current_name = name_val
                                     current_price = 0 
                                     
+                            # 2. Ghi nhớ Giá
                             if price_val:
                                 p_m = extract_price(price_val)
                                 if p_m > 0:
-                                    if p_m < 100000: p_m = p_m * 1000
+                                    if p_m < 100000: 
+                                        p_m = p_m * 1000
                                     current_price = p_m
                                     
+                            # 3. Chốt đơn
                             if current_name and size_val and current_price > 0:
-                                raw_code = current_name.strip() 
-                                if "JP7309" in raw_code.upper(): continue # Lọc Sổ đen
+                                raw_code = current_name.strip() # Lấy toàn bộ tên siêu dài, không cắt xén
+                                
+                                # Sổ đen chỉ áp dụng nội bộ tại đây
+                                if "JP7309" in raw_code.upper():
+                                    continue
                                 
                                 fp = int(round(current_price + 300000, -4))
                                 dk = normalize_key(raw_code)
@@ -183,18 +237,34 @@ def sync_data():
                                 for p in parts:
                                     p = p.strip()
                                     if not p: continue
+                                    
+                                    # Chẻ đôi size kiểu 36/37
                                     sub_parts = p.split('/') if '/' in p else [p]
                                     for sp in sub_parts:
-                                        if re.fullmatch(r'\d{3}', sp) and sp.endswith('5'): sp = sp[:2] + '.' + sp[2]
+                                        # Nối dấu chấm cho size kiểu 355
+                                        if re.fullmatch(r'\d{3}', sp) and sp.endswith('5'):
+                                            sp = sp[:2] + '.' + sp[2]
+                                            
                                         s_c = clean_size(sp)
+                                        
                                         if is_valid_size(s_c):
+                                            # BỨC TƯỜNG LỬA CHỈ CHO KHO 4 (Chỉ lấy size 35 đến 49)
+                                            try:
+                                                num_check = float(re.search(r'(\d+[.,]?\d*)', s_c).group(1).replace(',', '.'))
+                                                if num_check < 35 or num_check > 49:
+                                                    continue
+                                            except:
+                                                continue
+                                                
                                             if dk not in sneaker_dict: 
+                                                # Hiển thị giữ nguyên tên gốc dài
                                                 sneaker_dict[dk] = {"display_name": raw_code, "original_name": raw_code, "variants": {}}
+                                                
                                             if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
                                                 sneaker_dict[dk]["variants"][s_c] = fp
 
                 # =========================================================
-                # 3 KHO CŨ - TRẢ LẠI ZIN 100% NHƯ LÚC BAN ĐẦU
+                # XỬ LÝ KHO 1, 2, 3 - GIỮ NGUYÊN TRẠNG 100% THEO CODE CŨ CỦA MÀY
                 # =========================================================
                 else:
                     for row in data[1:]:
@@ -206,7 +276,6 @@ def sync_data():
                             if config["type"] == "kho_1":
                                 raw_code = get_val(row, config["col_code"]) or get_val(row, config["col_hang"])
                                 if la_hang_tap_nham(raw_code): continue 
-                                if "JP7309" in str(raw_code).upper(): continue # Lọc sổ đen
                                 
                                 price_val = get_val(row, config["col_price"])
                                 sizes_raw = get_val(row, config["col_size"]).split('\n')
@@ -232,21 +301,25 @@ def sync_data():
                                 price_val = get_val(row, config["col_price"])
                                 qty_val = get_val(row, config["col_qty"])
                                 
-                                try: so_luong = int(float(qty_val))
-                                except ValueError: so_luong = 0
+                                try:
+                                    so_luong = int(float(qty_val))
+                                except ValueError:
+                                    so_luong = 0
+                                
                                 if so_luong < 1: continue
 
                                 if not name_size_val or not price_val or la_hang_tap_nham(name_size_val): continue
-                                if "JP7309" in str(name_size_val).upper(): continue # Lọc sổ đen
                                 
                                 raw_code = loc_ma_giay(name_size_val)
                                 if not raw_code or str(raw_code).isdigit(): continue
                                 
                                 size_match = re.search(r'(?:EU|Size|UK|US)\s*([0-9.,/]+)', name_size_val, re.IGNORECASE)
-                                if size_match: s_c = clean_size(size_match.group(1))
+                                if size_match: 
+                                    s_c = clean_size(size_match.group(1))
                                 else:
                                     size_match = re.search(r'\(\s*([0-9.,/]+)\s*\)', name_size_val)
-                                    if size_match: s_c = clean_size(size_match.group(1))
+                                    if size_match: 
+                                        s_c = clean_size(size_match.group(1))
                                     else:
                                         size_tail = re.search(r'-\s*([0-9]{2}[.,]?[0-9]{0,2})$', name_size_val.strip())
                                         if size_tail: s_c = clean_size(size_tail.group(1))
@@ -275,17 +348,20 @@ def sync_data():
                             blocks = []; curr = {"names": [], "sizes": [], "price_val": 0}
                             for r in data[1:]:
                                 n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
+                                
                                 if not any([n,s,q,p]):
                                     if curr["names"] or curr["sizes"]:
                                         blocks.append(curr)
                                         curr = {"names": [], "sizes": [], "price_val": 0}
                                     continue
+                                
                                 if n: curr["names"].append(n)
                                 if p:
                                     p_m = extract_price(p)
                                     if p_m > curr["price_val"]: curr["price_val"] = p_m
                                 if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
                                     curr["sizes"].append(s)
+                                    
                             if curr["names"] or curr["sizes"]: blocks.append(curr)
                             return blocks
                         
@@ -293,7 +369,6 @@ def sync_data():
                             if not b["names"] or b["price_val"] == 0: continue
                             full_text = " ".join(b["names"])
                             if la_hang_tap_nham(full_text): continue
-                            if "JP7309" in full_text.upper(): continue # Lọc sổ đen
                             
                             code_c = loc_ma_giay(full_text)
                             if str(code_c).isdigit(): continue
@@ -311,6 +386,9 @@ def sync_data():
                                     if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
                                         sneaker_dict[dk]["variants"][sc] = fp
 
+        # =========================================================
+        # BỘ NÃO TRÍ NHỚ: ĐỌC DỮ LIỆU CŨ ĐỂ TÌM HÀNG "MỚI/CẬP NHẬT"
+        # =========================================================
         current_time = int(time.time())
         old_data_map = {}
         
@@ -320,15 +398,18 @@ def sync_data():
                     old_json = json.load(f)
                     for item in old_json:
                         old_data_map[item['name']] = item
-            except: pass
+            except: 
+                pass
 
         result = []
         for dk, info in sneaker_dict.items():
             if not info["variants"]: continue
+            
             brand = nhan_dien_hang(info["original_name"], dk)
             if brand == 'Khác': continue 
             
             sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
+            
             disp_name = info["display_name"]
             last_updated = current_time 
             
@@ -348,7 +429,7 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Đã dọn sạch. Kho 1 2 3 nguyên vẹn, Kho 4 tách riêng.")
+        print(f"✅ Xong! Tổng {len(result)} mẫu xịn. 3 Kho gốc nguyên vẹn. Kho 4 quét chuẩn tên dài.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
