@@ -124,9 +124,6 @@
         .sidebar-overlay.show { opacity: 1; visibility: visible; }
         .close-sidebar-btn { display: none; background: #e74c3c; color: #fff; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-weight: bold;}
 
-        /* ========================================= */
-        /* NÚT LỌC NỔI (CHỈ HIỆN TRÊN MOBILE) */
-        /* ========================================= */
         .floating-filter-btn { display: none; }
 
         /* MOBILE RESPONSIVE */
@@ -145,14 +142,12 @@
             .size-btn { padding: 4px 6px; font-size: 10px; }
             .order-btn { padding: 8px; font-size: 11px; }
             
-            /* Tùy chỉnh 3 cụm nút trôi nổi trên mobile */
             .floating-social { bottom: 15px; right: 15px; gap: 10px;}
             .social-btn { height: 36px; font-size: 11px; padding: 0 12px;}
             .social-icon { width: 15px; height: 15px; margin-right: 5px; }
             #backToTopBtn { bottom: 15px; left: 15px; width: 38px; height: 38px; font-size: 16px; }
             .share-btn { width: 28px; height: 28px; font-size: 13px; top: 5px; left: 5px; }
 
-            /* NÚT LỌC GIỮA MÀN HÌNH */
             .floating-filter-btn {
                 display: flex;
                 align-items: center;
@@ -240,7 +235,6 @@
         </main>
     </div>
 
-    <!-- NÚT LỌC NỔI CHÍNH GIỮA (MOBILE ONLY) -->
     <button class="floating-filter-btn" onclick="toggleSidebar()">⚙️ BỘ LỌC TÌM KIẾM</button>
 
     <div class="floating-social">
@@ -260,7 +254,7 @@
         let dictionaryData = []; 
         let selections = {}; 
         
-        let currentCategory = 'PICKLEBALL'; // Mặc định vào web là hiển thị giày Pickle
+        let currentCategory = 'PICKLEBALL'; 
         let currentBrand = 'Tất cả';
         let currentPriceRange = 'ALL'; 
         let currentSize = 'ALL';
@@ -268,14 +262,9 @@
         let missingImages = new Set(); 
         
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
-        
-        // BỘ NÃO PHÂN LOẠI NGÀNH HÀNG
         const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter"];
-        
-        // LỆNH BÀI MIỄN TỬ: NẾU DÍNH CÁC TỪ NÀY -> BẮT BUỘC LÀ SNEAKER
         const SNEAKER_KEYWORDS = ["giày thời trang", "onitsuka tiger", "onitsuka"];
         
-        // TỪ KHÓA GỢI Ý THEO NGÀNH
         const TRENDS = {
             'PICKLEBALL': ["Vapor Pro", "Asics Gel", "Court FF", "Babolat", "Skechers"],
             'SNEAKER': ["Air Force 1", "Jordan", "Onitsuka", "Samba", "Yeezy"]
@@ -301,9 +290,6 @@
             document.getElementById('sidebarOverlay').classList.toggle('show');
         }
 
-        // ==========================================
-        // KHỞI CHẠY TẢI DỮ LIỆU
-        // ==========================================
         Promise.all([
             fetch('data.json').then(res => res.json()),
             fetch(DICTIONARY_SHEET_URL).then(res => res.text())
@@ -366,7 +352,6 @@
                 
                 const searchString = matchedItem ? matchedItem.fullName.toLowerCase() : `${p.brand.toLowerCase()} ${shoeCode.toLowerCase()}`;
                 
-                // PHÂN LOẠI HÃNG SẢN PHẨM
                 let detectedBrand = null;
                 for (let b of TARGET_BRANDS) {
                     if (b === 'On') {
@@ -379,10 +364,8 @@
                 }
                 if (detectedBrand) p.brand = detectedBrand;
 
-                // GÁN NHÃN PICKLEBALL / SNEAKER
-                p.category = 'SNEAKER'; // Mặc định là Sneaker
+                p.category = 'SNEAKER'; 
                 
-                // 1. Kiểm tra xem có chứa từ khóa Pickleball không
                 let isPickle = false;
                 for (let kw of PICKLEBALL_KEYWORDS) {
                     if (searchString.includes(kw.toLowerCase())) {
@@ -392,7 +375,6 @@
                 }
                 if (isPickle) p.category = 'PICKLEBALL';
                 
-                // 2. Lệnh bài miễn tử: Nếu dính từ khóa Sneaker thì ép nó về Sneaker
                 for (let kw of SNEAKER_KEYWORDS) {
                     if (searchString.includes(kw.toLowerCase())) {
                         p.category = 'SNEAKER';
@@ -402,23 +384,18 @@
             });
 
             globalData = jsonData;
-            switchCategory('PICKLEBALL'); // Chạy hàm khởi tạo lần đầu
+            switchCategory('PICKLEBALL'); 
         }).catch(err => {
             console.log("Lỗi mạng: ", err);
         });
 
-        // ==========================================
-        // CÁC HÀM XỬ LÝ LỌC & HIỂN THỊ
-        // ==========================================
         function switchCategory(cat) {
             currentCategory = cat;
             
-            // Xử lý Giao diện Nút Tab
             const btns = document.querySelectorAll('.main-tab-btn');
             btns[0].classList.toggle('active', cat === 'PICKLEBALL');
             btns[1].classList.toggle('active', cat === 'SNEAKER');
             
-            // Reset các bộ lọc về mặc định khi chuyển Tab
             currentBrand = 'Tất cả';
             currentPriceRange = 'ALL';
             currentSize = 'ALL';
@@ -448,7 +425,6 @@
         }
 
         function renderSidebarFilters() {
-            // Lọc ra các sản phẩm thuộc Tab hiện tại để tạo list Thương hiệu & Size
             const catData = globalData.filter(p => p.category === currentCategory);
 
             const brandContainer = document.getElementById('brand-filters');
@@ -464,12 +440,16 @@
 
             const sizeContainer = document.getElementById('size-filters');
             let allSizes = new Set();
-            catData.forEach(p => p.variants.forEach(v => allSizes.add(v.size)));
+            catData.forEach(p => p.variants.forEach(v => {
+                let n = parseFloat(v.size);
+                // BỨC TƯỜNG LỬA TRÊN GIAO DIỆN: CHỈ CHO PHÉP HIỂN THỊ CÁC SIZE TỪ 35 ĐẾN 49
+                if (!isNaN(n) && n >= 35 && n <= 49) {
+                    allSizes.add(v.size);
+                }
+            }));
             
             let sortedSizes = Array.from(allSizes).sort((a,b) => {
-               let na = parseFloat(a); let nb = parseFloat(b);
-               if(!isNaN(na) && !isNaN(nb)) return na - nb;
-               return a.localeCompare(b);
+               return parseFloat(a) - parseFloat(b);
             });
 
             sizeContainer.innerHTML = sortedSizes.map(s => `<button class="size-filter-btn" onclick="filterSize('${s}', this)">${s}</button>`).join('');
@@ -532,7 +512,6 @@
             grid.innerHTML = ''; 
             
             let filtered = globalData.filter(p => {
-                // CHỐT CHẶN 1: Lọc theo Category (Pickleball hoặc Sneaker)
                 if (p.category !== currentCategory) return false;
 
                 const shoeCode = p.name.trim();
@@ -541,14 +520,11 @@
                     d.fullName.toLowerCase().includes(shoeCode.toLowerCase())
                 );
                 
-                // Lọc Thương hiệu
                 const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
                 if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
 
-                // Lọc Size
                 if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
                 
-                // Lọc Giá
                 if (currentPriceRange !== 'ALL') {
                     let minPrice = Math.min(...p.variants.map(v => v.price));
                     if (currentPriceRange === '1-2') return minPrice >= 1000000 && minPrice <= 2000000;
@@ -556,7 +532,6 @@
                     if (currentPriceRange === '3+') return minPrice > 3000000;
                 }
 
-                // Lọc Từ Khóa (Tìm tất cả các từ trong chuỗi)
                 if (currentSearch !== '') {
                     const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                     const searchTarget = `${displayFullName} ${shoeCode} ${p.brand}`.toLowerCase();
@@ -568,7 +543,6 @@
                 return true;
             });
 
-            // SẮP XẾP LUÔN LUÔN ĐỂ ONITSUKA Ở CUỐI CÙNG
             filtered.sort((a, b) => {
                 let indexA = TARGET_BRANDS.indexOf(a.brand);
                 let indexB = TARGET_BRANDS.indexOf(b.brand);
@@ -594,7 +568,6 @@
                 
                 const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
                 
-                // XỬ LÝ ẢNH SLIDER
                 const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 const imgUrls = rawImgStr.split(',').map(url => url.trim()).filter(url => url !== '');
 
