@@ -269,8 +269,11 @@
         
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
         
-        // BỘ NÃO PHÂN LOẠI NGÀNH HÀNG ĐÃ BỔ SUNG KEYWORD
+        // BỘ NÃO PHÂN LOẠI NGÀNH HÀNG
         const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter"];
+        
+        // LỆNH BÀI MIỄN TỬ: NẾU DÍNH CÁC TỪ NÀY -> BẮT BUỘC LÀ SNEAKER
+        const SNEAKER_KEYWORDS = ["giày thời trang", "onitsuka tiger", "onitsuka"];
         
         // TỪ KHÓA GỢI Ý THEO NGÀNH
         const TRENDS = {
@@ -379,10 +382,20 @@
                 // GÁN NHÃN PICKLEBALL / SNEAKER
                 p.category = 'SNEAKER'; // Mặc định là Sneaker
                 
-                // Nếu tên/hãng chứa các từ khóa vợt/pickle -> Cho vào kho Pickleball
+                // 1. Kiểm tra xem có chứa từ khóa Pickleball không
+                let isPickle = false;
                 for (let kw of PICKLEBALL_KEYWORDS) {
                     if (searchString.includes(kw.toLowerCase())) {
-                        p.category = 'PICKLEBALL';
+                        isPickle = true;
+                        break;
+                    }
+                }
+                if (isPickle) p.category = 'PICKLEBALL';
+                
+                // 2. Lệnh bài miễn tử: Nếu dính từ khóa Sneaker thì ép nó về Sneaker
+                for (let kw of SNEAKER_KEYWORDS) {
+                    if (searchString.includes(kw.toLowerCase())) {
+                        p.category = 'SNEAKER';
                         break;
                     }
                 }
