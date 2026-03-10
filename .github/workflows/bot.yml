@@ -39,20 +39,20 @@ jobs:
           git config --global user.name "BaoNgu-Bot"
           git config --global user.email "bot@baongu.store"
           
-          # 1. Cất file data.json (thành quả) ra ngoài vùng an toàn
-          mv data.json ../data.json
+          # 1. Cất riêng file data.json (thành quả) ra ngoài vùng an toàn
+          cp data.json /home/runner/data.json
           
-          # 2. Xóa sạch mọi rác rưởi, file tạm (như token, cache) để Git không dỗi
+          # 2. ĐỐT SẠCH KHO: Hủy mọi file rác, file token tạm để dọn đường
           git reset --hard
           git clean -fd
           
-          # 3. Kéo code mới nhất về (mượt mà 100%)
+          # 3. Kéo code mới nhất từ Github về (lúc này kho sạch 100%, đố báo lỗi được)
           git pull origin main
           
-          # 4. Trả file data.json lại vị trí cũ
-          mv ../data.json ./data.json
+          # 4. Trả file data.json vào lại đúng vị trí cũ
+          cp /home/runner/data.json ./data.json
           
-          # 5. Đóng gói và đẩy lên
+          # 5. Lưu và đẩy lên web
           git add data.json
-          git commit -m "🚀 Bot tự động cập nhật kho giày" || echo "Không có thay đổi data"
+          git commit -m "🚀 Bot tự động cập nhật kho giày" || echo "Không có data mới"
           git push origin main
