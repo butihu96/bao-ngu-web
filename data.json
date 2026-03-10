@@ -4225,6 +4225,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "24",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
                 "size": "40",
                 "price": 1700000,
                 "price_display": "1,700,000đ"
@@ -4245,7 +4250,7 @@
                 "price_display": "1,700,000đ"
             }
         ],
-        "updated_at": 1773162451
+        "updated_at": 1773163111
     },
     {
         "name": "Nike ReactX Rejuven8 Spruce Aura Light Silver HV5060-005",
@@ -4548,6 +4553,62 @@
         "updated_at": 1773162451
     },
     {
+        "name": "Adidas Yeezy Slide Ochre (Infants) Kids' - GW1933",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "19-3-105",
+                "price": 1450000,
+                "price_display": "1,450,000đ"
+            },
+            {
+                "size": "20-4-115",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "21-5-120",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "23-6-130",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "25-7-135",
+                "price": 1450000,
+                "price_display": "1,450,000đ"
+            }
+        ],
+        "updated_at": 1773163111
+    },
+    {
+        "name": "Dép Adidas Yeezy Slide Ochre GW1932",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "29-11",
+                "price": 1550000,
+                "price_display": "1,550,000đ"
+            }
+        ],
+        "updated_at": 1773163111
+    },
+    {
+        "name": "Dép Adifom Stan Warm Clay JI2614",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "5",
+                "price": 1300000,
+                "price_display": "1,300,000đ"
+            }
+        ],
+        "updated_at": 1773163111
+    },
+    {
         "name": "FY0404 - UB21",
         "brand": "Adidas",
         "variants": [
@@ -4631,6 +4692,23 @@
             }
         ],
         "updated_at": 1773162451
+    },
+    {
+        "name": "Giày Mule Adifom Stan Smith IE7052",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "4",
+                "price": 1650000,
+                "price_display": "1,650,000đ"
+            },
+            {
+                "size": "5",
+                "price": 1650000,
+                "price_display": "1,650,000đ"
+            }
+        ],
+        "updated_at": 1773163111
     },
     {
         "name": "Giày Onitsuka Tiger Mexico 66 Black Yellow 1183C102-751",
