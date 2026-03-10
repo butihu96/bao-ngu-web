@@ -88,6 +88,7 @@ def is_valid_size(s):
         match = re.search(r'(\d+[.,]?\d*)', s)
         if match:
             num = float(match.group(1).replace(',', '.'))
+            # TƯỜNG LỬA CHỈ CHO PHÉP SIZE TỪ 35 ĐẾN 49 (Áp dụng an toàn cho mọi kho)
             if num < 35 or num > 49: return False
     except: return False
     return True
@@ -165,14 +166,18 @@ def sync_data():
                 if not data: continue
 
                 # =========================================================
-                # KHO 4 - LẤY NGUYÊN VĂN TÊN DÀI SỌC
+                # BỘ NÃO ĐỘC LẬP CHO KHO 4 (CHUẨN TỌA ĐỘ DO ĐẠI CA CHỈ ĐỊNH)
                 # =========================================================
                 if config["type"] == "kho_4":
                     blocks = []
-                    if i == 0: blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
-                    elif i == 1: blocks = [(0, 1, 2), (4, 5, 6), (9, 10, 11), (14, 15, 16)]
-                    elif i in [2, 3]: blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
-                    elif i in [4, 5]: blocks = [(1, 2, 3), (6, 7, 8)]
+                    if i == 0:   # Jordan + Dunk low: Tên B(1) F(5) K(10) | Size C(2) G(6) L(11) | Giá D(3) H(7) M(12)
+                        blocks = [(1, 2, 3), (5, 6, 7), (10, 11, 12)]
+                    elif i == 1: # Pickleball: Tên A(0) E(4) I(8) N(13) | Size B(1) F(5) K(10) O(14) | Giá C(2) G(6) L(11) Q(16)
+                        blocks = [(0, 1, 2), (4, 5, 6), (8, 10, 11), (13, 14, 16)]
+                    elif i in [2, 3]: # AF1 / Jeep: Tên B(1) G(6) L(11) | Size C(2) H(7) M(12) | Giá D(3) I(8) N(13)
+                        blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
+                    elif i in [4, 5]: # Asic / Adidas: Tên B(1) G(6) | Size C(2) H(7) | Giá D(3) I(8)
+                        blocks = [(1, 2, 3), (6, 7, 8)]
 
                     for b_name, b_size, b_price in blocks:
                         current_name = ""
@@ -180,56 +185,70 @@ def sync_data():
                         
                         for r_idx in range(2, len(data)):
                             row = data[r_idx]
-                            name_val = get_val(row, b_name) or get_val(row, b_name - 1)
+                            name_val = get_val(row, b_name)
                             size_val = get_val(row, b_size)
                             price_val = get_val(row, b_price)
                             
+                            # 1. Ghi nhớ Tên Giày
                             if name_val and not str(name_val).isdigit():
-                                upper_name = name_val.upper()
+                                upper_name = name_val.upper().strip()
+                                
+                                # Loại bỏ các chữ rác phân cách
                                 if "HÀNG SẴN" in upper_name or "ĐANG VỀ" in upper_name or "CHÚ Ý" in upper_name:
                                     current_name = ""
                                     current_price = 0
                                     continue
                                 
-                                if len(name_val) > 5 and not la_hang_tap_nham(name_val):
+                                # CHỐT CHẶN: Chặn Tên Tiêu Đề Hãng (Thủ phạm gây ra "Giày Nike Chính Hãng")
+                                ignore_brands = ["NIKE", "ADIDAS", "ASICS", "SKECHERS", "ONITSUKA TIGER", "WILSON", "BABOLAT", "LACOSTE", "PUMA", "CHAMPION", "JEEP", "MLB", "ON", "NB", "NEW BALANCE"]
+                                if upper_name in ignore_brands or len(upper_name) < 5:
+                                    continue
+                                
+                                if not la_hang_tap_nham(name_val):
                                     current_name = name_val
                                     current_price = 0 
                                     
+                            # 2. Ghi nhớ Giá
                             if price_val:
                                 p_m = extract_price(price_val)
                                 if p_m > 0:
                                     if p_m < 100000: p_m = p_m * 1000
                                     current_price = p_m
                                     
+                            # 3. Chốt đơn Size & Ghép Tên
                             if current_name and size_val and current_price > 0:
-                                # LẤY NGUYÊN VĂN DÒNG TEXT LÀM MÃ SẢN PHẨM LUÔN
-                                raw_code = current_name.strip()
+                                raw_code = current_name.strip() # Lấy full cả cụm tên siêu dài
                                 
-                                # Chống lấy phải dòng rác: Phải có ít nhất 1 con số và Không nằm trong Sổ đen
-                                if not raw_code or not any(c.isdigit() for c in raw_code) or is_blacklisted(raw_code): 
-                                    continue
+                                if is_blacklisted(raw_code): continue
                                 
-                                fp = int(round(current_price + 300000, -4))
+                                fp = int(round(current_price + 300000, -4)) # Cộng 300k
                                 dk = normalize_key(raw_code)
                                 
+                                # Xử lý tã size (dịch "355" thành "35.5", hoặc "36/37")
                                 size_str = str(size_val).replace(',', '.').replace('\n', ' ')
                                 parts = re.split(r'\s+', size_str.strip())
                                 
                                 for p in parts:
                                     p = p.strip()
                                     if not p: continue
-                                    if re.fullmatch(r'\d{3}', p) and p.endswith('5'):
-                                        p = p[:2] + '.' + p[2]
-                                        
-                                    s_c = clean_size(p)
-                                    if is_valid_size(s_c):
-                                        if dk not in sneaker_dict: 
-                                            sneaker_dict[dk] = {"display_name": raw_code, "original_name": raw_code, "variants": {}}
-                                        if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
-                                            sneaker_dict[dk]["variants"][s_c] = fp
+                                    
+                                    # Nếu có gạch chéo 36/37 -> chẻ làm đôi lấy cả 2 size
+                                    sub_parts = p.split('/') if '/' in p else [p]
+                                    
+                                    for sp in sub_parts:
+                                        # Dịch 355 thành 35.5
+                                        if re.fullmatch(r'\d{3}', sp) and sp.endswith('5'):
+                                            sp = sp[:2] + '.' + sp[2]
+                                            
+                                        s_c = clean_size(sp)
+                                        if is_valid_size(s_c): # <-- Tường lửa size 35-49 hoạt động ở đây
+                                            if dk not in sneaker_dict: 
+                                                sneaker_dict[dk] = {"display_name": raw_code, "original_name": raw_code, "variants": {}}
+                                            if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
+                                                sneaker_dict[dk]["variants"][s_c] = fp
 
                 # =========================================================
-                # 3 KHO CŨ
+                # 3 KHO CŨ ĐƯỢC GIỮ NGUYÊN BẢN 100% NHƯ YÊU CẦU
                 # =========================================================
                 else:
                     for row in data[1:]:
@@ -381,7 +400,7 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Đã dọn sạch mã rác và ép hiển thị CỤM TÊN DÀI cho Kho 4.")
+        print(f"✅ Xong! Đã dọn sạch quái vật NIKE CHÍNH HÃNG. Kho 4 đã chuẩn chỉ 100%.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
