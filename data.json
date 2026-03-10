@@ -4,6 +4,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "37.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
                 "size": "38",
                 "price": 1850000,
                 "price_display": "1,850,000đ"
@@ -14,17 +19,27 @@
                 "price_display": "1,850,000đ"
             },
             {
+                "size": "40.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
                 "size": "41",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "553558-040",
         "brand": "Nike",
         "variants": [
+            {
+                "size": "40.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
             {
                 "size": "41",
                 "price": 2800000,
@@ -41,7 +56,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "553558-044",
@@ -66,11 +81,48 @@
         "updated_at": 1773152370
     },
     {
+        "name": "553558-132",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "553560-113",
         "brand": "Nike",
         "variants": [
             {
+                "size": "35.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "36",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "37.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             },
@@ -80,12 +132,17 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "553560-136",
         "brand": "Nike",
         "variants": [
+            {
+                "size": "35.5",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            },
             {
                 "size": "36-375",
                 "price": 2000000,
@@ -117,7 +174,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "CZ0220-111",
@@ -149,9 +206,14 @@
                 "size": "42",
                 "price": 2190000,
                 "price_display": "2,190,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "CZ0220-141",
@@ -195,7 +257,17 @@
                 "price_display": "2,500,000đ"
             },
             {
+                "size": "38.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
                 "size": "40",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "40.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             },
@@ -205,17 +277,32 @@
                 "price_display": "2,900,000đ"
             },
             {
+                "size": "42.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
                 "size": "43",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "44.5",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "DC0774-160",
         "brand": "Nike",
         "variants": [
+            {
+                "size": "38.5",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
             {
                 "size": "39",
                 "price": 2900000,
@@ -232,7 +319,7 @@
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "DD1391-601",
@@ -256,9 +343,24 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
                 "size": "41",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
             },
             {
                 "size": "45",
@@ -266,7 +368,19 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
+    },
+    {
+        "name": "DH1290-100",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "38.5",
+                "price": 800000,
+                "price_display": "800,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "DH2920-111",
@@ -278,7 +392,22 @@
                 "price_display": "2,100,000đ"
             },
             {
+                "size": "36.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
                 "size": "38",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
+                "size": "38.5",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
             },
@@ -288,12 +417,22 @@
                 "price_display": "2,100,000đ"
             },
             {
+                "size": "40.5",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
                 "size": "41",
                 "price": 2200000,
                 "price_display": "2,200,000đ"
             },
             {
                 "size": "42",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
+                "size": "42.5",
                 "price": 2200000,
                 "price_display": "2,200,000đ"
             },
@@ -308,7 +447,7 @@
                 "price_display": "2,200,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "DH2987-100",
@@ -365,13 +504,13 @@
         "variants": [
             {
                 "size": "36.5",
-                "price": 1490000,
-                "price_display": "1,490,000đ"
+                "price": 1400000,
+                "price_display": "1,400,000đ"
             },
             {
                 "size": "37.5",
-                "price": 1490000,
-                "price_display": "1,490,000đ"
+                "price": 1400000,
+                "price_display": "1,400,000đ"
             },
             {
                 "size": "38",
@@ -389,7 +528,7 @@
                 "price_display": "1,400,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "DR6192-101",
@@ -399,9 +538,100 @@
                 "size": "37.5",
                 "price": 1550000,
                 "price_display": "1,550,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "DR6966-101",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "41",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "DR6966-105",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "45",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "DR6966-700",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "DV3276-103",
@@ -428,6 +658,18 @@
         "updated_at": 1773154757
     },
     {
+        "name": "DX4816-300",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 700000,
+                "price_display": "700,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "FB3145-002",
         "brand": "Nike",
         "variants": [
@@ -438,6 +680,67 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "FB3145-004",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FB3145-100",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FB3145-104",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "41",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FB3146-100",
@@ -455,6 +758,28 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "FB3146-101",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FB3146-102",
@@ -481,12 +806,169 @@
                 "price_display": "2,550,000đ"
             },
             {
+                "size": "38",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
                 "size": "39",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FB3146-104",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FB3146-107",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FB3147-003",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "45",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FB3147-101",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FB6944-100",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 1750000,
+                "price_display": "1,750,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 1750000,
+                "price_display": "1,750,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FD0736-009",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FD0736-010",
@@ -510,7 +992,17 @@
                 "price_display": "2,300,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2300000,
+                "price_display": "2,300,000đ"
+            },
+            {
                 "size": "38",
+                "price": 2300000,
+                "price_display": "2,300,000đ"
+            },
+            {
+                "size": "38.5",
                 "price": 2300000,
                 "price_display": "2,300,000đ"
             },
@@ -520,7 +1012,19 @@
                 "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FD0736-103",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "38.5",
+                "price": 1900000,
+                "price_display": "1,900,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FD0736-104",
@@ -532,7 +1036,22 @@
                 "price_display": "1,950,000đ"
             },
             {
+                "size": "36.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
                 "size": "38",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "38.5",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
             },
@@ -542,7 +1061,7 @@
                 "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "FD0736-105",
@@ -561,12 +1080,17 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
                 "size": "41",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "FD4116-001",
@@ -579,6 +1103,50 @@
             }
         ],
         "updated_at": 1773154757
+    },
+    {
+        "name": "FD6575-100",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FD6575-103",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "38",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FD6575-107",
@@ -613,6 +1181,18 @@
         "updated_at": 1773137208
     },
     {
+        "name": "FD6575-109",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "38.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "FD6575-500",
         "brand": "Nike",
         "variants": [
@@ -623,8 +1203,8 @@
             },
             {
                 "size": "37.5",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
+                "price": 1900000,
+                "price_display": "1,900,000đ"
             },
             {
                 "size": "38",
@@ -647,7 +1227,75 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FN4322-800",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "43",
+                "price": 1100000,
+                "price_display": "1,100,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FN4698-101",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "42",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FQ4155-800",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FQ4155-801",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FQ6861-121",
@@ -660,6 +1308,89 @@
             }
         ],
         "updated_at": 1773152370
+    },
+    {
+        "name": "FQ7263-500",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FQ7266-500",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FQ7719-002",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FQ7728-001",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "41",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FV2285-900",
@@ -678,9 +1409,29 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "38.5",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
             },
             {
                 "size": "44.5",
@@ -688,19 +1439,24 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "FV5552-101",
         "brand": "Nike",
         "variants": [
             {
+                "size": "37.5",
+                "price": 3700000,
+                "price_display": "3,700,000đ"
+            },
+            {
                 "size": "40",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "FV5552-104",
@@ -864,6 +1620,21 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36",
+                "price": 3550000,
+                "price_display": "3,550,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3550000,
+                "price_display": "3,550,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3550000,
+                "price_display": "3,550,000đ"
+            },
+            {
                 "size": "38.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -872,14 +1643,24 @@
                 "size": "39",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3550000,
+                "price_display": "3,550,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "FV5554-104",
         "brand": "Nike",
         "variants": [
+            {
+                "size": "35.5",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
             {
                 "size": "38.5",
                 "price": 3600000,
@@ -889,6 +1670,16 @@
                 "size": "40.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
             },
             {
                 "size": "43",
@@ -901,7 +1692,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "FV5554-109",
@@ -1152,6 +1943,18 @@
         "updated_at": 1773079629
     },
     {
+        "name": "FZ2156-104",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "39",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "FZ2156-106",
         "brand": "Nike",
         "variants": [
@@ -1162,6 +1965,18 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "FZ2156-500",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FZ2156-700",
@@ -1245,21 +2060,48 @@
                 "size": "37.5",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "FZ2158-104",
         "brand": "Nike",
         "variants": [
             {
+                "size": "40",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FZ2158-106",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FZ2158-109",
@@ -1294,9 +2136,24 @@
                 "size": "39",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773137208
+        "updated_at": 1773156173
     },
     {
         "name": "FZ2158-401",
@@ -1336,6 +2193,28 @@
         "updated_at": 1773079629
     },
     {
+        "name": "FZ2158-500",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "FZ2161-004",
         "brand": "Nike",
         "variants": [
@@ -1361,6 +2240,28 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "FZ2161-100",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "39",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "FZ2161-101",
@@ -1531,13 +2432,13 @@
         "variants": [
             {
                 "size": "42",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             },
             {
                 "size": "42.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             },
             {
                 "size": "43",
@@ -1550,7 +2451,7 @@
                 "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "FZ2161-403",
@@ -1574,12 +2475,34 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
                 "size": "38",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            },
+            {
+                "size": "38.5",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
+    },
+    {
+        "name": "FZ5068-161",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "HF1161-300",
@@ -1594,9 +2517,36 @@
                 "size": "41",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
+    },
+    {
+        "name": "HF1173-300",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "42",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "HF3631-100",
@@ -1615,17 +2565,32 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "HF7834-300",
         "brand": "Nike",
         "variants": [
+            {
+                "size": "36",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
             {
                 "size": "38.5",
                 "price": 3100000,
@@ -1637,12 +2602,17 @@
                 "price_display": "3,100,000đ"
             },
             {
+                "size": "40",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
                 "size": "41",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "HJ5269-100",
@@ -1657,9 +2627,14 @@
                 "size": "38",
                 "price": 1850000,
                 "price_display": "1,850,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "HJ5269-600",
@@ -1671,12 +2646,39 @@
                 "price_display": "2,100,000đ"
             },
             {
+                "size": "36.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
                 "size": "38",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
+                "size": "38.5",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
+    },
+    {
+        "name": "HJ6641-300",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "38.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "HJ6647-300",
@@ -1686,21 +2688,83 @@
                 "size": "36.5",
                 "price": 2680000,
                 "price_display": "2,680,000đ"
+            },
+            {
+                "size": "36",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "HJ6650-300",
         "brand": "Nike",
         "variants": [
             {
+                "size": "36",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
                 "size": "38.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "40",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "HJ6651-300",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "HJ6767-500",
@@ -1748,6 +2812,18 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "HJ6769-500",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2290000,
+                "price_display": "2,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "HJ6774-500",
@@ -1891,6 +2967,18 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "HM3705-141",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "HM9594-004",
@@ -2052,6 +3140,18 @@
         "updated_at": 1773079629
     },
     {
+        "name": "HQ2628-801",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "38",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "HQ3484-121",
         "brand": "Nike",
         "variants": [
@@ -2076,9 +3176,38 @@
                 "size": "36",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 1900000,
+                "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
+    },
+    {
+        "name": "HQ6026-001",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "HQ6034-800",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "HV1149-100",
@@ -2342,12 +3471,17 @@
                 "price_display": "1,700,000đ"
             },
             {
+                "size": "42.5",
+                "price": 1700000,
+                "price_display": "1,700,000đ"
+            },
+            {
                 "size": "44",
                 "price": 1700000,
                 "price_display": "1,700,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "HV5997-161",
@@ -2359,12 +3493,17 @@
                 "price_display": "1,850,000đ"
             },
             {
+                "size": "36.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
                 "size": "38",
                 "price": 1850000,
                 "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "IB2534-100",
@@ -2531,6 +3670,16 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2450000,
                 "price_display": "2,450,000đ"
@@ -2541,7 +3690,7 @@
                 "price_display": "2,450,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "IB7168-100",
@@ -2617,6 +3766,94 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "1041A438-104",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "39.5",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "1041A481-500",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "42.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "1042A250-103",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "37",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "1044A082-102",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "37",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "1071A111-101",
@@ -2702,6 +3939,11 @@
                 "price_display": "1,450,000đ"
             },
             {
+                "size": "36.5",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            },
+            {
                 "size": "37",
                 "price": 1450000,
                 "price_display": "1,450,000đ"
@@ -2712,6 +3954,11 @@
                 "price_display": "2,500,000đ"
             },
             {
+                "size": "38.5",
+                "price": 2290000,
+                "price_display": "2,290,000đ"
+            },
+            {
                 "size": "39",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
@@ -2720,9 +3967,14 @@
                 "size": "42",
                 "price": 1450000,
                 "price_display": "1,450,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "ADIFOM",
@@ -2746,6 +3998,11 @@
         "brand": "Adidas",
         "variants": [
             {
+                "size": "35.5",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
                 "size": "36",
                 "price": 2200000,
                 "price_display": "2,200,000đ"
@@ -2754,9 +4011,19 @@
                 "size": "37",
                 "price": 2200000,
                 "price_display": "2,200,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "FY0404",
@@ -3033,6 +4300,65 @@
         "updated_at": 1773152370
     },
     {
+        "name": "SILVER",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "38.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "TRIPLE",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "40",
+                "price": 1350000,
+                "price_display": "1,350,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 1350000,
+                "price_display": "1,350,000đ"
+            },
+            {
+                "size": "41",
+                "price": 1350000,
+                "price_display": "1,350,000đ"
+            },
+            {
+                "size": "42",
+                "price": 1350000,
+                "price_display": "1,350,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "1041A370-106",
         "brand": "Asics",
         "variants": [
@@ -3146,9 +4472,29 @@
                 "size": "39.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "1041A481-002",
@@ -3274,6 +4620,23 @@
             }
         ],
         "updated_at": 1773137208
+    },
+    {
+        "name": "1041A481-300",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "41",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "1041A481-700",
@@ -3985,9 +5348,24 @@
                 "size": "37.5",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "1042A281-103",
@@ -4042,6 +5420,33 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "1042A294-100",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "37",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "1042A294-101",
@@ -4196,9 +5601,85 @@
         "updated_at": 1773079629
     },
     {
+        "name": "1044A077-105",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "38",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "1044A081-401",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "1044A081-700",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
+                "size": "37",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "1074A045-101",
         "brand": "Asics",
         "variants": [
+            {
+                "size": "36",
+                "price": 1590000,
+                "price_display": "1,590,000đ"
+            },
             {
                 "size": "37",
                 "price": 1490000,
@@ -4218,9 +5699,14 @@
                 "size": "39",
                 "price": 1490000,
                 "price_display": "1,490,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1773154757
+        "updated_at": 1773156173
     },
     {
         "name": "1074A045-103",
@@ -4561,12 +6047,17 @@
                 "price_display": "3,290,000đ"
             },
             {
+                "size": "37.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
                 "size": "39",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773156173
     },
     {
         "name": "1183A592-200",
@@ -5118,6 +6609,62 @@
         "updated_at": 1773079629
     },
     {
+        "name": "172069-PNK",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "36",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
+                "size": "37",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "172069-WBL",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "36",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "172069C-LAV",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "172069C-PNK",
         "brand": "Skechers",
         "variants": [
@@ -5142,9 +6689,31 @@
         "updated_at": 1773079629
     },
     {
+        "name": "172109-PUR",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "172109/HPK",
         "brand": "Skechers",
         "variants": [
+            {
+                "size": "35.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
             {
                 "size": "36.5 23.5",
                 "price": 2800000,
@@ -5176,7 +6745,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "172109BKW",
@@ -5277,6 +6846,62 @@
         "updated_at": 1773079629
     },
     {
+        "name": "246069C-WHP",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "39.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "246069C-WTQ",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "39.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "246109-ORG",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "246109/BKMT",
         "brand": "Skechers",
         "variants": [
@@ -5328,6 +6953,165 @@
         "updated_at": 1773079629
     },
     {
+        "name": "GIÀY SKECHERS VIPER COURT PRO 2.0 172109_LTGY",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "35",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "35.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "36",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "37",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "SKECHERS VIPER COURT PRO 2.0 172069_LTPK",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3550000,
+                "price_display": "3,550,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "SKECHERS VIPER COURT PRO 2.0 172109_WMLT",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "SKECHERS VIPER COURT PRO 2.0 246109WW_WBK",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "SKECHERS VIPER COURT PRO 2.0 246109_ NVY",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "39.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "SKECHERS VIPER COURT PRO 2.0 246109_PKBK",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "42.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "SKECHERS VIPER COURT RALLY 172110_WHT / 246110_WHT MEN",
+        "brand": "Skechers",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 1990000,
+                "price_display": "1,990,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1990000,
+                "price_display": "1,990,000đ"
+            },
+            {
+                "size": "42",
+                "price": 1990000,
+                "price_display": "1,990,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "3MD30030202",
         "brand": "On",
         "variants": [
@@ -5343,6 +7127,33 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "3ME10300108",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "39",
+                "price": 4190000,
+                "price_display": "4,190,000đ"
+            },
+            {
+                "size": "40",
+                "price": 4190000,
+                "price_display": "4,190,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 4190000,
+                "price_display": "4,190,000đ"
+            },
+            {
+                "size": "41",
+                "price": 4190000,
+                "price_display": "4,190,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "3ME10303602",
@@ -5379,12 +7190,22 @@
                 "price_display": "3,900,000đ"
             },
             {
+                "size": "42",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
                 "size": "43",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
+            },
+            {
+                "size": "44",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "3ME10574274",
@@ -5428,12 +7249,32 @@
         "brand": "On",
         "variants": [
             {
+                "size": "40.5",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
+            },
+            {
+                "size": "41",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
+            },
+            {
                 "size": "42",
                 "price": 4100000,
                 "price_display": "4,100,000đ"
+            },
+            {
+                "size": "43",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
+            },
+            {
+                "size": "44",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "3WD10293334",
@@ -5458,18 +7299,60 @@
         "updated_at": 1773079629
     },
     {
+        "name": "3WD10600975",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "3WD30050202",
         "brand": "On",
         "variants": [
+            {
+                "size": "36.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
             {
                 "size": "37",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
             },
             {
+                "size": "37.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
                 "size": "38",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
             },
             {
                 "size": "39",
@@ -5482,7 +7365,7 @@
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "3WD30054038",
@@ -5529,6 +7412,77 @@
         "updated_at": 1773079629
     },
     {
+        "name": "3WE10330256",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
+                "size": "37",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "3WE10332626",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "39",
+                "price": 4600000,
+                "price_display": "4,600,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "3WE10332840",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "3WE10332929",
         "brand": "On",
         "variants": [
@@ -5543,17 +7497,42 @@
                 "price_display": "3,300,000đ"
             },
             {
+                "size": "38.5",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
                 "size": "39",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             },
             {
+                "size": "40",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
+                "size": "41",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "3WE10333602",
@@ -5561,16 +7540,85 @@
         "variants": [
             {
                 "size": "37.5",
-                "price": 4300000,
-                "price_display": "4,300,000đ"
+                "price": 4090000,
+                "price_display": "4,090,000đ"
             },
             {
                 "size": "38",
-                "price": 4300000,
-                "price_display": "4,300,000đ"
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "3WE10630462",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "3WE10634274",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
+                "size": "41",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "3WF10180753",
@@ -5661,9 +7709,34 @@
                 "size": "37.5",
                 "price": 4100000,
                 "price_display": "4,100,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
+            },
+            {
+                "size": "40",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 4290000,
+                "price_display": "4,290,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "3WF30033606",
@@ -5678,9 +7751,14 @@
                 "size": "38.5",
                 "price": 4200000,
                 "price_display": "4,200,000đ"
+            },
+            {
+                "size": "40",
+                "price": 4200000,
+                "price_display": "4,200,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "3WF30034744",
@@ -5994,12 +8072,27 @@
         "brand": "Babolat",
         "variants": [
             {
+                "size": "42",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
                 "size": "45",
                 "price": 2400000,
                 "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "30S26555A-3039",
@@ -6012,8 +8105,8 @@
             },
             {
                 "size": "41",
-                "price": 2250000,
-                "price_display": "2,250,000đ"
+                "price": 2200000,
+                "price_display": "2,200,000đ"
             },
             {
                 "size": "42.5",
@@ -6022,11 +8115,48 @@
             },
             {
                 "size": "42",
-                "price": 2250000,
-                "price_display": "2,250,000đ"
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "30S26629B-5050",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "31S26556A-1112",
@@ -6251,9 +8381,66 @@
         "updated_at": 1773137208
     },
     {
+        "name": "TENNIS",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "40-405",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1650000,
+                "price_display": "1,650,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2490000,
+                "price_display": "2,490,000đ"
+            },
+            {
+                "size": "42",
+                "price": 1650000,
+                "price_display": "1,650,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "43",
+                "price": 1650000,
+                "price_display": "1,650,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "WRS332710",
         "brand": "Wilson",
         "variants": [
+            {
+                "size": "40.5",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            },
             {
                 "size": "42.6",
                 "price": 2200000,
@@ -6270,7 +8457,56 @@
                 "price_display": "2,200,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
+    },
+    {
+        "name": "WRS333670U",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "WRS334330",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "41",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3050000,
+                "price_display": "3,050,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "WRS334500",
@@ -6283,6 +8519,38 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "WRS334520",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "37",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4600000,
+                "price_display": "4,600,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 4600000,
+                "price_display": "4,600,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4600000,
+                "price_display": "4,600,000đ"
+            }
+        ],
+        "updated_at": 1773156173
     },
     {
         "name": "WRS335910",
@@ -6329,16 +8597,114 @@
         "updated_at": 1773079629
     },
     {
+        "name": "WRS336610",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "41",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "WRS336670",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "42",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 4000000,
+                "price_display": "4,000,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "WRS337020",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
+        "name": "WRS337030",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "38",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            }
+        ],
+        "updated_at": 1773156173
+    },
+    {
         "name": "WRS337040",
         "brand": "Wilson",
         "variants": [
             {
+                "size": "36.5",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "37",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3700000,
+                "price_display": "3,700,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3700000,
+                "price_display": "3,700,000đ"
+            },
+            {
                 "size": "39.3",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3700000,
+                "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773156173
     },
     {
         "name": "WRS337060",
