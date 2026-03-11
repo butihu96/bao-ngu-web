@@ -277,18 +277,27 @@
             document.getElementById('sidebarOverlay').classList.toggle('show');
         }
 
-        // ==========================================
-        // CON CHIP DÒ TÌM TỪ ĐIỂN THÔNG MINH
-        // Khớp được cả mã ngắn lẫn tên dài thòng lọng của Kho 4
+    // ==========================================
+        // CON CHIP DÒ TÌM TỪ ĐIỂN THÔNG MINH (BẢN MAX BỌC THÉP)
+        // Bất chấp dấu cách, gạch ngang hay nháy kép
         // ==========================================
         function findDictItem(shoeCode) {
             let sCode = shoeCode.toLowerCase();
+            // Xóa sạch mọi dấu cách và gạch ngang để ép khuôn chuẩn
+            let sCodeClean = sCode.replace(/[- ]/g, ''); 
+
             return dictionaryData.find(d => {
                 let mCode = d.mappingCode.toLowerCase();
+                let mCodeClean = mCode.replace(/[- ]/g, '');
                 let fName = d.fullName.toLowerCase();
                 
+                // 1. Trường hợp 1: Trùng khớp 100% 
                 if (mCode === sCode) return true;
-                if (mCode.length > 4 && sCode.includes(mCode)) return true;
+                
+                // 2. Trường hợp 2: Tên dài Kho 4 CHỨA MÃ CỐT LÕI (Bất chấp gạch ngang/dấu cách)
+                if (mCodeClean.length > 4 && sCodeClean.includes(mCodeClean)) return true;
+                
+                // 3. Trường hợp 3: Tên từ điển chứa mã (Chống mồ côi)
                 if (sCode.length > 4 && fName.includes(sCode)) return true;
                 
                 return false;
