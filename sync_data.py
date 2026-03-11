@@ -12,7 +12,7 @@ import pickle
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # =========================================================
-# TỰ ĐỊNH NGHĨA PHÂN LOẠI HÃNG 
+# TỰ ĐỊNH NGHĨA PHÂN LOẠI HÃNG
 # =========================================================
 CUSTOM_BRAND_MAPPING = {
     "1183A872": "Onitsuka Tiger",     
@@ -35,7 +35,7 @@ SHEETS_CONFIG = [
 ]
 
 # =========================================================
-# HỆ THỐNG XÁC THỰC BỌC THÉP CHO GITHUB ACTIONS
+# HỆ THỐNG XÁC THỰC
 # =========================================================
 def get_creds():
     creds = None
@@ -170,7 +170,7 @@ def sync_data():
                 if not data: continue
 
                 # =========================================================
-                # KHO 4
+                # BỘ NÃO CHUYÊN TRỊ KHO 4 
                 # =========================================================
                 if config["type"] == "kho_4":
                     blocks = []
@@ -242,7 +242,6 @@ def sync_data():
                                             if dk not in sneaker_dict: 
                                                 sneaker_dict[dk] = {"display_name": raw_name, "original_name": raw_name, "variants": {}}
                                             else:
-                                                # LUẬT CHỐNG RÁC: Chỉ cho phép đè tên nếu tên mới dài hơn nhưng KHÔNG QUÁ 90 ký tự (Chống gộp lỗi)
                                                 if len(raw_name) > len(sneaker_dict[dk]["display_name"]) and len(raw_name) < 90:
                                                     sneaker_dict[dk]["display_name"] = raw_name
                                                     sneaker_dict[dk]["original_name"] = raw_name
@@ -362,18 +361,19 @@ def sync_data():
                                         curr = {"names": [], "sizes": [], "price_val": 0}
                                     continue
                                 
-                                # ============================================================
-                                # ĐÂY LÀ "CON MẮT THẦN" TRỊ BỆNH KHO 2 NHÂN VIÊN QUÊN CÁCH DÒNG
-                                # NẾU THẤY TÊN MỚI, MÀ TRƯỚC ĐÓ ĐÃ CÓ SIZE => CHẮC CHẮN LÀ GIÀY MỚI! CẮT BLOCK TẠI ĐÂY!
-                                # ============================================================
-                                if n and curr["sizes"]:
-                                    blocks.append(curr)
-                                    curr = {"names": [], "sizes": [], "price_val": 0}
+                                # =========================================================
+                                # BỘ LỌC CHỐNG GỘP TÊN KHO 2 (Dao mổ cắt block)
+                                # =========================================================
+                                if n:
+                                    # Cắt ngay nếu đã có size nhưng lại xuất hiện một cái tên mới hoàn toàn
+                                    if curr["sizes"] and n not in curr["names"]:
+                                        blocks.append(curr)
+                                        curr = {"names": [], "sizes": [], "price_val": 0}
+                                        
+                                    if n not in curr["names"]:
+                                        curr["names"].append(n)
+                                # =========================================================
                                 
-                                # Chỉ thêm tên vào nếu tên đó chưa tồn tại trong danh sách (tránh gộp ô lặp chữ)
-                                if n and n not in curr["names"]: 
-                                    curr["names"].append(n)
-                                    
                                 if p:
                                     p_m = extract_price(p)
                                     if p_m > curr["price_val"]: curr["price_val"] = p_m
@@ -454,7 +454,7 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Đã cắt đứt toàn bộ các tên dính chùm của Kho 2. Ngăn chặn tuyệt đối quái vật rác.")
+        print(f"✅ Xong! Đã xử lý triệt để lỗi nối tên từ Kho 2.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
