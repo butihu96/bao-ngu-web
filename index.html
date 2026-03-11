@@ -274,16 +274,30 @@
         }
 
         // ==========================================
-        // DÒ TÌM TỪ ĐIỂN - Giữ nguyên như cũ (Bỏ vụ Regex đục lõi)
+        // CHIP DÒ TÌM AN TOÀN TUYỆT ĐỐI (CHỐNG LỆCH GẠCH NGANG)
+        // Dựa trên code cũ của mày, chỉ thêm bộ lọc gạch ngang
         // ==========================================
         function findDictItem(shoeCode) {
-            let sCode = shoeCode.toLowerCase();
+            let sCode = shoeCode.toLowerCase().trim();
+            // Tạo thêm 1 bản dính liền hoàn toàn để so sánh chéo (VD: FZ2161-402 -> fz2161402)
+            let sCodeSolid = sCode.replace(/[-_ ]/g, ''); 
+
             return dictionaryData.find(d => {
-                let mCode = d.mappingCode.toLowerCase();
-                let fName = d.fullName.toLowerCase();
+                let mCode = d.mappingCode.toLowerCase().trim();
+                let mCodeSolid = mCode.replace(/[-_ ]/g, '');
+                let fName = d.fullName.toLowerCase().trim();
                 
+                // 1. Nếu trùng chính xác 100%
                 if (mCode === sCode) return true;
-                if (mCode.length > 4 && sCode.includes(mCode)) return true;
+                
+                // 2. Nếu mã Google Sheet có nằm bên trong tên dài Kho 4
+                if (mCode.length > 3 && sCode.includes(mCode)) return true;
+
+                // 3. Trị dứt điểm vụ lệch gạch ngang: 
+                // Ép dính liền cả 2 bên. Cài điều kiện mCodeSolid > 5 để nó không bị nhận diện nhầm mấy chữ ngắn như "nike"
+                if (mCodeSolid.length > 5 && sCodeSolid.includes(mCodeSolid)) return true;
+                
+                // 4. Chống mồ côi (tên web nằm trong tên file ảnh)
                 if (sCode.length > 4 && fName.includes(sCode)) return true;
                 
                 return false;
@@ -291,7 +305,7 @@
         }
 
         // ==========================================
-        // CẤY THUỐC SỔ CACHE - Bắt trình duyệt luôn lấy Data mới nhất
+        // THUỐC SỔ CACHE - ÉP LUÔN TẢI BẢN MỚI
         // ==========================================
         const cacheBuster = new Date().getTime();
         Promise.all([
@@ -486,9 +500,13 @@
             renderGrid();
         }
 
+        // ==========================================
+        // KHẮC PHỤC LỖI HIỂN THỊ ICON ẢNH VỠ (CỦA ADGUARD/NEXTDNS)
+        // Dùng ảnh SVG tích hợp thẳng vào code, 100% không bao giờ vỡ
+        // ==========================================
         window.handleImgErr = function(img, shoeCode, originalBrand) {
             img.onerror = null; 
-            img.src = 'https://via.placeholder.com/400x300/f4f4f4/888888?text=CHUA+CO+ANH';
+            img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f4f4f4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' font-weight='bold' fill='%23888888' text-anchor='middle' dominant-baseline='middle'%3E%E2%8F%B3 H%C3%ACnh %E1%BA%A3nh %C4%91ang c%E1%BA%ADp nh%E1%BA%ADt%3C/text%3E%3C/svg%3E";
             missingImages.add(shoeCode);
             if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
                 let card = img.closest('.product-card');
@@ -575,6 +593,9 @@
                 const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 const imgUrls = rawImgStr.split(',').map(url => url.trim()).filter(url => url !== '');
 
+                // Tạo mã an toàn cho thuộc tính HTML (để truyền vào thẻ img không vỡ)
+                let safeShoeCode = shoeCode.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+
                 let imgHtml = '';
                 if (imgUrls.length > 1) {
                     imgHtml = `
@@ -582,7 +603,7 @@
                         <div class="slider-container" onscroll="updateDots(this)">
                             ${imgUrls.map((url, i) => `
                             <div class="slider-item">
-                                <img src="${url}" class="product-img" alt="${shoeCode}-${i}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
+                                <img src="${url}" class="product-img" alt="${safeShoeCode}-${i}" onerror="handleImgErr(this, '${safeShoeCode}', '${p.brand}')">
                             </div>
                             `).join('')}
                         </div>
@@ -591,14 +612,17 @@
                         </div>
                     </div>`;
                 } else {
-                    imgHtml = `<img src="${imgUrls[0] || ''}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">`;
+                    imgHtml = `<img src="${imgUrls[0] || ''}" class="product-img" alt="${safeShoeCode}" onerror="handleImgErr(this, '${safeShoeCode}', '${p.brand}')">`;
                 }
+
+                // Mã an toàn cho nút share
+                let safeShareName = displayFullName.replace(/'/g, "\\'").replace(/"/g, '&quot;');
 
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.innerHTML = `
                     <div class="product-img-wrapper">
-                        <button class="share-btn" onclick="event.stopPropagation(); shareProduct('${displayFullName.replace(/'/g, "\\'")}')" title="Chia sẻ mẫu này">🔗</button>
+                        <button class="share-btn" onclick="event.stopPropagation(); shareProduct('${safeShareName}')" title="Chia sẻ mẫu này">🔗</button>
                         ${imgHtml}
                     </div>
                     <div>
@@ -611,11 +635,11 @@
                         <div class="size-section">
                             <span class="size-label">Bảng Size (Click để chọn)</span>
                             <div class="size-container">
-                                ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${shoeCode.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
+                                ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${safeShoeCode}')">${v.size}</button>`).join('')}
                             </div>
                         </div>
                     </div>
-                    <button class="order-btn" onclick="order('${displayFullName.replace(/'/g, "\\'")}')">Liên Hệ</button>
+                    <button class="order-btn" onclick="order('${safeShareName}')">Liên Hệ</button>
                 `;
                 grid.appendChild(card);
             });
