@@ -54,7 +54,7 @@
         .search-box { display: flex; gap: 10px; margin-bottom: 8px; }
         .search-box input { flex-grow: 1; padding: 12px 20px; border-radius: 30px; border: 1px solid #ccc; font-size: 15px; outline: none; transition: 0.3s; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.02);}
         .search-box input:focus { border-color: #111; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        .btn-open-filter { display: none; } /* Ẩn mặc định trên PC */
+        .btn-open-filter { display: none; } 
         
         .trending-keywords { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; padding-left: 5px;}
         .kw-label { font-size: 12px; color: #777; font-weight: bold; margin-top: 4px; }
@@ -135,7 +135,6 @@
             #backToTopBtn { bottom: 15px; left: 15px; width: 38px; height: 38px; font-size: 16px; }
             .share-btn { width: 28px; height: 28px; font-size: 13px; top: 5px; left: 5px; }
 
-            /* CSS mới cho thanh tìm kiếm & bộ lọc dính trên top */
             .search-box {
                 position: sticky;
                 top: 10px;
@@ -246,10 +245,7 @@
         
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
         
-        // ĐÃ THÊM TỪ KHÓA "court lite" VÀO PICKLEBALL
         const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter", "court lite"];
-        
-        // ĐÃ THÊM TỪ KHÓA "giày thể thao" VÀO LỆNH BÀI SNEAKER
         const SNEAKER_KEYWORDS = ["giày thời trang", "giày thể thao", "thể thao", "onitsuka tiger", "onitsuka"];
         
         const TRENDS = {
@@ -277,36 +273,39 @@
             document.getElementById('sidebarOverlay').classList.toggle('show');
         }
 
-    // ==========================================
-        // CON CHIP DÒ TÌM TỪ ĐIỂN THÔNG MINH (BẢN MAX BỌC THÉP)
-        // Bất chấp dấu cách, gạch ngang hay nháy kép
+        // ==========================================
+        // CHIP DÒ MÃ BỌC THÉP (KHÔNG SỢ DẤU CÂU)
         // ==========================================
         function findDictItem(shoeCode) {
             let sCode = shoeCode.toLowerCase();
-            // Xóa sạch mọi dấu cách và gạch ngang để ép khuôn chuẩn
-            let sCodeClean = sCode.replace(/[- ]/g, ''); 
+            // Lột trần trụi cái tên Kho 4: Bỏ SẠCH dấu cách, gạch ngang, ngoặc kép, nháy đơn... chỉ giữ lại đúng chữ và số
+            let sCodeClean = sCode.replace(/[^a-z0-9]/g, ''); 
 
             return dictionaryData.find(d => {
                 let mCode = d.mappingCode.toLowerCase();
-                let mCodeClean = mCode.replace(/[- ]/g, '');
+                let mCodeClean = mCode.replace(/[^a-z0-9]/g, '');
                 let fName = d.fullName.toLowerCase();
                 
-                // 1. Trường hợp 1: Trùng khớp 100% 
+                // 1. Trùng khớp chính xác
                 if (mCode === sCode) return true;
                 
-                // 2. Trường hợp 2: Tên dài Kho 4 CHỨA MÃ CỐT LÕI (Bất chấp gạch ngang/dấu cách)
-                if (mCodeClean.length > 4 && sCodeClean.includes(mCodeClean)) return true;
+                // 2. Mã của mày có xuất hiện ở ĐÂU ĐÓ trong cái tên dài của Kho 4 không? (Đã bỏ dấu câu)
+                if (mCodeClean.length >= 4 && sCodeClean.includes(mCodeClean)) return true;
                 
-                // 3. Trường hợp 3: Tên từ điển chứa mã (Chống mồ côi)
+                // 3. Tên web Kho 4 có nằm gọn trong Tên của file Ảnh không?
                 if (sCode.length > 4 && fName.includes(sCode)) return true;
                 
                 return false;
             });
         }
 
+        // ==========================================
+        // THUỐC SỔ CACHE - Bắt trình duyệt tải file mới nhất
+        // ==========================================
+        const cacheBuster = '?v=' + new Date().getTime();
         Promise.all([
-            fetch('data.json').then(res => res.json()),
-            fetch(DICTIONARY_SHEET_URL).then(res => res.text())
+            fetch('data.json' + cacheBuster).then(res => res.json()),
+            fetch(DICTIONARY_SHEET_URL + '&v=' + new Date().getTime()).then(res => res.text())
         ]).then(([jsonData, csvText]) => {
             
             let lines = csvText.split('\n');
@@ -570,15 +569,9 @@
                 const shoeCode = p.name.trim();
                 const matchedItem = findDictItem(shoeCode);
                 
-                // ==========================================
-                // BỘ LỌC TÊN LÀM ĐẸP CHỐNG LẶP CHỮ (CHỐNG MỒ CÔI)
-                // ==========================================
                 let displayFullName = matchedItem ? matchedItem.fullName : shoeCode;
                 if (!matchedItem) {
-                    // Viết hoa chữ cái đầu cho tên mồ côi
                     displayFullName = displayFullName.replace(/\b\w/g, l => l.toUpperCase());
-                    
-                    // Nếu tên chưa có chữ "Giày" thì tự kẹp thêm hãng vào trước
                     if (!/giày|giay/i.test(displayFullName)) {
                         let brandText = (p.brand !== 'Khác' && !displayFullName.toLowerCase().includes(p.brand.toLowerCase())) ? `${p.brand} ` : ``;
                         displayFullName = `Giày ${brandText}${displayFullName}`;
@@ -591,6 +584,9 @@
                 const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 const imgUrls = rawImgStr.split(',').map(url => url.trim()).filter(url => url !== '');
 
+                // Sửa lỗi văng HTML khi tên giày có dấu ngoặc kép hoặc nháy đơn
+                let safeShoeCode = shoeCode.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+
                 let imgHtml = '';
                 if (imgUrls.length > 1) {
                     imgHtml = `
@@ -598,7 +594,7 @@
                         <div class="slider-container" onscroll="updateDots(this)">
                             ${imgUrls.map((url, i) => `
                             <div class="slider-item">
-                                <img src="${url}" class="product-img" alt="${shoeCode}-${i}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">
+                                <img src="${url}" class="product-img" alt="${safeShoeCode}-${i}" onerror="handleImgErr(this, '${safeShoeCode}', '${p.brand}')">
                             </div>
                             `).join('')}
                         </div>
@@ -607,14 +603,16 @@
                         </div>
                     </div>`;
                 } else {
-                    imgHtml = `<img src="${imgUrls[0] || ''}" class="product-img" alt="${shoeCode}" onerror="handleImgErr(this, '${shoeCode.replace(/'/g, "\\'")}', '${p.brand}')">`;
+                    imgHtml = `<img src="${imgUrls[0] || ''}" class="product-img" alt="${safeShoeCode}" onerror="handleImgErr(this, '${safeShoeCode}', '${p.brand}')">`;
                 }
+
+                let safeShareName = displayFullName.replace(/'/g, "\\'").replace(/"/g, '&quot;');
 
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.innerHTML = `
                     <div class="product-img-wrapper">
-                        <button class="share-btn" onclick="event.stopPropagation(); shareProduct('${displayFullName.replace(/'/g, "\\'")}')" title="Chia sẻ mẫu này">🔗</button>
+                        <button class="share-btn" onclick="event.stopPropagation(); shareProduct('${safeShareName}')" title="Chia sẻ mẫu này">🔗</button>
                         ${imgHtml}
                     </div>
                     <div>
@@ -627,11 +625,11 @@
                         <div class="size-section">
                             <span class="size-label">Bảng Size (Click để chọn)</span>
                             <div class="size-container">
-                                ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${shoeCode.replace(/'/g, "\\'")}')">${v.size}</button>`).join('')}
+                                ${p.variants.map(v => `<button class="size-btn" onclick="selSize(this, ${idx}, '${v.price_display}', '${v.size}', '${safeShoeCode}')">${v.size}</button>`).join('')}
                             </div>
                         </div>
                     </div>
-                    <button class="order-btn" onclick="order('${displayFullName.replace(/'/g, "\\'")}')">Liên Hệ</button>
+                    <button class="order-btn" onclick="order('${safeShareName}')">Liên Hệ</button>
                 `;
                 grid.appendChild(card);
             });
