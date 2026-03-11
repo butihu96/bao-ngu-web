@@ -274,38 +274,38 @@
         }
 
         // ==========================================
-        // CHIP DÒ TÌM AN TOÀN TUYỆT ĐỐI (CHỐNG LỆCH GẠCH NGANG)
-        // Dựa trên code cũ của mày, chỉ thêm bộ lọc gạch ngang
+        // CHIP DÒ MÃ (ĐÃ FIX LỖI HỐ ĐEN HÚT MÃ)
+        // Bắt buộc Cột 3 Google Sheets phải có Số mới được phép dò mập mờ
         // ==========================================
         function findDictItem(shoeCode) {
             let sCode = shoeCode.toLowerCase().trim();
-            // Tạo thêm 1 bản dính liền hoàn toàn để so sánh chéo (VD: FZ2161-402 -> fz2161402)
             let sCodeSolid = sCode.replace(/[-_ ]/g, ''); 
+            let sHasNumber = /\d/.test(sCode);
 
             return dictionaryData.find(d => {
                 let mCode = d.mappingCode.toLowerCase().trim();
                 let mCodeSolid = mCode.replace(/[-_ ]/g, '');
                 let fName = d.fullName.toLowerCase().trim();
                 
-                // 1. Nếu trùng chính xác 100%
+                // 1. Trùng chính xác 100%
                 if (mCode === sCode) return true;
                 
-                // 2. Nếu mã Google Sheet có nằm bên trong tên dài Kho 4
-                if (mCode.length > 3 && sCode.includes(mCode)) return true;
-
-                // 3. Trị dứt điểm vụ lệch gạch ngang: 
-                // Ép dính liền cả 2 bên. Cài điều kiện mCodeSolid > 5 để nó không bị nhận diện nhầm mấy chữ ngắn như "nike"
-                if (mCodeSolid.length > 5 && sCodeSolid.includes(mCodeSolid)) return true;
+                // 2. CHỐNG HỐ ĐEN: Chỉ cho phép dò tìm mập mờ nếu Cột Mã (Cột 3) CÓ CHỨA SỐ.
+                // Tránh việc vô tình gõ chữ "Nike" vào cột Cột 3 làm hỏng cả kho.
+                if (/\d/.test(mCode)) {
+                    if (mCode.length > 3 && sCode.includes(mCode)) return true;
+                    if (mCodeSolid.length > 5 && sCodeSolid.includes(mCodeSolid)) return true;
+                }
                 
-                // 4. Chống mồ côi (tên web nằm trong tên file ảnh)
-                if (sCode.length > 4 && fName.includes(sCode)) return true;
+                // 3. Chống mồ côi: Tên web dài bị lọt vào tên file ảnh
+                if (sHasNumber && sCode.length > 5 && fName.includes(sCode)) return true;
                 
                 return false;
             });
         }
 
         // ==========================================
-        // THUỐC SỔ CACHE - ÉP LUÔN TẢI BẢN MỚI
+        // THUỐC SỔ CACHE - F5 MỘT PHÁT ĂN LUÔN BẢN MỚI TỪ GOOGLE SHEET
         // ==========================================
         const cacheBuster = new Date().getTime();
         Promise.all([
@@ -501,11 +501,11 @@
         }
 
         // ==========================================
-        // KHẮC PHỤC LỖI HIỂN THỊ ICON ẢNH VỠ (CỦA ADGUARD/NEXTDNS)
-        // Dùng ảnh SVG tích hợp thẳng vào code, 100% không bao giờ vỡ
+        // VẼ ẢNH BẰNG CODE - CHỐNG BỊ MẠNG CHẶN VỠ ẢNH
         // ==========================================
         window.handleImgErr = function(img, shoeCode, originalBrand) {
             img.onerror = null; 
+            // Vẽ ra một bức ảnh màu xám có chữ trực tiếp bằng code, không cần link ngoài
             img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f4f4f4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' font-weight='bold' fill='%23888888' text-anchor='middle' dominant-baseline='middle'%3E%E2%8F%B3 H%C3%ACnh %E1%BA%A3nh %C4%91ang c%E1%BA%ADp nh%E1%BA%ADt%3C/text%3E%3C/svg%3E";
             missingImages.add(shoeCode);
             if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
@@ -593,7 +593,6 @@
                 const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
                 const imgUrls = rawImgStr.split(',').map(url => url.trim()).filter(url => url !== '');
 
-                // Tạo mã an toàn cho thuộc tính HTML (để truyền vào thẻ img không vỡ)
                 let safeShoeCode = shoeCode.replace(/'/g, "\\'").replace(/"/g, '&quot;');
 
                 let imgHtml = '';
@@ -615,7 +614,6 @@
                     imgHtml = `<img src="${imgUrls[0] || ''}" class="product-img" alt="${safeShoeCode}" onerror="handleImgErr(this, '${safeShoeCode}', '${p.brand}')">`;
                 }
 
-                // Mã an toàn cho nút share
                 let safeShareName = displayFullName.replace(/'/g, "\\'").replace(/"/g, '&quot;');
 
                 const card = document.createElement('div');
