@@ -4,7 +4,7 @@ import os
 import re
 import sys
 import traceback
-import time  # ĐÃ THÊM THƯ VIỆN TIME ĐỂ ĐÓNG MỘC THỜI GIAN
+import time  
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pickle
@@ -12,7 +12,7 @@ import pickle
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # =========================================================
-# TỰ ĐỊNH NGHĨA PHÂN LOẠI HÃNG (VŨ KHÍ BÍ MẬT)
+# TỰ ĐỊNH NGHĨA PHÂN LOẠI HÃNG
 # =========================================================
 CUSTOM_BRAND_MAPPING = {
     "1183A872": "Onitsuka Tiger",     
@@ -21,7 +21,7 @@ CUSTOM_BRAND_MAPPING = {
     "BABOLAT": "Babolat",
     "WILSON": "Wilson",
     "LACOSTE": "Lacoste",
-    "ROGER PRO": "On"  # Đã gài bẫy bắt Roger Pro
+    "ROGER PRO": "On"  
 }
 
 # =========================================================
@@ -35,7 +35,7 @@ SHEETS_CONFIG = [
 ]
 
 # =========================================================
-# HỆ THỐNG XÁC THỰC BỌC THÉP CHO GITHUB ACTIONS
+# HỆ THỐNG XÁC THỰC
 # =========================================================
 def get_creds():
     creds = None
@@ -170,7 +170,7 @@ def sync_data():
                 if not data: continue
 
                 # =========================================================
-                # BỘ NÃO CHUYÊN TRỊ KHO 4 CÓ TÍCH HỢP CHIP GỘP MÃ VÀ LUẬT GIÁ THẤP
+                # BỘ NÃO CHUYÊN TRỊ KHO 4 
                 # =========================================================
                 if config["type"] == "kho_4":
                     blocks = []
@@ -217,7 +217,6 @@ def sync_data():
                                 
                                 fp = int(round(current_price + 300000, -4))
                                 
-                                # Rút mã ngắn ra làm CMND chung
                                 extracted_code = loc_ma_giay(raw_name)
                                 dk = normalize_key(extracted_code)
                                 
@@ -243,17 +242,15 @@ def sync_data():
                                             if dk not in sneaker_dict: 
                                                 sneaker_dict[dk] = {"display_name": raw_name, "original_name": raw_name, "variants": {}}
                                             else:
-                                                # Ưu tiên lấy cái tên DÀI NHẤT để hiển thị web cho đẹp
                                                 if len(raw_name) > len(sneaker_dict[dk]["display_name"]):
                                                     sneaker_dict[dk]["display_name"] = raw_name
                                                     sneaker_dict[dk]["original_name"] = raw_name
                                                     
-                                            # LUẬT LẤY GIÁ THẤP HƠN KHI TRÙNG SIZE
                                             if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
                                                 sneaker_dict[dk]["variants"][s_c] = fp
 
                 # =========================================================
-                # XỬ LÝ 3 KHO CŨ - ÁP DỤNG LUẬT ĐỒNG BỘ MÃ + GIÁ THẤP
+                # XỬ LÝ 3 KHO CŨ - ÁP DỤNG MÁY LỌC RÁC
                 # =========================================================
                 else:
                     for row in data[1:]:
@@ -289,7 +286,6 @@ def sync_data():
                                 for s in sizes_raw:
                                     sc = clean_size(s)
                                     if is_valid_size(sc):
-                                        # LUẬT LẤY GIÁ THẤP HƠN KHI TRÙNG SIZE
                                         if sc not in sneaker_dict[dk]["variants"] or final_price < sneaker_dict[dk]["variants"][sc]:
                                             sneaker_dict[dk]["variants"][sc] = final_price
                                 continue
@@ -335,7 +331,21 @@ def sync_data():
                             final_price = int(round((p_max * 1000) + 300000, -4))
                             if final_price < 1000000: continue 
                             
+                            # ===============================================
+                            # CHIP LỌC RÁC TÊN ĐỘC QUYỀN CHO KHO 3
+                            # ===============================================
                             best_name = name_size_val.strip()
+                            # 1. Quét sạch (EU37,5), Size 36, UK 4...
+                            best_name = re.sub(r'(?i)\(?\b(?:EU|Size|UK|US|CM)\s*[0-9.,/]+\b\)?', '', best_name)
+                            # 2. Quét sạch size bị nhốt trong ngoặc tròn như (37.5)
+                            best_name = re.sub(r'\(\s*[0-9.,/]+\s*\)', '', best_name)
+                            best_name = best_name.strip()
+                            # 3. Quét sạch đuôi dính cm của Asics/Onitsuka như "- 235" hoặc "-23.5" ở cuối cùng
+                            best_name = re.sub(r'[- ]+[0-9]{2,3}(?:[.,][0-9])?$', '', best_name)
+                            # Gọt rũa lại lần cuối cho sạch sẽ dấu gạch ngang thừa
+                            best_name = best_name.strip(' -()')
+                            # ===============================================
+                            
                             if dk not in sneaker_dict: 
                                 sneaker_dict[dk] = {"display_name": best_name, "original_name": best_name, "variants": {}}
                             else:
@@ -343,7 +353,6 @@ def sync_data():
                                     sneaker_dict[dk]["display_name"] = best_name
                                     sneaker_dict[dk]["original_name"] = best_name
                             
-                            # LUẬT LẤY GIÁ THẤP HƠN KHI TRÙNG SIZE
                             if s_c not in sneaker_dict[dk]["variants"] or final_price < sneaker_dict[dk]["variants"][s_c]:
                                 sneaker_dict[dk]["variants"][s_c] = final_price
                         except: continue
@@ -395,7 +404,6 @@ def sync_data():
                             for s in b["sizes"]:
                                 sc = clean_size(s)
                                 if is_valid_size(sc):
-                                    # LUẬT LẤY GIÁ THẤP HƠN KHI TRÙNG SIZE
                                     if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
                                         sneaker_dict[dk]["variants"][sc] = fp
 
@@ -442,7 +450,7 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Đã GỘP CHUNG MÃ xuyên suốt 4 kho, ƯU TIÊN LẤY GIÁ THẤP NHẤT khi trùng size.")
+        print(f"✅ Xong! Rác của Kho 3 đã bị quét sạch bóng, ưu tiên tên đẹp nhất cho khách xem.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
