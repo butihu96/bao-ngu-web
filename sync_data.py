@@ -12,7 +12,7 @@ import pickle
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # =========================================================
-# TỰ ĐỊNH NGHĨA PHÂN LOẠI HÃNG
+# TỰ ĐỊNH NGHĨA PHÂN LOẠI HÃNG 
 # =========================================================
 CUSTOM_BRAND_MAPPING = {
     "1183A872": "Onitsuka Tiger",     
@@ -35,7 +35,7 @@ SHEETS_CONFIG = [
 ]
 
 # =========================================================
-# HỆ THỐNG XÁC THỰC
+# HỆ THỐNG XÁC THỰC BỌC THÉP CHO GITHUB ACTIONS
 # =========================================================
 def get_creds():
     creds = None
@@ -170,7 +170,7 @@ def sync_data():
                 if not data: continue
 
                 # =========================================================
-                # BỘ NÃO CHUYÊN TRỊ KHO 4 
+                # KHO 4
                 # =========================================================
                 if config["type"] == "kho_4":
                     blocks = []
@@ -242,7 +242,8 @@ def sync_data():
                                             if dk not in sneaker_dict: 
                                                 sneaker_dict[dk] = {"display_name": raw_name, "original_name": raw_name, "variants": {}}
                                             else:
-                                                if len(raw_name) > len(sneaker_dict[dk]["display_name"]):
+                                                # LUẬT CHỐNG RÁC: Chỉ cho phép đè tên nếu tên mới dài hơn nhưng KHÔNG QUÁ 90 ký tự (Chống gộp lỗi)
+                                                if len(raw_name) > len(sneaker_dict[dk]["display_name"]) and len(raw_name) < 90:
                                                     sneaker_dict[dk]["display_name"] = raw_name
                                                     sneaker_dict[dk]["original_name"] = raw_name
                                                     
@@ -250,7 +251,7 @@ def sync_data():
                                                 sneaker_dict[dk]["variants"][s_c] = fp
 
                 # =========================================================
-                # XỬ LÝ 3 KHO CŨ - ÁP DỤNG MÁY LỌC RÁC
+                # KHO 1, 2, 3
                 # =========================================================
                 else:
                     for row in data[1:]:
@@ -279,7 +280,7 @@ def sync_data():
                                 if dk not in sneaker_dict: 
                                     sneaker_dict[dk] = {"display_name": best_name, "original_name": best_name, "variants": {}}
                                 else:
-                                    if len(best_name) > len(sneaker_dict[dk]["display_name"]):
+                                    if len(best_name) > len(sneaker_dict[dk]["display_name"]) and len(best_name) < 90:
                                         sneaker_dict[dk]["display_name"] = best_name
                                         sneaker_dict[dk]["original_name"] = best_name
                                 
@@ -331,25 +332,17 @@ def sync_data():
                             final_price = int(round((p_max * 1000) + 300000, -4))
                             if final_price < 1000000: continue 
                             
-                            # ===============================================
-                            # CHIP LỌC RÁC TÊN ĐỘC QUYỀN CHO KHO 3
-                            # ===============================================
                             best_name = name_size_val.strip()
-                            # 1. Quét sạch (EU37,5), Size 36, UK 4...
                             best_name = re.sub(r'(?i)\(?\b(?:EU|Size|UK|US|CM)\s*[0-9.,/]+\b\)?', '', best_name)
-                            # 2. Quét sạch size bị nhốt trong ngoặc tròn như (37.5)
                             best_name = re.sub(r'\(\s*[0-9.,/]+\s*\)', '', best_name)
                             best_name = best_name.strip()
-                            # 3. Quét sạch đuôi dính cm của Asics/Onitsuka như "- 235" hoặc "-23.5" ở cuối cùng
                             best_name = re.sub(r'[- ]+[0-9]{2,3}(?:[.,][0-9])?$', '', best_name)
-                            # Gọt rũa lại lần cuối cho sạch sẽ dấu gạch ngang thừa
                             best_name = best_name.strip(' -()')
-                            # ===============================================
                             
                             if dk not in sneaker_dict: 
                                 sneaker_dict[dk] = {"display_name": best_name, "original_name": best_name, "variants": {}}
                             else:
-                                if len(best_name) > len(sneaker_dict[dk]["display_name"]):
+                                if len(best_name) > len(sneaker_dict[dk]["display_name"]) and len(best_name) < 90:
                                     sneaker_dict[dk]["display_name"] = best_name
                                     sneaker_dict[dk]["original_name"] = best_name
                             
@@ -369,7 +362,18 @@ def sync_data():
                                         curr = {"names": [], "sizes": [], "price_val": 0}
                                     continue
                                 
-                                if n: curr["names"].append(n)
+                                # ============================================================
+                                # ĐÂY LÀ "CON MẮT THẦN" TRỊ BỆNH KHO 2 NHÂN VIÊN QUÊN CÁCH DÒNG
+                                # NẾU THẤY TÊN MỚI, MÀ TRƯỚC ĐÓ ĐÃ CÓ SIZE => CHẮC CHẮN LÀ GIÀY MỚI! CẮT BLOCK TẠI ĐÂY!
+                                # ============================================================
+                                if n and curr["sizes"]:
+                                    blocks.append(curr)
+                                    curr = {"names": [], "sizes": [], "price_val": 0}
+                                
+                                # Chỉ thêm tên vào nếu tên đó chưa tồn tại trong danh sách (tránh gộp ô lặp chữ)
+                                if n and n not in curr["names"]: 
+                                    curr["names"].append(n)
+                                    
                                 if p:
                                     p_m = extract_price(p)
                                     if p_m > curr["price_val"]: curr["price_val"] = p_m
@@ -397,7 +401,7 @@ def sync_data():
                             if dk not in sneaker_dict: 
                                 sneaker_dict[dk] = {"display_name": best_name, "original_name": best_name, "variants": {}}
                             else:
-                                if len(best_name) > len(sneaker_dict[dk]["display_name"]):
+                                if len(best_name) > len(sneaker_dict[dk]["display_name"]) and len(best_name) < 90:
                                     sneaker_dict[dk]["display_name"] = best_name
                                     sneaker_dict[dk]["original_name"] = best_name
                                 
@@ -450,7 +454,7 @@ def sync_data():
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
         with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Rác của Kho 3 đã bị quét sạch bóng, ưu tiên tên đẹp nhất cho khách xem.")
+        print(f"✅ Xong! Đã cắt đứt toàn bộ các tên dính chùm của Kho 2. Ngăn chặn tuyệt đối quái vật rác.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
