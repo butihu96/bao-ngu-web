@@ -312,6 +312,11 @@
                 "price_display": "3,290,000đ"
             },
             {
+                "size": "42.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
                 "size": "43",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -322,7 +327,7 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "FV5552-403",
@@ -393,12 +398,17 @@
                 "price_display": "3,400,000đ"
             },
             {
+                "size": "38.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
                 "size": "40",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "FV5554-300",
@@ -751,6 +761,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "39",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -786,7 +801,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1773205418
+        "updated_at": 1773223708
     },
     {
         "name": "FZ2161-104",
@@ -2780,11 +2795,6 @@
                 "price_display": "3,750,000đ"
             },
             {
-                "size": "42",
-                "price": 3750000,
-                "price_display": "3,750,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 3750000,
                 "price_display": "3,750,000đ"
@@ -2795,7 +2805,7 @@
                 "price_display": "3,750,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "IB6550-700",
@@ -2913,14 +2923,9 @@
                 "size": "36",
                 "price": 1050000,
                 "price_display": "1,050,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 1050000,
-                "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1773205418
+        "updated_at": 1773223708
     },
     {
         "name": "IV4090-022",
@@ -3339,14 +3344,9 @@
                 "size": "41",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773223708
     },
     {
         "name": "Nike GP Challenge Pro Premium FB3146-101",
@@ -3385,11 +3385,6 @@
                 "price_display": "2,950,000đ"
             },
             {
-                "size": "37.5",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
@@ -3400,7 +3395,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773223708
     },
     {
         "name": "Nike GP Challenge Pro Womens Tennis Shoe Pale Ivory FB3146-104",
@@ -4759,14 +4754,9 @@
                 "size": "42.5",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "1041A487-400",
@@ -5165,14 +5155,14 @@
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "39.5",
+                "size": "39",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "39",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
+                "size": "39.5",
+                "price": 1900000,
+                "price_display": "1,900,000đ"
             },
             {
                 "size": "40",
@@ -5180,7 +5170,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1773152370
+        "updated_at": 1773223708
     },
     {
         "name": "1042A265-701",
@@ -5651,6 +5641,11 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "36",
+                "price": 1590000,
+                "price_display": "1,590,000đ"
+            },
+            {
                 "size": "37",
                 "price": 1590000,
                 "price_display": "1,590,000đ"
@@ -5676,7 +5671,7 @@
                 "price_display": "1,590,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "1074A045-702",
@@ -5818,11 +5813,6 @@
                 "price_display": "3,560,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3560000,
-                "price_display": "3,560,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
@@ -5838,7 +5828,7 @@
                 "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1773137208
+        "updated_at": 1773223708
     },
     {
         "name": "1182A678-750",
@@ -6623,11 +6613,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "36.5 23.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "37.5 24.5",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -6653,7 +6638,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1773168478
+        "updated_at": 1773223708
     },
     {
         "name": "Giày Skechers Viper Court Pro 2.0 172109_LTGY",
@@ -7694,17 +7679,12 @@
         "brand": "On",
         "variants": [
             {
-                "size": "42.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
-            },
-            {
                 "size": "43",
                 "price": 4700000,
                 "price_display": "4,700,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "THE ROGER Pro 2 Hồng\n3ME10303602",
@@ -7875,17 +7855,12 @@
                 "price_display": "3,650,000đ"
             },
             {
-                "size": "42",
-                "price": 3650000,
-                "price_display": "3,650,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "31S26556A-1112",
@@ -8164,7 +8139,7 @@
         "updated_at": 1773168857
     },
     {
-        "name": "Giày Tennis/Pickleball Babolat Jet Mach 3 All Court ‘Black’ 3A0S25B629-2001",
+        "name": "Giày Tennis Babolat Propulse Fury 3 All Court Men 3A0F25B208-5071",
         "brand": "Babolat",
         "variants": [
             {
@@ -8208,7 +8183,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773223708
     },
     {
         "name": "Giày Tennis/Pickleball/Golf Nam Babolat Jet Mach 3 All Court   30F22629-1005",
@@ -8264,11 +8239,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40.5",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -8284,7 +8254,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773223708
     },
     {
         "name": "Giày Tennis Nữ Wilson Intrigue Tour WRS337020",
@@ -8722,6 +8692,11 @@
                 "price_display": "3,190,000đ"
             },
             {
+                "size": "41",
+                "price": 3190000,
+                "price_display": "3,190,000đ"
+            },
+            {
                 "size": "42",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
@@ -8737,7 +8712,7 @@
                 "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     },
     {
         "name": "WRS338580U",
@@ -8834,13 +8809,8 @@
                 "size": "39",
                 "price": 1990000,
                 "price_display": "1,990,000đ"
-            },
-            {
-                "size": "40",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773223708
     }
 ]
