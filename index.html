@@ -274,38 +274,44 @@
         }
 
         // ==========================================
-        // CHIP DÒ MÃ (ĐÃ FIX LỖI HỐ ĐEN HÚT MÃ)
-        // Bắt buộc Cột 3 Google Sheets phải có Số mới được phép dò mập mờ
+        // CHIP DÒ MÃ BỌC THÉP (CẤP ĐẶC QUYỀN CHO TÊN KHÔNG SỐ + ĐỒNG BỘ TIẾNG VIỆT)
         // ==========================================
+        function normalizeVN(str) {
+            if (!str) return '';
+            // Sử dụng NFC để gộp các dấu câu tiếng Việt về chuẩn chung, tránh lỗi gõ phím
+            return str.normalize('NFC').toLowerCase().trim();
+        }
+
         function findDictItem(shoeCode) {
-            let sCode = shoeCode.toLowerCase().trim();
+            let sCode = normalizeVN(shoeCode);
+            // Xóa mọi khoảng trắng và gạch ngang để so sánh sát sườn
             let sCodeSolid = sCode.replace(/[-_ ]/g, ''); 
             let sHasNumber = /\d/.test(sCode);
 
             return dictionaryData.find(d => {
-                let mCode = d.mappingCode.toLowerCase().trim();
+                let mCode = normalizeVN(d.mappingCode);
                 let mCodeSolid = mCode.replace(/[-_ ]/g, '');
-                let fName = d.fullName.toLowerCase().trim();
+                let fName = normalizeVN(d.fullName);
                 
-                // 1. Trùng chính xác 100%
-                if (mCode === sCode) return true;
+                // 1. Trùng khớp chính xác 100% (Kể cả có hay không có khoảng trắng)
+                if (mCode === sCode || mCodeSolid === sCodeSolid) return true;
                 
-                // 2. CHỐNG HỐ ĐEN: Chỉ cho phép dò tìm mập mờ nếu Cột Mã (Cột 3) CÓ CHỨA SỐ.
-                // Tránh việc vô tình gõ chữ "Nike" vào cột Cột 3 làm hỏng cả kho.
-                if (/\d/.test(mCode)) {
+                // 2. ĐẶC QUYỀN CHO TÊN KHÔNG SỐ: 
+                // Cho phép dò mập mờ nếu Cột 3 chứa số, HOẶC tên đó phải dài hơn 12 ký tự (Cứu cánh cho On The Roger)
+                if (/\d/.test(mCode) || mCode.length > 12) {
                     if (mCode.length > 3 && sCode.includes(mCode)) return true;
                     if (mCodeSolid.length > 5 && sCodeSolid.includes(mCodeSolid)) return true;
                 }
                 
-                // 3. Chống mồ côi: Tên web dài bị lọt vào tên file ảnh
-                if (sHasNumber && sCode.length > 5 && fName.includes(sCode)) return true;
+                // 3. Chống mồ côi: Tên web lọt thỏm vào trong tên file ảnh
+                if ((sHasNumber || sCode.length > 12) && sCode.length > 5 && fName.includes(sCode)) return true;
                 
                 return false;
             });
         }
 
         // ==========================================
-        // THUỐC SỔ CACHE - F5 MỘT PHÁT ĂN LUÔN BẢN MỚI TỪ GOOGLE SHEET
+        // THUỐC SỔ CACHE - LUÔN LẤY SHEET MỚI
         // ==========================================
         const cacheBuster = new Date().getTime();
         Promise.all([
@@ -500,12 +506,8 @@
             renderGrid();
         }
 
-        // ==========================================
-        // VẼ ẢNH BẰNG CODE - CHỐNG BỊ MẠNG CHẶN VỠ ẢNH
-        // ==========================================
         window.handleImgErr = function(img, shoeCode, originalBrand) {
             img.onerror = null; 
-            // Vẽ ra một bức ảnh màu xám có chữ trực tiếp bằng code, không cần link ngoài
             img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f4f4f4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' font-weight='bold' fill='%23888888' text-anchor='middle' dominant-baseline='middle'%3E%E2%8F%B3 H%C3%ACnh %E1%BA%A3nh %C4%91ang c%E1%BA%ADp nh%E1%BA%ADt%3C/text%3E%3C/svg%3E";
             missingImages.add(shoeCode);
             if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
