@@ -878,6 +878,18 @@
         "updated_at": 1773205418
     },
     {
+        "name": "FZ2161-109",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "43",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            }
+        ],
+        "updated_at": 1773239903
+    },
+    {
         "name": "FZ2161-401",
         "brand": "Nike",
         "variants": [
@@ -2887,18 +2899,6 @@
         "updated_at": 1773079629
     },
     {
-        "name": "IB6555-300",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 4100000,
-                "price_display": "4,100,000đ"
-            }
-        ],
-        "updated_at": 1773137208
-    },
-    {
         "name": "IB7168-100",
         "brand": "Nike",
         "variants": [
@@ -3437,17 +3437,12 @@
                 "price_display": "3,050,000đ"
             },
             {
-                "size": "41",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3050000,
                 "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773239903
     },
     {
         "name": "Nike Interact Run Sail Black White Men's - FD2291-106",
@@ -4304,11 +4299,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "42.6",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "43.3",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -4319,7 +4309,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773239903
     },
     {
         "name": "JUNIOR",
@@ -7036,22 +7026,12 @@
                 "price_display": "3,100,000đ"
             },
             {
-                "size": "38.5",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
-            },
-            {
                 "size": "39",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
-            },
-            {
-                "size": "40",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773137208
+        "updated_at": 1773239903
     },
     {
         "name": "3WF30031217",
@@ -7098,9 +7078,19 @@
                 "size": "39",
                 "price": 4500000,
                 "price_display": "4,500,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 4500000,
+                "price_display": "4,500,000đ"
+            },
+            {
+                "size": "43",
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773239903
     },
     {
         "name": "3WF30593496",
@@ -7311,6 +7301,11 @@
         "brand": "On",
         "variants": [
             {
+                "size": "37.5",
+                "price": 4200000,
+                "price_display": "4,200,000đ"
+            },
+            {
                 "size": "38",
                 "price": 4200000,
                 "price_display": "4,200,000đ"
@@ -7321,12 +7316,17 @@
                 "price_display": "4,200,000đ"
             },
             {
+                "size": "39",
+                "price": 4200000,
+                "price_display": "4,200,000đ"
+            },
+            {
                 "size": "40",
                 "price": 4200000,
                 "price_display": "4,200,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773239903
     },
     {
         "name": "Giày On The Roger Pro 2 'All White' 3ME10300108 / 3WE10330108",
@@ -7679,12 +7679,17 @@
         "brand": "On",
         "variants": [
             {
+                "size": "42.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
                 "size": "43",
                 "price": 4700000,
                 "price_display": "4,700,000đ"
             }
         ],
-        "updated_at": 1773223708
+        "updated_at": 1773239903
     },
     {
         "name": "THE ROGER Pro 2 Hồng\n3ME10303602",
@@ -8126,17 +8131,12 @@
                 "price_display": "2,500,000đ"
             },
             {
-                "size": "43",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "45",
                 "price": 2400000,
                 "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773239903
     },
     {
         "name": "Giày Tennis Babolat Propulse Fury 3 All Court Men 3A0F25B208-5071",
@@ -8212,11 +8212,6 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "39",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "40",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
@@ -8232,7 +8227,7 @@
                 "price_display": "3,350,000đ"
             }
         ],
-        "updated_at": 1773137208
+        "updated_at": 1773239903
     },
     {
         "name": "Giày Tennis Nam Wilson Rush Pro 4.5 WRS333670U",
@@ -8754,18 +8749,6 @@
             }
         ],
         "updated_at": 1773152370
-    },
-    {
-        "name": "WRS338920U",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "40",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
-            }
-        ],
-        "updated_at": 1773079629
     },
     {
         "name": "WRS339230U",
