@@ -1573,6 +1573,11 @@
                 "price_display": "2,300,000đ"
             },
             {
+                "size": "36.5",
+                "price": 2300000,
+                "price_display": "2,300,000đ"
+            },
+            {
                 "size": "37.5",
                 "price": 2300000,
                 "price_display": "2,300,000đ"
@@ -1593,7 +1598,7 @@
                 "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1773168478
+        "updated_at": 1773339061
     },
     {
         "name": "Giày Nike V2K Run ‘Cream’ FD0736-103",
@@ -1660,8 +1665,8 @@
             },
             {
                 "size": "40",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 3050000,
+                "price_display": "3,050,000đ"
             },
             {
                 "size": "42",
@@ -1674,7 +1679,7 @@
                 "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773326305
+        "updated_at": 1773339061
     },
     {
         "name": "Giày Nike Vapor Pro 3 'Summit White Binary Blue' FZ2161-100 / FZ2158-100",
@@ -7404,14 +7409,9 @@
                 "size": "36.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1773310131
+        "updated_at": 1773339061
     },
     {
         "name": "31S26651A-1118",
@@ -7776,14 +7776,9 @@
                 "size": "38.5",
                 "price": 4600000,
                 "price_display": "4,600,000đ"
-            },
-            {
-                "size": "39",
-                "price": 4600000,
-                "price_display": "4,600,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773339061
     },
     {
         "name": "Giày Wilson Intrigue Tour Tennis 'White Pink' WRS337030",
