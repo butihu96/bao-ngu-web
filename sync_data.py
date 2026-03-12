@@ -246,6 +246,7 @@ def sync_data():
                                                     sneaker_dict[dk]["display_name"] = raw_name
                                                     sneaker_dict[dk]["original_name"] = raw_name
                                                     
+                                            # ĐẢM BẢO LẤY GIÁ RẺ NHẤT
                                             if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
                                                 sneaker_dict[dk]["variants"][s_c] = fp
 
@@ -286,6 +287,7 @@ def sync_data():
                                 for s in sizes_raw:
                                     sc = clean_size(s)
                                     if is_valid_size(sc):
+                                        # ĐẢM BẢO LẤY GIÁ RẺ NHẤT
                                         if sc not in sneaker_dict[dk]["variants"] or final_price < sneaker_dict[dk]["variants"][sc]:
                                             sneaker_dict[dk]["variants"][sc] = final_price
                                 continue
@@ -345,6 +347,7 @@ def sync_data():
                                     sneaker_dict[dk]["display_name"] = best_name
                                     sneaker_dict[dk]["original_name"] = best_name
                             
+                            # ĐẢM BẢO LẤY GIÁ RẺ NHẤT
                             if s_c not in sneaker_dict[dk]["variants"] or final_price < sneaker_dict[dk]["variants"][s_c]:
                                 sneaker_dict[dk]["variants"][s_c] = final_price
                         except: continue
@@ -408,6 +411,7 @@ def sync_data():
                             for s in b["sizes"]:
                                 sc = clean_size(s)
                                 if is_valid_size(sc):
+                                    # ĐẢM BẢO LẤY GIÁ RẺ NHẤT
                                     if sc not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][sc]:
                                         sneaker_dict[dk]["variants"][sc] = fp
 
@@ -453,8 +457,9 @@ def sync_data():
         priority_order = {"Nike": 1, "Adidas": 2, "Asics": 3, "Onitsuka Tiger": 4, "Skechers": 5, "On": 6, "Lacoste": 7, "Babolat": 8, "Wilson": 9}
         result.sort(key=lambda x: (priority_order.get(x["brand"], 99), x["name"]))
 
-        with open('data.json', 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=4)
-        print(f"✅ Xong! Đã xử lý triệt để lỗi nối tên từ Kho 2.")
+        with open('data.json', 'w', encoding='utf-8') as f: 
+            json.dump(result, f, ensure_ascii=False, indent=4)
+        print(f"✅ Xong! Đã đồng bộ giá rẻ nhất thành công xuyên suốt các kho.")
         
     except Exception as e: 
         print(f"\n❌ LỖI HỆ THỐNG TRẦM TRỌNG: {e}")
