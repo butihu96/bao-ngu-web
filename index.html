@@ -321,7 +321,17 @@
                 let parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
                 if(parts.length >= 2) {
                     let fullName = parts[0].replace(/^"|"$/g, '').trim(); 
-                    let imgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
+                    let rawImgUrl = parts[1].replace(/^"|"$/g, '').trim(); 
+                    
+                    // BỘ LỌC TỰ ĐỘNG CHUYỂN ĐỔI LINK GITHUB (BLOB -> RAW)
+                    let imgUrl = rawImgUrl.split(',').map(url => {
+                        let u = url.trim();
+                        if (u.includes('github.com') && u.includes('/blob/')) {
+                            u = u.replace(/https?:\/\/github\.com\/([^\/]+)\/([^\/]+)\/blob\//i, 'https://raw.githubusercontent.com/$1/$2/');
+                        }
+                        return u;
+                    }).join(',');
+
                     let mappingCode = parts[2] ? parts[2].replace(/^"|"$/g, '').trim() : fullName; 
                     let hotTag = parts[3] ? parts[3].replace(/^"|"$/g, '').trim() : ''; 
                     dictionaryData.push({ fullName: fullName, image: imgUrl, mappingCode: mappingCode, tag: hotTag });
@@ -458,7 +468,6 @@
             const allBrands = ['Tất cả', ...brandsInData]; 
             
             brandContainer.innerHTML = allBrands.map(b => {
-                // Sửa chữ Khác thành Hàng chưa cập nhật Ảnh
                 let label = b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Chưa cập nhật Ảnh' : '🔸 ' + b);
                 return `<button class="filter-item brand-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">${label}</button>`;
             }).join('');
