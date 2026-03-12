@@ -274,17 +274,27 @@
         }
 
         // ==========================================
-        // CHIP DÒ MÃ BỌC THÉP (CẤP ĐẶC QUYỀN CHO TÊN KHÔNG SỐ + ĐỒNG BỘ TIẾNG VIỆT)
+        // HÀM SHUFFLE - XÁO TRỘN NGẪU NHIÊN
+        // ==========================================
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // ==========================================
+        // CHIP DÒ MÃ BỌC THÉP: XỬ LÝ TIẾNG VIỆT + CẤP ĐẶC QUYỀN TÊN DÀI
         // ==========================================
         function normalizeVN(str) {
             if (!str) return '';
-            // Sử dụng NFC để gộp các dấu câu tiếng Việt về chuẩn chung, tránh lỗi gõ phím
+            // Chuẩn hóa Unicode (NFC) để "HồNg" hay "Hồng" đều về 1 form, sau đó viết thường
             return str.normalize('NFC').toLowerCase().trim();
         }
 
         function findDictItem(shoeCode) {
             let sCode = normalizeVN(shoeCode);
-            // Xóa mọi khoảng trắng và gạch ngang để so sánh sát sườn
             let sCodeSolid = sCode.replace(/[-_ ]/g, ''); 
             let sHasNumber = /\d/.test(sCode);
 
@@ -293,26 +303,23 @@
                 let mCodeSolid = mCode.replace(/[-_ ]/g, '');
                 let fName = normalizeVN(d.fullName);
                 
-                // 1. Trùng khớp chính xác 100% (Kể cả có hay không có khoảng trắng)
+                // 1. Trùng khớp 100% (Cho dù có hay không có khoảng trắng)
                 if (mCode === sCode || mCodeSolid === sCodeSolid) return true;
                 
-                // 2. ĐẶC QUYỀN CHO TÊN KHÔNG SỐ: 
-                // Cho phép dò mập mờ nếu Cột 3 chứa số, HOẶC tên đó phải dài hơn 12 ký tự (Cứu cánh cho On The Roger)
+                // 2. CHỐNG HỐ ĐEN MỞ RỘNG: 
+                // Cho phép tìm mập mờ nếu có số, HOẶC tên đó dài hơn 12 ký tự (Bảo vệ On The Roger)
                 if (/\d/.test(mCode) || mCode.length > 12) {
                     if (mCode.length > 3 && sCode.includes(mCode)) return true;
                     if (mCodeSolid.length > 5 && sCodeSolid.includes(mCodeSolid)) return true;
                 }
                 
-                // 3. Chống mồ côi: Tên web lọt thỏm vào trong tên file ảnh
+                // 3. Tên web lọt thỏm trong tên Sheet
                 if ((sHasNumber || sCode.length > 12) && sCode.length > 5 && fName.includes(sCode)) return true;
                 
                 return false;
             });
         }
 
-        // ==========================================
-        // THUỐC SỔ CACHE - LUÔN LẤY SHEET MỚI
-        // ==========================================
         const cacheBuster = new Date().getTime();
         Promise.all([
             fetch('data.json?v=' + cacheBuster).then(res => res.json()),
@@ -371,25 +378,33 @@
                 const shoeCode = p.name.trim();
                 const matchedItem = findDictItem(shoeCode);
                 
-                const searchString = matchedItem ? matchedItem.fullName.toLowerCase() : `${p.brand.toLowerCase()} ${shoeCode.toLowerCase()}`;
-                
-                let detectedBrand = null;
-                for (let b of TARGET_BRANDS) {
-                    if (b === 'On') {
-                        if (/\bon\b/i.test(searchString) && !/onitsuka/i.test(searchString)) { detectedBrand = b; break; }
-                    } else if (b === 'Onitsuka Tiger') {
-                        if (/onitsuka/i.test(searchString)) { detectedBrand = b; break; }
-                    } else {
-                        if (searchString.includes(b.toLowerCase())) { detectedBrand = b; break; }
+                // ==================================================
+                // ĐÁ BỌN MỒ CÔI VÀO TAB "KHÁC"
+                // ==================================================
+                if (!matchedItem) {
+                    p.brand = 'Khác';
+                    missingImages.add(shoeCode);
+                } else {
+                    const searchString = matchedItem.fullName.toLowerCase();
+                    let detectedBrand = null;
+                    for (let b of TARGET_BRANDS) {
+                        if (b === 'On') {
+                            if (/\bon\b/i.test(searchString) && !/onitsuka/i.test(searchString)) { detectedBrand = b; break; }
+                        } else if (b === 'Onitsuka Tiger') {
+                            if (/onitsuka/i.test(searchString)) { detectedBrand = b; break; }
+                        } else {
+                            if (searchString.includes(b.toLowerCase())) { detectedBrand = b; break; }
+                        }
                     }
+                    if (detectedBrand) p.brand = detectedBrand;
                 }
-                if (detectedBrand) p.brand = detectedBrand;
 
                 p.category = 'SNEAKER'; 
                 
+                const searchStrForCategory = matchedItem ? matchedItem.fullName.toLowerCase() : shoeCode.toLowerCase();
                 let isPickle = false;
                 for (let kw of PICKLEBALL_KEYWORDS) {
-                    if (searchString.includes(kw.toLowerCase())) {
+                    if (searchStrForCategory.includes(kw.toLowerCase())) {
                         isPickle = true;
                         break;
                     }
@@ -397,14 +412,18 @@
                 if (isPickle) p.category = 'PICKLEBALL';
                 
                 for (let kw of SNEAKER_KEYWORDS) {
-                    if (searchString.includes(kw.toLowerCase())) {
+                    if (searchStrForCategory.includes(kw.toLowerCase())) {
                         p.category = 'SNEAKER';
                         break;
                     }
                 }
             });
 
-            globalData = jsonData;
+            // ==================================================
+            // TRỘN NGẪU NHIÊN TOÀN BỘ DATA ĐỂ TRANG CHỦ LÚC NÀO CŨNG MỚI
+            // ==================================================
+            globalData = shuffleArray(jsonData);
+            
             switchCategory('PICKLEBALL'); 
         }).catch(err => {
             console.log("Lỗi mạng: ", err);
@@ -452,10 +471,10 @@
             const brandsInData = [...new Set(catData.map(p => p.brand))];
             
             brandsInData.sort((a, b) => (TARGET_BRANDS.indexOf(a) !== -1 ? TARGET_BRANDS.indexOf(a) : 99) - (TARGET_BRANDS.indexOf(b) !== -1 ? TARGET_BRANDS.indexOf(b) : 99));
-            const allBrands = ['Tất cả', ...brandsInData, 'Khác']; 
+            const allBrands = ['Tất cả', ...brandsInData]; 
             
             brandContainer.innerHTML = allBrands.map(b => {
-                let label = b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Khác' : '🔸 ' + b);
+                let label = b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Hàng chưa cập nhật Ảnh' : '🔸 ' + b);
                 return `<button class="filter-item brand-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">${label}</button>`;
             }).join('');
 
@@ -509,11 +528,6 @@
         window.handleImgErr = function(img, shoeCode, originalBrand) {
             img.onerror = null; 
             img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f4f4f4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' font-weight='bold' fill='%23888888' text-anchor='middle' dominant-baseline='middle'%3E%E2%8F%B3 H%C3%ACnh %E1%BA%A3nh %C4%91ang c%E1%BA%ADp nh%E1%BA%ADt%3C/text%3E%3C/svg%3E";
-            missingImages.add(shoeCode);
-            if (currentBrand !== 'Tất cả' && currentBrand !== 'Khác') {
-                let card = img.closest('.product-card');
-                if (card) card.style.display = 'none';
-            }
         };
 
         window.updateDots = function(container) {
@@ -537,8 +551,15 @@
                 const shoeCode = p.name.trim();
                 const matchedItem = findDictItem(shoeCode);
                 
-                const effectiveBrand = missingImages.has(shoeCode) ? 'Khác' : p.brand;
-                if (currentBrand !== 'Tất cả' && effectiveBrand !== currentBrand) return false;
+                // Lọc Brand
+                if (currentBrand !== 'Tất cả' && p.brand !== currentBrand) return false;
+                
+                // ==================================================
+                // GIẤU BỌN MỒ CÔI Ở TRANG CHỦ (Chỉ khi nào gõ Tìm kiếm thì mới hiện ra)
+                // ==================================================
+                if (currentBrand === 'Tất cả' && currentSearch === '') {
+                    if (!matchedItem) return false;
+                }
 
                 if (currentSize !== 'ALL' && !p.variants.some(v => v.size == currentSize)) return false;
                 
@@ -551,8 +572,9 @@
 
                 if (currentSearch !== '') {
                     const displayFullName = matchedItem ? matchedItem.fullName : `Giày ${p.brand} ${shoeCode} Chính Hãng`;
-                    const searchTarget = `${displayFullName} ${shoeCode} ${p.brand}`.toLowerCase();
-                    const searchKeywords = currentSearch.split(/\s+/).filter(k => k !== '');
+                    // Dùng Unicode NFC để gõ HồNg hay Hồng đều tìm được
+                    const searchTarget = normalizeVN(`${displayFullName} ${shoeCode} ${p.brand}`);
+                    const searchKeywords = normalizeVN(currentSearch).split(/\s+/).filter(k => k !== '');
                     const isMatch = searchKeywords.every(kw => searchTarget.includes(kw));
                     if (!isMatch) return false;
                 }
@@ -560,13 +582,25 @@
                 return true;
             });
 
-            filtered.sort((a, b) => {
-                let indexA = TARGET_BRANDS.indexOf(a.brand);
-                let indexB = TARGET_BRANDS.indexOf(b.brand);
-                if (indexA === -1) indexA = 99; 
-                if (indexB === -1) indexB = 99;
-                return indexA - indexB;
-            });
+            // ==================================================
+            // THUẬT TOÁN SẮP XẾP A-Z KHI CHỌN HÃNG
+            // ==================================================
+            if (currentBrand !== 'Tất cả') {
+                filtered.sort((a, b) => {
+                    const nameA = a.name.toLowerCase();
+                    const nameB = b.name.toLowerCase();
+                    if (nameA < nameB) return -1;
+                    if (nameA > nameB) return 1;
+                    return 0;
+                });
+            } else {
+                // Nếu ở trang chủ thì đẩy bọn Brand Khác (nếu lọt sổ) xuống tít dưới cùng
+                filtered.sort((a, b) => {
+                    if (a.brand === 'Khác' && b.brand !== 'Khác') return 1;
+                    if (a.brand !== 'Khác' && b.brand === 'Khác') return -1;
+                    return 0;
+                });
+            }
 
             if (filtered.length === 0) {
                 grid.innerHTML = `<div class="empty-state"><h3>Không tìm thấy mẫu nào phù hợp 🥲</h3><p>Hãy thử xóa bộ lọc hoặc tìm mã khác xem sao nhé!</p></div>`;
@@ -592,7 +626,7 @@
                     }
                 }
                 
-                const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : `images/${shoeCode}.jpg`;
+                const rawImgStr = (matchedItem && matchedItem.image.trim() !== "") ? matchedItem.image : ``;
                 const imgUrls = rawImgStr.split(',').map(url => url.trim()).filter(url => url !== '');
 
                 let safeShoeCode = shoeCode.replace(/'/g, "\\'").replace(/"/g, '&quot;');
@@ -612,8 +646,10 @@
                             ${imgUrls.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}"></div>`).join('')}
                         </div>
                     </div>`;
+                } else if (imgUrls.length === 1) {
+                    imgHtml = `<img src="${imgUrls[0]}" class="product-img" alt="${safeShoeCode}" onerror="handleImgErr(this, '${safeShoeCode}', '${p.brand}')">`;
                 } else {
-                    imgHtml = `<img src="${imgUrls[0] || ''}" class="product-img" alt="${safeShoeCode}" onerror="handleImgErr(this, '${safeShoeCode}', '${p.brand}')">`;
+                    imgHtml = `<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='100%25' height='100%25' fill='%23f4f4f4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' font-weight='bold' fill='%23888888' text-anchor='middle' dominant-baseline='middle'%3E%E2%8F%B3 H%C3%ACnh %E1%BA%A3nh %C4%91ang c%E1%BA%ADp nh%E1%BA%ADt%3C/text%3E%3C/svg%3E" class="product-img" alt="chua-co-anh">`;
                 }
 
                 let safeShareName = displayFullName.replace(/'/g, "\\'").replace(/"/g, '&quot;');
