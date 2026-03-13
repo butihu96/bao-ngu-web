@@ -1708,12 +1708,12 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "42",
+                "size": "42.5",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "42.5",
+                "size": "42",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
@@ -1728,7 +1728,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773424419
     },
     {
         "name": "Giày Nike Vapor Pro 3 ‘Clay Apricot Agate’ HQ6034-800",
@@ -1796,11 +1796,6 @@
                 "price_display": "3,550,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3550000,
-                "price_display": "3,550,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -1816,7 +1811,7 @@
                 "price_display": "3,550,000đ"
             }
         ],
-        "updated_at": 1773292104
+        "updated_at": 1773424419
     },
     {
         "name": "Giày NikeCourt Air Zoom Vapor 11 DR6966-105",
@@ -4081,11 +4076,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "42",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "43.3",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -4096,7 +4086,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1773395967
+        "updated_at": 1773424419
     },
     {
         "name": "JQ7141",
@@ -6760,6 +6750,11 @@
         "brand": "On",
         "variants": [
             {
+                "size": "36.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
                 "size": "37",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -6785,7 +6780,7 @@
                 "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773292104
+        "updated_at": 1773424419
     },
     {
         "name": "Jeep Xám Có dây xanh cam PX241WAS932",
@@ -6893,11 +6888,6 @@
         "brand": "On",
         "variants": [
             {
-                "size": "37.5",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -6913,7 +6903,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1773292104
+        "updated_at": 1773424419
     },
     {
         "name": "On roger pro fire lime 3WF30034744",
