@@ -452,11 +452,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "38",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -467,7 +462,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1773326305
+        "updated_at": 1773479124
     },
     {
         "name": "FV5554-400",
@@ -2587,12 +2582,32 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "35.5",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
                 "size": "36",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "40",
                 "price": 1050000,
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1773479124
     },
     {
         "name": "JQ7141-255  2/3",
@@ -3164,6 +3179,23 @@
             }
         ],
         "updated_at": 1773240607
+    },
+    {
+        "name": "Nike Vapor 12 Women's Hard Court Tennis Fv5554-500",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            }
+        ],
+        "updated_at": 1773479124
     },
     {
         "name": "Nike Vapor Lite 3 Women's Hard Court Tennis FZ2156-104",
@@ -4724,14 +4756,9 @@
         "updated_at": 1773245030
     },
     {
-        "name": "1042A237-300 FF2 Sw trắng hồng 1042A265-102",
+        "name": "1042A237-300",
         "brand": "Asics",
         "variants": [
-            {
-                "size": "35.5",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            },
             {
                 "size": "37",
                 "price": 1790000,
@@ -4748,7 +4775,7 @@
                 "price_display": "1,980,000đ"
             }
         ],
-        "updated_at": 1773245030
+        "updated_at": 1773479124
     },
     {
         "name": "1042A237-702",
@@ -4949,9 +4976,14 @@
                 "size": "37.5",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1773240607
+        "updated_at": 1773479124
     },
     {
         "name": "1042A281-103-22,75",
@@ -5616,11 +5648,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "37.5",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
-            },
-            {
                 "size": "38",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
@@ -5636,7 +5663,7 @@
                 "price_display": "4,000,000đ"
             }
         ],
-        "updated_at": 1773464587
+        "updated_at": 1773479124
     },
     {
         "name": "1183C102-001",
@@ -6553,6 +6580,11 @@
                 "price_display": "4,090,000đ"
             },
             {
+                "size": "37",
+                "price": 4090000,
+                "price_display": "4,090,000đ"
+            },
+            {
                 "size": "38.5",
                 "price": 4090000,
                 "price_display": "4,090,000đ"
@@ -6578,7 +6610,7 @@
                 "price_display": "4,090,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773479124
     },
     {
         "name": "Giày On The Roger Pro 'Fire' 3WF30033606 / 3MF30103606",
@@ -6873,14 +6905,9 @@
                 "size": "40.5",
                 "price": 4500000,
                 "price_display": "4,500,000đ"
-            },
-            {
-                "size": "43",
-                "price": 4500000,
-                "price_display": "4,500,000đ"
             }
         ],
-        "updated_at": 1773240607
+        "updated_at": 1773479124
     },
     {
         "name": "On roger pro fire đen",
@@ -7384,17 +7411,12 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "44.5",
+                "size": "42",
                 "price": 3550000,
                 "price_display": "3,550,000đ"
-            },
-            {
-                "size": "45",
-                "price": 3350000,
-                "price_display": "3,350,000đ"
             }
         ],
-        "updated_at": 1773378350
+        "updated_at": 1773479124
     },
     {
         "name": "Giày Babolat SFX 4 All Court 'Black/White' 30S26529A-2051",
@@ -7854,12 +7876,22 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "36.6",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "38.6",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
                 "size": "39.3",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773479124
     },
     {
         "name": "WRS337500",
@@ -7883,11 +7915,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "36.6",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "37.3",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -7898,17 +7925,12 @@
                 "price_display": "3,900,000đ"
             },
             {
-                "size": "39.3",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "40",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1773378350
+        "updated_at": 1773479124
     },
     {
         "name": "WRS338310U-245 1/3",
@@ -7931,18 +7953,6 @@
             }
         ],
         "updated_at": 1773464587
-    },
-    {
-        "name": "WRS338500",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "43.3",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            }
-        ],
-        "updated_at": 1773205418
     },
     {
         "name": "WRS338520U-275 1/3",
