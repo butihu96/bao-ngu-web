@@ -290,11 +290,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "40",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -320,7 +315,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1773310131
+        "updated_at": 1773568255
     },
     {
         "name": "FV5552-401",
@@ -2348,33 +2343,6 @@
         "updated_at": 1773079629
     },
     {
-        "name": "HV1449-100",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "36",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
-                "size": "36.5",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            }
-        ],
-        "updated_at": 1773241066
-    },
-    {
         "name": "HV1452-100",
         "brand": "Nike",
         "variants": [
@@ -2928,17 +2896,12 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "37.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773568255
     },
     {
         "name": "Nike GP Challenge Pro FB3146-107",
@@ -3332,21 +3295,53 @@
         "updated_at": 1773326305
     },
     {
-        "name": "VP12 TRẮNG SỌC ĐEN IB7168-100",
+        "name": "Tennis Pickleball Nike Vapor 12 HV1449-100",
         "brand": "Nike",
         "variants": [
             {
-                "size": "43",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
+                "size": "36",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
             },
+            {
+                "size": "36.5",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            }
+        ],
+        "updated_at": 1773568255
+    },
+    {
+        "name": "VP12 TRẮNG SỌC ĐEN IB7168-100",
+        "brand": "Nike",
+        "variants": [
             {
                 "size": "44",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1773240607
+        "updated_at": 1773568255
     },
     {
         "name": "VP12 Xanh đỏ FV5552-004",
@@ -4227,11 +4222,6 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "43.3",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
@@ -4242,7 +4232,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773553495
+        "updated_at": 1773568255
     },
     {
         "name": "Onitsuka Tiger Mexico 66 'Ivory Black' 1183C102-752",
@@ -5456,11 +5446,6 @@
                 "price_display": "3,790,000đ"
             },
             {
-                "size": "38",
-                "price": 3790000,
-                "price_display": "3,790,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3790000,
                 "price_display": "3,790,000đ"
@@ -5471,7 +5456,7 @@
                 "price_display": "3,790,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1773568255
     },
     {
         "name": "1183A872-100",
@@ -6475,17 +6460,12 @@
                 "price_display": "3,100,000đ"
             },
             {
-                "size": "38.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1773245030
+        "updated_at": 1773568255
     },
     {
         "name": "Giày On Running The Roger Pro 2 - 3WE10630462 / 3ME10570462",
@@ -6529,11 +6509,6 @@
                 "price_display": "4,090,000đ"
             },
             {
-                "size": "38.5",
-                "price": 4090000,
-                "price_display": "4,090,000đ"
-            },
-            {
                 "size": "39",
                 "price": 4090000,
                 "price_display": "4,090,000đ"
@@ -6554,7 +6529,7 @@
                 "price_display": "4,090,000đ"
             }
         ],
-        "updated_at": 1773479124
+        "updated_at": 1773568255
     },
     {
         "name": "Giày On The Roger Pro 'Fire' 3WF30033606 / 3MF30103606",
@@ -7377,11 +7352,6 @@
                 "price_display": "2,600,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
@@ -7392,7 +7362,7 @@
                 "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1773395967
+        "updated_at": 1773568255
     },
     {
         "name": "SFX EVO TRẮNG XANH 31S26556A-1112(WM)",
