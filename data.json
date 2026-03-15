@@ -860,14 +860,9 @@
                 "size": "42.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1773553495
+        "updated_at": 1773583239
     },
     {
         "name": "Giày (WMNS) Nike V2K Run 'Grey Pink' FZ5061-100",
@@ -2543,11 +2538,6 @@
                 "price_display": "1,050,000đ"
             },
             {
-                "size": "36",
-                "price": 1050000,
-                "price_display": "1,050,000đ"
-            },
-            {
                 "size": "39",
                 "price": 1050000,
                 "price_display": "1,050,000đ"
@@ -2558,7 +2548,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1773553495
+        "updated_at": 1773583239
     },
     {
         "name": "JQ7141-255  2/3",
@@ -5275,14 +5265,9 @@
                 "size": "38",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 3560000,
-                "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1773583239
     },
     {
         "name": "1182A678-001",
@@ -7095,9 +7080,14 @@
                 "size": "42.5",
                 "price": 4700000,
                 "price_display": "4,700,000đ"
+            },
+            {
+                "size": "43",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
             }
         ],
-        "updated_at": 1773553495
+        "updated_at": 1773583239
     },
     {
         "name": "VP12TRAWSNG SỌC XANH FV5552-104",
@@ -7352,7 +7342,17 @@
                 "price_display": "2,600,000đ"
             },
             {
+                "size": "42.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
                 "size": "43",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "44",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             },
@@ -7362,7 +7362,7 @@
                 "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1773568255
+        "updated_at": 1773583239
     },
     {
         "name": "SFX EVO TRẮNG XANH 31S26556A-1112(WM)",
