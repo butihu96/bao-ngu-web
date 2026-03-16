@@ -318,18 +318,6 @@
         "updated_at": 1773568255
     },
     {
-        "name": "FV5552-401",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            }
-        ],
-        "updated_at": 1773079629
-    },
-    {
         "name": "FV5552-402",
         "brand": "Nike",
         "variants": [
@@ -616,11 +604,6 @@
                 "price_display": "2,050,000đ"
             },
             {
-                "size": "37.5",
-                "price": 2050000,
-                "price_display": "2,050,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
@@ -631,7 +614,7 @@
                 "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1773675932
     },
     {
         "name": "FZ2156-500",
@@ -704,11 +687,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "40.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "41",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -734,7 +712,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1773675932
     },
     {
         "name": "FZ2161-108",
@@ -2489,17 +2467,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "39",
-                "price": 3350000,
-                "price_display": "3,350,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 3750000,
                 "price_display": "3,750,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1773675932
     },
     {
         "name": "IB6555-100",
@@ -2891,17 +2864,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773568255
+        "updated_at": 1773675932
     },
     {
         "name": "Nike GP Challenge Pro FB3146-107",
@@ -4796,17 +4764,12 @@
                 "price_display": "3,200,000đ"
             },
             {
-                "size": "39.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "40",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1773675932
     },
     {
         "name": "1042A279-102",
@@ -4926,14 +4889,9 @@
                 "size": "37.5",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1773479124
+        "updated_at": 1773675932
     },
     {
         "name": "1042A281-101",
@@ -6425,11 +6383,6 @@
                 "price_display": "3,200,000đ"
             },
             {
-                "size": "37",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -6441,11 +6394,16 @@
             },
             {
                 "size": "39",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773568255
+        "updated_at": 1773675932
     },
     {
         "name": "Giày On Running The Roger Pro 2 - 3WE10630462 / 3ME10570462",
@@ -7335,14 +7293,9 @@
                 "size": "44",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
-            },
-            {
-                "size": "45",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1773583239
+        "updated_at": 1773675932
     },
     {
         "name": "SFX EVO TRẮNG XANH 31S26556A-1112(WM)",
@@ -7836,11 +7789,6 @@
                 "price_display": "2,500,000đ"
             },
             {
-                "size": "38.6",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "39.3",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
@@ -7851,7 +7799,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1773675932
     },
     {
         "name": "WRS338310U-225 2/3",
