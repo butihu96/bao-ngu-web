@@ -719,6 +719,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "39",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -744,12 +749,17 @@
                 "price_display": "2,650,000đ"
             },
             {
+                "size": "43",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "44",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1773724494
+        "updated_at": 1773762259
     },
     {
         "name": "FZ2161-109",
@@ -1669,14 +1679,9 @@
                 "size": "42",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1773762259
     },
     {
         "name": "Giày Nike Vapor Pro 3 ‘Clay Apricot Agate’ HQ6034-800",
@@ -2513,11 +2518,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "35.5",
-                "price": 1050000,
-                "price_display": "1,050,000đ"
-            },
-            {
                 "size": "39",
                 "price": 1050000,
                 "price_display": "1,050,000đ"
@@ -2528,7 +2528,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1773724494
+        "updated_at": 1773762259
     },
     {
         "name": "JQ7141-255  2/3",
@@ -2676,8 +2676,8 @@
             },
             {
                 "size": "41",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             },
             {
                 "size": "42",
@@ -2700,7 +2700,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1773743792
+        "updated_at": 1773762259
     },
     {
         "name": "Nike Air Jordan 1 Low Triple White 553560-136(gs) /553558-136 (men) /DV0990-111 wm",
@@ -3185,8 +3185,8 @@
             },
             {
                 "size": "38.5",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "39",
@@ -3194,7 +3194,7 @@
                 "price_display": "2,450,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1773762259
     },
     {
         "name": "Nike court ntx trắng DV3276-103",
@@ -4617,6 +4617,48 @@
             }
         ],
         "updated_at": 1773245030
+    },
+    {
+        "name": "1042A237-106-22,75",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
+            },
+            {
+                "size": "37",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
+            },
+            {
+                "size": "38",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1773762259
     },
     {
         "name": "1042A237-300",
@@ -7081,16 +7123,144 @@
         "updated_at": 1773689873
     },
     {
+        "name": "30S26208B-1069",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            }
+        ],
+        "updated_at": 1773762259
+    },
+    {
+        "name": "30S26208B-2051",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            }
+        ],
+        "updated_at": 1773762259
+    },
+    {
+        "name": "30S26629B-5050",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 3350000,
+                "price_display": "3,350,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3350000,
+                "price_display": "3,350,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3350000,
+                "price_display": "3,350,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3350000,
+                "price_display": "3,350,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3350000,
+                "price_display": "3,350,000đ"
+            }
+        ],
+        "updated_at": 1773762259
+    },
+    {
         "name": "31S26630B-1117",
         "brand": "Babolat",
         "variants": [
             {
                 "size": "36.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773339061
+        "updated_at": 1773762259
+    },
+    {
+        "name": "31S26630B-4150",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            }
+        ],
+        "updated_at": 1773762259
     },
     {
         "name": "31S26651A-1118",
@@ -7464,17 +7634,12 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "41",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773762259
     },
     {
         "name": "Giày Wilson Rush Pro Ace 'White' WRS332710",
@@ -7660,9 +7825,19 @@
                 "size": "38",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
+            },
+            {
+                "size": "38.6",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
+                "size": "39.3",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1773641123
+        "updated_at": 1773762259
     },
     {
         "name": "WRS338310",
