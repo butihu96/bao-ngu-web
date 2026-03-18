@@ -21,11 +21,6 @@
                 "price_display": "2,300,000đ"
             },
             {
-                "size": "40.5",
-                "price": 2390000,
-                "price_display": "2,390,000đ"
-            },
-            {
                 "size": "41",
                 "price": 2390000,
                 "price_display": "2,390,000đ"
@@ -41,7 +36,7 @@
                 "price_display": "2,390,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1773811516
     },
     {
         "name": "DH2987-100",
@@ -220,9 +215,14 @@
                 "size": "38.5",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1773326305
+        "updated_at": 1773811516
     },
     {
         "name": "FD6575-107",
@@ -327,17 +327,12 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "42",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "44",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1773743792
+        "updated_at": 1773811516
     },
     {
         "name": "FV5552-403",
@@ -1750,8 +1745,8 @@
             },
             {
                 "size": "39",
-                "price": 3550000,
-                "price_display": "3,550,000đ"
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "40",
@@ -1759,7 +1754,7 @@
                 "price_display": "3,550,000đ"
             }
         ],
-        "updated_at": 1773424419
+        "updated_at": 1773811516
     },
     {
         "name": "Giày NikeCourt Air Zoom Vapor 11 DR6966-105",
@@ -3447,6 +3442,16 @@
         "brand": "Adidas",
         "variants": [
             {
+                "size": "36",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "37",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
                 "size": "37.5",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
@@ -3467,7 +3472,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1773464587
+        "updated_at": 1773811516
     },
     {
         "name": "Adidas Samba Jane Cloud White Pink (Women's) jr4482",
@@ -4587,33 +4592,6 @@
         "updated_at": 1773245030
     },
     {
-        "name": "1042A220-701",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "36",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "37.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "40",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            }
-        ],
-        "updated_at": 1773245030
-    },
-    {
         "name": "1042A237-106-22,75",
         "brand": "Asics",
         "variants": [
@@ -4792,11 +4770,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "37",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
@@ -4807,7 +4780,7 @@
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1773464587
+        "updated_at": 1773811516
     },
     {
         "name": "1042A279-105",
@@ -5197,17 +5170,12 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "35.5",
-                "price": 3560000,
-                "price_display": "3,560,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1773583239
+        "updated_at": 1773811516
     },
     {
         "name": "1182A678-001",
@@ -5411,14 +5379,9 @@
                 "size": "39",
                 "price": 3790000,
                 "price_display": "3,790,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 3790000,
-                "price_display": "3,790,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1773811516
     },
     {
         "name": "1183A872-254",
@@ -5526,11 +5489,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "38",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
-            },
-            {
                 "size": "39",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
@@ -5541,7 +5499,7 @@
                 "price_display": "4,000,000đ"
             }
         ],
-        "updated_at": 1773553495
+        "updated_at": 1773811516
     },
     {
         "name": "1183C102-001",
@@ -5757,11 +5715,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "37",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -5782,7 +5735,7 @@
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1773811516
     },
     {
         "name": "1183C102-701",
@@ -6249,18 +6202,6 @@
         "updated_at": 1773507752
     },
     {
-        "name": "Trắng Hồng 172109/WMLT",
-        "brand": "Skechers",
-        "variants": [
-            {
-                "size": "38.5 25.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            }
-        ],
-        "updated_at": 1773245030
-    },
-    {
         "name": "Đen cam 246109/BKMT ( Men's )",
         "brand": "Skechers",
         "variants": [
@@ -6441,17 +6382,12 @@
                 "price_display": "4,190,000đ"
             },
             {
-                "size": "40.5",
-                "price": 4190000,
-                "price_display": "4,190,000đ"
-            },
-            {
                 "size": "41",
                 "price": 4190000,
                 "price_display": "4,190,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773811516
     },
     {
         "name": "Giày On The Roger Pro 2 Clay ‘White Flame’ 3WE10330256",
@@ -6963,14 +6899,9 @@
                 "size": "42.5",
                 "price": 4700000,
                 "price_display": "4,700,000đ"
-            },
-            {
-                "size": "43",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
             }
         ],
-        "updated_at": 1773583239
+        "updated_at": 1773811516
     },
     {
         "name": "VP12TRAWSNG SỌC XANH FV5552-104",
@@ -7152,11 +7083,6 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "40.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -7167,17 +7093,12 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1773762259
+        "updated_at": 1773811516
     },
     {
         "name": "30S26629B-5050",
         "brand": "Babolat",
         "variants": [
-            {
-                "size": "40.5",
-                "price": 3350000,
-                "price_display": "3,350,000đ"
-            },
             {
                 "size": "42",
                 "price": 3350000,
@@ -7199,7 +7120,7 @@
                 "price_display": "3,350,000đ"
             }
         ],
-        "updated_at": 1773762259
+        "updated_at": 1773811516
     },
     {
         "name": "31S26630B-1117",
@@ -7250,17 +7171,12 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "36",
-                "price": 2050000,
-                "price_display": "2,050,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1773811516
     },
     {
         "name": "Babolat SFX Evo All Court ''Grey White'' Tennis / Pickleball 30S26555A-3039",
@@ -7294,6 +7210,11 @@
         "brand": "Babolat",
         "variants": [
             {
+                "size": "41",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
@@ -7304,7 +7225,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773240607
+        "updated_at": 1773811516
     },
     {
         "name": "Babolat jemach 4 trắng xanh Women",
@@ -7534,17 +7455,12 @@
                 "price_display": "3,700,000đ"
             },
             {
-                "size": "39.3",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3700000,
                 "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1773811516
     },
     {
         "name": "Giày Wilson Intrigue Tour Roland Garros ‘White’ WRS334520",
@@ -7916,18 +7832,6 @@
             }
         ],
         "updated_at": 1773241066
-    },
-    {
-        "name": "WRS338920",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "40.6",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            }
-        ],
-        "updated_at": 1773292104
     },
     {
         "name": "WRS339230U-24  2/3",
