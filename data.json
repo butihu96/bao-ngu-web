@@ -1119,14 +1119,14 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
+                "size": "40.5",
                 "price": 2190000,
                 "price_display": "2,190,000đ"
             },
             {
-                "size": "40.5",
-                "price": 2190000,
-                "price_display": "2,190,000đ"
+                "size": "40",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
             },
             {
                 "size": "41",
@@ -1144,7 +1144,7 @@
                 "price_display": "2,250,000đ"
             }
         ],
-        "updated_at": 1773205418
+        "updated_at": 1773849380
     },
     {
         "name": "Giày Nike Court Air Zoom Vapor Pro ‘White’ HM3705-141",
@@ -2387,14 +2387,9 @@
                 "size": "43",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1773553495
+        "updated_at": 1773849380
     },
     {
         "name": "HV1474-200",
@@ -2484,12 +2479,17 @@
                 "price_display": "3,900,000đ"
             },
             {
+                "size": "43",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
                 "size": "44",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1773641123
+        "updated_at": 1773849380
     },
     {
         "name": "IH4052-530",
@@ -3239,18 +3239,6 @@
             }
         ],
         "updated_at": 1773568255
-    },
-    {
-        "name": "VP12 TRẮNG SỌC ĐEN IB7168-100",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "44",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            }
-        ],
-        "updated_at": 1773689873
     },
     {
         "name": "VP12 Xanh đỏ FV5552-004",
@@ -4111,11 +4099,6 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
@@ -4131,7 +4114,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773830263
+        "updated_at": 1773849380
     },
     {
         "name": "Onitsuka Tiger Mexico 66 'Ivory Black' 1183C102-752",
@@ -4192,17 +4175,12 @@
                 "price_display": "2,200,000đ"
             },
             {
-                "size": "37",
-                "price": 2200000,
-                "price_display": "2,200,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1773641123
+        "updated_at": 1773849380
     },
     {
         "name": "Puma Triple Yellow Glow Volt Black Men Basketball 195217-03",
@@ -4463,6 +4441,48 @@
             }
         ],
         "updated_at": 1773326305
+    },
+    {
+        "name": "1041A483-102",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "39.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "42",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "44",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1773849380
     },
     {
         "name": "1041A489-101",
@@ -4849,17 +4869,12 @@
                 "price_display": "1,950,000đ"
             },
             {
-                "size": "40",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1773849380
     },
     {
         "name": "1042A281-103-22,75",
@@ -4914,6 +4929,38 @@
             }
         ],
         "updated_at": 1773079629
+    },
+    {
+        "name": "1042A283-102",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "37",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "38",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1773849380
     },
     {
         "name": "1042A294-700",
@@ -5605,11 +5652,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "37",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -5630,7 +5672,7 @@
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1773464587
+        "updated_at": 1773849380
     },
     {
         "name": "1183C102-201",
@@ -7184,8 +7226,8 @@
         "variants": [
             {
                 "size": "38.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 3300000,
+                "price_display": "3,300,000đ"
             },
             {
                 "size": "42",
@@ -7193,7 +7235,7 @@
                 "price_display": "3,550,000đ"
             }
         ],
-        "updated_at": 1773479124
+        "updated_at": 1773849380
     },
     {
         "name": "Giày Babolat SFX 4 All Court 'Black/White' 30S26529A-2051",
@@ -7724,21 +7766,16 @@
         "updated_at": 1773724494
     },
     {
-        "name": "WRS338520U-27 2/3",
+        "name": "WRS338520U",
         "brand": "Wilson",
         "variants": [
             {
                 "size": "40",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
-            },
-            {
-                "size": "42",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1773553495
+        "updated_at": 1773849380
     },
     {
         "name": "WRS338580U-255  2/3",
