@@ -6556,6 +6556,11 @@
         "brand": "On",
         "variants": [
             {
+                "size": "37.5",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
                 "size": "38",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -6571,7 +6576,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1773424419
+        "updated_at": 1773943839
     },
     {
         "name": "On roger pro fire lime 3WF30034744",
