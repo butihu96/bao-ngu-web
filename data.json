@@ -185,17 +185,12 @@
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "37.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
-            },
-            {
                 "size": "39",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1773689873
+        "updated_at": 1773983337
     },
     {
         "name": "FB3148-104",
@@ -830,6 +825,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "41",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "42",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -838,9 +838,19 @@
                 "size": "42.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1773583239
+        "updated_at": 1773983337
     },
     {
         "name": "Giày (WMNS) Nike V2K Run 'Grey Pink' FZ5061-100",
@@ -1571,11 +1581,11 @@
             },
             {
                 "size": "42.5",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
+                "price": 3550000,
+                "price_display": "3,550,000đ"
             }
         ],
-        "updated_at": 1773689873
+        "updated_at": 1773983337
     },
     {
         "name": "Giày Nike Vapor 3 Premium  FZ2158-109",
@@ -1656,6 +1666,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
@@ -1666,17 +1681,27 @@
                 "price_display": "2,850,000đ"
             },
             {
+                "size": "42",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "42",
+                "size": "43",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "44",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1773983337
     },
     {
         "name": "Giày Nike Vapor Pro 3 ‘Clay Apricot Agate’ HQ6034-800",
@@ -2369,11 +2394,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "41",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -2389,7 +2409,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1773849380
+        "updated_at": 1773983337
     },
     {
         "name": "HV1474-200",
@@ -3299,9 +3319,24 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
                 "size": "41",
-                "price": 2690000,
-                "price_display": "2,690,000đ"
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
             },
             {
                 "size": "42.5",
@@ -3309,14 +3344,9 @@
                 "price_display": "2,500,000đ"
             },
             {
-                "size": "42",
-                "price": 2690000,
-                "price_display": "2,690,000đ"
-            },
-            {
                 "size": "43",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
+                "price": 2450000,
+                "price_display": "2,450,000đ"
             },
             {
                 "size": "44.5",
@@ -3324,7 +3354,7 @@
                 "price_display": "2,450,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1773983337
     },
     {
         "name": "Vapor 3 đỏ  cam HQ2550-600",
@@ -4079,7 +4109,22 @@
                 "price_display": "2,850,000đ"
             },
             {
+                "size": "41.3",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
                 "size": "42.6",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "43.3",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
@@ -4089,7 +4134,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773897423
+        "updated_at": 1773983337
     },
     {
         "name": "Onitsuka Tiger Mexico 66 'Ivory Black' 1183C102-752",
@@ -4862,8 +4907,8 @@
             },
             {
                 "size": "37.5",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
+                "price": 2090000,
+                "price_display": "2,090,000đ"
             },
             {
                 "size": "38",
@@ -4886,7 +4931,7 @@
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1773983337
     },
     {
         "name": "1042A281-300",
@@ -6845,16 +6890,21 @@
         "updated_at": 1773641123
     },
     {
-        "name": "VP12TRAWSNG SỌC XANH FV5552-104",
+        "name": "VP12TRAWSNG SỌC XANH",
         "brand": "On",
         "variants": [
             {
-                "size": "45",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
+                "size": "42",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1773689873
+        "updated_at": 1773983337
     },
     {
         "name": "on clubhouse pro white pink",
@@ -7134,11 +7184,6 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "41",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
@@ -7149,7 +7194,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773811516
+        "updated_at": 1773983337
     },
     {
         "name": "Babolat jemach 4 trắng xanh Women",
@@ -7162,11 +7207,11 @@
             },
             {
                 "size": "42",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
+                "price": 3550000,
+                "price_display": "3,550,000đ"
             }
         ],
-        "updated_at": 1773931302
+        "updated_at": 1773983337
     },
     {
         "name": "Giày Babolat SFX 4 All Court 'Black/White' 30S26529A-2051",
@@ -7770,7 +7815,7 @@
         "updated_at": 1773496684
     },
     {
-        "name": "WRS339810U-245 1/3",
+        "name": "WRS339810U-23 1/3",
         "brand": "Wilson",
         "variants": [
             {
@@ -7782,14 +7827,9 @@
                 "size": "38",
                 "price": 1990000,
                 "price_display": "1,990,000đ"
-            },
-            {
-                "size": "39",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
             }
         ],
-        "updated_at": 1773830263
+        "updated_at": 1773983337
     },
     {
         "name": "WRS340120",
