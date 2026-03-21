@@ -913,6 +913,16 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40-405",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "41-42",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
@@ -928,7 +938,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1773743792
+        "updated_at": 1774068908
     },
     {
         "name": "Giày Nike Air Jordan 1 Low GS 'Mystic Green' 553560-113",
@@ -1250,23 +1260,23 @@
         "variants": [
             {
                 "size": "36.5",
-                "price": 1400000,
-                "price_display": "1,400,000đ"
+                "price": 1500000,
+                "price_display": "1,500,000đ"
             },
             {
                 "size": "37.5",
-                "price": 1400000,
-                "price_display": "1,400,000đ"
+                "price": 1500000,
+                "price_display": "1,500,000đ"
             },
             {
                 "size": "38",
-                "price": 1400000,
-                "price_display": "1,400,000đ"
+                "price": 1500000,
+                "price_display": "1,500,000đ"
             },
             {
                 "size": "39",
-                "price": 1400000,
-                "price_display": "1,400,000đ"
+                "price": 1500000,
+                "price_display": "1,500,000đ"
             },
             {
                 "size": "40",
@@ -1299,7 +1309,7 @@
                 "price_display": "1,600,000đ"
             }
         ],
-        "updated_at": 1773659667
+        "updated_at": 1774068908
     },
     {
         "name": "Giày Nike Dunk Low ‘Team Red’ DD1391-601",
@@ -2975,31 +2985,31 @@
         "updated_at": 1773168478
     },
     {
-        "name": "Nike ReactX Rejuven8 'Light Orewood Brown' HV5062-100 / HV5060-100 men",
+        "name": "Nike ReactX Rejuven8 'Light Orewood Brown' HV5060-100 men",
         "brand": "Nike",
         "variants": [
             {
                 "size": "40",
-                "price": 1700000,
-                "price_display": "1,700,000đ"
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             },
             {
                 "size": "41",
-                "price": 1700000,
-                "price_display": "1,700,000đ"
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             },
             {
                 "size": "42.5",
-                "price": 1700000,
-                "price_display": "1,700,000đ"
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             },
             {
                 "size": "44",
-                "price": 1700000,
-                "price_display": "1,700,000đ"
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             }
         ],
-        "updated_at": 1773168478
+        "updated_at": 1774068908
     },
     {
         "name": "Nike ReactX Rejuven8 Spruce Aura Light Silver HV5060-005",
@@ -3056,16 +3066,26 @@
         "variants": [
             {
                 "size": "37.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
+                "price": 3000000,
+                "price_display": "3,000,000đ"
             },
             {
                 "size": "38",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1773479124
+        "updated_at": 1774068908
     },
     {
         "name": "Nike Vapor Lite 3 Women's Hard Court Tennis FZ2156-104",
@@ -4040,11 +4060,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -4055,7 +4070,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1774068908
     },
     {
         "name": "KI3438",
@@ -4085,14 +4100,9 @@
                 "size": "43.3",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773983337
+        "updated_at": 1774068908
     },
     {
         "name": "Onitsuka Tiger Mexico 66 'Ivory Black' 1183C102-752",
@@ -4356,11 +4366,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "41.5",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 3050000,
                 "price_display": "3,050,000đ"
@@ -4376,7 +4381,7 @@
                 "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773724494
+        "updated_at": 1774068908
     },
     {
         "name": "1041A481-700",
@@ -5991,14 +5996,9 @@
                 "size": "37.5",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1773205418
+        "updated_at": 1774068908
     },
     {
         "name": "Skechers Viper Court Pro 172069-PNK",
@@ -7192,14 +7192,9 @@
                 "size": "42.5",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773983337
+        "updated_at": 1774068908
     },
     {
         "name": "Babolat jemach 4 trắng xanh Women",
@@ -7383,6 +7378,33 @@
         "updated_at": 1773830263
     },
     {
+        "name": "Giày Tennis Nam Wilson Rush Pro ACE Clay WRS334380",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "41",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            }
+        ],
+        "updated_at": 1774068908
+    },
+    {
         "name": "Giày Tennis Nữ Wilson Intrigue Tour WRS337020",
         "brand": "Wilson",
         "variants": [
@@ -7502,6 +7524,11 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "40.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
                 "size": "41",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
@@ -7517,7 +7544,7 @@
                 "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773168857
+        "updated_at": 1774068908
     },
     {
         "name": "Giày Wilson Rush Pro 4.5 ‘White Infrared’ WRS336610",
@@ -7721,23 +7748,6 @@
             }
         ],
         "updated_at": 1774017162
-    },
-    {
-        "name": "WRS338310",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "37.3",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "39.3",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            }
-        ],
-        "updated_at": 1773830263
     },
     {
         "name": "WRS338310U-245 1/3",
