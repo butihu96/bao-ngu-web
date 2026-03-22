@@ -1155,8 +1155,8 @@
             },
             {
                 "size": "42",
-                "price": 2190000,
-                "price_display": "2,190,000đ"
+                "price": 2250000,
+                "price_display": "2,250,000đ"
             },
             {
                 "size": "43",
@@ -1164,7 +1164,7 @@
                 "price_display": "2,250,000đ"
             }
         ],
-        "updated_at": 1773849380
+        "updated_at": 1774187785
     },
     {
         "name": "Giày Nike Court Air Zoom Vapor Pro ‘White’ HM3705-141",
@@ -2531,11 +2531,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "37.5",
-                "price": 1050000,
-                "price_display": "1,050,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 1050000,
                 "price_display": "1,050,000đ"
@@ -2551,7 +2546,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1774187785
     },
     {
         "name": "JQ7141-255  2/3",
@@ -4104,11 +4099,6 @@
                 "price_display": "3,200,000đ"
             },
             {
-                "size": "40.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "41.5",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -4134,7 +4124,7 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1774112362
+        "updated_at": 1774187785
     },
     {
         "name": "1041A481-101",
@@ -5700,18 +5690,6 @@
         "updated_at": 1773079629
     },
     {
-        "name": "246115-BKW",
-        "brand": "Skechers",
-        "variants": [
-            {
-                "size": "43",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
-            }
-        ],
-        "updated_at": 1773079629
-    },
-    {
         "name": "246115-WBPR",
         "brand": "Skechers",
         "variants": [
@@ -6986,17 +6964,5 @@
             }
         ],
         "updated_at": 1774101285
-    },
-    {
-        "name": "WRS340120",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "39.3",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            }
-        ],
-        "updated_at": 1774170260
     }
 ]
