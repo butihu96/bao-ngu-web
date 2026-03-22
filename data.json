@@ -273,11 +273,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "43",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -288,7 +283,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1774083770
+        "updated_at": 1774156395
     },
     {
         "name": "FV5552-402",
@@ -1262,6 +1257,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36",
+                "price": 1500000,
+                "price_display": "1,500,000đ"
+            },
+            {
                 "size": "36.5",
                 "price": 1500000,
                 "price_display": "1,500,000đ"
@@ -1312,7 +1312,7 @@
                 "price_display": "1,600,000đ"
             }
         ],
-        "updated_at": 1774068908
+        "updated_at": 1774156395
     },
     {
         "name": "Giày Nike Dunk Low ‘Team Red’ DD1391-601",
@@ -3137,22 +3137,12 @@
                 "price_display": "1,950,000đ"
             },
             {
-                "size": "38",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
-            },
-            {
                 "size": "39",
                 "price": 2250000,
                 "price_display": "2,250,000đ"
             }
         ],
-        "updated_at": 1774101285
+        "updated_at": 1774156395
     },
     {
         "name": "Nike Wmns Air Force 1 Low 'Valentine’s Day 2024' FZ5068-161",
@@ -3907,18 +3897,6 @@
         "updated_at": 1773830263
     },
     {
-        "name": "JR9153",
-        "brand": "Adidas",
-        "variants": [
-            {
-                "size": "41.3",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            }
-        ],
-        "updated_at": 1773659667
-    },
-    {
         "name": "JS2562",
         "brand": "Adidas",
         "variants": [
@@ -3955,11 +3933,6 @@
         "brand": "Adidas",
         "variants": [
             {
-                "size": "40",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "41.3",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
@@ -3980,7 +3953,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1774068908
+        "updated_at": 1774156395
     },
     {
         "name": "Onitsuka Tiger Mexico 66 'Ivory Black' 1183C102-752",
@@ -4556,17 +4529,12 @@
                 "price_display": "3,000,000đ"
             },
             {
-                "size": "38",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1774001057
+        "updated_at": 1774156395
     },
     {
         "name": "1042A279-105",
@@ -5191,11 +5159,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "37",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -5216,7 +5179,7 @@
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1774156395
     },
     {
         "name": "1183A592-200",
@@ -5910,18 +5873,6 @@
         "updated_at": 1773079629
     },
     {
-        "name": "Giày On Running Roger Clubhouse Pr 3WD30054038",
-        "brand": "On",
-        "variants": [
-            {
-                "size": "39",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            }
-        ],
-        "updated_at": 1773931302
-    },
-    {
         "name": "Giày On Running Roger Clubhouse Pro ‘White’ 3WD30050202",
         "brand": "On",
         "variants": [
@@ -6301,16 +6252,31 @@
         "updated_at": 1774101285
     },
     {
-        "name": "on clubhouse pro white pink",
+        "name": "on clubhouse pro white pink 3WD30054038 ( women )",
         "brand": "On",
         "variants": [
             {
-                "size": "37.5",
+                "size": "38",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "40",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773245030
+        "updated_at": 1774156395
     },
     {
         "name": "on roger ADV pro bule pink",
@@ -6363,17 +6329,12 @@
         "brand": "Lacoste",
         "variants": [
             {
-                "size": "40.5",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1773079629
+        "updated_at": 1774156395
     },
     {
         "name": "750SMA01972G9",
@@ -6960,14 +6921,9 @@
                 "size": "43.3",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1774001057
+        "updated_at": 1774156395
     },
     {
         "name": "WRS338580U-255  2/3",
@@ -7060,17 +7016,5 @@
             }
         ],
         "updated_at": 1774101285
-    },
-    {
-        "name": "WRS340120",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "39.3",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            }
-        ],
-        "updated_at": 1774083770
     }
 ]
