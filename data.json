@@ -147,6 +147,18 @@
         "updated_at": 1773241066
     },
     {
+        "name": "DR6192-101",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 1550000,
+                "price_display": "1,550,000đ"
+            }
+        ],
+        "updated_at": 1774198796
+    },
+    {
         "name": "Dép Nike Calm Slide 'Black' FD4116-001",
         "brand": "Nike",
         "variants": [
@@ -1005,33 +1017,6 @@
         "updated_at": 1773168478
     },
     {
-        "name": "Giày Nike Air Zoom Vapor Pro 2 'White' DR6192-101 / DR6191-101",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 1550000,
-                "price_display": "1,550,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
-            }
-        ],
-        "updated_at": 1773168857
-    },
-    {
         "name": "Giày Nike Court Air Zoom Vapor 11 DR6966-700",
         "brand": "Nike",
         "variants": [
@@ -1165,18 +1150,6 @@
             }
         ],
         "updated_at": 1774187785
-    },
-    {
-        "name": "Giày Nike Court Air Zoom Vapor Pro ‘White’ HM3705-141",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "43",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
-            }
-        ],
-        "updated_at": 1773724494
     },
     {
         "name": "Giày Nike Court Vapor 12 Premium HC Cactus Green HJ6650-300",
@@ -1699,9 +1672,14 @@
                 "size": "42",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774101285
+        "updated_at": 1774198796
     },
     {
         "name": "Giày Nike Zoom GP Challenge 1 'White' FB3147-101 / FB3148-101",
@@ -4048,11 +4026,6 @@
                 "price_display": "2,000,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            },
-            {
                 "size": "43.5",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
@@ -4063,7 +4036,7 @@
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1774198796
     },
     {
         "name": "1041A438-401",
@@ -4076,18 +4049,6 @@
             }
         ],
         "updated_at": 1774112362
-    },
-    {
-        "name": "1041A481-003",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "42",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            }
-        ],
-        "updated_at": 1773641123
     },
     {
         "name": "1041A481-100",
