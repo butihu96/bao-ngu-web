@@ -747,14 +747,9 @@
                 "size": "43",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2690000,
-                "price_display": "2,690,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1774170260
     },
     {
         "name": "FZ2161-109",
@@ -850,17 +845,12 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "43",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "44",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1773983337
+        "updated_at": 1774170260
     },
     {
         "name": "Giày (WMNS) Nike V2K Run 'Grey Pink' FZ5061-100",
@@ -3138,11 +3128,11 @@
             },
             {
                 "size": "39",
-                "price": 2250000,
-                "price_display": "2,250,000đ"
+                "price": 1950000,
+                "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1774156395
+        "updated_at": 1774170260
     },
     {
         "name": "Nike Wmns Air Force 1 Low 'Valentine’s Day 2024' FZ5068-161",
@@ -4019,17 +4009,12 @@
                 "price_display": "3,300,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
                 "size": "43.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1773507752
+        "updated_at": 1774170260
     },
     {
         "name": "1041A405-104",
@@ -4205,11 +4190,6 @@
                 "price_display": "2,950,000đ"
             },
             {
-                "size": "41.5",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
@@ -4220,7 +4200,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1773326305
+        "updated_at": 1774170260
     },
     {
         "name": "1041A483-102",
@@ -6279,16 +6259,21 @@
         "updated_at": 1774156395
     },
     {
-        "name": "on roger ADV pro bule pink",
+        "name": "on roger ADV pro bule pink 3WF10183015 ( women)",
         "brand": "On",
         "variants": [
             {
-                "size": "37",
+                "size": "39",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
+                "size": "40",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1773292104
+        "updated_at": 1774170260
     },
     {
         "name": "on roger ADV pro white bule 3WF10180753 ( women )",
@@ -6375,11 +6360,6 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "40",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
@@ -6405,7 +6385,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1773830263
+        "updated_at": 1774170260
     },
     {
         "name": "30S26208B-2051",
@@ -6442,14 +6422,9 @@
                 "size": "38",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1773762259
+        "updated_at": 1774170260
     },
     {
         "name": "31S26630B-4150",
@@ -6872,21 +6847,16 @@
         "updated_at": 1773914956
     },
     {
-        "name": "WRS338520U-27 2/3",
+        "name": "WRS338520U",
         "brand": "Wilson",
         "variants": [
             {
                 "size": "40",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
-            },
-            {
-                "size": "42",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1774083770
+        "updated_at": 1774170260
     },
     {
         "name": "WRS338580",
@@ -7016,5 +6986,17 @@
             }
         ],
         "updated_at": 1774101285
+    },
+    {
+        "name": "WRS340120",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "39.3",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            }
+        ],
+        "updated_at": 1774170260
     }
 ]
