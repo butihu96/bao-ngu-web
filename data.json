@@ -212,14 +212,9 @@
                 "size": "36.5",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
-            },
-            {
-                "size": "39",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1774348623
+        "updated_at": 1774367247
     },
     {
         "name": "FD6575-107",
@@ -751,11 +746,6 @@
                 "price_display": "2,690,000đ"
             },
             {
-                "size": "41",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -771,7 +761,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1774170260
+        "updated_at": 1774367247
     },
     {
         "name": "FZ2161-109",
@@ -1506,9 +1496,14 @@
                 "size": "36",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1773168478
+        "updated_at": 1774367247
     },
     {
         "name": "Giày Nike V2K Run 'Platinum Tint' FD0736-009",
@@ -2688,6 +2683,11 @@
                 "price_display": "2,100,000đ"
             },
             {
+                "size": "38.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
                 "size": "39",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
@@ -2728,7 +2728,7 @@
                 "price_display": "2,200,000đ"
             }
         ],
-        "updated_at": 1774264256
+        "updated_at": 1774367247
     },
     {
         "name": "Nike Air Jordan 1 Low 'Grey White' 553558-044",
@@ -2758,11 +2758,6 @@
             },
             {
                 "size": "38.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "39",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             },
@@ -2802,7 +2797,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1773830263
+        "updated_at": 1774367247
     },
     {
         "name": "Nike Air Jordan 1 Low Triple White 553560-136(gs) /553558-136 (men) /DV0990-111 wm",
@@ -4769,14 +4764,9 @@
                 "size": "39.5",
                 "price": 2090000,
                 "price_display": "2,090,000đ"
-            },
-            {
-                "size": "40",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1774329384
+        "updated_at": 1774367247
     },
     {
         "name": "1042A281-300",
@@ -5972,14 +5962,9 @@
                 "size": "40.5",
                 "price": 3050000,
                 "price_display": "3,050,000đ"
-            },
-            {
-                "size": "41",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1773830263
+        "updated_at": 1774367247
     },
     {
         "name": "Jeep Xám Có dây xanh cam PX241WAS932",
@@ -6891,17 +6876,12 @@
                 "price_display": "3,190,000đ"
             },
             {
-                "size": "43",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
-            },
-            {
                 "size": "44",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1774244920
+        "updated_at": 1774367247
     },
     {
         "name": "WRS338580",
@@ -6918,11 +6898,6 @@
                 "price_display": "2,700,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
@@ -6933,7 +6908,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1774244920
+        "updated_at": 1774367247
     },
     {
         "name": "WRS338580U-255  2/3",
@@ -6961,18 +6936,6 @@
             }
         ],
         "updated_at": 1774264256
-    },
-    {
-        "name": "WRS338860U",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "40",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
-            }
-        ],
-        "updated_at": 1773241066
     },
     {
         "name": "WRS338920",
