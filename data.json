@@ -2590,11 +2590,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 3850000,
-                "price_display": "3,850,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 3850000,
                 "price_display": "3,850,000đ"
@@ -2620,7 +2615,7 @@
                 "price_display": "3,850,000đ"
             }
         ],
-        "updated_at": 1774329384
+        "updated_at": 1774381054
     },
     {
         "name": "JQ7141-255  2/3",
