@@ -212,9 +212,14 @@
                 "size": "36.5",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1900000,
+                "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1774367247
+        "updated_at": 1774453984
     },
     {
         "name": "FD6575-107",
@@ -261,6 +266,53 @@
         "updated_at": 1773079629
     },
     {
+        "name": "FV5552-003",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            }
+        ],
+        "updated_at": 1774453984
+    },
+    {
         "name": "FV5552-104",
         "brand": "Nike",
         "variants": [
@@ -302,39 +354,12 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "43",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "44",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1774434874
-    },
-    {
-        "name": "FV5552-402",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "41",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
-                "size": "42",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            }
-        ],
-        "updated_at": 1774083770
+        "updated_at": 1774453984
     },
     {
         "name": "FV5552-403",
@@ -1152,12 +1177,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40.5",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
+                "size": "40",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
             },
             {
-                "size": "40",
+                "size": "40.5",
                 "price": 2250000,
                 "price_display": "2,250,000đ"
             },
@@ -1177,7 +1202,7 @@
                 "price_display": "2,250,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1774453984
     },
     {
         "name": "Giày Nike Court Vapor 12 Premium HC Cactus Green HJ6650-300",
@@ -2503,6 +2528,48 @@
         "updated_at": 1773079629
     },
     {
+        "name": "HV1488-600",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3800000,
+                "price_display": "3,800,000đ"
+            }
+        ],
+        "updated_at": 1774453984
+    },
+    {
         "name": "IB2534-100",
         "brand": "Nike",
         "variants": [
@@ -3265,14 +3332,9 @@
                 "size": "39",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
-            },
-            {
-                "size": "40",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1774453984
     },
     {
         "name": "Nike Zoom GP Challenge 1 HC Women's Tennis FQ7263-500",
@@ -3373,6 +3435,28 @@
             }
         ],
         "updated_at": 1774413426
+    },
+    {
+        "name": "VAPOR 12 NAVY FV5552-402",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "41",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            }
+        ],
+        "updated_at": 1774453984
     },
     {
         "name": "VP12 Xanh đỏ FV5552-004",
@@ -4228,11 +4312,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -4248,7 +4327,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1774434874
+        "updated_at": 1774453984
     },
     {
         "name": "KI3438",
@@ -4260,11 +4339,6 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
@@ -4280,7 +4354,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1774244920
+        "updated_at": 1774453984
     },
     {
         "name": "Onitsuka Tiger Mexico 66 'Ivory Black' 1183C102-752",
@@ -4366,14 +4440,9 @@
         "updated_at": 1774413426
     },
     {
-        "name": "1041A370-106 Gel X hồng",
+        "name": "1041A370-106",
         "brand": "Asics",
         "variants": [
-            {
-                "size": "39",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
-            },
             {
                 "size": "40.5",
                 "price": 3300000,
@@ -4390,7 +4459,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1774434874
+        "updated_at": 1774453984
     },
     {
         "name": "1041A408-003",
@@ -4825,14 +4894,9 @@
         "updated_at": 1773743792
     },
     {
-        "name": "1042A237-702-22,75",
+        "name": "1042A237-702",
         "brand": "Asics",
         "variants": [
-            {
-                "size": "36",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
             {
                 "size": "37",
                 "price": 1900000,
@@ -4859,7 +4923,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1773914956
+        "updated_at": 1774453984
     },
     {
         "name": "1042A265-701",
@@ -5532,11 +5596,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "37",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -5552,7 +5611,7 @@
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1774156395
+        "updated_at": 1774453984
     },
     {
         "name": "1183A592-200",
@@ -5668,14 +5727,9 @@
                 "size": "38",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
-            },
-            {
-                "size": "39",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1774453984
     },
     {
         "name": "1183C015-201",
@@ -7833,11 +7887,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "41.3",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -7848,7 +7897,7 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1774329384
+        "updated_at": 1774453984
     },
     {
         "name": "WRS338520U-255 2/3",
