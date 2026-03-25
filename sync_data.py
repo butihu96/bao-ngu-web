@@ -177,8 +177,8 @@ def sync_data():
                 if config["type"] == "kho_4":
                     blocks = []
                     if i == 0:   blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
-                    # ĐÃ CẬP NHẬT TỌA ĐỘ CHUẨN CHO TAB 2 (Pickleball+DC) THEO ĐÚNG FORM SẾP GIAO
-                    elif i == 1: blocks = [(1, 2, 3), (6, 7, 8), (10, 11, 12), (14, 15, 16)]
+                    # TỌA ĐỘ CHUẨN 100% THEO ẢNH: Cột A(0), E(4), I(8), M(12)
+                    elif i == 1: blocks = [(0, 1, 2), (4, 5, 6), (8, 9, 10), (12, 13, 14)] 
                     elif i in [2, 3]: blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
                     elif i in [4, 5]: blocks = [(1, 2, 3), (6, 7, 8)]
 
@@ -189,7 +189,12 @@ def sync_data():
                         for r_idx in range(2, len(data)):
                             row = data[r_idx]
                             
-                            name_val = get_val(row, b_name) or get_val(row, b_name - 1)
+                            # KHÓA CHỐNG LỖI -1 CỦA PYTHON
+                            if b_name == 0:
+                                name_val = get_val(row, b_name)
+                            else:
+                                name_val = get_val(row, b_name) or get_val(row, b_name - 1)
+                                
                             size_val = get_val(row, b_size)
                             price_val = get_val(row, b_price)
                             
