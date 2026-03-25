@@ -614,18 +614,6 @@
         "updated_at": 1774348623
     },
     {
-        "name": "FZ2156-500",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "36.5",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            }
-        ],
-        "updated_at": 1773168478
-    },
-    {
         "name": "FZ2156-700",
         "brand": "Nike",
         "variants": [
@@ -3477,6 +3465,18 @@
         "updated_at": 1773168478
     },
     {
+        "name": "fz2156-500",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
+            }
+        ],
+        "updated_at": 1774411825
+    },
+    {
         "name": "vapor 3 xanh đỏ FZ2161-004",
         "brand": "Nike",
         "variants": [
@@ -3996,28 +3996,6 @@
         "updated_at": 1773240607
     },
     {
-        "name": "1041A405-104",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
-                "size": "41.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
-                "size": "43.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            }
-        ],
-        "updated_at": 1773079629
-    },
-    {
         "name": "1041A408-300",
         "brand": "Asics",
         "variants": [
@@ -4352,6 +4330,28 @@
             }
         ],
         "updated_at": 1774112362
+    },
+    {
+        "name": "1041a405-104",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            }
+        ],
+        "updated_at": 1774411825
     },
     {
         "name": "1042A220-701",
@@ -4734,14 +4734,9 @@
                 "size": "39",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
             }
         ],
-        "updated_at": 1774367247
+        "updated_at": 1774411825
     },
     {
         "name": "1042A281-300",
@@ -5211,6 +5206,11 @@
                 "price_display": "3,790,000đ"
             },
             {
+                "size": "37.5",
+                "price": 3790000,
+                "price_display": "3,790,000đ"
+            },
+            {
                 "size": "39",
                 "price": 3790000,
                 "price_display": "3,790,000đ"
@@ -5221,7 +5221,7 @@
                 "price_display": "3,790,000đ"
             }
         ],
-        "updated_at": 1773724494
+        "updated_at": 1774411825
     },
     {
         "name": "1183A872-100",
@@ -6520,7 +6520,7 @@
         "updated_at": 1774083770
     },
     {
-        "name": "Babolat jemach 4 trắng xanh Women",
+        "name": "Babolat jemach 4 xanh",
         "brand": "Babolat",
         "variants": [
             {
@@ -6534,7 +6534,7 @@
                 "price_display": "3,550,000đ"
             }
         ],
-        "updated_at": 1774264256
+        "updated_at": 1774411825
     },
     {
         "name": "SFX EVO TRẮNG XANH 31S26556A-1112(WM)",
