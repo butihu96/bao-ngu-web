@@ -32,7 +32,10 @@ jobs:
           echo "$TOKEN_B64" | base64 --decode > token.pickle
 
       - name: Gọi Bot chui vào 4 kho lấy Data
-        run: python sync_data.py
+        run: |
+          python sync_data.py
+          echo "--- KÍCH THƯỚC FILE SAU KHI CHẠY PYTHON ---"
+          ls -la data.json
 
       - name: Đóng gói Data mới lên Web bằng Đòn Hủy Diệt
         run: |
@@ -51,6 +54,10 @@ jobs:
           
           # 4. Trả file data.json vào lại đúng vị trí cũ
           cp /home/runner/data.json ./data.json
+          
+          # SOIPASS: Bật máy quét xem Git có nhận ra sự thay đổi không
+          echo "--- TRẠNG THÁI GIT TRƯỚC KHI COMMIT ---"
+          git status
           
           # 5. Lưu và đẩy lên web
           git add data.json
