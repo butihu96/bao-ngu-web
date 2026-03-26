@@ -31,7 +31,7 @@ CUSTOM_BRAND_MAPPING = {
 # =========================================================
 SHEETS_CONFIG = [
     {"name": "Kho Điệp Phạm", "id": "1LguFhRHWfHI87onU-Awobfallk_gtZZdPhpCllnK1eo", "type": "kho_1", "col_hang": 2, "col_code": 3, "col_size": 4, "col_price": 5},
-    {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2", "left_cols": {"name": 0, "size": 2, "qty": 3, "price": 4}, "right_cols": {"name": 8, "size": 10, "qty": 11, "price": 12}},
+    {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2"},
     {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
     {"name": "Kho Nam Giày (Kho 4)", "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", "type": "kho_4"}
 ]
@@ -139,14 +139,12 @@ def is_code_format(text):
     if re.search(r'\bWRS[A-Z0-9]{4,8}\b', t): return True
     if re.search(r'\b([A-Z0-9]{6,8})[- ]([A-Z0-9]{3,4})\b', t): return True
     if re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', t): return True
-    # Bổ sung nhận diện mã Asics đặc thù (VD: 1041A481-101, 1042A279.102)
     if re.search(r'\b104[12]A\d{3}[-.]\d{3}\b', t): return True
     return False
 
 def nhan_dien_hang(original_name, dict_key):
     full_str = f"{original_name} {dict_key}".upper()
 
-    # BỘ NÃO MỚI: Quét siêu nhạy để không sót bất kỳ hãng nào
     if "NIKE" in full_str: return 'Nike'
     if "ASICS" in full_str or "1041A" in full_str or "1042A" in full_str or "1041" in full_str: return 'Asics'
     if "BABOLAT" in full_str: return 'Babolat'
@@ -161,7 +159,6 @@ def nhan_dien_hang(original_name, dict_key):
     if "MLB" in full_str: return 'MLB'
     if "FILA" in full_str: return 'Fila'
 
-    # Nhận diện dự phòng qua cấu trúc Regex
     if re.search(r'\b[A-Z0-9]{6}-[A-Z0-9]{3}\b', full_str): return 'Nike'
     if re.search(r'\b[A-Z0-9]{9}-[A-Z0-9]{4}\b', full_str): return 'Babolat'
     if re.search(r'\b\d{6}[A-Z]?[-/]?[A-Z]{3,4}\b', full_str): return 'Skechers'
@@ -275,7 +272,7 @@ def sync_data():
                 # =========================================================
                 # TRÍCH XUẤT DATA KHO 1, 3
                 # =========================================================
-                else:
+                elif config["type"] in ["kho_1", "kho_3"]:
                     for row in data[1:]:
                         try:
                             raw_code = ""
@@ -293,7 +290,7 @@ def sync_data():
                                 
                                 if p_max == 0 or not raw_code or str(raw_code).isdigit(): continue
                                 final_price = int(round((p_max * 1000) + 300000, -4))
-                                if final_price < 1000000: continue 
+                                if final_price < 100000: continue 
                                 
                                 extracted_code = loc_ma_giay(raw_code)
                                 best_name = raw_code.strip()
@@ -343,7 +340,7 @@ def sync_data():
                                 p_max = extract_price(price_val)
                                 if p_max == 0: continue
                                 final_price = int(round((p_max * 1000) + 300000, -4))
-                                if final_price < 1000000: continue 
+                                if final_price < 100000: continue 
 
                                 best_name = name_size_val.strip()
                                 best_name = re.sub(r'(?i)\(?\b(?:EU|Size|UK|US|CM)\s*[0-9.,/]+\b\)?', '', best_name)
@@ -358,77 +355,99 @@ def sync_data():
                                     "size": s_c,
                                     "price": final_price
                                 })
-
-                            elif config["type"] == "kho_2":
-                                continue
-
                         except: continue
 
-                    # =========================================================
-                    # TRÍCH XUẤT DATA KHO 2 (BỘ NÃO MỚI - CHỐNG LỆCH TỌA ĐỘ VÀ HEADER RÁC)
-                    # =========================================================
-                    if config["type"] == "kho_2":
-                        left_cols = {"name": 0, "size": 2, "qty": 3, "price": 4}
-                        right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12} 
+                # =========================================================
+                # TRÍCH XUẤT DATA KHO 2 (DÒ CỘT SÂU ĐẾN HÀNG 300)
+                # =========================================================
+                elif config["type"] == "kho_2":
+                    left_cols = {"name": 0, "size": 2, "qty": 3, "price": 4} # Mặc định
+                    right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12} # Mặc định
 
-                        def parse_side(cols):
-                            blocks = []; curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
-                            for r in data[1:]:
-                                n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
+                    # RADAR DÒ CỘT TỰ ĐỘNG (Quét sâu 300 dòng để thích ứng mọi Tab)
+                    for r in data[1:300]:
+                        if len(r) > 5 and extract_price(get_val(r, 5)) > 500:
+                            left_cols = {"name": 0, "size": 3, "qty": 4, "price": 5}
+                            break
+                        elif len(r) > 4 and extract_price(get_val(r, 4)) > 500:
+                            left_cols = {"name": 0, "size": 2, "qty": 3, "price": 4}
+                            break
+                            
+                    for r in data[1:300]:
+                        if len(r) > 12 and extract_price(get_val(r, 12)) > 500:
+                            right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12}
+                            break
+                        elif len(r) > 11 and extract_price(get_val(r, 11)) > 500:
+                            right_cols = {"name": 7, "size": 9, "qty": 10, "price": 11}
+                            break
+
+                    def parse_side(cols):
+                        blocks = []; curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
+                        # Quét KHÔNG GIỚI HẠN toàn bộ các dòng của Sheet
+                        for r in data[1:]:
+                            n = get_val(r, cols["name"])
+                            
+                            # Bọc lót Tab Skechers: Tên tàng hình ở cột A, chuyển sang bắt cột B
+                            if cols["name"] == 0 and not n:
+                                n = get_val(r, 1)
                                 
-                                if not any([n,s,q,p]):
-                                    if curr["names"] or curr["sizes"]:
-                                        blocks.append(curr)
-                                        curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
-                                    continue
-                                
-                                if n:
-                                    if len(str(n)) > 60:
-                                        pass 
-                                    else:
-                                        if curr["sizes"] and n not in curr["names"]:
-                                            if not is_code_format(n) and curr.get("empty_name_seen", False):
-                                                blocks.append(curr)
-                                                curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
-                                                
-                                        if n not in curr["names"]:
-                                            curr["names"].append(n)
+                            s = get_val(r, cols["size"])
+                            q = get_val(r, cols["qty"])
+                            p = get_val(r, cols["price"])
+                            
+                            if not any([n, s, q, p]):
+                                if curr["names"] or curr["sizes"]:
+                                    blocks.append(curr)
+                                    curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
+                                continue
+                            
+                            if n:
+                                if len(str(n)) > 60:
+                                    pass # Lọc header dài dòng
                                 else:
-                                    if curr["sizes"] or curr["names"]:
-                                        curr["empty_name_seen"] = True
+                                    if curr["sizes"] and n not in curr["names"]:
+                                        if not is_code_format(n) and curr.get("empty_name_seen", False):
+                                            blocks.append(curr)
+                                            curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
+                                            
+                                    if n not in curr["names"]:
+                                        curr["names"].append(n)
+                            else:
+                                if curr["sizes"] or curr["names"]:
+                                    curr["empty_name_seen"] = True
+                            
+                            if p:
+                                p_m = extract_price(p)
+                                if p_m > curr["price_val"]: curr["price_val"] = p_m
+                            if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
+                                curr["sizes"].append(s)
                                 
-                                if p:
-                                    p_m = extract_price(p)
-                                    if p_m > curr["price_val"]: curr["price_val"] = p_m
-                                if s and q and str(q).strip().lower() not in ['0','hết', '#n/a', '']:
-                                    curr["sizes"].append(s)
-                                    
-                            if curr["names"] or curr["sizes"]: blocks.append(curr)
-                            return blocks
+                        if curr["names"] or curr["sizes"]: blocks.append(curr)
+                        return blocks
+                    
+                    for b in parse_side(left_cols) + parse_side(right_cols):
+                        if not b["names"] or b["price_val"] == 0: continue
+                        full_text = " ".join(b["names"])
+                        if la_hang_tap_nham(full_text): continue
+                        if "JP7309" in full_text.upper(): continue 
                         
-                        for b in parse_side(left_cols) + parse_side(right_cols):
-                            if not b["names"] or b["price_val"] == 0: continue
-                            full_text = " ".join(b["names"])
-                            if la_hang_tap_nham(full_text): continue
-                            if "JP7309" in full_text.upper(): continue 
+                        extracted_code = loc_ma_giay(full_text)
+                        if str(extracted_code).isdigit(): continue
+                        
+                        fp = int(round((b["price_val"] * 1000) + 300000, -4))
+                        if fp < 100000: continue 
+                        
+                        best_name = full_text.strip()
                             
-                            extracted_code = loc_ma_giay(full_text)
-                            if str(extracted_code).isdigit(): continue
-                            
-                            fp = int(round((b["price_val"] * 1000) + 300000, -4))
-                            if fp < 1000000: continue 
-                            
-                            best_name = full_text.strip()
-                                
-                            for s in b["sizes"]:
-                                sc = clean_size(s)
-                                if is_valid_size(sc):
-                                    all_raw_items.append({
-                                        "code": extracted_code,
-                                        "name": best_name,
-                                        "size": sc,
-                                        "price": fp
-                                    })
+                        for s in b["sizes"]:
+                            sc = clean_size(s)
+                            if is_valid_size(sc):
+                                all_raw_items.append({
+                                    "code": extracted_code,
+                                    "name": best_name,
+                                    "size": sc,
+                                    "price": fp
+                                })
 
         print(f"✅ Đã cào xong {len(all_raw_items)} dữ liệu thô. Bắt đầu gộp Size và đồng bộ Giá...")
 
@@ -474,9 +493,6 @@ def sync_data():
             if not info["variants"]: continue
             
             brand = nhan_dien_hang(info["original_name"], dk)
-            
-            # SỬA LỖI CHÍ MẠNG: Đã gỡ bỏ dòng "if brand == 'Khác': continue"
-            # Mọi sản phẩm cào được đều được lên web!
             
             sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
             
