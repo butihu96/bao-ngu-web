@@ -115,28 +115,23 @@
         .close-sidebar-btn { display: none; background: #e74c3c; color: #fff; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-weight: bold;}
 
         @media (max-width: 900px) { 
-            /* Bỏ dính của header trên điện thoại */
             header { position: relative !important; transform: none !important; z-index: 1; }
             
             .layout-wrapper { flex-direction: column; padding: 10px; margin: 0 auto; gap: 10px;}
             
-            /* Bộ lọc dính chặt lên đầu, thu nhỏ lại */
             .sidebar { position: sticky; top: 0; left: 0; width: 100%; height: auto; max-height: none; z-index: 105; border-radius: 0 0 12px 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); padding: 10px; margin-bottom: 5px; background: #fff;}
             .close-sidebar-btn { display: none; } 
             .sidebar > .filter-title:first-child { display: none; } 
             
-            /* Thu nhỏ các nút filter */
             .filter-list { flex-direction: row; overflow-x: auto; gap: 6px; padding-bottom: 5px; scrollbar-width: none; -ms-overflow-style: none; }
             .filter-list::-webkit-scrollbar { display: none; }
             .filter-item { white-space: nowrap; border: 1px solid #ddd; border-radius: 20px; padding: 4px 12px; font-size: 12px;}
             .filter-item.active { background: #111; color: #fff; border-color: #111;}
             
-            /* Thu nhỏ các nút size */
             .size-grid-filter { display: flex; overflow-x: auto; gap: 6px; padding-bottom: 5px; scrollbar-width: none; -ms-overflow-style: none;}
             .size-grid-filter::-webkit-scrollbar { display: none; }
             .size-filter-btn { flex: 0 0 auto; min-width: 40px; border-radius: 20px; font-size: 11px; padding: 4px 0;}
             
-            /* Thu hẹp khoảng cách các nhóm filter */
             .filter-group { margin-bottom: 8px; }
             .filter-group:last-child { margin-bottom: 0; }
             .filter-title { font-size: 12px; margin-bottom: 5px; padding-bottom: 0; border: none; }
@@ -159,7 +154,6 @@
             #backToTopBtn { bottom: 15px; left: 15px; width: 38px; height: 38px; font-size: 16px; }
             .share-btn { width: 28px; height: 28px; font-size: 13px; top: 5px; left: 5px; }
 
-            /* Bỏ cố định thanh tìm kiếm để không đè lên bộ lọc */
             .search-box {
                 position: relative;
                 top: 0;
@@ -254,11 +248,12 @@
         
         const TARGET_BRANDS = ["Nike", "Adidas", "Asics", "Skechers", "On", "Lacoste", "Babolat", "Wilson", "Onitsuka Tiger"];
         
-        const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter", "court lite"];
+        // Bơm thêm từ khóa nhận diện Pickleball
+        const PICKLEBALL_KEYWORDS = ["tennis", "pickleball", "barricade", "court ff", "solution speed", "gel", "dedicate", "vapor", "game ff", "solution", "upcourt", "skechers", "on", "lacoste", "babolat", "wilson", "gp", "court hunter", "court lite", "court slide 4", "speed ff 3"];
         const SNEAKER_KEYWORDS = ["giày thời trang", "giày thể thao", "thể thao", "onitsuka tiger", "onitsuka", "revolution" ];
         
         const TRENDS = {
-            'PICKLEBALL': ["Vapor Pro", "Vapor 12", "Court FF", "Wilson","Asics Gel", "Rush Pro", "Babolat", "Skechers"],
+            'PICKLEBALL': ["Vapor Pro", "Court Slide", "Court FF", "Speed FF", "Wilson","Asics Gel", "Babolat", "Skechers"],
             'SNEAKER': ["Air Force 1", "Jordan", "Onitsuka", "Samba", "Yeezy"]
         };
 
@@ -408,7 +403,13 @@
                         break;
                     }
                 }
+                
                 if (isPickle) p.category = 'PICKLEBALL';
+                
+                // Khóa cứng: Tất cả giày Wilson hoặc Babolat đều phải nằm ở mục Pickleball
+                if (p.brand === 'Wilson' || p.brand === 'Babolat') {
+                    p.category = 'PICKLEBALL';
+                }
                 
                 for (let kw of SNEAKER_KEYWORDS) {
                     if (searchStrForCategory.includes(kw.toLowerCase())) {
@@ -463,12 +464,17 @@
         function renderSidebarFilters() {
             const catData = globalData.filter(p => p.category === currentCategory);
 
-            const brandContainer = document.getElementById('brand-filters');
-            const brandsInData = [...new Set(catData.map(p => p.brand))];
+            let brandsInData = [...new Set(catData.map(p => p.brand))];
+            
+            // Xóa sổ Wilson khỏi bộ lọc nếu đang ở Tab Sneaker
+            if (currentCategory === 'SNEAKER') {
+                brandsInData = brandsInData.filter(b => b !== 'Wilson');
+            }
             
             brandsInData.sort((a, b) => (TARGET_BRANDS.indexOf(a) !== -1 ? TARGET_BRANDS.indexOf(a) : 99) - (TARGET_BRANDS.indexOf(b) !== -1 ? TARGET_BRANDS.indexOf(b) : 99));
             const allBrands = ['Tất cả', ...brandsInData]; 
             
+            const brandContainer = document.getElementById('brand-filters');
             brandContainer.innerHTML = allBrands.map(b => {
                 let label = b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Chưa cập nhật Ảnh' : '🔸 ' + b);
                 return `<button class="filter-item brand-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">${label}</button>`;
