@@ -128,6 +128,17 @@ def loc_ma_giay(ten_rac):
     
     return ten_rac
 
+def is_code_format(text):
+    t = str(text).upper().strip()
+    if re.search(r'\b(?=.*[A-Z])(?=.*\d)[A-Z0-9]{11}\b', t): return True
+    if re.search(r'\b\d{2,4}[A-Z]{2,4}[A-Z0-9]{5,8}\b', t): return True
+    if re.search(r'\b[A-Z0-9]{9}-[A-Z0-9]{4}\b', t): return True
+    if re.search(r'\b\d{6}[A-Z]?[-/]?[A-Z]{3,4}\b', t): return True
+    if re.search(r'\bWRS[A-Z0-9]{4,8}\b', t): return True
+    if re.search(r'\b([A-Z0-9]{6,8})[- ]([A-Z0-9]{3,4})\b', t): return True
+    if re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', t): return True
+    return False
+
 def nhan_dien_hang(original_name, dict_key):
     name = str(original_name).upper()
     full_str = f"{original_name} {dict_key}".upper()
@@ -152,7 +163,6 @@ def sync_data():
         print("--- Bot đang quét đa kho... ---")
         client = gspread.authorize(get_creds())
         
-        # BƯỚC 1: CÀO DATA ĐỘC LẬP TỪNG KHO VÀO DANH SÁCH THÔ
         all_raw_items = []
 
         for config in SHEETS_CONFIG:
@@ -252,7 +262,7 @@ def sync_data():
                                             })
 
                 # =========================================================
-                # TRÍCH XUẤT DATA KHO 1, 2, 3
+                # TRÍCH XUẤT DATA KHO 1, 3
                 # =========================================================
                 else:
                     for row in data[1:]:
@@ -343,18 +353,13 @@ def sync_data():
 
                         except: continue
 
+                    # =========================================================
+                    # TRÍCH XUẤT DATA KHO 2 (BỘ NÃO MỚI - CHỐNG LỆCH TỌA ĐỘ VÀ HEADER RÁC)
+                    # =========================================================
                     if config["type"] == "kho_2":
-                        left_cols = config.get("left_cols", {"name": 0, "size": 2, "qty": 3, "price": 4})
-                        
-                        # RADAR: Dò tọa độ chuẩn của cột khối bên phải
-                        right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12} # Mặc định Babolat/Skechers
-                        for r in data[1:20]:
-                            if len(r) > 11 and get_val(r, 9) and extract_price(get_val(r, 11)) > 0:
-                                right_cols = {"name": 7, "size": 9, "qty": 10, "price": 11} # Asics/Nike
-                                break
-                            if len(r) > 12 and get_val(r, 10) and extract_price(get_val(r, 12)) > 0:
-                                right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12}
-                                break
+                        # Cột đã được fix cứng theo đúng cấu trúc 4 ảnh sếp gửi
+                        left_cols = {"name": 0, "size": 2, "qty": 3, "price": 4}
+                        right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12} 
 
                         def parse_side(cols):
                             blocks = []; curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
@@ -368,14 +373,19 @@ def sync_data():
                                     continue
                                 
                                 if n:
-                                    # DAO MỔ MỚI: Chỉ cắt nếu đã thu thập đủ 2 tên (Tên + Mã) hoặc qua dòng trống
-                                    if curr["sizes"] and n not in curr["names"]:
-                                        if len(curr["names"]) >= 2 or curr.get("empty_name_seen", False):
-                                            blocks.append(curr)
-                                            curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
-                                            
-                                    if n not in curr["names"]:
-                                        curr["names"].append(n)
+                                    # Lọc ngay những Header rác "Khách về thử giày..." dài ngoằn
+                                    if len(str(n)) > 60:
+                                        pass 
+                                    else:
+                                        if curr["sizes"] and n not in curr["names"]:
+                                            # DAO MỔ THÔNG MINH: Chỉ cắt nếu đó không phải là Mã Giày (định dạng code) 
+                                            # VÀ trước đó đã có list size (empty_name_seen = True)
+                                            if not is_code_format(n) and curr.get("empty_name_seen", False):
+                                                blocks.append(curr)
+                                                curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
+                                                
+                                        if n not in curr["names"]:
+                                            curr["names"].append(n)
                                 else:
                                     if curr["sizes"] or curr["names"]:
                                         curr["empty_name_seen"] = True
@@ -434,7 +444,6 @@ def sync_data():
                     sneaker_dict[dk]["display_name"] = raw_name
                     sneaker_dict[dk]["original_name"] = raw_name
                     
-            # ĐẢM BẢO LẤY GIÁ RẺ NHẤT TRONG CÁC KHO
             if s_c not in sneaker_dict[dk]["variants"] or fp < sneaker_dict[dk]["variants"][s_c]:
                 sneaker_dict[dk]["variants"][s_c] = fp
 
