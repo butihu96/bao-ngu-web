@@ -21,7 +21,9 @@ CUSTOM_BRAND_MAPPING = {
     "BABOLAT": "Babolat",
     "WILSON": "Wilson",
     "LACOSTE": "Lacoste",
-    "ROGER PRO": "On"  
+    "ROGER PRO": "On",
+    "NIKE": "Nike",
+    "ASICS": "Asics"
 }
 
 # =========================================================
@@ -137,24 +139,33 @@ def is_code_format(text):
     if re.search(r'\bWRS[A-Z0-9]{4,8}\b', t): return True
     if re.search(r'\b([A-Z0-9]{6,8})[- ]([A-Z0-9]{3,4})\b', t): return True
     if re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', t): return True
+    # Bổ sung nhận diện mã Asics đặc thù (VD: 1041A481-101, 1042A279.102)
+    if re.search(r'\b104[12]A\d{3}[-.]\d{3}\b', t): return True
     return False
 
 def nhan_dien_hang(original_name, dict_key):
-    name = str(original_name).upper()
     full_str = f"{original_name} {dict_key}".upper()
 
-    for keyword, brand in CUSTOM_BRAND_MAPPING.items():
-        if keyword in full_str: return brand
+    # BỘ NÃO MỚI: Quét siêu nhạy để không sót bất kỳ hãng nào
+    if "NIKE" in full_str: return 'Nike'
+    if "ASICS" in full_str or "1041A" in full_str or "1042A" in full_str or "1041" in full_str: return 'Asics'
+    if "BABOLAT" in full_str: return 'Babolat'
+    if "WILSON" in full_str or "WRS" in full_str: return 'Wilson'
+    if "SKECHER" in full_str: return 'Skechers'
+    if "LACOSTE" in full_str: return 'Lacoste'
+    if "ONITSUKA" in full_str or "1183" in full_str: return 'Onitsuka Tiger'
+    if "ROGER PRO" in full_str or "ON" in full_str.split(): return 'On'
+    if "NEW BALANCE" in full_str or "NB" in full_str.split(): return 'New Balance'
+    if "ADIDAS" in full_str: return 'Adidas'
+    if "PUMA" in full_str: return 'Puma'
+    if "MLB" in full_str: return 'MLB'
+    if "FILA" in full_str: return 'Fila'
 
-    if re.search(r'\bON\b', full_str) or re.search(r'\b(?=.*[A-Z])(?=.*\d)[A-Z0-9]{11}\b', name): return 'On'
-    if re.search(r'\b\d{2,4}[A-Z]{2,4}[A-Z0-9]{5,8}\b', name) or "LACOSTE" in full_str: return 'Lacoste'
-    if name.startswith("11") and "-" in name: return 'Onitsuka Tiger'
-    if name.startswith("10") and "-" in name: return 'Asics'
-    if re.search(r'\b[A-Z0-9]{9}-[A-Z0-9]{4}\b', name): return 'Babolat'
-    if re.search(r'\b\d{6}[A-Z]?[-/]?[A-Z]{3,4}\b', name) or "SKECHER" in full_str: return 'Skechers'
-    if re.search(r'\bWRS[A-Z0-9]{4,8}\b', name): return 'Wilson'
-    if re.search(r'\b[A-Z0-9]{6}-[A-Z0-9]{3}\b', name): return 'Nike'
-    if re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', name): return 'Adidas'
+    # Nhận diện dự phòng qua cấu trúc Regex
+    if re.search(r'\b[A-Z0-9]{6}-[A-Z0-9]{3}\b', full_str): return 'Nike'
+    if re.search(r'\b[A-Z0-9]{9}-[A-Z0-9]{4}\b', full_str): return 'Babolat'
+    if re.search(r'\b\d{6}[A-Z]?[-/]?[A-Z]{3,4}\b', full_str): return 'Skechers'
+    if re.search(r'(?<!-)\b(?=.*\d)(?=.*[A-Z])[A-Z0-9]{6}\b(?!-)', full_str): return 'Adidas'
     
     return 'Khác'
 
@@ -357,7 +368,6 @@ def sync_data():
                     # TRÍCH XUẤT DATA KHO 2 (BỘ NÃO MỚI - CHỐNG LỆCH TỌA ĐỘ VÀ HEADER RÁC)
                     # =========================================================
                     if config["type"] == "kho_2":
-                        # Cột đã được fix cứng theo đúng cấu trúc 4 ảnh sếp gửi
                         left_cols = {"name": 0, "size": 2, "qty": 3, "price": 4}
                         right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12} 
 
@@ -373,13 +383,10 @@ def sync_data():
                                     continue
                                 
                                 if n:
-                                    # Lọc ngay những Header rác "Khách về thử giày..." dài ngoằn
                                     if len(str(n)) > 60:
                                         pass 
                                     else:
                                         if curr["sizes"] and n not in curr["names"]:
-                                            # DAO MỔ THÔNG MINH: Chỉ cắt nếu đó không phải là Mã Giày (định dạng code) 
-                                            # VÀ trước đó đã có list size (empty_name_seen = True)
                                             if not is_code_format(n) and curr.get("empty_name_seen", False):
                                                 blocks.append(curr)
                                                 curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
@@ -467,7 +474,9 @@ def sync_data():
             if not info["variants"]: continue
             
             brand = nhan_dien_hang(info["original_name"], dk)
-            if brand == 'Khác': continue 
+            
+            # SỬA LỖI CHÍ MẠNG: Đã gỡ bỏ dòng "if brand == 'Khác': continue"
+            # Mọi sản phẩm cào được đều được lên web!
             
             sorted_v = sorted([{"size": k, "price": v, "price_display": f"{v:,}đ"} for k, v in info["variants"].items()], key=lambda x: float(re.search(r'\d+', x["size"]).group(0)) if re.search(r'\d+', x["size"]) else 999)
             
