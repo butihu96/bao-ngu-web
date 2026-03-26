@@ -177,7 +177,6 @@ def sync_data():
                 if config["type"] == "kho_4":
                     blocks = []
                     if i == 0:   blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
-                    # TỌA ĐỘ CHUẨN 100% THEO ẢNH: Cột A(0), E(4), I(8), M(12)
                     elif i == 1: blocks = [(0, 1, 2), (4, 5, 6), (8, 9, 10), (12, 13, 14)] 
                     elif i in [2, 3]: blocks = [(1, 2, 3), (6, 7, 8), (11, 12, 13)]
                     elif i in [4, 5]: blocks = [(1, 2, 3), (6, 7, 8)]
@@ -189,7 +188,6 @@ def sync_data():
                         for r_idx in range(2, len(data)):
                             row = data[r_idx]
                             
-                            # KHÓA CHỐNG LỖI -1 CỦA PYTHON
                             if b_name == 0:
                                 name_val = get_val(row, b_name)
                             else:
@@ -346,24 +344,41 @@ def sync_data():
                         except: continue
 
                     if config["type"] == "kho_2":
+                        left_cols = config.get("left_cols", {"name": 0, "size": 2, "qty": 3, "price": 4})
+                        
+                        # RADAR: Dò tọa độ chuẩn của cột khối bên phải
+                        right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12} # Mặc định Babolat/Skechers
+                        for r in data[1:20]:
+                            if len(r) > 11 and get_val(r, 9) and extract_price(get_val(r, 11)) > 0:
+                                right_cols = {"name": 7, "size": 9, "qty": 10, "price": 11} # Asics/Nike
+                                break
+                            if len(r) > 12 and get_val(r, 10) and extract_price(get_val(r, 12)) > 0:
+                                right_cols = {"name": 8, "size": 10, "qty": 11, "price": 12}
+                                break
+
                         def parse_side(cols):
-                            blocks = []; curr = {"names": [], "sizes": [], "price_val": 0}
+                            blocks = []; curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
                             for r in data[1:]:
                                 n=get_val(r, cols["name"]); s=get_val(r, cols["size"]); q=get_val(r, cols["qty"]); p=get_val(r, cols["price"])
                                 
                                 if not any([n,s,q,p]):
                                     if curr["names"] or curr["sizes"]:
                                         blocks.append(curr)
-                                        curr = {"names": [], "sizes": [], "price_val": 0}
+                                        curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
                                     continue
                                 
                                 if n:
+                                    # DAO MỔ MỚI: Chỉ cắt nếu đã thu thập đủ 2 tên (Tên + Mã) hoặc qua dòng trống
                                     if curr["sizes"] and n not in curr["names"]:
-                                        blocks.append(curr)
-                                        curr = {"names": [], "sizes": [], "price_val": 0}
-                                        
+                                        if len(curr["names"]) >= 2 or curr.get("empty_name_seen", False):
+                                            blocks.append(curr)
+                                            curr = {"names": [], "sizes": [], "price_val": 0, "empty_name_seen": False}
+                                            
                                     if n not in curr["names"]:
                                         curr["names"].append(n)
+                                else:
+                                    if curr["sizes"] or curr["names"]:
+                                        curr["empty_name_seen"] = True
                                 
                                 if p:
                                     p_m = extract_price(p)
@@ -374,7 +389,7 @@ def sync_data():
                             if curr["names"] or curr["sizes"]: blocks.append(curr)
                             return blocks
                         
-                        for b in parse_side(config["left_cols"]) + parse_side(config["right_cols"]):
+                        for b in parse_side(left_cols) + parse_side(right_cols):
                             if not b["names"] or b["price_val"] == 0: continue
                             full_text = " ".join(b["names"])
                             if la_hang_tap_nham(full_text): continue
