@@ -4108,11 +4108,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "42.6",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "43.3",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -4123,7 +4118,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774607629
+        "updated_at": 1774636679
     },
     {
         "name": "JQ7141",
@@ -7497,23 +7492,6 @@
         "updated_at": 1774413426
     },
     {
-        "name": "On The Roger Pro Fire Men Tennis Shoe - White 3MF30102626",
-        "brand": "On",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 4290000,
-                "price_display": "4,290,000đ"
-            },
-            {
-                "size": "42",
-                "price": 4100000,
-                "price_display": "4,100,000đ"
-            }
-        ],
-        "updated_at": 1774504325
-    },
-    {
         "name": "On The Roger Pro Fire Men Tennis Shoe - White 3WF30032626",
         "brand": "On",
         "variants": [
@@ -7643,22 +7621,12 @@
         "brand": "On",
         "variants": [
             {
-                "size": "40",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1774523725
+        "updated_at": 1774636679
     },
     {
         "name": "The roger pro 2 bule gren",
@@ -8821,11 +8789,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "38",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
                 "size": "38.6",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
@@ -8836,7 +8799,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1774607629
+        "updated_at": 1774636679
     },
     {
         "name": "WRS338920",
@@ -8916,7 +8879,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1774624243
+        "updated_at": 1774636679
     },
     {
         "name": "091143",
@@ -9214,7 +9177,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774624243
+        "updated_at": 1774636679
     },
     {
         "name": "397452-02",
@@ -9226,7 +9189,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774624243
+        "updated_at": 1774636679
     },
     {
         "name": "397452-02",
@@ -9290,6 +9253,18 @@
             }
         ],
         "updated_at": 1774329384
+    },
+    {
+        "name": "3MF30102626",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "42",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            }
+        ],
+        "updated_at": 1774636679
     },
     {
         "name": "3YE10014013",
