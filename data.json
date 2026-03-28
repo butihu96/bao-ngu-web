@@ -447,9 +447,19 @@
                 "size": "36.5",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1774691686
+        "updated_at": 1774717497
     },
     {
         "name": "FV5554-109",
@@ -2041,18 +2051,6 @@
             }
         ],
         "updated_at": 1774607629
-    },
-    {
-        "name": "Giày TennisPickleball Nike Zoom GP Challenge 1 ‘Cannon’ FB3147-003",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "45",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            }
-        ],
-        "updated_at": 1774434874
     },
     {
         "name": "Giày chạy bộ thể thao Nữ Quest 5 Premium FB6944-100",
@@ -4170,7 +4168,7 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "41",
+                "size": "41.3",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             },
@@ -4190,7 +4188,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774717497
     },
     {
         "name": "JQ7141",
@@ -5188,6 +5186,11 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "36",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
                 "size": "37",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
@@ -5218,7 +5221,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1774691686
+        "updated_at": 1774717497
     },
     {
         "name": "Clg 15 trắng đen 1041A510-101",
@@ -6409,11 +6412,16 @@
             },
             {
                 "size": "39",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1774706630
+        "updated_at": 1774717497
     },
     {
         "name": "1183A201-003",
@@ -8722,11 +8730,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "40.6",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
@@ -8757,7 +8760,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1774691686
+        "updated_at": 1774717497
     },
     {
         "name": "WRS337500",
@@ -8943,17 +8946,12 @@
                 "price_display": "2,700,000đ"
             },
             {
-                "size": "42.6",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            },
-            {
                 "size": "43.3",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774717497
     },
     {
         "name": "WRS338580U-255  2/3",
@@ -9072,7 +9070,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1774706630
+        "updated_at": 1774717497
     },
     {
         "name": "091143",
@@ -9370,7 +9368,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774706630
+        "updated_at": 1774717497
     },
     {
         "name": "397452-02",
@@ -9382,7 +9380,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774706630
+        "updated_at": 1774717497
     },
     {
         "name": "397452-02",
