@@ -925,11 +925,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "35.5",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
-            },
-            {
                 "size": "40-405",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
@@ -955,7 +950,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1774264256
+        "updated_at": 1774778179
     },
     {
         "name": "Giày Nike Air Jordan 1 Low GS 'Mystic Green' 553560-113",
@@ -1661,11 +1656,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
@@ -1687,11 +1677,11 @@
             },
             {
                 "size": "43",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774778179
     },
     {
         "name": "Giày Nike Zoom GP Challenge 1 'White' FB3147-101 / FB3148-101",
@@ -3498,17 +3488,24 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "42.5",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
                 "size": "44.5",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1773689873
+        "updated_at": 1774778179
+    },
+    {
+        "name": "VP12TRAWSNG SỌC XANH FV5552-104",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "45",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
+            }
+        ],
+        "updated_at": 1774778179
     },
     {
         "name": "VP3 XANH ĐEN IB6550-700",
@@ -4695,7 +4692,7 @@
                 "price_display": "3,200,000đ"
             },
             {
-                "size": "38",
+                "size": "37.5",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
             },
@@ -4705,7 +4702,7 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774778179
     },
     {
         "name": "1042A279-103",
@@ -5966,14 +5963,9 @@
                 "size": "43.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774526514
+        "updated_at": 1774778179
     },
     {
         "name": "RX trắng hồng 1042A279-104",
@@ -7518,9 +7510,14 @@
                 "size": "41",
                 "price": 4190000,
                 "price_display": "4,190,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4190000,
+                "price_display": "4,190,000đ"
             }
         ],
-        "updated_at": 1774434874
+        "updated_at": 1774778179
     },
     {
         "name": "Giày On The Roger Pro 2 Clay ‘White Flame’ 3WE10330256",
@@ -8265,11 +8262,6 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "37",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 1850000,
                 "price_display": "1,850,000đ"
@@ -8290,7 +8282,7 @@
                 "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1774706630
+        "updated_at": 1774778179
     },
     {
         "name": "babolat fury 3 do man",
@@ -8373,9 +8365,14 @@
                 "size": "42",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1774778179
     },
     {
         "name": "Giày Tennis Nam Wilson Rush Pro ACE  WRS334380",
@@ -8620,6 +8617,18 @@
         "updated_at": 1773724494
     },
     {
+        "name": "WRS336430",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "42.6",
+                "price": 2980000,
+                "price_display": "2,980,000đ"
+            }
+        ],
+        "updated_at": 1774778179
+    },
+    {
         "name": "WRS337060",
         "brand": "Wilson",
         "variants": [
@@ -8683,11 +8692,6 @@
                 "price_display": "3,450,000đ"
             },
             {
-                "size": "42",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
@@ -8703,7 +8707,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1774717497
+        "updated_at": 1774778179
     },
     {
         "name": "WRS337500",
@@ -8986,17 +8990,12 @@
                 "price_display": "3,250,000đ"
             },
             {
-                "size": "38",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1774778179
     },
     {
         "name": "091143",
@@ -9008,7 +9007,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1774763693
+        "updated_at": 1774778179
     },
     {
         "name": "091143",
@@ -9306,7 +9305,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774763693
+        "updated_at": 1774778179
     },
     {
         "name": "397452-02",
@@ -9318,7 +9317,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774763693
+        "updated_at": 1774778179
     },
     {
         "name": "397452-02",
