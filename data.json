@@ -744,48 +744,6 @@
         "updated_at": 1774674934
     },
     {
-        "name": "FZ2161-101",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "41",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            }
-        ],
-        "updated_at": 1774691686
-    },
-    {
         "name": "FZ2161-108",
         "brand": "Nike",
         "variants": [
@@ -848,8 +806,8 @@
             },
             {
                 "size": "43",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
+                "price": 2690000,
+                "price_display": "2,690,000đ"
             },
             {
                 "size": "44",
@@ -857,7 +815,7 @@
                 "price_display": "2,690,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774851946
     },
     {
         "name": "FZ2161-403",
@@ -1672,8 +1630,8 @@
             },
             {
                 "size": "42",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             },
             {
                 "size": "43",
@@ -1681,7 +1639,7 @@
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774778179
+        "updated_at": 1774851946
     },
     {
         "name": "Giày Nike Zoom GP Challenge 1 'White' FB3147-101 / FB3148-101",
@@ -1821,6 +1779,48 @@
             }
         ],
         "updated_at": 1774526121
+    },
+    {
+        "name": "Giày Pickleball Nike Vapor Pro 3 White/Black – FZ2161-101",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            }
+        ],
+        "updated_at": 1774851946
     },
     {
         "name": "Giày Pickleball Nike Zoom Challenge ‘Hyper Orange’ FQ4155-800",
@@ -1970,38 +1970,6 @@
             }
         ],
         "updated_at": 1774413426
-    },
-    {
-        "name": "Giày Tennis/Pickleball Nike Zoom GP Challenge Pro 'White Black' FB3145-100 / FB3146-100",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "36.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
-                "size": "37.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            }
-        ],
-        "updated_at": 1774607629
     },
     {
         "name": "Giày Tennis/Pickleball Nike Zoom Vapor 12 White Black FV5552-101 / FV5554-100",
@@ -2295,11 +2263,11 @@
             },
             {
                 "size": "38",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
+                "price": 3450000,
+                "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774851946
     },
     {
         "name": "HV1452-100",
@@ -2588,11 +2556,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "36.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -2613,7 +2576,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1774803946
+        "updated_at": 1774851946
     },
     {
         "name": "IR8316-401",
@@ -3786,8 +3749,8 @@
             },
             {
                 "size": "43",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "44",
@@ -3795,7 +3758,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774851946
     },
     {
         "name": "dx4816-300",
@@ -4160,11 +4123,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "42",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "43.3",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -4175,7 +4133,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774717497
+        "updated_at": 1774851946
     },
     {
         "name": "JQ7141",
@@ -6563,11 +6521,6 @@
                 "price_display": "3,790,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3790000,
-                "price_display": "3,790,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3790000,
                 "price_display": "3,790,000đ"
@@ -6578,7 +6531,7 @@
                 "price_display": "3,790,000đ"
             }
         ],
-        "updated_at": 1774411825
+        "updated_at": 1774851946
     },
     {
         "name": "1183A872-100",
@@ -7033,14 +6986,9 @@
                 "size": "38",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1773464587
+        "updated_at": 1774851946
     },
     {
         "name": "Giày Onitsuka Tiger Mexico 66 Ginger Peach 1183A201-254",
@@ -7591,27 +7539,12 @@
         "brand": "On",
         "variants": [
             {
-                "size": "39",
-                "price": 4190000,
-                "price_display": "4,190,000đ"
-            },
-            {
                 "size": "40",
-                "price": 4190000,
-                "price_display": "4,190,000đ"
-            },
-            {
-                "size": "41",
-                "price": 4190000,
-                "price_display": "4,190,000đ"
-            },
-            {
-                "size": "42",
                 "price": 4190000,
                 "price_display": "4,190,000đ"
             }
         ],
-        "updated_at": 1774778179
+        "updated_at": 1774851946
     },
     {
         "name": "Giày On The Roger Pro 2 Clay ‘White Flame’ 3WE10330256",
@@ -8886,11 +8819,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40.6",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -8906,7 +8834,7 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1774691686
+        "updated_at": 1774851946
     },
     {
         "name": "WRS338520",
@@ -9096,7 +9024,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1774818211
+        "updated_at": 1774851946
     },
     {
         "name": "091143",
@@ -9196,11 +9124,6 @@
         "brand": "Khác",
         "variants": [
             {
-                "size": "36",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
-            },
-            {
                 "size": "37",
                 "price": 1590000,
                 "price_display": "1,590,000đ"
@@ -9226,7 +9149,7 @@
                 "price_display": "1,500,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774851946
     },
     {
         "name": "1182A660-001",
@@ -9394,7 +9317,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774818211
+        "updated_at": 1774851946
     },
     {
         "name": "397452-02",
@@ -9406,7 +9329,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774818211
+        "updated_at": 1774851946
     },
     {
         "name": "397452-02",
@@ -10271,14 +10194,9 @@
                 "size": "41.5",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
-            },
-            {
-                "size": "43.5",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1774706630
+        "updated_at": 1774851946
     },
     {
         "name": "Sục Jeep PX231WAS575 nâu",
