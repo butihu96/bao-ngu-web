@@ -252,18 +252,6 @@
         "updated_at": 1773241066
     },
     {
-        "name": "DR6192-101",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 1550000,
-                "price_display": "1,550,000đ"
-            }
-        ],
-        "updated_at": 1774674934
-    },
-    {
         "name": "Dép Nike Calm Slide 'Black' FD4116-001",
         "brand": "Nike",
         "variants": [
@@ -744,8 +732,8 @@
         "variants": [
             {
                 "size": "40",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
+                "price": 2690000,
+                "price_display": "2,690,000đ"
             },
             {
                 "size": "40.5",
@@ -768,7 +756,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774936631
     },
     {
         "name": "FZ2161-109",
@@ -1012,6 +1000,23 @@
             }
         ],
         "updated_at": 1774870667
+    },
+    {
+        "name": "Giày Nike Air Zoom Vapor Pro 2 'White' DR6192-101 / DR6191-101",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 1550000,
+                "price_display": "1,550,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            }
+        ],
+        "updated_at": 1774936631
     },
     {
         "name": "Giày Nike Court Air Zoom Vapor 11 DR6966-700",
@@ -1646,11 +1651,6 @@
                 "price_display": "2,900,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
@@ -1661,7 +1661,7 @@
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774851946
+        "updated_at": 1774936631
     },
     {
         "name": "Giày Nike Zoom GP Challenge 1 'White' FB3147-101 / FB3148-101",
@@ -2403,17 +2403,12 @@
                 "price_display": "3,800,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3800000,
-                "price_display": "3,800,000đ"
-            },
-            {
                 "size": "44",
                 "price": 3800000,
                 "price_display": "3,800,000đ"
             }
         ],
-        "updated_at": 1774763693
+        "updated_at": 1774936631
     },
     {
         "name": "IB2534-100",
@@ -2563,6 +2558,11 @@
                 "price_display": "2,750,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -2583,7 +2583,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1774886209
+        "updated_at": 1774936631
     },
     {
         "name": "IR8316-401",
@@ -3113,14 +3113,9 @@
                 "size": "43",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
-            },
-            {
-                "size": "44.5",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1774936631
     },
     {
         "name": "Nike Vapor 12 Women's Hard Court Tennis Fv5554-500",
@@ -3453,17 +3448,12 @@
                 "price_display": "2,300,000đ"
             },
             {
-                "size": "42",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2300000,
                 "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774936631
     },
     {
         "name": "VAPOR 3 ĐEN FZ2158-001 FZ2161-002",
@@ -3610,17 +3600,12 @@
                 "price_display": "3,350,000đ"
             },
             {
-                "size": "43",
-                "price": 3350000,
-                "price_display": "3,350,000đ"
-            },
-            {
                 "size": "44",
                 "price": 3350000,
                 "price_display": "3,350,000đ"
             }
         ],
-        "updated_at": 1774526121
+        "updated_at": 1774936631
     },
     {
         "name": "Vapor 3 trắng xanh FZ2161-104",
@@ -3688,11 +3673,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -3708,7 +3688,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1774526514
+        "updated_at": 1774936631
     },
     {
         "name": "Vp12 Trắng Xanh FV5552-108",
@@ -4198,11 +4178,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "42",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -4218,7 +4193,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1774763693
+        "updated_at": 1774936631
     },
     {
         "name": "KI3438",
@@ -4518,11 +4493,6 @@
                 "price_display": "2,090,000đ"
             },
             {
-                "size": "41.5",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2090000,
                 "price_display": "2,090,000đ"
@@ -4533,7 +4503,7 @@
                 "price_display": "2,090,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774936631
     },
     {
         "name": "1041a405-104",
@@ -4639,9 +4609,14 @@
         "updated_at": 1774674934
     },
     {
-        "name": "1042A237-702",
+        "name": "1042A237-702-22,75",
         "brand": "Asics",
         "variants": [
+            {
+                "size": "36",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
+            },
             {
                 "size": "37",
                 "price": 1900000,
@@ -4651,6 +4626,11 @@
                 "size": "37.5",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
             },
             {
                 "size": "39.5",
@@ -4668,7 +4648,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1774936631
     },
     {
         "name": "1042A265-701",
@@ -7597,9 +7577,14 @@
                 "size": "40",
                 "price": 4190000,
                 "price_display": "4,190,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4190000,
+                "price_display": "4,190,000đ"
             }
         ],
-        "updated_at": 1774851946
+        "updated_at": 1774936631
     },
     {
         "name": "Giày On The Roger Pro 2 Clay ‘White Flame’ 3WE10330256",
@@ -7708,8 +7693,8 @@
             },
             {
                 "size": "39",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
+                "price": 4290000,
+                "price_display": "4,290,000đ"
             },
             {
                 "size": "40.5",
@@ -7737,7 +7722,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1774870667
+        "updated_at": 1774936631
     },
     {
         "name": "On roger pro be 3WD10293334",
@@ -9065,14 +9050,9 @@
                 "size": "37",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
-            },
-            {
-                "size": "39",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1774778179
+        "updated_at": 1774936631
     },
     {
         "name": "091143",
@@ -9084,7 +9064,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1774908071
+        "updated_at": 1774936631
     },
     {
         "name": "091143",
@@ -9253,11 +9233,6 @@
                 "price_display": "3,560,000đ"
             },
             {
-                "size": "38",
-                "price": 3560000,
-                "price_display": "3,560,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
@@ -9268,7 +9243,7 @@
                 "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1774870667
+        "updated_at": 1774936631
     },
     {
         "name": "1182A660-752",
@@ -9432,7 +9407,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774908071
+        "updated_at": 1774936631
     },
     {
         "name": "397452-02",
@@ -9444,7 +9419,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1774908071
+        "updated_at": 1774936631
     },
     {
         "name": "397452-02",
@@ -10238,14 +10213,9 @@
                 "size": "36",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
-            },
-            {
-                "size": "37",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774526514
+        "updated_at": 1774936631
     },
     {
         "name": "Puma Triple Yellow Glow Volt Black Men Basketball 195217-03",
@@ -10443,8 +10413,13 @@
                 "size": "40",
                 "price": 2290000,
                 "price_display": "2,290,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2290000,
+                "price_display": "2,290,000đ"
             }
         ],
-        "updated_at": 1774526514
+        "updated_at": 1774936631
     }
 ]
