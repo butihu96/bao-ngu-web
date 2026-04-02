@@ -661,11 +661,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36.5",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 1990000,
                 "price_display": "1,990,000đ"
@@ -681,7 +676,7 @@
                 "price_display": "1,990,000đ"
             }
         ],
-        "updated_at": 1774348623
+        "updated_at": 1775128312
     },
     {
         "name": "FZ2156-700",
@@ -746,6 +741,33 @@
             }
         ],
         "updated_at": 1774955651
+    },
+    {
+        "name": "FZ2161-104",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            }
+        ],
+        "updated_at": 1775128312
     },
     {
         "name": "FZ2161-108",
@@ -1566,14 +1588,19 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "36.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "37.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "38",
@@ -1587,13 +1614,13 @@
             },
             {
                 "size": "39",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "40",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "42",
@@ -1606,7 +1633,7 @@
                 "price_display": "3,050,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775128312
     },
     {
         "name": "Giày Nike Vapor Pro 3 'Summit White Binary Blue' FZ2161-100 / FZ2158-100",
@@ -1821,6 +1848,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "39",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
@@ -1856,7 +1888,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1774851946
+        "updated_at": 1775128312
     },
     {
         "name": "Giày Pickleball Nike Zoom Challenge ‘Hyper Orange’ FQ4155-800",
@@ -1905,11 +1937,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
-            },
-            {
                 "size": "36.5",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
@@ -1925,7 +1952,7 @@
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775128312
     },
     {
         "name": "Giày Tennis/Pickleball Nike GP Challenge Pro 'Summit White' FB3145-002",
@@ -2372,7 +2399,7 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
+                "size": "41",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             },
@@ -2385,9 +2412,14 @@
                 "size": "43",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774706630
+        "updated_at": 1775128312
     },
     {
         "name": "HV1474-200",
@@ -2526,11 +2558,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
@@ -2551,7 +2578,7 @@
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775128312
     },
     {
         "name": "IH4052-530",
@@ -2563,17 +2590,37 @@
                 "price_display": "1,050,000đ"
             },
             {
+                "size": "37.5",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
                 "size": "38.5",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1050000,
+                "price_display": "1,050,000đ"
+            },
+            {
+                "size": "40",
                 "price": 1050000,
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775128312
     },
     {
         "name": "IR8252-401",
         "brand": "Nike",
         "variants": [
+            {
+                "size": "36",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
             {
                 "size": "36.5",
                 "price": 2750000,
@@ -2605,7 +2652,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1775059092
+        "updated_at": 1775128312
     },
     {
         "name": "IR8316-401",
@@ -3342,6 +3389,11 @@
                 "price_display": "2,450,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
                 "size": "38.5",
                 "price": 2450000,
                 "price_display": "2,450,000đ"
@@ -3350,9 +3402,19 @@
                 "size": "38",
                 "price": 2450000,
                 "price_display": "2,450,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1775043052
+        "updated_at": 1775128312
     },
     {
         "name": "Nike court ntx trắng DV3276-103",
@@ -3640,38 +3702,6 @@
         "updated_at": 1774994353
     },
     {
-        "name": "Vapor 3 trắng xanh FZ2161-104",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
-            }
-        ],
-        "updated_at": 1774994353
-    },
-    {
         "name": "Vapor 3 xanh đỏ HJ6774-500",
         "brand": "Nike",
         "variants": [
@@ -3701,7 +3731,7 @@
         "updated_at": 1774994353
     },
     {
-        "name": "Vp 12 Be Cam IB6555-100",
+        "name": "Vp 12 Be Cam IB6555-100 VP12TRAWSNG SỌC XANH",
         "brand": "Nike",
         "variants": [
             {
@@ -3715,12 +3745,17 @@
                 "price_display": "3,900,000đ"
             },
             {
+                "size": "42.5",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
                 "size": "44",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775128312
     },
     {
         "name": "Vp12 Trắng Xanh FV5552-108",
@@ -3809,9 +3844,19 @@
                 "size": "39",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775128312
     },
     {
         "name": "vapor 12 đen trắng FV5552-001",
@@ -4108,11 +4153,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -4133,7 +4173,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1775043052
+        "updated_at": 1775128312
     },
     {
         "name": "JQ7141",
@@ -4343,11 +4383,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "40",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
@@ -4363,7 +4398,7 @@
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1774886209
+        "updated_at": 1775128312
     },
     {
         "name": "1041A408-300",
@@ -4971,11 +5006,6 @@
                 "price_display": "1,950,000đ"
             },
             {
-                "size": "42",
-                "price": 1980000,
-                "price_display": "1,980,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
@@ -4986,7 +5016,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775128312
     },
     {
         "name": "Bbl propulse junior 3 3J2S25A553-1071 game ff xanh biển 1042a281-100",
@@ -5890,18 +5920,6 @@
         "updated_at": 1774955651
     },
     {
-        "name": "Giày pickleball COURT SLIDE 4 1042A283-101",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "37",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            }
-        ],
-        "updated_at": 1774526514
-    },
-    {
         "name": "RX Trắng Xanh 1042A279.102 1042A279-102 Wide ( 35.5 )",
         "brand": "Asics",
         "variants": [
@@ -6235,11 +6253,6 @@
                 "price_display": "2,600,000đ"
             },
             {
-                "size": "38",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
                 "size": "39",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
@@ -6260,7 +6273,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775128312
     },
     {
         "name": "dedicate 8 trắng xanh 1041A409-104",
@@ -7988,18 +8001,6 @@
         "updated_at": 1774674934
     },
     {
-        "name": "30S26208B-2051",
-        "brand": "Babolat",
-        "variants": [
-            {
-                "size": "42.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            }
-        ],
-        "updated_at": 1774955651
-    },
-    {
         "name": "31S26630B-1117",
         "brand": "Babolat",
         "variants": [
@@ -8654,7 +8655,7 @@
         "updated_at": 1773724494
     },
     {
-        "name": "WRS336360U-255  2/3",
+        "name": "WRS336360U-275  1/3",
         "brand": "Wilson",
         "variants": [
             {
@@ -8683,7 +8684,7 @@
                 "price_display": "2,690,000đ"
             }
         ],
-        "updated_at": 1775059092
+        "updated_at": 1775128312
     },
     {
         "name": "WRS336430",
@@ -8810,6 +8811,16 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "36",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
+                "size": "36.6",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
                 "size": "38",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -8830,7 +8841,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1774955651
+        "updated_at": 1775128312
     },
     {
         "name": "WRS338310",
@@ -8975,7 +8986,7 @@
         "updated_at": 1774717497
     },
     {
-        "name": "WRS338580U-255  2/3",
+        "name": "WRS338580U-275  1/3",
         "brand": "Wilson",
         "variants": [
             {
@@ -8999,7 +9010,7 @@
                 "price_display": "2,690,000đ"
             }
         ],
-        "updated_at": 1775043052
+        "updated_at": 1775128312
     },
     {
         "name": "WRS338860",
@@ -9108,11 +9119,6 @@
                 "price_display": "3,900,000đ"
             },
             {
-                "size": "36 2/3",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
                 "size": "37.3",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -9143,7 +9149,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1775059092
+        "updated_at": 1775128312
     },
     {
         "name": "091143",
@@ -9155,7 +9161,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775128312
     },
     {
         "name": "091143",
@@ -9341,6 +9347,11 @@
                 "price_display": "3,560,000đ"
             },
             {
+                "size": "37",
+                "price": 3560000,
+                "price_display": "3,560,000đ"
+            },
+            {
                 "size": "37.5",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
@@ -9356,7 +9367,7 @@
                 "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1775024035
+        "updated_at": 1775128312
     },
     {
         "name": "1182A678-001",
@@ -9483,7 +9494,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775128312
     },
     {
         "name": "397452-02",
@@ -9495,7 +9506,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775128312
     },
     {
         "name": "397452-02",
@@ -9508,6 +9519,23 @@
             }
         ],
         "updated_at": 1774526514
+    },
+    {
+        "name": "3A1F25A651-5072",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "37",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            }
+        ],
+        "updated_at": 1775128312
     },
     {
         "name": "3J3F25A884-5008",
@@ -10040,19 +10068,9 @@
                 "size": "37",
                 "price": 750000,
                 "price_display": "750,000đ"
-            },
-            {
-                "size": "38",
-                "price": 750000,
-                "price_display": "750,000đ"
-            },
-            {
-                "size": "39",
-                "price": 750000,
-                "price_display": "750,000đ"
             }
         ],
-        "updated_at": 1774955651
+        "updated_at": 1775128312
     },
     {
         "name": "Jeep đế cao P740W14555SX nâu",
@@ -10332,11 +10350,6 @@
         "brand": "Khác",
         "variants": [
             {
-                "size": "39.5",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
-            },
-            {
                 "size": "40",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
@@ -10347,7 +10360,7 @@
                 "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1775024035
+        "updated_at": 1775128312
     },
     {
         "name": "Sục Jeep PX231WAS575 nâu",
