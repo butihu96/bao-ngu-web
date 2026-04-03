@@ -163,12 +163,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
+                "size": "42",
                 "price": 1490000,
                 "price_display": "1,490,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1775210949
     },
     {
         "name": "DH3158-100-24",
@@ -686,14 +686,9 @@
                 "size": "36.5",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2050000,
-                "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1774523725
+        "updated_at": 1775210949
     },
     {
         "name": "FZ2161-104",
@@ -2883,11 +2878,21 @@
         "variants": [
             {
                 "size": "40.5",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1775210949
     },
     {
         "name": "Nike Court Vapor Pro 3 'Cactus Green' HJ6641-300",
@@ -3521,11 +3526,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "36.5",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
@@ -3556,7 +3556,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775210949
     },
     {
         "name": "Vapor 12 hypersamsh hồng HV1488-600",
@@ -4126,14 +4126,9 @@
                 "size": "43.3",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1775128312
+        "updated_at": 1775210949
     },
     {
         "name": "JQ7141",
@@ -5788,9 +5783,19 @@
                 "size": "40",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775210949
     },
     {
         "name": "Giày Tennis/Pickleball Nữ Asics Solution Speed FF 3.0 White/Bright Rose 1042A250-103",
@@ -6340,8 +6345,8 @@
             },
             {
                 "size": "38",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
+                "price": 1950000,
+                "price_display": "1,950,000đ"
             },
             {
                 "size": "39",
@@ -6354,7 +6359,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775210949
     },
     {
         "name": "1183A201-003",
@@ -7108,17 +7113,12 @@
                 "price_display": "2,900,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
                 "size": "43.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775210949
     },
     {
         "name": "Giày Skechers Viper Court Pro 172069-WBL",
@@ -7420,11 +7420,6 @@
                 "price_display": "3,200,000đ"
             },
             {
-                "size": "38",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
@@ -7435,7 +7430,7 @@
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775210949
     },
     {
         "name": "Giày On Running The Roger Pro 2 - 3WE10630462 / 3ME10570462",
@@ -7624,8 +7619,8 @@
             },
             {
                 "size": "39",
-                "price": 4290000,
-                "price_display": "4,290,000đ"
+                "price": 3900000,
+                "price_display": "3,900,000đ"
             },
             {
                 "size": "40",
@@ -7643,7 +7638,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1775144281
+        "updated_at": 1775210949
     },
     {
         "name": "On roger pro be 3WD10293334",
@@ -8029,21 +8024,31 @@
                 "size": "43",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775210949
     },
     {
         "name": "Babolat furry 3 đen xám men 30S26208B 2051",
         "brand": "Babolat",
         "variants": [
             {
+                "size": "42",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775210949
     },
     {
         "name": "Babolat jemach 4 trắng men",
@@ -8058,6 +8063,11 @@
                 "size": "40",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
             },
             {
                 "size": "41",
@@ -8080,12 +8090,17 @@
                 "price_display": "3,450,000đ"
             },
             {
+                "size": "44",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
                 "size": "45",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775210949
     },
     {
         "name": "Giày Babolat Jet Mach 4 'Black' 30S26629B-2036",
@@ -8214,13 +8229,13 @@
             },
             {
                 "size": "38",
-                "price": 2200000,
-                "price_display": "2,200,000đ"
+                "price": 1900000,
+                "price_display": "1,900,000đ"
             },
             {
                 "size": "39",
-                "price": 2200000,
-                "price_display": "2,200,000đ"
+                "price": 1900000,
+                "price_display": "1,900,000đ"
             },
             {
                 "size": "40",
@@ -8228,7 +8243,7 @@
                 "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775210949
     },
     {
         "name": "babolat fury 3 do man",
@@ -8253,18 +8268,6 @@
         "updated_at": 1774994353
     },
     {
-        "name": "babolat jet tere 2 trang do",
-        "brand": "Babolat",
-        "variants": [
-            {
-                "size": "44",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            }
-        ],
-        "updated_at": 1774994353
-    },
-    {
         "name": "babolat sadow bule",
         "brand": "Babolat",
         "variants": [
@@ -8277,7 +8280,7 @@
         "updated_at": 1774994353
     },
     {
-        "name": "babolat sfx4 đen",
+        "name": "babolat sfx4 đen babolat jet tere 2 trang do",
         "brand": "Babolat",
         "variants": [
             {
@@ -8294,9 +8297,14 @@
                 "size": "44.5",
                 "price": 2400000,
                 "price_display": "2,400,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775210949
     },
     {
         "name": "Giày Tennis Nam Wilson Rush Pro 4.5 WRS333670U",
@@ -8856,11 +8864,6 @@
                 "price_display": "3,190,000đ"
             },
             {
-                "size": "41",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
@@ -8876,7 +8879,7 @@
                 "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1775043052
+        "updated_at": 1775210949
     },
     {
         "name": "WRS338580",
@@ -9071,7 +9074,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775195516
+        "updated_at": 1775210949
     },
     {
         "name": "091143",
@@ -9399,7 +9402,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775195516
+        "updated_at": 1775210949
     },
     {
         "name": "397452-02",
@@ -9411,7 +9414,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775195516
+        "updated_at": 1775210949
     },
     {
         "name": "397452-02",
@@ -9522,17 +9525,12 @@
         "brand": "Khác",
         "variants": [
             {
-                "size": "37.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "39",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775210949
     },
     {
         "name": "3j3s25a884-5065",
