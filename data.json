@@ -1586,14 +1586,9 @@
                 "size": "43",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1775226583
     },
     {
         "name": "Giày Nike Vapor Pro 3 Turf Orange IB6558-100",
@@ -1718,17 +1713,12 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "45",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1774504325
+        "updated_at": 1775226583
     },
     {
         "name": "Giày NikeCourt Vapor 11 HC Premium FQ7266-500",
@@ -2459,17 +2449,12 @@
                 "price_display": "2,550,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
                 "size": "44",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775195516
+        "updated_at": 1775226583
     },
     {
         "name": "IH4052-530",
@@ -2570,6 +2555,16 @@
                 "price_display": "3,850,000đ"
             },
             {
+                "size": "42",
+                "price": 3850000,
+                "price_display": "3,850,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3850000,
+                "price_display": "3,850,000đ"
+            },
+            {
                 "size": "43",
                 "price": 3850000,
                 "price_display": "3,850,000đ"
@@ -2580,7 +2575,7 @@
                 "price_display": "3,850,000đ"
             }
         ],
-        "updated_at": 1775195516
+        "updated_at": 1775226583
     },
     {
         "name": "JQ7141-275  1/3",
@@ -3237,6 +3232,23 @@
         "updated_at": 1775144281
     },
     {
+        "name": "Nike Women’s GP Challenge Pro ‘White’ FB3146-102",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            }
+        ],
+        "updated_at": 1775226583
+    },
+    {
         "name": "Nike Zoom GP Challenge 1 HC Women's Tennis FQ7263-500",
         "brand": "Nike",
         "variants": [
@@ -3763,18 +3775,6 @@
             }
         ],
         "updated_at": 1773168478
-    },
-    {
-        "name": "nike clg xanh than FB3146-102",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "35.5",
-                "price": 2200000,
-                "price_display": "2,200,000đ"
-            }
-        ],
-        "updated_at": 1775195516
     },
     {
         "name": "vapor 12 be nâu FV5554-109",
@@ -4699,11 +4699,6 @@
                 "price_display": "3,100,000đ"
             },
             {
-                "size": "38",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            },
-            {
                 "size": "39",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
@@ -4719,7 +4714,7 @@
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775226583
     },
     {
         "name": "1042A279-103",
@@ -5126,14 +5121,14 @@
                 "price_display": "2,600,000đ"
             },
             {
+                "size": "39.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
                 "size": "39",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
             },
             {
                 "size": "40",
@@ -5141,7 +5136,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1775059092
+        "updated_at": 1775226583
     },
     {
         "name": "Clg 15 trắng đen 1041A510-101",
@@ -8935,12 +8930,17 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "38.6",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
                 "size": "40",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1774763693
+        "updated_at": 1775226583
     },
     {
         "name": "WRS338920",
@@ -9074,7 +9074,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775210949
+        "updated_at": 1775226583
     },
     {
         "name": "091143",
@@ -9402,7 +9402,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775210949
+        "updated_at": 1775226583
     },
     {
         "name": "397452-02",
@@ -9414,7 +9414,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775210949
+        "updated_at": 1775226583
     },
     {
         "name": "397452-02",
@@ -9728,14 +9728,9 @@
                 "size": "38.5",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
             }
         ],
-        "updated_at": 1774112362
+        "updated_at": 1775226583
     },
     {
         "name": "Giày Puma Speedcat OG 'Black' 401698_01",
