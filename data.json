@@ -1145,23 +1145,23 @@
         "variants": [
             {
                 "size": "36.5",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "37.5",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "38.5",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "38",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "39",
@@ -1174,7 +1174,7 @@
                 "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775238909
     },
     {
         "name": "Giày Nike Court Vapor Pro 2 Premium ‘Hyper Crimson’ FQ7719-002",
@@ -3613,7 +3613,7 @@
         "updated_at": 1775043052
     },
     {
-        "name": "Vapor 12 trắng đỏ hv1149-100 IB2534-100",
+        "name": "Vapor 12 trắng đỏ hv1149-100",
         "brand": "Nike",
         "variants": [
             {
@@ -3642,7 +3642,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775238909
     },
     {
         "name": "Vapor 12 xanh Hj0549-700",
@@ -4218,6 +4218,11 @@
                 "price_display": "2,650,000đ"
             },
             {
+                "size": "42",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "42.6",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -4228,7 +4233,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775238909
     },
     {
         "name": "KI3438",
@@ -5080,11 +5085,6 @@
             },
             {
                 "size": "43.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "43",
                 "price": 2300000,
                 "price_display": "2,300,000đ"
             },
@@ -5094,7 +5094,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1775144281
+        "updated_at": 1775238909
     },
     {
         "name": "Clg 15 trắng tím hồng 1042a294-103",
@@ -5283,19 +5283,9 @@
                 "size": "39.5",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
-                "size": "41.5",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1775072764
+        "updated_at": 1775238909
     },
     {
         "name": "Game FF trang xanh 1041A489-104",
@@ -5486,9 +5476,14 @@
                 "size": "44",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 3000000,
+                "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775238909
     },
     {
         "name": "Giày Tennis/Pickleball Asics Gel Resolution X 1041A481-500",
@@ -6467,17 +6462,12 @@
                 "price_display": "3,790,000đ"
             },
             {
-                "size": "39",
-                "price": 3790000,
-                "price_display": "3,790,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3790000,
                 "price_display": "3,790,000đ"
             }
         ],
-        "updated_at": 1774870667
+        "updated_at": 1775238909
     },
     {
         "name": "1183A872-100",
@@ -9074,7 +9064,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775226583
+        "updated_at": 1775238909
     },
     {
         "name": "091143",
@@ -9402,7 +9392,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775226583
+        "updated_at": 1775238909
     },
     {
         "name": "397452-02",
@@ -9414,7 +9404,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775226583
+        "updated_at": 1775238909
     },
     {
         "name": "397452-02",
@@ -9720,17 +9710,12 @@
                 "price_display": "2,090,000đ"
             },
             {
-                "size": "38",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1775226583
+        "updated_at": 1775238909
     },
     {
         "name": "Giày Puma Speedcat OG 'Black' 401698_01",
@@ -10320,33 +10305,6 @@
             }
         ],
         "updated_at": 1774112362
-    },
-    {
-        "name": "Vp12 xanh trắng",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "36.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
-                "size": "37.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            }
-        ],
-        "updated_at": 1774994353
     },
     {
         "name": "Willson xanh biển",
