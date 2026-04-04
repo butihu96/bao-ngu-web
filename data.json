@@ -44,23 +44,6 @@
         "updated_at": 1774674934
     },
     {
-        "name": "Air Jordan 1 Low ‘Rattan’ 553558-153",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            }
-        ],
-        "updated_at": 1774264256
-    },
-    {
         "name": "CZ0220-111",
         "brand": "Nike",
         "variants": [
@@ -370,6 +353,28 @@
             }
         ],
         "updated_at": 1774674934
+    },
+    {
+        "name": "FV5552-402",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "41",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1775296653
     },
     {
         "name": "FV5552-403",
@@ -762,14 +767,9 @@
                 "size": "42.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1774763693
+        "updated_at": 1775296653
     },
     {
         "name": "Giày (WMNS) Nike V2K Run 'Grey Pink' FZ5061-100",
@@ -789,28 +789,6 @@
                 "size": "38.5",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
-            }
-        ],
-        "updated_at": 1773168478
-    },
-    {
-        "name": "Giày Air Jordan 1 Low 'Reverse Panda' 553558-132 / 553560-132",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "35.5",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
-            },
-            {
-                "size": "36.5",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
-            },
-            {
-                "size": "37.5",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
             }
         ],
         "updated_at": 1773168478
@@ -846,82 +824,6 @@
             }
         ],
         "updated_at": 1774778179
-    },
-    {
-        "name": "Giày Nike Air Jordan 1 Low GS 'Mystic Green' 553560-113",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "35.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
-                "size": "36",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
-                "size": "36.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
-                "size": "37.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            }
-        ],
-        "updated_at": 1773168478
-    },
-    {
-        "name": "Giày Nike Air Jordan 1 Low Smoke Grey V3 553558-040",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "41",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            }
-        ],
-        "updated_at": 1773310131
-    },
-    {
-        "name": "Giày Nike Air Jordan Courtside 23 'Khaki Dark Brown' FQ6861-121",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "36",
-                "price": 1650000,
-                "price_display": "1,650,000đ"
-            }
-        ],
-        "updated_at": 1773168478
     },
     {
         "name": "Giày Nike Air Zoom Vapor 12 ‘Pale Ivory/Vachetta Tan’ FV5554-109",
@@ -1217,50 +1119,6 @@
             }
         ],
         "updated_at": 1774590747
-    },
-    {
-        "name": "Giày Nike Dunk Low ‘Team Red’ DD1391-601",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "42",
-                "price": 2290000,
-                "price_display": "2,290,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2290000,
-                "price_display": "2,290,000đ"
-            }
-        ],
-        "updated_at": 1773168478
-    },
-    {
-        "name": "Giày Nike Jordan 1 Low Reverse Black Toe (W) DC0774-160",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "38.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
-                "size": "41",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
-                "size": "43",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            }
-        ],
-        "updated_at": 1773168478
     },
     {
         "name": "Giày Nike Killshot 2 'Midnight Navy' 432997-107 / FZ5630-102",
@@ -1873,18 +1731,6 @@
             }
         ],
         "updated_at": 1774413426
-    },
-    {
-        "name": "Giày Tennis/Pickleball Nike GP Challenge Pro Premium FQ7728-001",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "41",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            }
-        ],
-        "updated_at": 1774870667
     },
     {
         "name": "Giày Tennis/Pickleball Nike GP Challenge Pro Premium HF1161-300",
@@ -2664,117 +2510,6 @@
         "updated_at": 1774367247
     },
     {
-        "name": "Nike Air Jordan 1 Low 'Grey White' 553558-044",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "41",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            }
-        ],
-        "updated_at": 1773724494
-    },
-    {
-        "name": "Nike Air Jordan 1 Low 'Panda' DC0774-101",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "38",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "40",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
-                "size": "41",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            },
-            {
-                "size": "44.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            }
-        ],
-        "updated_at": 1774367247
-    },
-    {
-        "name": "Nike Air Jordan 1 Low Triple White 553560-136(gs) /553558-136 (men) /DV0990-111 wm",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "35.5",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
-            },
-            {
-                "size": "36-375",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            },
-            {
-                "size": "40-41",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            }
-        ],
-        "updated_at": 1773168478
-    },
-    {
         "name": "Nike Air Zoom Vapor Pro 3 FZ2158-500",
         "brand": "Nike",
         "variants": [
@@ -3000,28 +2735,6 @@
             }
         ],
         "updated_at": 1774264256
-    },
-    {
-        "name": "Nike Men's Air Zoom Vapor 12 HC FV5552-402",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "41",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
-                "size": "42",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
-            }
-        ],
-        "updated_at": 1775279741
     },
     {
         "name": "Nike ReactX Rejuven8 'Light Orewood Brown' HV5060-100 men",
@@ -3784,8 +3497,8 @@
         "variants": [
             {
                 "size": "36.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "37.5",
@@ -3818,7 +3531,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1775195516
+        "updated_at": 1775296653
     },
     {
         "name": "vapor 12 đen trắng FV5552-001",
@@ -4394,7 +4107,7 @@
                 "price_display": "2,950,000đ"
             },
             {
-                "size": "43.5",
+                "size": "42.5",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
             },
@@ -4404,7 +4117,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1775279741
+        "updated_at": 1775296653
     },
     {
         "name": "1041A483-102",
@@ -4453,6 +4166,11 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "40.5",
+                "price": 2090000,
+                "price_display": "2,090,000đ"
+            },
+            {
                 "size": "41.5",
                 "price": 2090000,
                 "price_display": "2,090,000đ"
@@ -4468,7 +4186,7 @@
                 "price_display": "2,090,000đ"
             }
         ],
-        "updated_at": 1774955651
+        "updated_at": 1775296653
     },
     {
         "name": "1041A489-102",
@@ -4809,9 +4527,14 @@
         "updated_at": 1774674934
     },
     {
-        "name": "1042A294-700",
+        "name": "1042A294-700-22,75",
         "brand": "Asics",
         "variants": [
+            {
+                "size": "36",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
             {
                 "size": "37.5",
                 "price": 2600000,
@@ -4843,7 +4566,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1774955651
+        "updated_at": 1775296653
     },
     {
         "name": "ASICS GEL-ROCKET 12 tím 1072A119-400",
@@ -5341,12 +5064,12 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "39.5",
+                "size": "39",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
             },
             {
-                "size": "39",
+                "size": "39.5",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
             },
@@ -5391,7 +5114,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1775144281
+        "updated_at": 1775296653
     },
     {
         "name": "Gel X trang den 1041A487-103( WIDE) 1041A481-103( thường)",
@@ -7271,14 +6994,9 @@
                 "size": "42",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1774413426
+        "updated_at": 1775296653
     },
     {
         "name": "Skechers Viper Court Pro 2.0 246109WW_WBK",
@@ -7893,6 +7611,18 @@
         "updated_at": 1774674934
     },
     {
+        "name": "30S26208B-2051",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "43",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            }
+        ],
+        "updated_at": 1775296653
+    },
+    {
         "name": "31S26630B-1117",
         "brand": "Babolat",
         "variants": [
@@ -8143,11 +7873,6 @@
                 "price_display": "800,000đ"
             },
             {
-                "size": "41",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
                 "size": "41.5",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
@@ -8168,7 +7893,7 @@
                 "price_display": "800,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775296653
     },
     {
         "name": "Giày Babolat SFX 4 All Court 'Black/White' 30S26529A-2051",
@@ -8838,6 +8563,11 @@
                 "price_display": "3,190,000đ"
             },
             {
+                "size": "41",
+                "price": 3190000,
+                "price_display": "3,190,000đ"
+            },
+            {
                 "size": "42",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
@@ -8853,7 +8583,7 @@
                 "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1775210949
+        "updated_at": 1775296653
     },
     {
         "name": "WRS338580",
@@ -9053,7 +8783,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775279741
+        "updated_at": 1775296653
     },
     {
         "name": "091143",
@@ -9244,6 +8974,11 @@
                 "price_display": "3,560,000đ"
             },
             {
+                "size": "38",
+                "price": 3560000,
+                "price_display": "3,560,000đ"
+            },
+            {
                 "size": "39",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
@@ -9254,7 +8989,7 @@
                 "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1775128312
+        "updated_at": 1775296653
     },
     {
         "name": "1182A678-001",
@@ -9381,7 +9116,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775279741
+        "updated_at": 1775296653
     },
     {
         "name": "397452-02",
@@ -9393,7 +9128,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775279741
+        "updated_at": 1775296653
     },
     {
         "name": "397452-02",
@@ -9647,12 +9382,12 @@
                 "price_display": "2,350,000đ"
             },
             {
-                "size": "39.5",
+                "size": "40",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
             },
             {
-                "size": "40",
+                "size": "40.5",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
             },
@@ -9672,7 +9407,7 @@
                 "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1774526514
+        "updated_at": 1775296653
     },
     {
         "name": "Giày Puma Speedcat Ballet 'Dark Chocolate' 406758-02",
