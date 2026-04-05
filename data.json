@@ -308,6 +308,18 @@
         "updated_at": 1773168478
     },
     {
+        "name": "FB3148-104",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            }
+        ],
+        "updated_at": 1775397909
+    },
+    {
         "name": "FD6575-107",
         "brand": "Nike",
         "variants": [
@@ -542,11 +554,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -557,7 +564,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1774691686
+        "updated_at": 1775397909
     },
     {
         "name": "FV5554-400",
@@ -2911,12 +2918,12 @@
                 "price_display": "2,550,000đ"
             },
             {
-                "size": "38.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
+                "size": "38",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
             },
             {
-                "size": "38",
+                "size": "38.5",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             },
@@ -2931,7 +2938,7 @@
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775383250
+        "updated_at": 1775397909
     },
     {
         "name": "dx4816-300",
@@ -2984,14 +2991,14 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "38",
+                "size": "38.5",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
             },
             {
-                "size": "38.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
+                "size": "38",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "39",
@@ -3004,7 +3011,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1775311462
+        "updated_at": 1775397909
     },
     {
         "name": "vapor 12 đen trắng FV5552-001",
@@ -3110,14 +3117,9 @@
                 "size": "39",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
-            },
-            {
-                "size": "40",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1775383250
+        "updated_at": 1775397909
     },
     {
         "name": "vp3 trắng xanh min FZ2158-106",
@@ -7380,7 +7382,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775383250
+        "updated_at": 1775397909
     },
     {
         "name": "091143",
@@ -7735,7 +7737,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775383250
+        "updated_at": 1775397909
     },
     {
         "name": "397452-02",
@@ -7747,7 +7749,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775383250
+        "updated_at": 1775397909
     },
     {
         "name": "397452-02",
