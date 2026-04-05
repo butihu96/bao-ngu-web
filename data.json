@@ -639,17 +639,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "37.5",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            },
-            {
                 "size": "38",
                 "price": 1990000,
                 "price_display": "1,990,000đ"
             }
         ],
-        "updated_at": 1775195516
+        "updated_at": 1775368549
     },
     {
         "name": "FZ2156-700",
@@ -3384,18 +3379,6 @@
         "updated_at": 1774994353
     },
     {
-        "name": "Vp 12 Be Cam IB6555-100 VP12TRAWSNG SỌC XANH",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "42.5",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            }
-        ],
-        "updated_at": 1775311462
-    },
-    {
         "name": "Vp12 Trắng Xanh FV5552-108",
         "brand": "Nike",
         "variants": [
@@ -5410,6 +5393,33 @@
         "updated_at": 1774526514
     },
     {
+        "name": "Giày Asics GS Upcourt 6 'Morganite White' 1074A045-702",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 1590000,
+                "price_display": "1,590,000đ"
+            },
+            {
+                "size": "37",
+                "price": 1690000,
+                "price_display": "1,690,000đ"
+            },
+            {
+                "size": "38",
+                "price": 1590000,
+                "price_display": "1,590,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1590000,
+                "price_display": "1,590,000đ"
+            }
+        ],
+        "updated_at": 1775368549
+    },
+    {
         "name": "Giày Asics Gel Resolution X 'White Black' 1041A481-100",
         "brand": "Asics",
         "variants": [
@@ -5440,11 +5450,11 @@
             },
             {
                 "size": "44",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
+                "price": 3290000,
+                "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1774691686
+        "updated_at": 1775368549
     },
     {
         "name": "Giày Asics Gel Resolution X GS 'Blue' 1044A081-401",
@@ -5959,18 +5969,6 @@
             }
         ],
         "updated_at": 1774994353
-    },
-    {
-        "name": "Tennis/Pickleball Asics Gel-Resolution X Men’s “Green” 1041A481-300",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "42",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            }
-        ],
-        "updated_at": 1774413426
     },
     {
         "name": "Tennis/Pickleball Nữ Asics Court Slide 4  1042A283-102",
@@ -7480,9 +7478,14 @@
                 "price_display": "3,900,000đ"
             },
             {
+                "size": "38",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
                 "size": "39",
-                "price": 4290000,
-                "price_display": "4,290,000đ"
+                "price": 3900000,
+                "price_display": "3,900,000đ"
             },
             {
                 "size": "40",
@@ -7500,7 +7503,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1775311462
+        "updated_at": 1775368549
     },
     {
         "name": "On roger pro be 3WD10293334",
@@ -7954,11 +7957,6 @@
                 "price_display": "3,450,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "43",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
@@ -7974,7 +7972,7 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1775210949
+        "updated_at": 1775368549
     },
     {
         "name": "Giày Babolat Jet Mach 4 'Black' 30S26629B-2036",
@@ -8577,14 +8575,9 @@
                 "size": "43.3",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775368549
     },
     {
         "name": "WRS337500",
@@ -8819,17 +8812,12 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "38.6",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
                 "size": "40",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1775226583
+        "updated_at": 1775368549
     },
     {
         "name": "WRS338920",
@@ -8963,7 +8951,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775336573
+        "updated_at": 1775368549
     },
     {
         "name": "091143",
@@ -9057,28 +9045,6 @@
             }
         ],
         "updated_at": 1773931302
-    },
-    {
-        "name": "1074A045-702",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
-            },
-            {
-                "size": "38",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
-            },
-            {
-                "size": "39",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
-            }
-        ],
-        "updated_at": 1775195516
     },
     {
         "name": "1182A660-001",
@@ -9223,17 +9189,12 @@
                 "price_display": "3,560,000đ"
             },
             {
-                "size": "39",
-                "price": 3560000,
-                "price_display": "3,560,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1773897423
+        "updated_at": 1775368549
     },
     {
         "name": "1182A678-750",
@@ -9296,7 +9257,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775336573
+        "updated_at": 1775368549
     },
     {
         "name": "397452-02",
@@ -9308,7 +9269,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775336573
+        "updated_at": 1775368549
     },
     {
         "name": "397452-02",
@@ -10092,18 +10053,6 @@
             }
         ],
         "updated_at": 1773168478
-    },
-    {
-        "name": "Pro2 trắng",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "38",
-                "price": 3800000,
-                "price_display": "3,800,000đ"
-            }
-        ],
-        "updated_at": 1775144281
     },
     {
         "name": "Puma Speedcat OG Black Pink  400986_09",
