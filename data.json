@@ -124,17 +124,12 @@
                 "price_display": "2,350,000đ"
             },
             {
-                "size": "38",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "39",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1775043052
+        "updated_at": 1775552952
     },
     {
         "name": "DH2987-100",
@@ -2270,17 +2265,12 @@
                 "price_display": "2,550,000đ"
             },
             {
-                "size": "42",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
                 "size": "44",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775466858
+        "updated_at": 1775552952
     },
     {
         "name": "IH4052-530",
@@ -2347,9 +2337,14 @@
                 "size": "40",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1775540914
+        "updated_at": 1775552952
     },
     {
         "name": "IR8316-401",
@@ -3119,8 +3114,8 @@
             },
             {
                 "size": "42.5",
-                "price": 2300000,
-                "price_display": "2,300,000đ"
+                "price": 2600000,
+                "price_display": "2,600,000đ"
             },
             {
                 "size": "43",
@@ -3128,7 +3123,7 @@
                 "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775552952
     },
     {
         "name": "VAPOR 3 XÁM GHI FZ2158-401",
@@ -3209,17 +3204,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "42.5",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
                 "size": "44.5",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1775024035
+        "updated_at": 1775552952
     },
     {
         "name": "VP3 XANH ĐEN IB6550-700",
@@ -3279,8 +3269,8 @@
             },
             {
                 "size": "42.5",
-                "price": 3650000,
-                "price_display": "3,650,000đ"
+                "price": 3700000,
+                "price_display": "3,700,000đ"
             },
             {
                 "size": "43",
@@ -3293,7 +3283,7 @@
                 "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1775279741
+        "updated_at": 1775552952
     },
     {
         "name": "Vapor 12 trắng đỏ hv1149-100",
@@ -3389,8 +3379,8 @@
             },
             {
                 "size": "40.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "42",
@@ -3413,7 +3403,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1775540914
+        "updated_at": 1775552952
     },
     {
         "name": "dx4816-300",
@@ -4809,12 +4799,17 @@
                 "price_display": "2,550,000đ"
             },
             {
+                "size": "39",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
                 "size": "39.5",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775552952
     },
     {
         "name": "CLG 15 xanh min 1042A294-300",
@@ -6682,14 +6677,9 @@
                 "size": "38",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
-            },
-            {
-                "size": "39",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1774001057
+        "updated_at": 1775552952
     },
     {
         "name": "1183b566-021",
@@ -6716,17 +6706,12 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "39",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1774870667
+        "updated_at": 1775552952
     },
     {
         "name": "Giày Onitsuka Tiger Mexico 66 Black Yellow 1183C102-751",
@@ -7627,11 +7612,6 @@
                 "price_display": "2,500,000đ"
             },
             {
-                "size": "42",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
@@ -7642,7 +7622,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775552952
     },
     {
         "name": "30S26208B-2051",
@@ -8772,7 +8752,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775540914
+        "updated_at": 1775552952
     },
     {
         "name": "091143",
@@ -8921,7 +8901,7 @@
                 "price_display": "3,560,000đ"
             },
             {
-                "size": "37",
+                "size": "38",
                 "price": 3560000,
                 "price_display": "3,560,000đ"
             },
@@ -8931,7 +8911,7 @@
                 "price_display": "3,560,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775552952
     },
     {
         "name": "1182A678-001",
@@ -9053,7 +9033,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775540914
+        "updated_at": 1775552952
     },
     {
         "name": "397452-02",
@@ -9065,7 +9045,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775540914
+        "updated_at": 1775552952
     },
     {
         "name": "397452-02",
