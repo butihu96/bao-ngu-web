@@ -65,11 +65,6 @@
                 "price_display": "2,300,000đ"
             },
             {
-                "size": "41",
-                "price": 2390000,
-                "price_display": "2,390,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 2300000,
                 "price_display": "2,300,000đ"
@@ -80,7 +75,7 @@
                 "price_display": "2,390,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775540914
     },
     {
         "name": "Chalenger pro xanh đỏ HJ6767-500",
@@ -315,11 +310,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "41",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -345,7 +335,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1775466858
+        "updated_at": 1775540914
     },
     {
         "name": "FV5552-104",
@@ -369,17 +359,12 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "42",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "44",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1775296653
+        "updated_at": 1775540914
     },
     {
         "name": "FV5552-403",
@@ -428,6 +413,11 @@
                 "price_display": "3,650,000đ"
             },
             {
+                "size": "38",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
                 "size": "38.5",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
@@ -436,9 +426,14 @@
                 "size": "39",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1775494545
+        "updated_at": 1775540914
     },
     {
         "name": "FV5554-300",
@@ -1576,11 +1571,11 @@
             },
             {
                 "size": "37.5",
-                "price": 1200000,
-                "price_display": "1,200,000đ"
+                "price": 1900000,
+                "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "Giày Pickleball Nike Vapor Pro 3 White/Black – FZ2161-101",
@@ -1762,14 +1757,9 @@
                 "size": "37.5",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "Giày Tennis/Pickleball Nike Zoom Vapor 12 White Black FV5552-101 / FV5554-100",
@@ -2048,12 +2038,22 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40.5",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
+                "size": "41",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775540914
     },
     {
         "name": "HQ3484-121",
@@ -2324,6 +2324,11 @@
                 "price_display": "2,750,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -2344,7 +2349,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "IR8316-401",
@@ -3379,8 +3384,8 @@
             },
             {
                 "size": "40",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "40.5",
@@ -3408,7 +3413,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1775494545
+        "updated_at": 1775540914
     },
     {
         "name": "dx4816-300",
@@ -4370,11 +4375,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "37",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 2090000,
                 "price_display": "2,090,000đ"
@@ -4395,7 +4395,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1775109121
+        "updated_at": 1775540914
     },
     {
         "name": "1042A237-300",
@@ -4923,14 +4923,9 @@
                 "size": "39",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
-            },
-            {
-                "size": "40",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "Clg 15 trắng đen 1041A510-101",
@@ -5334,11 +5329,11 @@
             },
             {
                 "size": "39",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
+                "price": 1690000,
+                "price_display": "1,690,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "Giày Asics Gel Resolution X 'White Black' 1041A481-100",
@@ -8731,23 +8726,6 @@
         "updated_at": 1775530077
     },
     {
-        "name": "WRS340140U-245  1/3",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "37",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            },
-            {
-                "size": "39",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            }
-        ],
-        "updated_at": 1775481616
-    },
-    {
         "name": "Willson navy WRS337060",
         "brand": "Wilson",
         "variants": [
@@ -8794,7 +8772,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "091143",
@@ -9075,7 +9053,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "397452-02",
@@ -9087,7 +9065,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775540914
     },
     {
         "name": "397452-02",
