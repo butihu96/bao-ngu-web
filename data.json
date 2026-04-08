@@ -2447,9 +2447,14 @@
                 "size": "42.5",
                 "price": 1800000,
                 "price_display": "1,800,000đ"
+            },
+            {
+                "size": "44",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             }
         ],
-        "updated_at": 1775043052
+        "updated_at": 1775668191
     },
     {
         "name": "Nike ReactX Rejuven8 Spruce Aura Light Silver HV5060-005",
@@ -2720,11 +2725,6 @@
                 "price_display": "3,650,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3700000,
-                "price_display": "3,700,000đ"
-            },
-            {
                 "size": "43",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
@@ -2735,7 +2735,7 @@
                 "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1775654891
+        "updated_at": 1775668191
     },
     {
         "name": "Vapor 12 trắng đỏ hv1149-100",
@@ -3373,14 +3373,9 @@
                 "size": "42.6",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
-            },
-            {
-                "size": "43.3",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1775210949
+        "updated_at": 1775668191
     },
     {
         "name": "JQ7141",
@@ -4011,33 +4006,6 @@
         "updated_at": 1774674934
     },
     {
-        "name": "1042A220-107",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "39",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "40",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            }
-        ],
-        "updated_at": 1775654891
-    },
-    {
         "name": "1042A220-701",
         "brand": "Asics",
         "variants": [
@@ -4209,11 +4177,6 @@
                 "price_display": "3,100,000đ"
             },
             {
-                "size": "39",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
@@ -4224,7 +4187,7 @@
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1775639294
+        "updated_at": 1775668191
     },
     {
         "name": "1042A279-103",
@@ -5034,11 +4997,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "35.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
                 "size": "44",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
@@ -5049,7 +5007,7 @@
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775668191
     },
     {
         "name": "RX bule white 1041A481-101",
@@ -7292,7 +7250,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775654891
+        "updated_at": 1775668191
     },
     {
         "name": "091143",
@@ -7617,7 +7575,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775654891
+        "updated_at": 1775668191
     },
     {
         "name": "397452-02",
@@ -7629,7 +7587,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775654891
+        "updated_at": 1775668191
     },
     {
         "name": "397452-02",
