@@ -310,11 +310,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "43",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -330,7 +325,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1775540914
+        "updated_at": 1775616551
     },
     {
         "name": "FV5552-104",
@@ -1068,6 +1063,11 @@
                 "price_display": "1,500,000đ"
             },
             {
+                "size": "38",
+                "price": 1500000,
+                "price_display": "1,500,000đ"
+            },
+            {
                 "size": "39",
                 "price": 1500000,
                 "price_display": "1,500,000đ"
@@ -1098,7 +1098,7 @@
                 "price_display": "1,600,000đ"
             }
         ],
-        "updated_at": 1774590747
+        "updated_at": 1775616551
     },
     {
         "name": "Giày Nike Killshot 2 'Midnight Navy' 432997-107 / FZ5630-102",
@@ -5392,9 +5392,14 @@
                 "size": "42",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1775530077
+        "updated_at": 1775616551
     },
     {
         "name": "Giày Asics SOLUTION SWIFT FF 2 1042A265-400",
@@ -7607,14 +7612,9 @@
                 "size": "36.5",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1775616551
     },
     {
         "name": "31S26630B-4150",
@@ -7798,14 +7798,9 @@
                 "size": "42",
                 "price": 3500000,
                 "price_display": "3,500,000đ"
-            },
-            {
-                "size": "43",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
             }
         ],
-        "updated_at": 1775568422
+        "updated_at": 1775616551
     },
     {
         "name": "Giày Babolat SFX 4 All Court 'Black/White' 30S26529A-2051",
@@ -8692,7 +8687,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775595233
+        "updated_at": 1775616551
     },
     {
         "name": "091143",
@@ -8973,7 +8968,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775595233
+        "updated_at": 1775616551
     },
     {
         "name": "397452-02",
@@ -8985,7 +8980,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775595233
+        "updated_at": 1775616551
     },
     {
         "name": "397452-02",
