@@ -843,14 +843,14 @@
                 "price_display": "2,690,000đ"
             },
             {
-                "size": "42",
+                "size": "42.5",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
+                "size": "42",
+                "price": 2690000,
+                "price_display": "2,690,000đ"
             },
             {
                 "size": "43",
@@ -858,7 +858,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1774955651
+        "updated_at": 1775702625
     },
     {
         "name": "FZ2161-109",
@@ -2118,14 +2118,9 @@
                 "size": "40",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1775702625
     },
     {
         "name": "IR8316-401",
@@ -2933,17 +2928,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "38",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
                 "size": "40",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775654891
+        "updated_at": 1775702625
     },
     {
         "name": "dx4816-300",
@@ -3119,17 +3109,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "38",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1775654891
+        "updated_at": 1775702625
     },
     {
         "name": "Adidas Samba Jane Cloud White Pink (Women's) jr4482",
@@ -4781,8 +4766,8 @@
             },
             {
                 "size": "41.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2090000,
+                "price_display": "2,090,000đ"
             },
             {
                 "size": "42",
@@ -4805,7 +4790,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775702625
     },
     {
         "name": "Gel X hồng 1041A481-700",
@@ -6284,18 +6269,6 @@
         "updated_at": 1774994353
     },
     {
-        "name": "The roger pro Fine hồng 3WF30033606 (women)",
-        "brand": "On",
-        "variants": [
-            {
-                "size": "39",
-                "price": 4200000,
-                "price_display": "4,200,000đ"
-            }
-        ],
-        "updated_at": 1775654891
-    },
-    {
         "name": "The roger pro Fine trắng hồng 3WF30032626",
         "brand": "On",
         "variants": [
@@ -7250,7 +7223,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775681487
+        "updated_at": 1775702625
     },
     {
         "name": "091143",
@@ -7554,18 +7527,6 @@
         "updated_at": 1774526514
     },
     {
-        "name": "31S24651-4123",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "39",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
-            }
-        ],
-        "updated_at": 1774674934
-    },
-    {
         "name": "397452-02",
         "brand": "Khác",
         "variants": [
@@ -7575,7 +7536,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775681487
+        "updated_at": 1775702625
     },
     {
         "name": "397452-02",
@@ -7587,7 +7548,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775681487
+        "updated_at": 1775702625
     },
     {
         "name": "397452-02",
