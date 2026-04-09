@@ -800,8 +800,8 @@
             },
             {
                 "size": "42",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
+                "price": 2590000,
+                "price_display": "2,590,000đ"
             },
             {
                 "size": "43",
@@ -814,7 +814,7 @@
                 "price_display": "2,450,000đ"
             }
         ],
-        "updated_at": 1775128312
+        "updated_at": 1775754752
     },
     {
         "name": "FZ2161-108",
@@ -1931,17 +1931,12 @@
                 "price_display": "3,600,000đ"
             },
             {
-                "size": "42",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
-            },
-            {
                 "size": "43",
                 "price": 3700000,
                 "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1775754752
     },
     {
         "name": "HV1488-100",
@@ -4527,17 +4522,17 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "39.5",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
                 "size": "39",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1775713874
+        "updated_at": 1775754752
     },
     {
         "name": "Clg 15 trắng đen 1041A510-101",
@@ -6347,17 +6342,12 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "42.5",
-                "price": 3350000,
-                "price_display": "3,350,000đ"
-            },
-            {
                 "size": "44.5",
                 "price": 3350000,
                 "price_display": "3,350,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1775754752
     },
     {
         "name": "31S26630B-1117",
@@ -7159,7 +7149,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775742721
+        "updated_at": 1775754752
     },
     {
         "name": "091143",
@@ -7472,7 +7462,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775742721
+        "updated_at": 1775754752
     },
     {
         "name": "397452-02",
@@ -7484,7 +7474,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775742721
+        "updated_at": 1775754752
     },
     {
         "name": "397452-02",
@@ -8066,6 +8056,107 @@
             }
         ],
         "updated_at": 1774526514
+    },
+    {
+        "name": "Loto trắng",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "39",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "41",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "42",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "43",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "44",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1775754752
+    },
+    {
+        "name": "Loto trắng hồng",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "36",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "37",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "38",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1775754752
+    },
+    {
+        "name": "Loto vàng",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "36",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "37",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "38",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1950000,
+                "price_display": "1,950,000đ"
+            }
+        ],
+        "updated_at": 1775754752
     },
     {
         "name": "New Balance 550 White Green BB550WT1",
