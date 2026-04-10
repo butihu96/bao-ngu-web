@@ -1792,11 +1792,6 @@
                 "price_display": "3,250,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
@@ -1807,7 +1802,7 @@
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1775827252
     },
     {
         "name": "HV1452-100",
@@ -2851,8 +2846,8 @@
             },
             {
                 "size": "42",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "42.5",
@@ -2870,7 +2865,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1775827252
     },
     {
         "name": "Vp12 xanh trắng HJ6650-300",
@@ -2946,8 +2941,8 @@
         "variants": [
             {
                 "size": "36.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
+                "price": 3400000,
+                "price_display": "3,400,000đ"
             },
             {
                 "size": "37.5",
@@ -2975,7 +2970,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1775742721
+        "updated_at": 1775827252
     },
     {
         "name": "vapor 12 đen trắng FV5552-001",
@@ -3071,14 +3066,9 @@
                 "size": "38",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1775827252
     },
     {
         "name": "vp3 trắng xanh min FZ2158-106",
@@ -3097,14 +3087,14 @@
         "brand": "Adidas",
         "variants": [
             {
-                "size": "36",
-                "price": 1450000,
-                "price_display": "1,450,000đ"
-            },
-            {
                 "size": "36.5",
                 "price": 1800000,
                 "price_display": "1,800,000đ"
+            },
+            {
+                "size": "36",
+                "price": 1450000,
+                "price_display": "1,450,000đ"
             },
             {
                 "size": "37",
@@ -3137,7 +3127,7 @@
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1775654891
+        "updated_at": 1775827252
     },
     {
         "name": "Adidas Samba OG White Gum",
@@ -3701,11 +3691,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "41.5",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
@@ -3721,7 +3706,7 @@
                 "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1775827252
     },
     {
         "name": "1041A408-003",
@@ -3964,14 +3949,9 @@
         "updated_at": 1775444095
     },
     {
-        "name": "1042A237-106-22,75",
+        "name": "1042A237-106",
         "brand": "Asics",
         "variants": [
-            {
-                "size": "36",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
             {
                 "size": "37.5",
                 "price": 2090000,
@@ -3993,7 +3973,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1775742721
+        "updated_at": 1775827252
     },
     {
         "name": "1042A237-300",
@@ -4118,17 +4098,12 @@
                 "price_display": "3,100,000đ"
             },
             {
-                "size": "39.5",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            },
-            {
                 "size": "40",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1775668191
+        "updated_at": 1775827252
     },
     {
         "name": "1042A279-103",
@@ -5506,11 +5481,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
-            },
-            {
                 "size": "37",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
@@ -5536,7 +5506,7 @@
                 "price_display": "4,000,000đ"
             }
         ],
-        "updated_at": 1774870667
+        "updated_at": 1775827252
     },
     {
         "name": "1183C015-201",
@@ -5593,19 +5563,9 @@
                 "size": "37.5",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
-            },
-            {
-                "size": "38",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
             }
         ],
-        "updated_at": 1775800843
+        "updated_at": 1775827252
     },
     {
         "name": "1183C102-001",
@@ -5632,17 +5592,12 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "39",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1774870667
+        "updated_at": 1775827252
     },
     {
         "name": "1183C102-005",
@@ -5770,17 +5725,12 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "39",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1774886209
+        "updated_at": 1775827252
     },
     {
         "name": "1183C102-201",
@@ -5903,14 +5853,9 @@
                 "size": "38",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1775552952
+        "updated_at": 1775827252
     },
     {
         "name": "Giày Onitsuka Tiger Mexico 66 Black Yellow 1183C102-751",
@@ -5944,11 +5889,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "37",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -5969,7 +5909,7 @@
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1775455257
+        "updated_at": 1775827252
     },
     {
         "name": "Onitsuka Tiger Advanti 'Cream White Black' 1183B799-101",
@@ -6461,14 +6401,9 @@
                 "size": "44",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
-            },
-            {
-                "size": "45",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1775827252
     },
     {
         "name": "SFX EVO TRẮNG XANH 31S26556A-1112(WM)",
@@ -6876,11 +6811,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40.6",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "41.3",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
@@ -6891,7 +6821,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1775466858
+        "updated_at": 1775827252
     },
     {
         "name": "WRS338520",
@@ -6908,17 +6838,12 @@
                 "price_display": "3,200,000đ"
             },
             {
-                "size": "42.6",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "43.3",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1775789704
+        "updated_at": 1775827252
     },
     {
         "name": "WRS338520U-255 2/3",
@@ -7167,7 +7092,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1775827252
     },
     {
         "name": "091143",
@@ -7480,7 +7405,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1775827252
     },
     {
         "name": "397452-02",
@@ -7492,7 +7417,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1775827252
     },
     {
         "name": "397452-02",
@@ -7747,11 +7672,6 @@
         "brand": "Puma",
         "variants": [
             {
-                "size": "36",
-                "price": 2290000,
-                "price_display": "2,290,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 2290000,
                 "price_display": "2,290,000đ"
@@ -7767,7 +7687,7 @@
                 "price_display": "2,290,000đ"
             }
         ],
-        "updated_at": 1774526514
+        "updated_at": 1775827252
     },
     {
         "name": "Giày Puma Speedcat OG ‘Red White’ 401698-02",
@@ -8059,36 +7979,36 @@
         "variants": [
             {
                 "size": "39",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "40",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "41",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "42",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "43",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "44",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1775754752
+        "updated_at": 1775827252
     },
     {
         "name": "Loto trắng hồng",
@@ -8096,31 +8016,31 @@
         "variants": [
             {
                 "size": "36",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "37",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "38",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "39",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "40",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1775754752
+        "updated_at": 1775827252
     },
     {
         "name": "Loto vàng",
@@ -8128,31 +8048,31 @@
         "variants": [
             {
                 "size": "36",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "37",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "38",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "39",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
                 "size": "40",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1775754752
+        "updated_at": 1775827252
     },
     {
         "name": "New Balance 550 White Green BB550WT1",
