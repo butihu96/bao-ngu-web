@@ -132,23 +132,6 @@
         "updated_at": 1775552952
     },
     {
-        "name": "Chalenger pro đỏ cam FQ4155-800",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "36.5",
-                "price": 2100000,
-                "price_display": "2,100,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2100000,
-                "price_display": "2,100,000đ"
-            }
-        ],
-        "updated_at": 1775789704
-    },
-    {
         "name": "DH2987-100",
         "brand": "Nike",
         "variants": [
@@ -889,38 +872,6 @@
             }
         ],
         "updated_at": 1775481616
-    },
-    {
-        "name": "FZ2161-401",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
-                "size": "40",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "41",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            }
-        ],
-        "updated_at": 1775742721
     },
     {
         "name": "FZ2161-403",
@@ -2167,11 +2118,6 @@
                 "price_display": "3,750,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3750000,
-                "price_display": "3,750,000đ"
-            },
-            {
                 "size": "43",
                 "price": 3750000,
                 "price_display": "3,750,000đ"
@@ -2182,7 +2128,7 @@
                 "price_display": "3,750,000đ"
             }
         ],
-        "updated_at": 1775726068
+        "updated_at": 1775800843
     },
     {
         "name": "JQ7141-275  1/3",
@@ -2571,6 +2517,38 @@
         "updated_at": 1774994353
     },
     {
+        "name": "VAPOR 3 XANH FZ2161-401",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2300000,
+                "price_display": "2,300,000đ"
+            }
+        ],
+        "updated_at": 1775800843
+    },
+    {
         "name": "VAPOR 3 XÁM GHI FZ2158-401",
         "brand": "Nike",
         "variants": [
@@ -2902,16 +2880,21 @@
         "updated_at": 1775627358
     },
     {
-        "name": "chalenger gp nâu IB6560-109",
+        "name": "chalenger gp nâu IB6560-109 Chalenger pro đỏ cam FQ4155-800",
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
+                "size": "36.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
+                "size": "38.5",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775789704
+        "updated_at": 1775800843
     },
     {
         "name": "dx4816-300",
@@ -4765,12 +4748,17 @@
                 "price_display": "2,950,000đ"
             },
             {
+                "size": "43.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
                 "size": "44",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1775742721
+        "updated_at": 1775800843
     },
     {
         "name": "Gel X trang den 1041A487-103( WIDE) 1041A481-103( thường)",
@@ -4800,9 +4788,14 @@
                 "size": "42",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1775800843
     },
     {
         "name": "Gel X đen xanh 1041a481-003",
@@ -5582,17 +5575,12 @@
                 "price_display": "4,000,000đ"
             },
             {
-                "size": "39",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
             }
         ],
-        "updated_at": 1775713874
+        "updated_at": 1775800843
     },
     {
         "name": "1183C102-001",
@@ -6308,12 +6296,17 @@
                 "price_display": "2,500,000đ"
             },
             {
+                "size": "42",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
                 "size": "43",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1775713874
+        "updated_at": 1775800843
     },
     {
         "name": "30S26208B-2051",
@@ -7114,7 +7107,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775789704
+        "updated_at": 1775800843
     },
     {
         "name": "091143",
@@ -7427,7 +7420,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775789704
+        "updated_at": 1775800843
     },
     {
         "name": "397452-02",
@@ -7439,7 +7432,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775789704
+        "updated_at": 1775800843
     },
     {
         "name": "397452-02",
