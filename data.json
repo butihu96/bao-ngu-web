@@ -232,11 +232,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36.5",
-                "price": 1490000,
-                "price_display": "1,490,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 1490000,
                 "price_display": "1,490,000đ"
@@ -257,7 +252,7 @@
                 "price_display": "1,490,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1775875192
     },
     {
         "name": "DR6192-101",
@@ -535,11 +530,6 @@
                 "price_display": "3,250,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
@@ -555,7 +545,7 @@
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1775875192
     },
     {
         "name": "FV5554-400",
@@ -697,11 +687,6 @@
                 "price_display": "2,050,000đ"
             },
             {
-                "size": "37.5",
-                "price": 2050000,
-                "price_display": "2,050,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
@@ -717,7 +702,7 @@
                 "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1775568422
+        "updated_at": 1775875192
     },
     {
         "name": "FZ2156-102",
@@ -1564,11 +1549,6 @@
                 "price_display": "1,350,000đ"
             },
             {
-                "size": "42",
-                "price": 1350000,
-                "price_display": "1,350,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 1350000,
                 "price_display": "1,350,000đ"
@@ -1579,7 +1559,7 @@
                 "price_display": "1,350,000đ"
             }
         ],
-        "updated_at": 1775639294
+        "updated_at": 1775875192
     },
     {
         "name": "HJ9198-005",
@@ -2025,14 +2005,9 @@
                 "size": "40.5",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1775726068
+        "updated_at": 1775875192
     },
     {
         "name": "IH4052-530",
@@ -7082,7 +7057,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775853820
+        "updated_at": 1775875192
     },
     {
         "name": "091143",
@@ -7395,7 +7370,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775853820
+        "updated_at": 1775875192
     },
     {
         "name": "397452-02",
@@ -7407,7 +7382,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775853820
+        "updated_at": 1775875192
     },
     {
         "name": "397452-02",
