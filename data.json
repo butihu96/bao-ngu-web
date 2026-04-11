@@ -745,6 +745,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "39",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -780,7 +785,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1775897489
     },
     {
         "name": "FZ2161-104",
@@ -2106,14 +2111,9 @@
                 "size": "42",
                 "price": 3750000,
                 "price_display": "3,750,000đ"
-            },
-            {
-                "size": "43",
-                "price": 3750000,
-                "price_display": "3,750,000đ"
             }
         ],
-        "updated_at": 1775885214
+        "updated_at": 1775897489
     },
     {
         "name": "JQ7141-275  1/3",
@@ -2654,6 +2654,11 @@
                 "price_display": "3,650,000đ"
             },
             {
+                "size": "42.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
                 "size": "43",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
@@ -2664,7 +2669,7 @@
                 "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1775668191
+        "updated_at": 1775897489
     },
     {
         "name": "Vapor 12 trắng đỏ hv1149-100",
@@ -2789,41 +2794,46 @@
         "variants": [
             {
                 "size": "39",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "40",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "40.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "42",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "42.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "43",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "44",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1775827252
+        "updated_at": 1775897489
     },
     {
         "name": "Vp12 xanh trắng HJ6650-300",
@@ -3318,6 +3328,11 @@
                 "price_display": "2,650,000đ"
             },
             {
+                "size": "42",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "42.6",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3333,7 +3348,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1775639294
+        "updated_at": 1775897489
     },
     {
         "name": "JR1743",
@@ -3642,11 +3657,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "42.5",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
-            },
-            {
                 "size": "43.5",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
@@ -3657,7 +3667,7 @@
                 "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1775827252
+        "updated_at": 1775897489
     },
     {
         "name": "1041A408-003",
@@ -3715,6 +3725,11 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "40.5",
+                "price": 3200000,
+                "price_display": "3,200,000đ"
+            },
+            {
                 "size": "41.5",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -3735,7 +3750,7 @@
                 "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1775742721
+        "updated_at": 1775897489
     },
     {
         "name": "1041A481-103",
@@ -4049,12 +4064,17 @@
                 "price_display": "3,100,000đ"
             },
             {
+                "size": "39",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
                 "size": "40",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1775827252
+        "updated_at": 1775897489
     },
     {
         "name": "1042A279-103",
@@ -4362,11 +4382,6 @@
                 "price_display": "2,300,000đ"
             },
             {
-                "size": "40",
-                "price": 2300000,
-                "price_display": "2,300,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2300000,
                 "price_display": "2,300,000đ"
@@ -4397,7 +4412,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1775238909
+        "updated_at": 1775897489
     },
     {
         "name": "Clg 15 trắng tím hồng 1042a294-103",
@@ -4425,8 +4440,8 @@
             },
             {
                 "size": "39",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "39.5",
@@ -4439,7 +4454,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1775885214
+        "updated_at": 1775897489
     },
     {
         "name": "Clg 15 trắng đen 1041A510-101",
@@ -6483,27 +6498,42 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "36",
+                "price": 3950000,
+                "price_display": "3,950,000đ"
+            },
+            {
+                "size": "36.6",
+                "price": 3950000,
+                "price_display": "3,950,000đ"
+            },
+            {
+                "size": "37.3",
+                "price": 3950000,
+                "price_display": "3,950,000đ"
+            },
+            {
                 "size": "38",
-                "price": 3700000,
-                "price_display": "3,700,000đ"
+                "price": 3950000,
+                "price_display": "3,950,000đ"
             },
             {
                 "size": "38.6",
-                "price": 3700000,
-                "price_display": "3,700,000đ"
+                "price": 3950000,
+                "price_display": "3,950,000đ"
             },
             {
                 "size": "39.3",
-                "price": 3700000,
-                "price_display": "3,700,000đ"
+                "price": 3950000,
+                "price_display": "3,950,000đ"
             },
             {
                 "size": "40",
-                "price": 3700000,
-                "price_display": "3,700,000đ"
+                "price": 3950000,
+                "price_display": "3,950,000đ"
             }
         ],
-        "updated_at": 1775568422
+        "updated_at": 1775897489
     },
     {
         "name": "WRS335000",
@@ -6585,11 +6615,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "40.6",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
@@ -6620,7 +6645,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1775639294
+        "updated_at": 1775897489
     },
     {
         "name": "WRS337500",
@@ -6644,11 +6669,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "36.6",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -6669,7 +6689,44 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1775383250
+        "updated_at": 1775897489
+    },
+    {
+        "name": "WRS338240",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "40",
+                "price": 4300000,
+                "price_display": "4,300,000đ"
+            },
+            {
+                "size": "40.6",
+                "price": 4300000,
+                "price_display": "4,300,000đ"
+            },
+            {
+                "size": "41.3",
+                "price": 4300000,
+                "price_display": "4,300,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4300000,
+                "price_display": "4,300,000đ"
+            },
+            {
+                "size": "42.6",
+                "price": 4300000,
+                "price_display": "4,300,000đ"
+            },
+            {
+                "size": "43.3",
+                "price": 4300000,
+                "price_display": "4,300,000đ"
+            }
+        ],
+        "updated_at": 1775897489
     },
     {
         "name": "WRS338310",
@@ -6730,7 +6787,17 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "40.6",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
                 "size": "41.3",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
+                "size": "42",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
             },
@@ -6740,7 +6807,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1775827252
+        "updated_at": 1775897489
     },
     {
         "name": "WRS338520",
@@ -7011,7 +7078,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1775885214
+        "updated_at": 1775897489
     },
     {
         "name": "091143",
@@ -7129,14 +7196,9 @@
                 "size": "38",
                 "price": 1590000,
                 "price_display": "1,590,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
             }
         ],
-        "updated_at": 1773931302
+        "updated_at": 1775897489
     },
     {
         "name": "1074A045-702",
@@ -7324,7 +7386,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775885214
+        "updated_at": 1775897489
     },
     {
         "name": "397452-02",
@@ -7336,7 +7398,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1775885214
+        "updated_at": 1775897489
     },
     {
         "name": "397452-02",
@@ -7498,9 +7560,14 @@
                 "size": "38",
                 "price": 1200000,
                 "price_display": "1,200,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 1200000,
+                "price_display": "1,200,000đ"
             }
         ],
-        "updated_at": 1775726068
+        "updated_at": 1775897489
     },
     {
         "name": "Giày New Balance 530 Running Navy MR530SG",
@@ -8206,6 +8273,43 @@
             }
         ],
         "updated_at": 1774112362
+    },
+    {
+        "name": "Vapor 12 min min",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "36",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            }
+        ],
+        "updated_at": 1775897489
     },
     {
         "name": "Willson xanh biển",
