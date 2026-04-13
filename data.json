@@ -2025,11 +2025,6 @@
                 "price_display": "2,550,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
@@ -2040,7 +2035,7 @@
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776088177
     },
     {
         "name": "IH4052-530",
@@ -3699,12 +3694,17 @@
                 "price_display": "2,000,000đ"
             },
             {
+                "size": "42.5",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
                 "size": "43.5",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1775128312
+        "updated_at": 1776088177
     },
     {
         "name": "1041A408-300",
@@ -4440,8 +4440,8 @@
             },
             {
                 "size": "37.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "38",
@@ -4464,7 +4464,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1775897489
+        "updated_at": 1776088177
     },
     {
         "name": "Clg 15 trắng đen 1041A510-101",
@@ -5928,14 +5928,9 @@
                 "size": "37 24",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
-            },
-            {
-                "size": "37.5 24.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1775568422
+        "updated_at": 1776088177
     },
     {
         "name": "Trắng Hồng 172109/WMLT",
@@ -7026,7 +7021,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776088177
     },
     {
         "name": "091143",
@@ -7324,7 +7319,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776088177
     },
     {
         "name": "397452-02",
@@ -7336,7 +7331,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776088177
     },
     {
         "name": "397452-02",
