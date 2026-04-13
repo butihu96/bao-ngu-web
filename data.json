@@ -487,14 +487,9 @@
                 "size": "42.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1776100124
     },
     {
         "name": "FV5554-100",
@@ -877,8 +872,8 @@
             },
             {
                 "size": "40.5",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "41",
@@ -906,7 +901,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776100124
     },
     {
         "name": "FZ2161-403",
@@ -1293,11 +1288,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "38",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            },
-            {
                 "size": "40-405",
                 "price": 1850000,
                 "price_display": "1,850,000đ"
@@ -1323,7 +1313,7 @@
                 "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1775581529
+        "updated_at": 1776100124
     },
     {
         "name": "Giày Nike V2K Run ''Summit White - HJ5269-100",
@@ -2025,6 +2015,11 @@
                 "price_display": "2,550,000đ"
             },
             {
+                "size": "42.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
                 "size": "43",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
@@ -2035,7 +2030,7 @@
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1776088177
+        "updated_at": 1776100124
     },
     {
         "name": "IH4052-530",
@@ -6317,12 +6312,12 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "38",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "size": "38.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             },
             {
-                "size": "38.5",
+                "size": "38",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             },
@@ -6332,7 +6327,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1775999454
+        "updated_at": 1776100124
     },
     {
         "name": "SFX EVO XÁM 30S26555A-3039 (MEN)",
@@ -7021,7 +7016,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776088177
+        "updated_at": 1776100124
     },
     {
         "name": "091143",
@@ -7319,7 +7314,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776088177
+        "updated_at": 1776100124
     },
     {
         "name": "397452-02",
@@ -7331,7 +7326,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776088177
+        "updated_at": 1776100124
     },
     {
         "name": "397452-02",
