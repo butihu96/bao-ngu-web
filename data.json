@@ -1971,12 +1971,17 @@
                 "price_display": "2,550,000đ"
             },
             {
+                "size": "42.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
                 "size": "44",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1776146546
+        "updated_at": 1776174894
     },
     {
         "name": "IH4052-530",
@@ -3941,17 +3946,12 @@
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "39",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
-            {
                 "size": "40",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1775444095
+        "updated_at": 1776174894
     },
     {
         "name": "1042A265-701",
@@ -4110,14 +4110,9 @@
                 "size": "37.5",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
-            },
-            {
-                "size": "38",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1775984135
+        "updated_at": 1776174894
     },
     {
         "name": "1042A294-100",
@@ -5715,12 +5710,17 @@
                 "price_display": "3,290,000đ"
             },
             {
+                "size": "37",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            },
+            {
                 "size": "39",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1774870667
+        "updated_at": 1776174894
     },
     {
         "name": "1183C102-701",
@@ -6551,11 +6551,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "41.3",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
@@ -6571,7 +6566,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1775984135
+        "updated_at": 1776174894
     },
     {
         "name": "WRS337200",
@@ -6627,11 +6622,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "36",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -6652,7 +6642,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776174894
     },
     {
         "name": "WRS338240",
@@ -7006,7 +6996,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776174894
     },
     {
         "name": "091143",
@@ -7065,14 +7055,9 @@
                 "size": "38",
                 "price": 1490000,
                 "price_display": "1,490,000đ"
-            },
-            {
-                "size": "39",
-                "price": 1490000,
-                "price_display": "1,490,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1776174894
     },
     {
         "name": "1074A045-103",
@@ -7136,14 +7121,9 @@
                 "size": "37.5",
                 "price": 1590000,
                 "price_display": "1,590,000đ"
-            },
-            {
-                "size": "38",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1776174894
     },
     {
         "name": "1182A660-001",
@@ -7304,7 +7284,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776174894
     },
     {
         "name": "397452-02",
@@ -7316,7 +7296,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776174894
     },
     {
         "name": "397452-02",
