@@ -1731,17 +1731,12 @@
                 "price_display": "3,250,000đ"
             },
             {
-                "size": "38",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1776061148
+        "updated_at": 1776232954
     },
     {
         "name": "HV1452-100",
@@ -1887,11 +1882,6 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "41",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
@@ -1912,7 +1902,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776232954
     },
     {
         "name": "IB8171-999",
@@ -2987,6 +2977,11 @@
                 "price_display": "2,750,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "38.5",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
@@ -3002,7 +2997,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1776221644
+        "updated_at": 1776232954
     },
     {
         "name": "vp3 trang do HV1376-100",
@@ -3395,11 +3390,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "38.6",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "39.3",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3410,7 +3400,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1775311462
+        "updated_at": 1776232954
     },
     {
         "name": "JR1763",
@@ -4627,11 +4617,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "39",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
@@ -4667,12 +4652,12 @@
                 "price_display": "2,900,000đ"
             },
             {
-                "size": "44",
+                "size": "44.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1776146546
+        "updated_at": 1776232954
     },
     {
         "name": "Gel X trang den 1041A487-103( WIDE) 1041A481-103( thường)",
@@ -5439,11 +5424,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 4000000,
-                "price_display": "4,000,000đ"
-            },
-            {
                 "size": "37",
                 "price": 4000000,
                 "price_display": "4,000,000đ"
@@ -5454,7 +5434,7 @@
                 "price_display": "4,000,000đ"
             }
         ],
-        "updated_at": 1776146546
+        "updated_at": 1776232954
     },
     {
         "name": "1183C102-001",
@@ -5913,19 +5893,7 @@
         "updated_at": 1776088177
     },
     {
-        "name": "Trắng Hồng 172109/WMLT",
-        "brand": "Skechers",
-        "variants": [
-            {
-                "size": "39.5 26.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            }
-        ],
-        "updated_at": 1775568422
-    },
-    {
-        "name": "Women Hồng đậm 172109/HPK ( women)",
+        "name": "Trắng Hồng 172109/WMLT Women Hồng đậm 172109/HPK ( women)",
         "brand": "Skechers",
         "variants": [
             {
@@ -5944,7 +5912,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1776232954
     },
     {
         "name": "On roger pro be 3WD10293334",
@@ -6614,11 +6582,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40.6",
-                "price": 4300000,
-                "price_display": "4,300,000đ"
-            },
-            {
                 "size": "41.3",
                 "price": 4300000,
                 "price_display": "4,300,000đ"
@@ -6634,7 +6597,7 @@
                 "price_display": "4,300,000đ"
             }
         ],
-        "updated_at": 1775999454
+        "updated_at": 1776232954
     },
     {
         "name": "WRS338310",
@@ -6924,11 +6887,6 @@
                 "price_display": "3,900,000đ"
             },
             {
-                "size": "36 2/3",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
@@ -6944,7 +6902,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1776012335
+        "updated_at": 1776232954
     },
     {
         "name": "091143",
@@ -6956,7 +6914,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776221644
+        "updated_at": 1776232954
     },
     {
         "name": "091143",
@@ -6997,11 +6955,6 @@
         "brand": "Khác",
         "variants": [
             {
-                "size": "36",
-                "price": 1490000,
-                "price_display": "1,490,000đ"
-            },
-            {
                 "size": "37",
                 "price": 1490000,
                 "price_display": "1,490,000đ"
@@ -7017,7 +6970,7 @@
                 "price_display": "1,490,000đ"
             }
         ],
-        "updated_at": 1776174894
+        "updated_at": 1776232954
     },
     {
         "name": "1074A045-103",
@@ -7244,7 +7197,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776221644
+        "updated_at": 1776232954
     },
     {
         "name": "397452-02",
@@ -7256,7 +7209,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776221644
+        "updated_at": 1776232954
     },
     {
         "name": "397452-02",
@@ -7475,8 +7428,8 @@
             },
             {
                 "size": "36",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
+                "price": 2200000,
+                "price_display": "2,200,000đ"
             },
             {
                 "size": "37",
@@ -7499,7 +7452,7 @@
                 "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1775494545
+        "updated_at": 1776232954
     },
     {
         "name": "Giày Puma Speedcat OG 'Black' 401698_01",
