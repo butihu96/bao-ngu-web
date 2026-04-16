@@ -2818,14 +2818,9 @@
                 "size": "39",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1776074377
+        "updated_at": 1776347848
     },
     {
         "name": "vapor 12 đen trắng FV5552-001",
@@ -3138,17 +3133,12 @@
         "brand": "Adidas",
         "variants": [
             {
-                "size": "38",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            },
-            {
                 "size": "38.6",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1774674934
+        "updated_at": 1776347848
     },
     {
         "name": "IH8158",
@@ -3521,28 +3511,6 @@
             }
         ],
         "updated_at": 1775627358
-    },
-    {
-        "name": "1041A370-106",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "39.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
-                "size": "43.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            }
-        ],
-        "updated_at": 1775984135
     },
     {
         "name": "1041A370-404",
@@ -4424,6 +4392,48 @@
         "updated_at": 1774994353
     },
     {
+        "name": "FF3 court trắng đen 1041A370-106",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "39.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            }
+        ],
+        "updated_at": 1776347848
+    },
+    {
         "name": "FF4 speed tims women 1042A307-500",
         "brand": "Asics",
         "variants": [
@@ -4574,14 +4584,9 @@
                 "size": "42.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
-            },
-            {
-                "size": "44.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776347848
     },
     {
         "name": "Gel X trang den 1041A487-103( WIDE) 1041A481-103( thường)",
@@ -6030,12 +6035,17 @@
                 "price_display": "2,500,000đ"
             },
             {
+                "size": "42.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
                 "size": "43",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1775885214
+        "updated_at": 1776347848
     },
     {
         "name": "30S26208B-2051",
@@ -6053,11 +6063,6 @@
         "name": "30S26208C-7023",
         "brand": "Babolat",
         "variants": [
-            {
-                "size": "40.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
             {
                 "size": "41",
                 "price": 2650000,
@@ -6084,7 +6089,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776347848
     },
     {
         "name": "30S26649C-7023",
@@ -6096,17 +6101,12 @@
                 "price_display": "2,150,000đ"
             },
             {
-                "size": "44",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
                 "size": "44.5",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1776319499
+        "updated_at": 1776347848
     },
     {
         "name": "31S26530A-4145",
@@ -6151,18 +6151,6 @@
         "updated_at": 1776260911
     },
     {
-        "name": "31S26630B-1117",
-        "brand": "Babolat",
-        "variants": [
-            {
-                "size": "36.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            }
-        ],
-        "updated_at": 1775616551
-    },
-    {
         "name": "31S26630B-4150",
         "brand": "Babolat",
         "variants": [
@@ -6178,6 +6166,48 @@
             }
         ],
         "updated_at": 1775466858
+    },
+    {
+        "name": "31S26651C-4144",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            },
+            {
+                "size": "37",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2050000,
+                "price_display": "2,050,000đ"
+            }
+        ],
+        "updated_at": 1776347848
     },
     {
         "name": "Babolat furry 3 đen xám men 30S26208B 2051",
@@ -6892,7 +6922,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776347848
     },
     {
         "name": "091143",
@@ -7165,7 +7195,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776347848
     },
     {
         "name": "397452-02",
@@ -7177,7 +7207,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776347848
     },
     {
         "name": "397452-02",
@@ -7368,17 +7398,12 @@
                 "price_display": "2,350,000đ"
             },
             {
-                "size": "42",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1776245125
+        "updated_at": 1776347848
     },
     {
         "name": "Giày Puma Speedcat Ballet 'Dark Chocolate' 406758-02",
