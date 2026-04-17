@@ -120,6 +120,23 @@
         "updated_at": 1776146546
     },
     {
+        "name": "Chalenger pro đỏ cam FQ4155-800",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2100000,
+                "price_display": "2,100,000đ"
+            }
+        ],
+        "updated_at": 1776405966
+    },
+    {
         "name": "DH2987-100",
         "brand": "Nike",
         "variants": [
@@ -413,6 +430,16 @@
                 "price_display": "3,600,000đ"
             },
             {
+                "size": "40",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
                 "size": "41",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -421,9 +448,19 @@
                 "size": "42",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1776221644
+        "updated_at": 1776405966
     },
     {
         "name": "FV5552-403",
@@ -1198,11 +1235,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "39",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
@@ -1213,7 +1245,7 @@
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1776405966
     },
     {
         "name": "Giày Nike Killshot 2 'Midnight Navy' 432997-107 / FZ5630-102",
@@ -2750,23 +2782,6 @@
         "updated_at": 1776061148
     },
     {
-        "name": "chalenger gp nâu IB6560-109 Chalenger pro đỏ cam FQ4155-800",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "36.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            }
-        ],
-        "updated_at": 1775800843
-    },
-    {
         "name": "dx4816-300",
         "brand": "Nike",
         "variants": [
@@ -2940,6 +2955,11 @@
                 "price_display": "2,700,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
                 "size": "38.5",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
@@ -2955,7 +2975,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1775885214
+        "updated_at": 1776405966
     },
     {
         "name": "vp3 trắng xanh min FZ2158-106",
@@ -5365,17 +5385,12 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "38",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1775827252
+        "updated_at": 1776405966
     },
     {
         "name": "1183C102-005",
@@ -5918,17 +5933,17 @@
         "brand": "On",
         "variants": [
             {
-                "size": "41",
+                "size": "37",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             },
             {
-                "size": "42",
+                "size": "41",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1776405966
     },
     {
         "name": "The roger pro Fine xanh hồng 3WF30593496",
@@ -6089,14 +6104,9 @@
                 "size": "42.5",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
-            },
-            {
-                "size": "44.5",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1776347848
+        "updated_at": 1776405966
     },
     {
         "name": "31S26530A-4145",
@@ -6339,11 +6349,6 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "42",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
@@ -6354,7 +6359,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1776405966
     },
     {
         "name": "babolat jet tere 2 trang do",
@@ -6902,7 +6907,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776394603
+        "updated_at": 1776405966
     },
     {
         "name": "091143",
@@ -7175,7 +7180,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776394603
+        "updated_at": 1776405966
     },
     {
         "name": "397452-02",
@@ -7187,7 +7192,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776394603
+        "updated_at": 1776405966
     },
     {
         "name": "397452-02",
@@ -7503,6 +7508,11 @@
                 "price_display": "1,200,000đ"
             },
             {
+                "size": "36",
+                "price": 1200000,
+                "price_display": "1,200,000đ"
+            },
+            {
                 "size": "38",
                 "price": 1200000,
                 "price_display": "1,200,000đ"
@@ -7513,7 +7523,7 @@
                 "price_display": "1,200,000đ"
             }
         ],
-        "updated_at": 1775812548
+        "updated_at": 1776405966
     },
     {
         "name": "Jeep 2 dây qoai màu xanh P651w13112",
@@ -7925,9 +7935,19 @@
                 "size": "40",
                 "price": 750000,
                 "price_display": "750,000đ"
+            },
+            {
+                "size": "41",
+                "price": 750000,
+                "price_display": "750,000đ"
+            },
+            {
+                "size": "42",
+                "price": 750000,
+                "price_display": "750,000đ"
             }
         ],
-        "updated_at": 1775912882
+        "updated_at": 1776405966
     },
     {
         "name": "P651W13129 suc jeep xanh qoai đỏ",
@@ -8042,6 +8062,48 @@
             }
         ],
         "updated_at": 1774112362
+    },
+    {
+        "name": "Vp3 Trắng",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "39",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            }
+        ],
+        "updated_at": 1776405966
     },
     {
         "name": "Willson xanh biển",
