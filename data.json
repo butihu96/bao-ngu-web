@@ -2529,22 +2529,37 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "37.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "size": "36.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
-                "size": "38.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "size": "37.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "38",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1775999454
+        "updated_at": 1776417821
     },
     {
         "name": "Vapor 12 hypersamsh hồng HV1488-600",
@@ -3277,6 +3292,16 @@
         "brand": "Adidas",
         "variants": [
             {
+                "size": "40",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "40.6",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "41.3",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3297,7 +3322,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776417821
     },
     {
         "name": "JR1743",
@@ -3388,9 +3413,19 @@
                 "size": "38.6",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
+            },
+            {
+                "size": "39.3",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1776394603
+        "updated_at": 1776417821
     },
     {
         "name": "JS2562",
@@ -4277,8 +4312,8 @@
             },
             {
                 "size": "37.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "38",
@@ -4301,7 +4336,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776417821
     },
     {
         "name": "Clg 15 trắng xanh 1041A510-103",
@@ -4453,11 +4488,6 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "36",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "37",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
@@ -4468,7 +4498,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776417821
     },
     {
         "name": "FF4 speed trắng hồng 1042A307-100",
@@ -6185,19 +6215,56 @@
                 "size": "37",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2050000,
-                "price_display": "2,050,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2050000,
-                "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1776394603
+        "updated_at": 1776417821
+    },
+    {
+        "name": "Babolat furry 3 xanh chuối men",
+        "brand": "Babolat",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            }
+        ],
+        "updated_at": 1776417821
     },
     {
         "name": "Babolat furry 3 đen xám men 30S26208B 2051",
@@ -6907,7 +6974,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776405966
+        "updated_at": 1776417821
     },
     {
         "name": "091143",
@@ -7180,7 +7247,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776405966
+        "updated_at": 1776417821
     },
     {
         "name": "397452-02",
@@ -7192,7 +7259,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776405966
+        "updated_at": 1776417821
     },
     {
         "name": "397452-02",
