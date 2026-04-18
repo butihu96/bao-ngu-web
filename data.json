@@ -1555,11 +1555,6 @@
                 "price_display": "1,450,000đ"
             },
             {
-                "size": "41",
-                "price": 1450000,
-                "price_display": "1,450,000đ"
-            },
-            {
                 "size": "42",
                 "price": 1450000,
                 "price_display": "1,450,000đ"
@@ -1580,7 +1575,7 @@
                 "price_display": "1,450,000đ"
             }
         ],
-        "updated_at": 1773241066
+        "updated_at": 1776502607
     },
     {
         "name": "HJ9198-007",
@@ -1773,12 +1768,32 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
                 "size": "43",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1776490998
+        "updated_at": 1776502607
     },
     {
         "name": "HV1474-200",
@@ -2648,14 +2663,9 @@
                 "size": "37.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1776433229
+        "updated_at": 1776502607
     },
     {
         "name": "Vapor 12 vàng chanh HF7834-300",
@@ -3292,6 +3302,11 @@
         "brand": "Adidas",
         "variants": [
             {
+                "size": "40",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "40.6",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3315,9 +3330,14 @@
                 "size": "43.3",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776480472
+        "updated_at": 1776502607
     },
     {
         "name": "JR1743",
@@ -3855,11 +3875,6 @@
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "37",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2090000,
                 "price_display": "2,090,000đ"
@@ -3875,7 +3890,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776502607
     },
     {
         "name": "1042A265-701",
@@ -4517,17 +4532,12 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "39",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1775238909
+        "updated_at": 1776502607
     },
     {
         "name": "Game FF trang xanh 1041A489-104",
@@ -6017,34 +6027,24 @@
         "brand": "On",
         "variants": [
             {
-                "size": "37",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1776405966
+        "updated_at": 1776502607
     },
     {
         "name": "The roger pro Fine xanh hồng 3WF30593496",
         "brand": "On",
         "variants": [
             {
-                "size": "38.5",
-                "price": 4100000,
-                "price_display": "4,100,000đ"
-            },
-            {
                 "size": "40",
                 "price": 4100000,
                 "price_display": "4,100,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776502607
     },
     {
         "name": "The roger pro clay",
@@ -6183,11 +6183,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -6198,7 +6193,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776347848
+        "updated_at": 1776502607
     },
     {
         "name": "30S26649C-7023",
@@ -6728,6 +6723,11 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "41.3",
+                "price": 4300000,
+                "price_display": "4,300,000đ"
+            },
+            {
                 "size": "42",
                 "price": 4300000,
                 "price_display": "4,300,000đ"
@@ -6738,7 +6738,7 @@
                 "price_display": "4,300,000đ"
             }
         ],
-        "updated_at": 1776309652
+        "updated_at": 1776502607
     },
     {
         "name": "WRS338310",
@@ -7028,7 +7028,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776490998
+        "updated_at": 1776502607
     },
     {
         "name": "091143",
@@ -7301,7 +7301,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776490998
+        "updated_at": 1776502607
     },
     {
         "name": "397452-02",
@@ -7313,7 +7313,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776490998
+        "updated_at": 1776502607
     },
     {
         "name": "397452-02",
@@ -7636,11 +7636,6 @@
         "brand": "Khác",
         "variants": [
             {
-                "size": "35",
-                "price": 1200000,
-                "price_display": "1,200,000đ"
-            },
-            {
                 "size": "36",
                 "price": 1200000,
                 "price_display": "1,200,000đ"
@@ -7656,7 +7651,7 @@
                 "price_display": "1,200,000đ"
             }
         ],
-        "updated_at": 1776405966
+        "updated_at": 1776502607
     },
     {
         "name": "Jeep 2 dây qoai màu xanh P651w13112",
