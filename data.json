@@ -769,17 +769,12 @@
                 "price_display": "2,600,000đ"
             },
             {
-                "size": "44.5",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
                 "size": "45",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1776433229
+        "updated_at": 1776480472
     },
     {
         "name": "FZ2161-104",
@@ -2269,7 +2264,7 @@
                 "price_display": "2,000,000đ"
             },
             {
-                "size": "40-41",
+                "size": "41",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             },
@@ -2289,7 +2284,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1776480472
     },
     {
         "name": "Nike Air Jordan 1 Retro Low OG X PSG Paris Saint Germain HF8828-100",
@@ -3312,11 +3307,6 @@
         "brand": "Adidas",
         "variants": [
             {
-                "size": "40",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "40.6",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3342,7 +3332,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776417821
+        "updated_at": 1776480472
     },
     {
         "name": "JR1743",
@@ -5811,9 +5801,14 @@
                 "size": "38",
                 "price": 3090000,
                 "price_display": "3,090,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 3090000,
+                "price_display": "3,090,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776480472
     },
     {
         "name": "172109-LTPK",
@@ -6861,14 +6856,9 @@
                 "size": "43",
                 "price": 3190000,
                 "price_display": "3,190,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1776309652
+        "updated_at": 1776480472
     },
     {
         "name": "WRS338580",
@@ -7058,7 +7048,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776459143
+        "updated_at": 1776480472
     },
     {
         "name": "091143",
@@ -7331,7 +7321,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776459143
+        "updated_at": 1776480472
     },
     {
         "name": "397452-02",
@@ -7343,7 +7333,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776459143
+        "updated_at": 1776480472
     },
     {
         "name": "397452-02",
@@ -8267,6 +8257,18 @@
             }
         ],
         "updated_at": 1776405966
+    },
+    {
+        "name": "Vp3 vàng xanh",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "38",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            }
+        ],
+        "updated_at": 1776480472
     },
     {
         "name": "Willson xanh biển",
