@@ -729,11 +729,6 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "41",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -754,7 +749,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1776578474
+        "updated_at": 1776604265
     },
     {
         "name": "FZ2161-101",
@@ -2519,8 +2514,8 @@
             },
             {
                 "size": "42.5",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "43",
@@ -2528,7 +2523,7 @@
                 "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1775800843
+        "updated_at": 1776604265
     },
     {
         "name": "VAPOR 3 XÁM GHI FZ2158-401",
@@ -5096,23 +5091,23 @@
         "variants": [
             {
                 "size": "35.5",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "36",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "37",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "37.5",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "39",
@@ -5125,7 +5120,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1776245125
+        "updated_at": 1776604265
     },
     {
         "name": "ggameff trắng hồng 1042A281-103",
@@ -5160,14 +5155,9 @@
                 "size": "39",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1776245125
+        "updated_at": 1776604265
     },
     {
         "name": "1183A201-003",
@@ -5990,9 +5980,14 @@
                 "size": "43",
                 "price": 4800000,
                 "price_display": "4,800,000đ"
+            },
+            {
+                "size": "44",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
             }
         ],
-        "updated_at": 1776568940
+        "updated_at": 1776604265
     },
     {
         "name": "On roger pro fire lime 3WF30034744",
@@ -6170,11 +6165,6 @@
                 "price_display": "4,800,000đ"
             },
             {
-                "size": "38.5",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 4800000,
                 "price_display": "4,800,000đ"
@@ -6190,7 +6180,7 @@
                 "price_display": "4,800,000đ"
             }
         ],
-        "updated_at": 1776433229
+        "updated_at": 1776604265
     },
     {
         "name": "on roger ADV pro bule pink 3WF10183015 ( women)",
@@ -7108,7 +7098,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776589182
+        "updated_at": 1776604265
     },
     {
         "name": "091143",
@@ -7426,7 +7416,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776589182
+        "updated_at": 1776604265
     },
     {
         "name": "397452-02",
@@ -7438,7 +7428,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1776589182
+        "updated_at": 1776604265
     },
     {
         "name": "397452-02",
@@ -8259,18 +8249,6 @@
         "updated_at": 1773168478
     },
     {
-        "name": "Puma Speedcat OG Black Pink  400986_09",
-        "brand": "Puma",
-        "variants": [
-            {
-                "size": "36",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            }
-        ],
-        "updated_at": 1774936631
-    },
-    {
         "name": "SHTS3LACEX-630",
         "brand": "Khác",
         "variants": [
@@ -8369,14 +8347,9 @@
                 "size": "42.5",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1776405966
+        "updated_at": 1776604265
     },
     {
         "name": "Vp3 vàng xanh",
