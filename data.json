@@ -2984,11 +2984,6 @@
                 "price_display": "2,250,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "42",
                 "price": 1450000,
                 "price_display": "1,450,000đ"
@@ -3009,7 +3004,7 @@
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1776693137
+        "updated_at": 1776704953
     },
     {
         "name": "Adidas Samba OG White Gum",
@@ -3321,6 +3316,11 @@
                 "price_display": "2,650,000đ"
             },
             {
+                "size": "38",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "38.6",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3336,7 +3336,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776704953
     },
     {
         "name": "JR1763",
@@ -3463,6 +3463,16 @@
         "brand": "Adidas",
         "variants": [
             {
+                "size": "40",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "40.6",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "41.3",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3488,7 +3498,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776433229
+        "updated_at": 1776704953
     },
     {
         "name": "or clubhouse pro all wwhite 3WD30050202 ( women )",
@@ -7050,7 +7060,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776693137
+        "updated_at": 1776704953
     },
     {
         "name": "091143",
@@ -7358,7 +7368,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776693137
+        "updated_at": 1776704953
     },
     {
         "name": "397452-02",
@@ -7370,7 +7380,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776693137
+        "updated_at": 1776704953
     },
     {
         "name": "397452-02",
@@ -7563,11 +7573,6 @@
                 "price_display": "2,350,000đ"
             },
             {
-                "size": "40",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
@@ -7578,7 +7583,7 @@
                 "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1776347848
+        "updated_at": 1776704953
     },
     {
         "name": "Giày Puma Speedcat Ballet 'Dark Chocolate' 406758-02",
@@ -7917,43 +7922,6 @@
             }
         ],
         "updated_at": 1774526514
-    },
-    {
-        "name": "Loto trắng",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "39",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            },
-            {
-                "size": "40",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            },
-            {
-                "size": "41",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            },
-            {
-                "size": "42",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            },
-            {
-                "size": "43",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            },
-            {
-                "size": "44",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
-            }
-        ],
-        "updated_at": 1775827252
     },
     {
         "name": "Loto trắng hồng",
