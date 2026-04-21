@@ -496,11 +496,6 @@
                 "price_display": "3,250,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
@@ -516,7 +511,7 @@
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776740243
     },
     {
         "name": "FV5554-400",
@@ -1812,11 +1807,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "41",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -1832,7 +1822,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1776502607
+        "updated_at": 1776740243
     },
     {
         "name": "HV1474-200",
@@ -1949,17 +1939,12 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "43",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "44",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1776232954
+        "updated_at": 1776740243
     },
     {
         "name": "IB8171-999",
@@ -3188,11 +3173,6 @@
                 "price_display": "2,800,000đ"
             },
             {
-                "size": "41.3",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
@@ -3213,7 +3193,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1776740243
     },
     {
         "name": "JQ7141",
@@ -6215,12 +6195,12 @@
                 "price_display": "2,000,000đ"
             },
             {
-                "size": "40",
+                "size": "40.5",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1776260911
+        "updated_at": 1776740243
     },
     {
         "name": "31S26530C-5082",
@@ -6439,14 +6419,9 @@
                 "size": "44.5",
                 "price": 3350000,
                 "price_display": "3,350,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1776273041
+        "updated_at": 1776740243
     },
     {
         "name": "SFX EVO TRẮNG XANH 31S26556A-1112(WM)",
@@ -6821,6 +6796,11 @@
         "brand": "Wilson",
         "variants": [
             {
+                "size": "37",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
@@ -6836,7 +6816,7 @@
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1776589182
+        "updated_at": 1776740243
     },
     {
         "name": "WRS338500",
@@ -6861,26 +6841,9 @@
         "updated_at": 1776061148
     },
     {
-        "name": "WRS338520",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "41.3",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            }
-        ],
-        "updated_at": 1776617333
-    },
-    {
         "name": "WRS338520U-275  1/3",
         "brand": "Wilson",
         "variants": [
-            {
-                "size": "40",
-                "price": 3190000,
-                "price_display": "3,190,000đ"
-            },
             {
                 "size": "42",
                 "price": 3190000,
@@ -6897,7 +6860,7 @@
                 "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1776679367
+        "updated_at": 1776740243
     },
     {
         "name": "WRS338580",
@@ -6939,14 +6902,9 @@
                 "size": "40",
                 "price": 2690000,
                 "price_display": "2,690,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2690000,
-                "price_display": "2,690,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776740243
     },
     {
         "name": "WRS338860",
@@ -7060,7 +7018,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776718436
+        "updated_at": 1776740243
     },
     {
         "name": "091143",
@@ -7180,14 +7138,9 @@
                 "size": "39",
                 "price": 1590000,
                 "price_display": "1,590,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 1590000,
-                "price_display": "1,590,000đ"
             }
         ],
-        "updated_at": 1776517889
+        "updated_at": 1776740243
     },
     {
         "name": "1182A660-001",
@@ -7368,7 +7321,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776718436
+        "updated_at": 1776740243
     },
     {
         "name": "397452-02",
@@ -7380,7 +7333,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776718436
+        "updated_at": 1776740243
     },
     {
         "name": "397452-02",
@@ -7698,6 +7651,11 @@
                 "price_display": "1,200,000đ"
             },
             {
+                "size": "37",
+                "price": 1200000,
+                "price_display": "1,200,000đ"
+            },
+            {
                 "size": "38",
                 "price": 1200000,
                 "price_display": "1,200,000đ"
@@ -7708,7 +7666,7 @@
                 "price_display": "1,200,000đ"
             }
         ],
-        "updated_at": 1776502607
+        "updated_at": 1776740243
     },
     {
         "name": "Jeep 2 dây qoai màu xanh P651w13112",
