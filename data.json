@@ -3490,18 +3490,6 @@
         "updated_at": 1775627358
     },
     {
-        "name": "1041A370-404",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "43.5",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
-            }
-        ],
-        "updated_at": 1776074377
-    },
-    {
         "name": "1041A408-003",
         "brand": "Asics",
         "variants": [
@@ -3768,11 +3756,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "37",
-                "price": 2090000,
-                "price_display": "2,090,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 2090000,
                 "price_display": "2,090,000đ"
@@ -3788,7 +3771,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1776679367
+        "updated_at": 1776791372
     },
     {
         "name": "1042A237-300",
@@ -4284,43 +4267,6 @@
         "updated_at": 1776779584
     },
     {
-        "name": "Clg 15 trắng xanh 1041A510-103",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "40",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
-                "size": "43.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            }
-        ],
-        "updated_at": 1776309652
-    },
-    {
         "name": "Clg 15 xanh xám 1041a510-020",
         "brand": "Asics",
         "variants": [
@@ -4383,16 +4329,105 @@
         "updated_at": 1776779584
     },
     {
+        "name": "Dedicate 8 1041A409-401",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "39",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "42",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "44",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            }
+        ],
+        "updated_at": 1776791372
+    },
+    {
+        "name": "Dedicate 8 1042A236-021",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "36",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "37",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "38",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "39",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            }
+        ],
+        "updated_at": 1776791372
+    },
+    {
         "name": "FF2 Sw trắng hồng 1042A265-102",
         "brand": "Asics",
         "variants": [
             {
                 "size": "35.5",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1776791372
     },
     {
         "name": "FF3 Speed vangf chanh 1042A250-750",
@@ -4449,6 +4484,58 @@
         "updated_at": 1776347848
     },
     {
+        "name": "FF3 xanh 1041A370-404",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "39",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            }
+        ],
+        "updated_at": 1776791372
+    },
+    {
         "name": "FF4 speed tims women 1042A307-500",
         "brand": "Asics",
         "variants": [
@@ -4493,6 +4580,58 @@
         "updated_at": 1776445057
     },
     {
+        "name": "FF4 xanh 1041A532-400",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "39",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            }
+        ],
+        "updated_at": 1776791372
+    },
+    {
         "name": "FF4 xanh lá men 1041A532-300",
         "brand": "Asics",
         "variants": [
@@ -4503,6 +4642,58 @@
             }
         ],
         "updated_at": 1776779584
+    },
+    {
+        "name": "Ff3 trắng xám 1042A220.107",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "36",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "37",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "39",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3400000,
+                "price_display": "3,400,000đ"
+            }
+        ],
+        "updated_at": 1776791372
     },
     {
         "name": "Game FF black pick 1042a281-500 game ff xanh biển 1042a281-100",
@@ -4526,19 +4717,29 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "36",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
+                "size": "37",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
                 "size": "39.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             },
             {
                 "size": "40",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             },
             {
                 "size": "40.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             },
             {
                 "size": "41.5",
@@ -4547,26 +4748,26 @@
             },
             {
                 "size": "42",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             },
             {
                 "size": "42.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             },
             {
                 "size": "43.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             },
             {
                 "size": "44",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
+                "price": 2000000,
+                "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1776146546
+        "updated_at": 1776791372
     },
     {
         "name": "Gel X hồng 1041A481-700",
@@ -4626,6 +4827,63 @@
             }
         ],
         "updated_at": 1776779584
+    },
+    {
+        "name": "Gel X xám 1041A481-402 1041A487-402( bản wide)",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "39",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 2950000,
+                "price_display": "2,950,000đ"
+            }
+        ],
+        "updated_at": 1776791372
     },
     {
         "name": "Gel X đen xanh 1041a481-003",
@@ -4707,6 +4965,53 @@
         "updated_at": 1774526514
     },
     {
+        "name": "RX  xám xanh 1042A279-401",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "36",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "37",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            }
+        ],
+        "updated_at": 1776791372
+    },
+    {
         "name": "RX Trắng Xanh 1042A279.102 1042A279-102 Wide ( 35.5 )",
         "brand": "Asics",
         "variants": [
@@ -4728,6 +5033,11 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "39.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
+            },
+            {
                 "size": "44",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
@@ -4738,7 +5048,7 @@
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1775668191
+        "updated_at": 1776791372
     },
     {
         "name": "RX bule white 1041A481-101",
@@ -4746,16 +5056,16 @@
         "variants": [
             {
                 "size": "42.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             },
             {
                 "size": "43.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1776791372
     },
     {
         "name": "RX trắng hồng 1042A279-104",
@@ -5009,11 +5319,11 @@
         "variants": [
             {
                 "size": "36",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
+                "price": 1600000,
+                "price_display": "1,600,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1776791372
     },
     {
         "name": "gel x trắng tím 1042A279-105",
@@ -5924,17 +6234,12 @@
                 "price_display": "4,800,000đ"
             },
             {
-                "size": "42",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 4800000,
                 "price_display": "4,800,000đ"
             }
         ],
-        "updated_at": 1776433229
+        "updated_at": 1776791372
     },
     {
         "name": "The roger pro 2 bule gren",
@@ -7033,7 +7338,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776779584
+        "updated_at": 1776791372
     },
     {
         "name": "091143",
@@ -7331,7 +7636,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776779584
+        "updated_at": 1776791372
     },
     {
         "name": "397452-02",
@@ -7343,7 +7648,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776779584
+        "updated_at": 1776791372
     },
     {
         "name": "397452-02",
@@ -7524,7 +7829,37 @@
                 "price_display": "2,350,000đ"
             },
             {
+                "size": "38",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
                 "size": "40.5",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
+                "size": "42",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
             },
@@ -7534,7 +7869,7 @@
                 "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1776704953
+        "updated_at": 1776791372
     },
     {
         "name": "Giày Puma Speedcat Ballet 'Dark Chocolate' 406758-02",
