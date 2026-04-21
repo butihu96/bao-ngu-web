@@ -300,11 +300,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36.5",
-                "price": 1790000,
-                "price_display": "1,790,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 1790000,
                 "price_display": "1,790,000đ"
@@ -320,7 +315,7 @@
                 "price_display": "1,790,000đ"
             }
         ],
-        "updated_at": 1776665972
+        "updated_at": 1776779584
     },
     {
         "name": "FN8923-061",
@@ -1413,11 +1408,6 @@
                 "price_display": "2,300,000đ"
             },
             {
-                "size": "38",
-                "price": 2300000,
-                "price_display": "2,300,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 2300000,
                 "price_display": "2,300,000đ"
@@ -1428,7 +1418,7 @@
                 "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1774329384
+        "updated_at": 1776779584
     },
     {
         "name": "Giày Nike V2K Run ‘Cream’ FD0736-103",
@@ -2042,12 +2032,17 @@
                 "price_display": "2,750,000đ"
             },
             {
+                "size": "39",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1776764657
+        "updated_at": 1776779584
     },
     {
         "name": "IR8316-401",
@@ -3019,6 +3014,18 @@
         "updated_at": 1775713874
     },
     {
+        "name": "Bbl propulse junior 3 3J2S25A553-1071",
+        "brand": "Adidas",
+        "variants": [
+            {
+                "size": "38",
+                "price": 1700000,
+                "price_display": "1,700,000đ"
+            }
+        ],
+        "updated_at": 1776779584
+    },
+    {
         "name": "Court hunter trắng đen 1071a111-101",
         "brand": "Adidas",
         "variants": [
@@ -3291,11 +3298,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "38.6",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "39.3",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -3306,7 +3308,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776704953
+        "updated_at": 1776779584
     },
     {
         "name": "JR1763",
@@ -4119,23 +4121,6 @@
         "updated_at": 1774526514
     },
     {
-        "name": "Bbl propulse junior 3 3J2S25A553-1071 game ff xanh biển 1042a281-100",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "37",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
-            },
-            {
-                "size": "38",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
-            }
-        ],
-        "updated_at": 1774994353
-    },
-    {
         "name": "CLG 15 BẠC 1042A294-101",
         "brand": "Asics",
         "variants": [
@@ -4267,8 +4252,8 @@
             },
             {
                 "size": "37",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "37.5",
@@ -4287,8 +4272,8 @@
             },
             {
                 "size": "39.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "40",
@@ -4296,7 +4281,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1776679367
+        "updated_at": 1776779584
     },
     {
         "name": "Clg 15 trắng xanh 1041A510-103",
@@ -4340,7 +4325,17 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "39",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
                 "size": "39.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "40",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             },
@@ -4378,9 +4373,14 @@
                 "size": "44.5",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
+            },
+            {
+                "size": "45",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1776751500
+        "updated_at": 1776779584
     },
     {
         "name": "FF2 Sw trắng hồng 1042A265-102",
@@ -4498,11 +4498,28 @@
         "variants": [
             {
                 "size": "39.5",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1776502607
+        "updated_at": 1776779584
+    },
+    {
+        "name": "Game FF black pick 1042a281-500 game ff xanh biển 1042a281-100",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "37",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            }
+        ],
+        "updated_at": 1776779584
     },
     {
         "name": "Game FF trang xanh 1041A489-104",
@@ -4601,9 +4618,14 @@
                 "size": "39.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1776764657
+        "updated_at": 1776779584
     },
     {
         "name": "Gel X đen xanh 1041a481-003",
@@ -7011,7 +7033,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776764657
+        "updated_at": 1776779584
     },
     {
         "name": "091143",
@@ -7309,7 +7331,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776764657
+        "updated_at": 1776779584
     },
     {
         "name": "397452-02",
@@ -7321,7 +7343,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776764657
+        "updated_at": 1776779584
     },
     {
         "name": "397452-02",
@@ -8173,17 +8195,12 @@
                 "price_display": "2,600,000đ"
             },
             {
-                "size": "42",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1776617333
+        "updated_at": 1776779584
     },
     {
         "name": "Vp3 vàng xanh",
