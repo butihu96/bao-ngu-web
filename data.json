@@ -884,19 +884,19 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "42.5",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
             },
             {
+                "size": "42.5",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "43",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "44",
@@ -904,7 +904,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1776100124
+        "updated_at": 1776914317
     },
     {
         "name": "FZ2161-403",
@@ -1899,17 +1899,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "44",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1776837733
+        "updated_at": 1776914317
     },
     {
         "name": "IB8171-999",
@@ -1970,11 +1965,6 @@
                 "price_display": "1,050,000đ"
             },
             {
-                "size": "37.5",
-                "price": 1050000,
-                "price_display": "1,050,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 1050000,
                 "price_display": "1,050,000đ"
@@ -1990,7 +1980,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1776517889
+        "updated_at": 1776914317
     },
     {
         "name": "IR8252-401",
@@ -2659,18 +2649,6 @@
         "updated_at": 1776617333
     },
     {
-        "name": "Vapor 3 xanh đỏ HJ6774-500",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2300000,
-                "price_display": "2,300,000đ"
-            }
-        ],
-        "updated_at": 1774994353
-    },
-    {
         "name": "Vapor 3 đỏ  cam HQ2550-600",
         "brand": "Nike",
         "variants": [
@@ -2815,11 +2793,11 @@
         "variants": [
             {
                 "size": "43",
-                "price": 2290000,
-                "price_display": "2,290,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1776665972
+        "updated_at": 1776914317
     },
     {
         "name": "vp3 be nâu FZ2158-109",
@@ -4097,8 +4075,8 @@
             },
             {
                 "size": "39.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
+                "price": 2550000,
+                "price_display": "2,550,000đ"
             },
             {
                 "size": "40",
@@ -4106,7 +4084,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1776914317
     },
     {
         "name": "CLG 15 xanh min 1042A294-300",
@@ -4218,8 +4196,8 @@
             },
             {
                 "size": "39.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "40",
@@ -4227,7 +4205,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1776779584
+        "updated_at": 1776914317
     },
     {
         "name": "Clg 15 xanh xám 1041a510-020",
@@ -7229,7 +7207,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1776891656
+        "updated_at": 1776914317
     },
     {
         "name": "091143",
@@ -7522,7 +7500,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1776891656
+        "updated_at": 1776914317
     },
     {
         "name": "397452-02",
@@ -8441,11 +8419,6 @@
                 "price_display": "2,600,000đ"
             },
             {
-                "size": "40",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
@@ -8456,7 +8429,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1776779584
+        "updated_at": 1776914317
     },
     {
         "name": "Vp3 vàng xanh",
