@@ -380,11 +380,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "41",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
@@ -400,7 +395,7 @@
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1776849944
+        "updated_at": 1777011046
     },
     {
         "name": "FV5552-109",
@@ -4453,12 +4448,17 @@
                 "price_display": "2,750,000đ"
             },
             {
+                "size": "37",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "40.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1776937703
+        "updated_at": 1777011046
     },
     {
         "name": "FF4 xanh 1041A532-400",
@@ -4557,14 +4557,9 @@
                 "size": "39",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
-            },
-            {
-                "size": "39.5",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1776826577
+        "updated_at": 1777011046
     },
     {
         "name": "Game FF black pick 1042a281-500 game ff xanh biển 1042a281-100",
@@ -7136,7 +7131,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777011046
     },
     {
         "name": "091143",
@@ -7424,7 +7419,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777011046
     },
     {
         "name": "371951-07",
@@ -7436,7 +7431,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777011046
     },
     {
         "name": "371951-07",
@@ -7448,7 +7443,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777011046
     },
     {
         "name": "371951-07",
@@ -7460,7 +7455,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777011046
     },
     {
         "name": "371951-07",
@@ -7472,7 +7467,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777011046
     },
     {
         "name": "371951-07",
@@ -7496,7 +7491,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777011046
     },
     {
         "name": "397452-02",
