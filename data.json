@@ -185,11 +185,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36",
-                "price": 1490000,
-                "price_display": "1,490,000đ"
-            },
-            {
                 "size": "36.5",
                 "price": 1490000,
                 "price_display": "1,490,000đ"
@@ -210,7 +205,7 @@
                 "price_display": "1,490,000đ"
             }
         ],
-        "updated_at": 1774523725
+        "updated_at": 1777096224
     },
     {
         "name": "DJ6605-001",
@@ -1083,14 +1078,9 @@
                 "size": "37.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1775627358
+        "updated_at": 1777096224
     },
     {
         "name": "Giày Nike Air Jordan 1 Low Smoke Grey V3 553558-040",
@@ -2770,11 +2760,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "36.5",
-                "price": 3000000,
-                "price_display": "3,000,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 3000000,
                 "price_display": "3,000,000đ"
@@ -2790,7 +2775,7 @@
                 "price_display": "3,000,000đ"
             }
         ],
-        "updated_at": 1776665972
+        "updated_at": 1777096224
     },
     {
         "name": "vp3 be nâu FZ2158-109",
@@ -4215,6 +4200,11 @@
                 "price_display": "2,650,000đ"
             },
             {
+                "size": "38",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "39",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -4230,7 +4220,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1777024099
+        "updated_at": 1777096224
     },
     {
         "name": "Clg 15 xanh xám 1041a510-020",
@@ -4556,18 +4546,6 @@
             }
         ],
         "updated_at": 1776791372
-    },
-    {
-        "name": "FF4 xanh lá men 1041A532-300",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "39.5",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            }
-        ],
-        "updated_at": 1776779584
     },
     {
         "name": "Ff3 trắng xám 1042A220.107",
@@ -4989,18 +4967,18 @@
         "variants": [
             {
                 "size": "36",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "37.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "37",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "38",
@@ -5018,7 +4996,7 @@
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1776952537
+        "updated_at": 1777096224
     },
     {
         "name": "RX đen đỏ 1042A279-001",
@@ -5242,23 +5220,23 @@
         "variants": [
             {
                 "size": "35.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "36",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "37",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "37.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "39",
@@ -5266,7 +5244,7 @@
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1776866019
+        "updated_at": 1777096224
     },
     {
         "name": "ggameff trắng hồng 1042A281-103",
@@ -6657,17 +6635,12 @@
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "43",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
-            },
-            {
                 "size": "44.5",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1776331472
+        "updated_at": 1777096224
     },
     {
         "name": "babolat fury 3 do man",
@@ -7181,7 +7154,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777085390
+        "updated_at": 1777096224
     },
     {
         "name": "091143",
@@ -7479,7 +7452,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777085390
+        "updated_at": 1777096224
     },
     {
         "name": "371951-07",
@@ -7491,7 +7464,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777085390
+        "updated_at": 1777096224
     },
     {
         "name": "371951-07",
@@ -7503,7 +7476,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777085390
+        "updated_at": 1777096224
     },
     {
         "name": "371951-07",
@@ -7515,7 +7488,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777085390
+        "updated_at": 1777096224
     },
     {
         "name": "371951-07",
@@ -7539,7 +7512,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777085390
+        "updated_at": 1777096224
     },
     {
         "name": "397452-02",
