@@ -733,11 +733,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "41",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -763,7 +758,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1777038360
+        "updated_at": 1777107549
     },
     {
         "name": "FZ2161-101",
@@ -1787,12 +1782,17 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "41",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
                 "size": "43",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1776849944
+        "updated_at": 1777107549
     },
     {
         "name": "HV1474-200",
@@ -1841,14 +1841,9 @@
                 "size": "41",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
-            },
-            {
-                "size": "43",
-                "price": 3700000,
-                "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1775754752
+        "updated_at": 1777107549
     },
     {
         "name": "HV1488-100",
@@ -3943,18 +3938,6 @@
             }
         ],
         "updated_at": 1776174894
-    },
-    {
-        "name": "1042A294-100",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "38",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            }
-        ],
-        "updated_at": 1775812548
     },
     {
         "name": "1042A294-700-22,75",
@@ -6077,14 +6060,9 @@
                 "size": "42.5",
                 "price": 4800000,
                 "price_display": "4,800,000đ"
-            },
-            {
-                "size": "44",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
             }
         ],
-        "updated_at": 1776937703
+        "updated_at": 1777107549
     },
     {
         "name": "On roger pro fire lime 3WF30034744",
@@ -6625,12 +6603,12 @@
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "42.5",
+                "size": "42",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             },
             {
-                "size": "42",
+                "size": "42.5",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
             },
@@ -6640,7 +6618,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1777096224
+        "updated_at": 1777107549
     },
     {
         "name": "babolat fury 3 do man",
@@ -7154,7 +7132,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777096224
+        "updated_at": 1777107549
     },
     {
         "name": "091143",
@@ -7227,17 +7205,12 @@
                 "price_display": "1,550,000đ"
             },
             {
-                "size": "39",
-                "price": 1550000,
-                "price_display": "1,550,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 1550000,
                 "price_display": "1,550,000đ"
             }
         ],
-        "updated_at": 1777024099
+        "updated_at": 1777107549
     },
     {
         "name": "1074A045-403",
@@ -7452,7 +7425,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777096224
+        "updated_at": 1777107549
     },
     {
         "name": "371951-07",
@@ -7464,7 +7437,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777096224
+        "updated_at": 1777107549
     },
     {
         "name": "371951-07",
@@ -7476,7 +7449,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777096224
+        "updated_at": 1777107549
     },
     {
         "name": "371951-07",
@@ -7488,7 +7461,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777096224
+        "updated_at": 1777107549
     },
     {
         "name": "371951-07",
@@ -7512,7 +7485,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777096224
+        "updated_at": 1777107549
     },
     {
         "name": "397452-02",
