@@ -417,11 +417,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
@@ -442,7 +437,7 @@
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1776952537
+        "updated_at": 1777174052
     },
     {
         "name": "FV5552-402 Vp12 navy",
@@ -1918,6 +1913,23 @@
             }
         ],
         "updated_at": 1775311462
+    },
+    {
+        "name": "IB6555-300",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "42",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            }
+        ],
+        "updated_at": 1777174052
     },
     {
         "name": "IB6558-100",
@@ -4013,6 +4025,18 @@
             }
         ],
         "updated_at": 1776174894
+    },
+    {
+        "name": "1042A294-100",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "38",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            }
+        ],
+        "updated_at": 1777174052
     },
     {
         "name": "1042A294-700-22,75",
@@ -6830,6 +6854,33 @@
         "updated_at": 1775195516
     },
     {
+        "name": "WRS335910",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "36.6",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "38.6",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            }
+        ],
+        "updated_at": 1777174052
+    },
+    {
         "name": "WRS336360U-275  1/3",
         "brand": "Wilson",
         "variants": [
@@ -7264,7 +7315,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777149916
+        "updated_at": 1777174052
     },
     {
         "name": "091143",
@@ -7557,7 +7608,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777149916
+        "updated_at": 1777174052
     },
     {
         "name": "371951-07",
@@ -7569,7 +7620,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777149916
+        "updated_at": 1777174052
     },
     {
         "name": "371951-07",
@@ -7581,7 +7632,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777149916
+        "updated_at": 1777174052
     },
     {
         "name": "371951-07",
@@ -7593,7 +7644,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777149916
+        "updated_at": 1777174052
     },
     {
         "name": "371951-07",
@@ -7617,7 +7668,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777149916
+        "updated_at": 1777174052
     },
     {
         "name": "397452-02",
