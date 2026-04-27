@@ -1900,21 +1900,31 @@
         "updated_at": 1775311462
     },
     {
-        "name": "IB6555-300",
+        "name": "IB6555-100",
         "brand": "Nike",
         "variants": [
             {
+                "size": "41",
+                "price": 3950000,
+                "price_display": "3,950,000đ"
+            },
+            {
                 "size": "42",
-                "price": 4100000,
-                "price_display": "4,100,000đ"
+                "price": 3950000,
+                "price_display": "3,950,000đ"
             },
             {
                 "size": "42.5",
-                "price": 4100000,
-                "price_display": "4,100,000đ"
+                "price": 3950000,
+                "price_display": "3,950,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3950000,
+                "price_display": "3,950,000đ"
             }
         ],
-        "updated_at": 1777174052
+        "updated_at": 1777298709
     },
     {
         "name": "IB6558-100",
@@ -2044,12 +2054,17 @@
                 "price_display": "2,750,000đ"
             },
             {
+                "size": "39",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1777209358
+        "updated_at": 1777298709
     },
     {
         "name": "IR8316-401",
@@ -2062,6 +2077,11 @@
             },
             {
                 "size": "40",
+                "price": 3700000,
+                "price_display": "3,700,000đ"
+            },
+            {
+                "size": "40.5",
                 "price": 3700000,
                 "price_display": "3,700,000đ"
             },
@@ -2086,7 +2106,7 @@
                 "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1777000829
+        "updated_at": 1777298709
     },
     {
         "name": "JQ7141-275  1/3",
@@ -2296,8 +2316,8 @@
             },
             {
                 "size": "40",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             },
             {
                 "size": "41",
@@ -2320,7 +2340,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1777038360
+        "updated_at": 1777298709
     },
     {
         "name": "Nike Air Jordan 1 Retro Low OG X PSG Paris Saint Germain HF8828-100",
@@ -2514,12 +2534,22 @@
                 "price_display": "2,700,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
             },
             {
                 "size": "38.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "40.5",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
             },
@@ -2534,7 +2564,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "VP12 Xanh đỏ FV5552-004",
@@ -2814,6 +2844,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "36.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -2829,7 +2864,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1776751500
+        "updated_at": 1777298709
     },
     {
         "name": "vp3 trang do HV1376-100",
@@ -3651,11 +3686,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "40.5",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            },
-            {
                 "size": "41.5",
                 "price": 1990000,
                 "price_display": "1,990,000đ"
@@ -3681,7 +3711,7 @@
                 "price_display": "1,990,000đ"
             }
         ],
-        "updated_at": 1776655485
+        "updated_at": 1777298709
     },
     {
         "name": "1041a405-104",
@@ -5955,17 +5985,12 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "39",
-                "price": 3090000,
-                "price_display": "3,090,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1776937703
+        "updated_at": 1777298709
     },
     {
         "name": "Giày Onitsuka Tiger Mexico 66 Ginger Peach 1183A201-254",
@@ -6126,14 +6151,9 @@
                 "size": "42",
                 "price": 4800000,
                 "price_display": "4,800,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
             }
         ],
-        "updated_at": 1777107549
+        "updated_at": 1777298709
     },
     {
         "name": "On roger pro fire lime 3WF30034744",
@@ -6333,6 +6353,11 @@
         "brand": "On",
         "variants": [
             {
+                "size": "38.5",
+                "price": 3150000,
+                "price_display": "3,150,000đ"
+            },
+            {
                 "size": "39",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
@@ -6343,7 +6368,7 @@
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1774994353
+        "updated_at": 1777298709
     },
     {
         "name": "30S26208B-1069",
@@ -6732,6 +6757,11 @@
         "brand": "Babolat",
         "variants": [
             {
+                "size": "41",
+                "price": 2400000,
+                "price_display": "2,400,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 2400000,
                 "price_display": "2,400,000đ"
@@ -6747,7 +6777,7 @@
                 "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1776965066
+        "updated_at": 1777298709
     },
     {
         "name": "WRS332710",
@@ -7233,7 +7263,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "091143",
@@ -7531,7 +7561,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "371951-07",
@@ -7543,7 +7573,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "371951-07",
@@ -7555,7 +7585,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "371951-07",
@@ -7567,7 +7597,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "371951-07",
@@ -7579,7 +7609,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "371951-07",
@@ -7603,7 +7633,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777298709
     },
     {
         "name": "397452-02",
