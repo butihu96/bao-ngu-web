@@ -2091,6 +2091,11 @@
                 "price_display": "2,750,000đ"
             },
             {
+                "size": "38",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "38.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -2106,7 +2111,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1777298709
+        "updated_at": 1777444078
     },
     {
         "name": "IR8316-401",
@@ -3704,14 +3709,9 @@
                 "size": "42",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
-            },
-            {
-                "size": "44",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1777024099
+        "updated_at": 1777444078
     },
     {
         "name": "1041A490-104",
@@ -5825,11 +5825,6 @@
                 "price_display": "3,290,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3290000,
                 "price_display": "3,290,000đ"
@@ -5845,7 +5840,7 @@
                 "price_display": "3,290,000đ"
             }
         ],
-        "updated_at": 1777398593
+        "updated_at": 1777444078
     },
     {
         "name": "1183C102-201",
@@ -5878,6 +5873,18 @@
             }
         ],
         "updated_at": 1776655485
+    },
+    {
+        "name": "1183C102-203",
+        "brand": "Onitsuka Tiger",
+        "variants": [
+            {
+                "size": "39",
+                "price": 3290000,
+                "price_display": "3,290,000đ"
+            }
+        ],
+        "updated_at": 1777444078
     },
     {
         "name": "1183C102-204",
@@ -6881,6 +6888,18 @@
         "updated_at": 1775195516
     },
     {
+        "name": "WRS335910",
+        "brand": "Wilson",
+        "variants": [
+            {
+                "size": "36.6",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            }
+        ],
+        "updated_at": 1777444078
+    },
+    {
         "name": "WRS336360U-255  2/3",
         "brand": "Wilson",
         "variants": [
@@ -7419,7 +7438,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777444078
     },
     {
         "name": "091143",
@@ -7757,7 +7776,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777444078
     },
     {
         "name": "371951-07",
@@ -7769,7 +7788,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777444078
     },
     {
         "name": "371951-07",
@@ -7781,7 +7800,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777444078
     },
     {
         "name": "371951-07",
@@ -7793,7 +7812,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777444078
     },
     {
         "name": "371951-07",
@@ -7805,7 +7824,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777444078
     },
     {
         "name": "371951-07",
@@ -7829,7 +7848,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777444078
     },
     {
         "name": "397452-02",
