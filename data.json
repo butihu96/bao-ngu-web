@@ -2459,12 +2459,17 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "41",
+                "price": 1800000,
+                "price_display": "1,800,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 1800000,
                 "price_display": "1,800,000đ"
             }
         ],
-        "updated_at": 1777386195
+        "updated_at": 1777484534
     },
     {
         "name": "Nike ReactX Rejuven8 Spruce Aura Light Silver HV5060-005",
@@ -2578,6 +2583,11 @@
                 "price_display": "2,650,000đ"
             },
             {
+                "size": "42",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -2593,7 +2603,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777484534
     },
     {
         "name": "VAPOR 3 ĐEN FZ2158-001 FZ2161-002",
@@ -2664,6 +2674,21 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "36.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
@@ -2679,7 +2704,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777484534
     },
     {
         "name": "Vapor 12 hypersamsh hồng HV1488-600",
@@ -6967,18 +6992,6 @@
         "updated_at": 1775195516
     },
     {
-        "name": "WRS335910",
-        "brand": "Wilson",
-        "variants": [
-            {
-                "size": "36.6",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            }
-        ],
-        "updated_at": 1777444078
-    },
-    {
         "name": "WRS336360U-255  2/3",
         "brand": "Wilson",
         "variants": [
@@ -7495,7 +7508,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1777484534
     },
     {
         "name": "091143",
@@ -7833,7 +7846,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1777484534
     },
     {
         "name": "371951-07",
@@ -7845,7 +7858,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1777484534
     },
     {
         "name": "371951-07",
@@ -7857,7 +7870,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1777484534
     },
     {
         "name": "371951-07",
@@ -7869,7 +7882,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1777484534
     },
     {
         "name": "371951-07",
@@ -7881,7 +7894,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1777484534
     },
     {
         "name": "371951-07",
@@ -7905,7 +7918,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1777484534
     },
     {
         "name": "397452-02",
