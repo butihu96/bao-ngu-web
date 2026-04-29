@@ -398,14 +398,9 @@
                 "size": "43",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1777122863
+        "updated_at": 1777457396
     },
     {
         "name": "FV5552-109",
@@ -1958,22 +1953,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
             {
                 "size": "41",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "42",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
@@ -1993,7 +1978,7 @@
                 "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1777371577
+        "updated_at": 1777457396
     },
     {
         "name": "IB8171-999",
@@ -2293,6 +2278,11 @@
                 "price_display": "2,500,000đ"
             },
             {
+                "size": "38.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -2323,7 +2313,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1776158655
+        "updated_at": 1777457396
     },
     {
         "name": "Nike Air Jordan 1 Low SE 'Dark Pony' HF3148-102",
@@ -2919,8 +2909,8 @@
         "variants": [
             {
                 "size": "36.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "price": 2600000,
+                "price_display": "2,600,000đ"
             },
             {
                 "size": "37.5",
@@ -2938,7 +2928,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1777271474
+        "updated_at": 1777457396
     },
     {
         "name": "vp3 trắng xanh min FZ2158-106",
@@ -4503,11 +4493,6 @@
                 "price_display": "3,500,000đ"
             },
             {
-                "size": "42",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 3500000,
                 "price_display": "3,500,000đ"
@@ -4518,7 +4503,7 @@
                 "price_display": "3,500,000đ"
             }
         ],
-        "updated_at": 1777285285
+        "updated_at": 1777457396
     },
     {
         "name": "FF3 xanh 1041A370-404",
@@ -6655,11 +6640,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "44",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "44.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -6675,7 +6655,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1777050136
+        "updated_at": 1777457396
     },
     {
         "name": "Babolat jemach 4 đỏ men 30s26629B-5050",
@@ -6944,14 +6924,9 @@
                 "size": "38",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
-            },
-            {
-                "size": "40",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1776655485
+        "updated_at": 1777457396
     },
     {
         "name": "WRS337070",
@@ -7406,16 +7381,6 @@
                 "price_display": "1,990,000đ"
             },
             {
-                "size": "41",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            },
-            {
-                "size": "42",
-                "price": 1990000,
-                "price_display": "1,990,000đ"
-            },
-            {
                 "size": "43",
                 "price": 1990000,
                 "price_display": "1,990,000đ"
@@ -7426,7 +7391,7 @@
                 "price_display": "1,990,000đ"
             }
         ],
-        "updated_at": 1777371577
+        "updated_at": 1777457396
     },
     {
         "name": "091143",
@@ -7438,7 +7403,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777444078
+        "updated_at": 1777457396
     },
     {
         "name": "091143",
@@ -7776,7 +7741,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777444078
+        "updated_at": 1777457396
     },
     {
         "name": "371951-07",
@@ -7788,7 +7753,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777444078
+        "updated_at": 1777457396
     },
     {
         "name": "371951-07",
@@ -7800,7 +7765,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777444078
+        "updated_at": 1777457396
     },
     {
         "name": "371951-07",
@@ -7812,7 +7777,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777444078
+        "updated_at": 1777457396
     },
     {
         "name": "371951-07",
@@ -7824,7 +7789,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777444078
+        "updated_at": 1777457396
     },
     {
         "name": "371951-07",
@@ -7848,7 +7813,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777444078
+        "updated_at": 1777457396
     },
     {
         "name": "397452-02",
@@ -8741,11 +8706,11 @@
             },
             {
                 "size": "39",
-                "price": 1300000,
-                "price_display": "1,300,000đ"
+                "price": 10630000,
+                "price_display": "10,630,000đ"
             }
         ],
-        "updated_at": 1774112362
+        "updated_at": 1777457396
     },
     {
         "name": "VP12TRAWSNG nâu",
