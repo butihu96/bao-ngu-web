@@ -326,11 +326,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -361,7 +356,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1777122863
+        "updated_at": 1777543810
     },
     {
         "name": "FV5552-104",
@@ -1545,14 +1540,9 @@
                 "size": "37.5",
                 "price": 2100000,
                 "price_display": "2,100,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2100000,
-                "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1777520175
+        "updated_at": 1777543810
     },
     {
         "name": "HJ8485-601",
@@ -2855,14 +2845,9 @@
                 "size": "38",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1777386195
+        "updated_at": 1777543810
     },
     {
         "name": "vapor 12 be nâu FV5554-109",
@@ -3518,11 +3503,6 @@
         "brand": "Adidas",
         "variants": [
             {
-                "size": "37.3",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -3543,7 +3523,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1777038360
+        "updated_at": 1777543810
     },
     {
         "name": "KI3438",
@@ -7453,7 +7433,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "091143",
@@ -7791,7 +7771,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "371951-07",
@@ -7803,7 +7783,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "371951-07",
@@ -7815,7 +7795,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "371951-07",
@@ -7827,7 +7807,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "371951-07",
@@ -7839,7 +7819,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "371951-07",
@@ -7863,7 +7843,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "397452-02",
@@ -8076,6 +8056,16 @@
                 "price_display": "2,350,000đ"
             },
             {
+                "size": "38",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 2350000,
+                "price_display": "2,350,000đ"
+            },
+            {
                 "size": "39.5",
                 "price": 2350000,
                 "price_display": "2,350,000đ"
@@ -8106,7 +8096,7 @@
                 "price_display": "2,350,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777543810
     },
     {
         "name": "Giày Puma Speedcat Ballet 'Dark Chocolate' 406758-02",
