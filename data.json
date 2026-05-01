@@ -217,17 +217,12 @@
                 "price_display": "1,190,000đ"
             },
             {
-                "size": "44",
-                "price": 1190000,
-                "price_display": "1,190,000đ"
-            },
-            {
                 "size": "45",
                 "price": 1190000,
                 "price_display": "1,190,000đ"
             }
         ],
-        "updated_at": 1775973383
+        "updated_at": 1777607281
     },
     {
         "name": "DM0113-100",
@@ -2575,19 +2570,14 @@
                 "price_display": "1,950,000đ"
             },
             {
-                "size": "38",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
             },
             {
-                "size": "39",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
+                "size": "38",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
             },
             {
                 "size": "40.5",
@@ -2605,7 +2595,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1777530674
+        "updated_at": 1777607281
     },
     {
         "name": "VP12 Xanh đỏ FV5552-004",
@@ -2639,12 +2629,12 @@
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "38",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
+                "size": "38.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
             },
             {
-                "size": "38.5",
+                "size": "38",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
@@ -2654,7 +2644,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1777484534
+        "updated_at": 1777607281
     },
     {
         "name": "Vapor 12 hypersamsh hồng HV1488-600",
@@ -7043,11 +7033,6 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "37.3",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
                 "size": "38.6",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
@@ -7058,7 +7043,7 @@
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1777038360
+        "updated_at": 1777607281
     },
     {
         "name": "WRS338250",
@@ -7418,7 +7403,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777583110
+        "updated_at": 1777607281
     },
     {
         "name": "091143",
@@ -7756,7 +7741,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777583110
+        "updated_at": 1777607281
     },
     {
         "name": "371951-07",
@@ -7768,7 +7753,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777583110
+        "updated_at": 1777607281
     },
     {
         "name": "371951-07",
@@ -7780,7 +7765,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777583110
+        "updated_at": 1777607281
     },
     {
         "name": "371951-07",
@@ -7792,7 +7777,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777583110
+        "updated_at": 1777607281
     },
     {
         "name": "371951-07",
@@ -7804,7 +7789,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777583110
+        "updated_at": 1777607281
     },
     {
         "name": "371951-07",
@@ -7828,7 +7813,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777583110
+        "updated_at": 1777607281
     },
     {
         "name": "397452-02",
@@ -8738,18 +8723,6 @@
             }
         ],
         "updated_at": 1777285285
-    },
-    {
-        "name": "Vp12 Trắng cam",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "42",
-                "price": 3800000,
-                "price_display": "3,800,000đ"
-            }
-        ],
-        "updated_at": 1777310767
     },
     {
         "name": "Vp3 Trắng",
