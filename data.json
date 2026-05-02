@@ -2523,11 +2523,6 @@
                 "price_display": "2,700,000đ"
             },
             {
-                "size": "40.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
@@ -2538,7 +2533,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1777607281
+        "updated_at": 1777713103
     },
     {
         "name": "VP12 Xanh đỏ FV5552-004",
@@ -3271,11 +3266,6 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "42",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -3296,7 +3286,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1777433718
+        "updated_at": 1777713103
     },
     {
         "name": "JR1757",
@@ -6814,14 +6804,9 @@
                 "size": "36.6",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1777457396
+        "updated_at": 1777713103
     },
     {
         "name": "WRS337070",
@@ -7048,17 +7033,7 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "40.6",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
-                "size": "41.3",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
             },
@@ -7078,7 +7053,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1777122863
+        "updated_at": 1777713103
     },
     {
         "name": "WRS338520U-255  2/3",
@@ -7276,7 +7251,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777702224
+        "updated_at": 1777713103
     },
     {
         "name": "091143",
@@ -7344,6 +7319,11 @@
         "brand": "Khác",
         "variants": [
             {
+                "size": "36",
+                "price": 1550000,
+                "price_display": "1,550,000đ"
+            },
+            {
                 "size": "37.5",
                 "price": 1650000,
                 "price_display": "1,650,000đ"
@@ -7359,7 +7339,7 @@
                 "price_display": "1,550,000đ"
             }
         ],
-        "updated_at": 1777617610
+        "updated_at": 1777713103
     },
     {
         "name": "1074A045-403",
@@ -7597,7 +7577,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777702224
+        "updated_at": 1777713103
     },
     {
         "name": "371951-07",
@@ -7609,7 +7589,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777702224
+        "updated_at": 1777713103
     },
     {
         "name": "371951-07",
@@ -7621,7 +7601,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777702224
+        "updated_at": 1777713103
     },
     {
         "name": "371951-07",
@@ -7633,7 +7613,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777702224
+        "updated_at": 1777713103
     },
     {
         "name": "371951-07",
@@ -7645,7 +7625,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777702224
+        "updated_at": 1777713103
     },
     {
         "name": "371951-07",
@@ -7669,7 +7649,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777702224
+        "updated_at": 1777713103
     },
     {
         "name": "397452-02",
@@ -8567,18 +8547,6 @@
             }
         ],
         "updated_at": 1777457396
-    },
-    {
-        "name": "VP12TRAWSNG nâu",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "43",
-                "price": 3550000,
-                "price_display": "3,550,000đ"
-            }
-        ],
-        "updated_at": 1777285285
     },
     {
         "name": "Vp3 Trắng",
