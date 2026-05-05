@@ -2209,6 +2209,11 @@
             },
             {
                 "size": "38.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "39",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             },
@@ -2248,7 +2253,7 @@
                 "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1777740897
+        "updated_at": 1777962038
     },
     {
         "name": "Nike Air Jordan 1 Low SE 'Dark Pony' HF3148-102",
@@ -2895,18 +2900,6 @@
         "updated_at": 1775713874
     },
     {
-        "name": "Bbl propulse junior 3 3J2S25A553-1071",
-        "brand": "Adidas",
-        "variants": [
-            {
-                "size": "38",
-                "price": 1700000,
-                "price_display": "1,700,000đ"
-            }
-        ],
-        "updated_at": 1776779584
-    },
-    {
         "name": "Court hunter trắng đen 1071a111-101",
         "brand": "Adidas",
         "variants": [
@@ -3105,11 +3098,6 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "42",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
@@ -3130,7 +3118,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1777728092
+        "updated_at": 1777962038
     },
     {
         "name": "JR1757",
@@ -4011,11 +3999,6 @@
                 "price_display": "2,650,000đ"
             },
             {
-                "size": "39",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
                 "size": "39.5",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -4026,7 +4009,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1777889872
+        "updated_at": 1777962038
     },
     {
         "name": "Clg 15 xanh xám 1041a510-020",
@@ -5027,12 +5010,12 @@
                 "price_display": "1,950,000đ"
             },
             {
-                "size": "39",
+                "size": "39.5",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
             },
             {
-                "size": "39.5",
+                "size": "39",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
             },
@@ -5042,7 +5025,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1777024099
+        "updated_at": 1777962038
     },
     {
         "name": "1183A201-003",
@@ -5939,14 +5922,9 @@
                 "size": "37.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1775144281
+        "updated_at": 1777962038
     },
     {
         "name": "The roger pro 2 pink 3ME10303602",
@@ -5984,18 +5962,6 @@
             }
         ],
         "updated_at": 1775627358
-    },
-    {
-        "name": "The roger pro 2 xanh hồng",
-        "brand": "On",
-        "variants": [
-            {
-                "size": "38",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            }
-        ],
-        "updated_at": 1774994353
     },
     {
         "name": "The roger pro Fine xanh hồng 3WF30593496",
@@ -6401,11 +6367,6 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "40.5",
-                "price": 1900000,
-                "price_display": "1,900,000đ"
-            },
-            {
                 "size": "42",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
@@ -6416,7 +6377,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "babolat fury 3 do man",
@@ -6997,7 +6958,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "091143",
@@ -7338,7 +7299,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "371951-07",
@@ -7350,7 +7311,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "371951-07",
@@ -7362,7 +7323,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "371951-07",
@@ -7374,7 +7335,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "371951-07",
@@ -7386,7 +7347,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "371951-07",
@@ -7410,7 +7371,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1777951482
+        "updated_at": 1777962038
     },
     {
         "name": "397452-02",
@@ -8288,6 +8249,58 @@
         "updated_at": 1777457396
     },
     {
+        "name": "Vapor 12 xanh rêu",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "40",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "42",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "45",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            }
+        ],
+        "updated_at": 1777962038
+    },
+    {
         "name": "Vp3 Trắng",
         "brand": "Khác",
         "variants": [
@@ -8332,43 +8345,6 @@
             }
         ],
         "updated_at": 1775024035
-    },
-    {
-        "name": "Willson đen đỏ",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "36 2/3",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            },
-            {
-                "size": "40",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            },
-            {
-                "size": "41",
-                "price": 3050000,
-                "price_display": "3,050,000đ"
-            }
-        ],
-        "updated_at": 1777903901
     },
     {
         "name": "pUMA Speedcat OG Nâu 398846_31",
