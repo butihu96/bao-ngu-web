@@ -561,43 +561,6 @@
         "updated_at": 1778038513
     },
     {
-        "name": "FZ2161-401",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "41",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
-            }
-        ],
-        "updated_at": 1778002065
-    },
-    {
         "name": "Giày (WMNS) Nike V2K Run 'Grey Pink' FZ5061-100",
         "brand": "Nike",
         "variants": [
@@ -1861,6 +1824,43 @@
         "updated_at": 1774994353
     },
     {
+        "name": "VAPOR 3 XANH FZ2161-401",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2300000,
+                "price_display": "2,300,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            }
+        ],
+        "updated_at": 1778049175
+    },
+    {
         "name": "VAPOR 3 ĐEN FZ2158-001 FZ2161-002",
         "brand": "Nike",
         "variants": [
@@ -2383,7 +2383,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "JH7038",
@@ -2395,7 +2395,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "JH7038",
@@ -2722,11 +2722,6 @@
         "brand": "Asics",
         "variants": [
             {
-                "size": "36",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
-            },
-            {
                 "size": "37",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
@@ -2742,7 +2737,7 @@
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1778002065
+        "updated_at": 1778049175
     },
     {
         "name": "CLG 15 xanh min 1042A294-300",
@@ -2972,14 +2967,9 @@
                 "size": "37.5",
                 "price": 1850000,
                 "price_display": "1,850,000đ"
-            },
-            {
-                "size": "38",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1777471740
+        "updated_at": 1778049175
     },
     {
         "name": "FF2 Sw trắng hồng 1042A265-102",
@@ -4971,11 +4961,6 @@
                 "price_display": "3,400,000đ"
             },
             {
-                "size": "43",
-                "price": 3400000,
-                "price_display": "3,400,000đ"
-            },
-            {
                 "size": "44.5",
                 "price": 3400000,
                 "price_display": "3,400,000đ"
@@ -4986,7 +4971,7 @@
                 "price_display": "3,400,000đ"
             }
         ],
-        "updated_at": 1778002065
+        "updated_at": 1778049175
     },
     {
         "name": "Babolat jemach 4 đỏ men 30s26629B-5050",
@@ -5333,7 +5318,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "091143",
@@ -5659,7 +5644,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "371951-07",
@@ -5671,7 +5656,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "371951-07",
@@ -5683,7 +5668,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "371951-07",
@@ -5695,7 +5680,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "371951-07",
@@ -5707,7 +5692,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "371951-07",
@@ -5731,7 +5716,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1778038513
+        "updated_at": 1778049175
     },
     {
         "name": "397452-02",
