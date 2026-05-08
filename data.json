@@ -34,16 +34,26 @@
         "variants": [
             {
                 "size": "40.5",
-                "price": 2100000,
-                "price_display": "2,100,000đ"
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
             },
             {
                 "size": "44.5",
-                "price": 2100000,
-                "price_display": "2,100,000đ"
+                "price": 2500000,
+                "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1777135859
+        "updated_at": 1778220028
     },
     {
         "name": "Chalenger pro đỏ HQ2609-600",
@@ -838,14 +848,9 @@
                 "size": "37.5",
                 "price": 2000000,
                 "price_display": "2,000,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1776061148
+        "updated_at": 1778220028
     },
     {
         "name": "Giày Nike Dunk Low ‘Dark Beetroot’ DJ6188-600",
@@ -1964,21 +1969,16 @@
         "updated_at": 1778149681
     },
     {
-        "name": "Vapor 12 Magnolia FV5552-104",
+        "name": "Vapor 12 FV5552-104",
         "brand": "Nike",
         "variants": [
             {
                 "size": "42.5",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
-            },
-            {
-                "size": "43",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1778163900
+        "updated_at": 1778220028
     },
     {
         "name": "Vapor 12 hypersamsh hồng HV1488-600",
@@ -2030,28 +2030,6 @@
             }
         ],
         "updated_at": 1775627358
-    },
-    {
-        "name": "Vapor 12 xanh ná IB6555-300",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
-                "size": "41",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            },
-            {
-                "size": "42",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
-            }
-        ],
-        "updated_at": 1778163900
     },
     {
         "name": "Vapor 12 xanh rêu FV5552-003",
@@ -2169,9 +2147,14 @@
                 "size": "38.5",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1778002065
+        "updated_at": 1778220028
     },
     {
         "name": "dx4816-300",
@@ -2212,44 +2195,17 @@
                 "price_display": "2,200,000đ"
             },
             {
+                "size": "36.5",
+                "price": 2200000,
+                "price_display": "2,200,000đ"
+            },
+            {
                 "size": "37.5",
                 "price": 2490000,
                 "price_display": "2,490,000đ"
             }
         ],
-        "updated_at": 1778136032
-    },
-    {
-        "name": "vapor 12 be nâu FV5554-109",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "36.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
-                "size": "37.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
-                "size": "38",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
-                "size": "39",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            }
-        ],
-        "updated_at": 1778149681
+        "updated_at": 1778220028
     },
     {
         "name": "vapor 12 xanh ná FV5554-300",
@@ -2523,7 +2479,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "JH7038",
@@ -2535,7 +2491,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "JH7038",
@@ -2874,6 +2830,11 @@
                 "price_display": "2,550,000đ"
             },
             {
+                "size": "37.5",
+                "price": 2550000,
+                "price_display": "2,550,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
@@ -2884,7 +2845,7 @@
                 "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1778049175
+        "updated_at": 1778220028
     },
     {
         "name": "CLG 15 xanh min 1042A294-300",
@@ -2941,9 +2902,14 @@
                 "size": "43.5",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1778163900
+        "updated_at": 1778220028
     },
     {
         "name": "Clg 15 trắng tím hồng 1042a294-103",
@@ -3212,18 +3178,6 @@
         "updated_at": 1778163900
     },
     {
-        "name": "FF4 speed tims women 1042A307-500",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "35.5",
-                "price": 2200000,
-                "price_display": "2,200,000đ"
-            }
-        ],
-        "updated_at": 1778176271
-    },
-    {
         "name": "FF4 speed trắng hồng 1042A307-100",
         "brand": "Asics",
         "variants": [
@@ -3315,14 +3269,9 @@
                 "size": "39",
                 "price": 3350000,
                 "price_display": "3,350,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 3350000,
-                "price_display": "3,350,000đ"
             }
         ],
-        "updated_at": 1778163900
+        "updated_at": 1778220028
     },
     {
         "name": "Game FF black pick 1042a281-500 game ff xanh biển 1042a281-100",
@@ -3421,9 +3370,14 @@
                 "size": "42.5",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1778163900
+        "updated_at": 1778220028
     },
     {
         "name": "Gel X trang den 1041A487-103( WIDE) 1041A481-103( thường)",
@@ -3738,12 +3692,17 @@
                 "price_display": "2,800,000đ"
             },
             {
+                "size": "41.5",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
                 "size": "42",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1778163900
+        "updated_at": 1778220028
     },
     {
         "name": "Rx xanh vàng 1042a279-400",
@@ -4639,8 +4598,8 @@
             },
             {
                 "size": "38",
-                "price": 3090000,
-                "price_display": "3,090,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             },
             {
                 "size": "39",
@@ -4658,7 +4617,7 @@
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1778149681
+        "updated_at": 1778220028
     },
     {
         "name": "Giày Onitsuka Tiger Mexico 66 Ginger Peach 1183A201-254",
@@ -4749,18 +4708,6 @@
         "updated_at": 1777386195
     },
     {
-        "name": "Hồng đậm 172109/HPK ( women)",
-        "brand": "Skechers",
-        "variants": [
-            {
-                "size": "39 26",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            }
-        ],
-        "updated_at": 1776837733
-    },
-    {
         "name": "Skechers Viper Court Pro 2.0 Trắng 172109W-WHT Women bản wide",
         "brand": "Skechers",
         "variants": [
@@ -4834,9 +4781,14 @@
                 "size": "37.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1777962038
+        "updated_at": 1778220028
     },
     {
         "name": "The roger pro 2 pink 3ME10303602",
@@ -4849,6 +4801,16 @@
             },
             {
                 "size": "37.5",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
+                "size": "38",
+                "price": 3500000,
+                "price_display": "3,500,000đ"
+            },
+            {
+                "size": "38.5",
                 "price": 3500000,
                 "price_display": "3,500,000đ"
             },
@@ -4873,19 +4835,36 @@
                 "price_display": "3,500,000đ"
             }
         ],
-        "updated_at": 1778077461
+        "updated_at": 1778220028
+    },
+    {
+        "name": "The roger pro 2 xanh hồng",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "38",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            }
+        ],
+        "updated_at": 1778220028
     },
     {
         "name": "The roger pro Fine xanh hồng 3WF30593496",
         "brand": "On",
         "variants": [
             {
+                "size": "38",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
+            },
+            {
                 "size": "40",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1777310767
+        "updated_at": 1778220028
     },
     {
         "name": "The roger pro Fire trắng hồng 3WF30032626",
@@ -5418,7 +5397,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "091143",
@@ -5744,7 +5723,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "371951-07",
@@ -5756,7 +5735,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "371951-07",
@@ -5768,7 +5747,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "371951-07",
@@ -5780,7 +5759,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "371951-07",
@@ -5792,7 +5771,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "371951-07",
@@ -5816,7 +5795,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1778211019
+        "updated_at": 1778220028
     },
     {
         "name": "397452-02",
@@ -6551,28 +6530,6 @@
             }
         ],
         "updated_at": 1777457396
-    },
-    {
-        "name": "Vp3 Trắng",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            }
-        ],
-        "updated_at": 1778163900
     },
     {
         "name": "Willson xanh min",
