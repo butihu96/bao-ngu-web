@@ -1936,37 +1936,37 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "36.5",
+                "price": 2450000,
+                "price_display": "2,450,000đ"
+            },
+            {
                 "size": "36",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
             },
             {
-                "size": "36.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "37.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2450000,
+                "price_display": "2,450,000đ"
             },
             {
                 "size": "38",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2450000,
+                "price_display": "2,450,000đ"
             },
             {
                 "size": "38.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2450000,
+                "price_display": "2,450,000đ"
             },
             {
                 "size": "39",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2450000,
+                "price_display": "2,450,000đ"
             }
         ],
-        "updated_at": 1778149681
+        "updated_at": 1778248799
     },
     {
         "name": "Vapor 12 FV5552-104",
@@ -2474,7 +2474,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "JH7038",
@@ -2486,7 +2486,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "JH7038",
@@ -4745,23 +4745,6 @@
         "updated_at": 1777951482
     },
     {
-        "name": "The roger pro 2 be hong 3ME10574274",
-        "brand": "On",
-        "variants": [
-            {
-                "size": "42",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
-            }
-        ],
-        "updated_at": 1777285285
-    },
-    {
         "name": "The roger pro 2 bule gren",
         "brand": "On",
         "variants": [
@@ -4769,14 +4752,9 @@
                 "size": "37.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1778220028
+        "updated_at": 1778248799
     },
     {
         "name": "The roger pro 2 pink 3ME10303602",
@@ -4826,11 +4804,80 @@
         "variants": [
             {
                 "size": "38",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
+                "price": 3500000,
+                "price_display": "3,500,000đ"
             }
         ],
-        "updated_at": 1778220028
+        "updated_at": 1778248799
+    },
+    {
+        "name": "The roger pro 3 lime 3WG10314744",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "37",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "40",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            }
+        ],
+        "updated_at": 1778248799
+    },
+    {
+        "name": "The roger pro 3 tím 3WG10734757",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "40",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            }
+        ],
+        "updated_at": 1778248799
     },
     {
         "name": "The roger pro Fine xanh hồng 3WF30593496",
@@ -4899,6 +4946,28 @@
             }
         ],
         "updated_at": 1778149681
+    },
+    {
+        "name": "The roger pro fire xám",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "41",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
+            }
+        ],
+        "updated_at": 1778248799
     },
     {
         "name": "on roger ADV pro bule pink 3WF10183015 ( women)",
@@ -5375,7 +5444,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "091143",
@@ -5701,7 +5770,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "371951-07",
@@ -5713,7 +5782,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "371951-07",
@@ -5725,7 +5794,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "371951-07",
@@ -5737,7 +5806,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "371951-07",
@@ -5749,7 +5818,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "371951-07",
@@ -5773,7 +5842,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778248799
     },
     {
         "name": "397452-02",
@@ -6444,6 +6513,80 @@
             }
         ],
         "updated_at": 1773168478
+    },
+    {
+        "name": "Pro3  trắng 3WG10312626 3MG10362626",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "36.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "37",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "40",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "43",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            }
+        ],
+        "updated_at": 1778248799
+    },
+    {
+        "name": "Pro3 clay đen hồng 3wg10732890",
+        "brand": "Khác",
+        "variants": [
+            {
+                "size": "40",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "41",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            }
+        ],
+        "updated_at": 1778248799
     },
     {
         "name": "SW FF2 navy",
