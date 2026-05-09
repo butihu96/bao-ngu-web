@@ -2481,7 +2481,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "JH7038",
@@ -2493,7 +2493,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "JH7038",
@@ -2911,14 +2911,14 @@
                 "price_display": "2,500,000đ"
             },
             {
-                "size": "37.5",
+                "size": "37",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             },
             {
-                "size": "37",
-                "price": 2650000,
-                "price_display": "2,650,000đ"
+                "size": "37.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
             },
             {
                 "size": "39.5",
@@ -2931,7 +2931,7 @@
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1778163900
+        "updated_at": 1778307581
     },
     {
         "name": "Clg 15 xanh xám 1041a510-020",
@@ -3108,11 +3108,6 @@
                 "price_display": "3,500,000đ"
             },
             {
-                "size": "42",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
                 "size": "42.5",
                 "price": 3500000,
                 "price_display": "3,500,000đ"
@@ -3123,7 +3118,7 @@
                 "price_display": "3,500,000đ"
             }
         ],
-        "updated_at": 1778232447
+        "updated_at": 1778307581
     },
     {
         "name": "FF3 xanh 1041A370-404",
@@ -3840,18 +3835,6 @@
         "updated_at": 1778002065
     },
     {
-        "name": "dedicate xanh 1042A237-300",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "36",
-                "price": 1300000,
-                "price_display": "1,300,000đ"
-            }
-        ],
-        "updated_at": 1778163900
-    },
-    {
         "name": "game ff xanh biển 1042a281-100",
         "brand": "Asics",
         "variants": [
@@ -3862,6 +3845,33 @@
             }
         ],
         "updated_at": 1778261035
+    },
+    {
+        "name": "gel x trắng tím 1042A279-105",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "35.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "36",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "37",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2500000,
+                "price_display": "2,500,000đ"
+            }
+        ],
+        "updated_at": 1778307581
     },
     {
         "name": "ggameff trắng hồng 1042A281-103",
@@ -4732,9 +4742,14 @@
                 "size": "37.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1778248799
+        "updated_at": 1778307581
     },
     {
         "name": "The roger pro 2 pink 3ME10303602",
@@ -4910,27 +4925,30 @@
         "brand": "On",
         "variants": [
             {
+                "size": "37.5",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
+            },
+            {
+                "size": "38.5",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4800000,
+                "price_display": "4,800,000đ"
+            },
+            {
                 "size": "40.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4800000,
+                "price_display": "4,800,000đ"
             },
-            {
-                "size": "41",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
-            },
-            {
-                "size": "42",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
-            }
-        ],
-        "updated_at": 1778149681
-    },
-    {
-        "name": "The roger pro fire xám",
-        "brand": "On",
-        "variants": [
             {
                 "size": "41",
                 "price": 4800000,
@@ -4940,14 +4958,9 @@
                 "size": "42",
                 "price": 4800000,
                 "price_display": "4,800,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
             }
         ],
-        "updated_at": 1778248799
+        "updated_at": 1778307581
     },
     {
         "name": "on roger ADV pro bule pink 3WF10183015 ( women)",
@@ -5424,7 +5437,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "091143",
@@ -5745,7 +5758,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "371951-07",
@@ -5757,7 +5770,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "371951-07",
@@ -5769,7 +5782,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "371951-07",
@@ -5781,7 +5794,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "371951-07",
@@ -5793,7 +5806,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "371951-07",
@@ -5817,7 +5830,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1778297381
+        "updated_at": 1778307581
     },
     {
         "name": "397452-02",
@@ -6564,9 +6577,39 @@
                 "size": "41",
                 "price": 4700000,
                 "price_display": "4,700,000đ"
+            },
+            {
+                "size": "42",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "43",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "44",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
+                "size": "45",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
             }
         ],
-        "updated_at": 1778248799
+        "updated_at": 1778307581
     },
     {
         "name": "SW FF2 navy",
