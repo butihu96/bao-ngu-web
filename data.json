@@ -1828,11 +1828,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "35.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
                 "size": "36",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
@@ -1851,14 +1846,9 @@
                 "size": "38",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "VAPOR 3 XANH FZ2161-401",
@@ -2494,7 +2484,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "JH7038",
@@ -2506,7 +2496,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "JH7038",
@@ -2956,11 +2946,6 @@
                 "price_display": "2,400,000đ"
             },
             {
-                "size": "40",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 2400000,
                 "price_display": "2,400,000đ"
@@ -3001,7 +2986,7 @@
                 "price_display": "2,400,000đ"
             }
         ],
-        "updated_at": 1778163900
+        "updated_at": 1778406065
     },
     {
         "name": "Dedicate 8 1041A409-401",
@@ -3937,8 +3922,8 @@
             },
             {
                 "size": "38",
-                "price": 1850000,
-                "price_display": "1,850,000đ"
+                "price": 2090000,
+                "price_display": "2,090,000đ"
             },
             {
                 "size": "39",
@@ -3946,7 +3931,7 @@
                 "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "1183A201-003",
@@ -4746,28 +4731,6 @@
         "updated_at": 1776088177
     },
     {
-        "name": "On roger pro fire lime 3WF30034744",
-        "brand": "On",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
-            },
-            {
-                "size": "38",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
-            },
-            {
-                "size": "40",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
-            }
-        ],
-        "updated_at": 1778384534
-    },
-    {
         "name": "The roger pro 2 bule gren",
         "brand": "On",
         "variants": [
@@ -4880,6 +4843,11 @@
         "brand": "On",
         "variants": [
             {
+                "size": "37.5",
+                "price": 4700000,
+                "price_display": "4,700,000đ"
+            },
+            {
                 "size": "38",
                 "price": 4700000,
                 "price_display": "4,700,000đ"
@@ -4900,7 +4868,7 @@
                 "price_display": "4,700,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "The roger pro Fine xanh hồng 3WF30593496",
@@ -4963,11 +4931,6 @@
                 "price_display": "4,800,000đ"
             },
             {
-                "size": "38.5",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
-            },
-            {
                 "size": "39",
                 "price": 4800000,
                 "price_display": "4,800,000đ"
@@ -4988,7 +4951,7 @@
                 "price_display": "4,800,000đ"
             }
         ],
-        "updated_at": 1778307581
+        "updated_at": 1778406065
     },
     {
         "name": "on roger ADV pro bule pink 3WF10183015 ( women)",
@@ -5460,7 +5423,7 @@
                 "price_display": "850,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "091143",
@@ -5781,7 +5744,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "371951-07",
@@ -5793,7 +5756,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "371951-07",
@@ -5805,7 +5768,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "371951-07",
@@ -5817,7 +5780,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "371951-07",
@@ -5829,7 +5792,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "371951-07",
@@ -5853,7 +5816,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1778394983
+        "updated_at": 1778406065
     },
     {
         "name": "397452-02",
@@ -5904,18 +5867,6 @@
                 "size": "44.5",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
-            }
-        ],
-        "updated_at": 1778163900
-    },
-    {
-        "name": "Game ff trắng xanh",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "42",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
             }
         ],
         "updated_at": 1778163900
