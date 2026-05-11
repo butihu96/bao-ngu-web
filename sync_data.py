@@ -30,7 +30,7 @@ CUSTOM_BRAND_MAPPING = {
 # CẤU HÌNH KHO
 # =========================================================
 SHEETS_CONFIG = [
-    {"name": "Kho Điệp Phạm", "id": "1NpEgmuj2OWmIPKV0QFUoTZKfN9teosKhPPaggCDl0Q0", "type": "kho_1", "col_hang": 3, "col_code": 4, "col_size": 5, "col_price": 6},
+    {"name": "Kho Điệp Phạm", "id": "1NpEgmuj2OWmIPKV0QFUoTZKfN9teosKhPPaggCDl0Q0", "type": "kho_1", "col_hang": 2, "col_code": 3, "col_size": 4, "col_price": 5},
     {"name": "Kho LV", "id": "1d1wSARzGqFBmCXOyxR3N8YSoW3oNUHczDmUZOKAGKkE", "type": "kho_2"},
     {"name": "Kho Hanaichi (Kho 3)", "id": "1Tiu2VBfxwtACu5wpOTXrNSznoaxBdJj9u3J_WB0uLbc", "type": "kho_3", "col_name_size": 1, "col_price": 2, "col_qty": 6},
     {"name": "Kho Nam Giày (Kho 4)", "id": "1VA_k8EPso5IhBKjQnEUyYVFrQq-nweGwx6AMeYG6Av8", "type": "kho_4"}
