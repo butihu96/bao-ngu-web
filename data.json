@@ -3148,7 +3148,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "JH7038",
@@ -3160,7 +3160,7 @@
                 "price_display": "1,050,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "JH7038",
@@ -3494,11 +3494,11 @@
         "variants": [
             {
                 "size": "40",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1779189852
+        "updated_at": 1779225803
     },
     {
         "name": "1041A408-003",
@@ -6006,33 +6006,33 @@
         "updated_at": 1778902430
     },
     {
-        "name": "On adlv",
+        "name": "On adlv Ko hoàn",
         "brand": "On",
         "variants": [
             {
                 "size": "39",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1778741315
+        "updated_at": 1779225803
     },
     {
-        "name": "On aldv",
+        "name": "On aldv Ko hoàn",
         "brand": "On",
         "variants": [
             {
                 "size": "38.5",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
+                "price": 2250000,
+                "price_display": "2,250,000đ"
             },
             {
                 "size": "39",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
+                "price": 2250000,
+                "price_display": "2,250,000đ"
             }
         ],
-        "updated_at": 1778741315
+        "updated_at": 1779225803
     },
     {
         "name": "On pro fire hồng",
@@ -6040,11 +6040,33 @@
         "variants": [
             {
                 "size": "38.5",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
+                "price": 3600000,
+                "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1778924653
+        "updated_at": 1779225803
+    },
+    {
+        "name": "On roger pro",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "37.5",
+                "price": 4400000,
+                "price_display": "4,400,000đ"
+            },
+            {
+                "size": "38",
+                "price": 4400000,
+                "price_display": "4,400,000đ"
+            },
+            {
+                "size": "39",
+                "price": 4400000,
+                "price_display": "4,400,000đ"
+            }
+        ],
+        "updated_at": 1779225803
     },
     {
         "name": "On roger pro fire lime 3WF30034744",
@@ -6052,38 +6074,38 @@
         "variants": [
             {
                 "size": "37.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4400000,
+                "price_display": "4,400,000đ"
             },
             {
                 "size": "38",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4400000,
+                "price_display": "4,400,000đ"
             },
             {
                 "size": "40",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4400000,
+                "price_display": "4,400,000đ"
             }
         ],
-        "updated_at": 1778741315
+        "updated_at": 1779225803
     },
     {
-        "name": "The roger pro 2 bule gren",
+        "name": "The roger pro 2 bule gren Ko hoàn",
         "brand": "On",
         "variants": [
             {
                 "size": "37.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
+                "price": 2600000,
+                "price_display": "2,600,000đ"
             },
             {
                 "size": "38",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
+                "price": 2600000,
+                "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1778307581
+        "updated_at": 1779225803
     },
     {
         "name": "The roger pro 2 pink 3ME10303602",
@@ -6091,48 +6113,28 @@
         "variants": [
             {
                 "size": "37.5",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
+                "price": 3200000,
+                "price_display": "3,200,000đ"
             },
             {
                 "size": "38",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
-                "size": "43",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
+                "price": 3200000,
+                "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1778567995
+        "updated_at": 1779225803
     },
     {
-        "name": "The roger pro 2 xanh hồng",
+        "name": "The roger pro 2 xanh hồng Ko hoàn",
         "brand": "On",
         "variants": [
             {
                 "size": "38",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
+                "price": 3200000,
+                "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1778248799
+        "updated_at": 1779225803
     },
     {
         "name": "The roger pro 3 lime 3WG10314744",
@@ -6140,36 +6142,36 @@
         "variants": [
             {
                 "size": "37",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "37.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "38",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "38.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "39",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "40",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             }
         ],
-        "updated_at": 1778248799
+        "updated_at": 1779225803
     },
     {
         "name": "The roger pro 3 tím 3WG10734757",
@@ -6177,50 +6179,50 @@
         "variants": [
             {
                 "size": "39",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "40",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             }
         ],
-        "updated_at": 1779118871
+        "updated_at": 1779225803
     },
     {
-        "name": "The roger pro Fine xanh hồng 3WF30593496",
+        "name": "The roger pro Fine xanh hồng Ko hoàn 3WF30593496",
         "brand": "On",
         "variants": [
             {
                 "size": "38",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
+                "price": 3700000,
+                "price_display": "3,700,000đ"
             },
             {
                 "size": "40",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
+                "price": 3700000,
+                "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1778220028
+        "updated_at": 1779225803
     },
     {
-        "name": "The roger pro Fire trắng hồng 3WF30032626",
+        "name": "The roger pro Fire trắng hồng 3WF30032626 Ko hoàn",
         "brand": "On",
         "variants": [
             {
                 "size": "40",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
+                "price": 3700000,
+                "price_display": "3,700,000đ"
             },
             {
                 "size": "41",
-                "price": 3900000,
-                "price_display": "3,900,000đ"
+                "price": 3700000,
+                "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1778989930
+        "updated_at": 1779225803
     },
     {
         "name": "The roger pro clay",
@@ -6244,59 +6246,49 @@
         "brand": "On",
         "variants": [
             {
-                "size": "37.5",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
-            },
-            {
                 "size": "38.5",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
-            },
-            {
-                "size": "38",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
+                "price": 4400000,
+                "price_display": "4,400,000đ"
             },
             {
                 "size": "39",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
+                "price": 4400000,
+                "price_display": "4,400,000đ"
             },
             {
                 "size": "41",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
+                "price": 4400000,
+                "price_display": "4,400,000đ"
             },
             {
                 "size": "42",
-                "price": 4800000,
-                "price_display": "4,800,000đ"
+                "price": 4400000,
+                "price_display": "4,400,000đ"
             }
         ],
-        "updated_at": 1778867024
+        "updated_at": 1779225803
     },
     {
-        "name": "on roger ADV pro bule pink 3WF10183015 ( women)",
+        "name": "on roger ADV pro bule pink 3WF10183015 ( women) Ko hoàn",
         "brand": "On",
         "variants": [
             {
                 "size": "38.5",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             },
             {
                 "size": "39",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             },
             {
                 "size": "40",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1777298709
+        "updated_at": 1779225803
     },
     {
         "name": "30S26208B-1069",
@@ -7180,7 +7172,7 @@
                 "price_display": "790,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "091143",
@@ -7456,7 +7448,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "371951-07",
@@ -7468,7 +7460,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "371951-07",
@@ -7480,7 +7472,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "371951-07",
@@ -7492,7 +7484,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "371951-07",
@@ -7504,7 +7496,7 @@
                 "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "371951-07",
@@ -7528,7 +7520,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-02",
@@ -7540,7 +7532,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-02",
@@ -7552,7 +7544,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-02",
@@ -7564,7 +7556,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-02",
@@ -7576,7 +7568,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-02",
@@ -7588,7 +7580,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-02",
@@ -7612,7 +7604,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-45",
@@ -7624,7 +7616,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-45",
@@ -7636,7 +7628,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-45",
@@ -7648,7 +7640,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-45",
@@ -7660,7 +7652,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-45",
@@ -7672,7 +7664,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "384139-45",
@@ -7696,7 +7688,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7708,7 +7700,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7720,7 +7712,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7732,7 +7724,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7744,7 +7736,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7756,7 +7748,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7768,7 +7760,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7780,7 +7772,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7792,7 +7784,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -7804,7 +7796,7 @@
                 "price_display": "950,000đ"
             }
         ],
-        "updated_at": 1779214135
+        "updated_at": 1779225803
     },
     {
         "name": "394251-06",
@@ -8692,31 +8684,31 @@
         "variants": [
             {
                 "size": "37",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "37.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "38",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "38.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "40",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             }
         ],
-        "updated_at": 1779189852
+        "updated_at": 1779225803
     },
     {
         "name": "Pro3 clay đen hồng 3wg10732890 ( 40 - 40.5 ) 3MG10802890 ( 41- 45 )",
@@ -8724,46 +8716,46 @@
         "variants": [
             {
                 "size": "40",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "40.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "41",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "42",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "42.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "43",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "44",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             },
             {
                 "size": "44.5",
-                "price": 4700000,
-                "price_display": "4,700,000đ"
+                "price": 4500000,
+                "price_display": "4,500,000đ"
             }
         ],
-        "updated_at": 1779163073
+        "updated_at": 1779225803
     },
     {
         "name": "SHTS3LACEX-630",
