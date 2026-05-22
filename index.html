@@ -114,102 +114,138 @@
         .sidebar-overlay.show { opacity: 1; visibility: visible; }
         .close-sidebar-btn { display: none; background: #e74c3c; color: #fff; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-weight: bold;}
 
-        /* CSS RIÊNG CHO ĐIỆN THOẠI */
-        @media (max-width: 900px) { 
-    header { position: relative !important; transform: none !important; z-index: 1; }
-    
-    .layout-wrapper { flex-direction: column; padding: 10px; margin: 0 auto; gap: 10px;}
-    
-    .sidebar { 
-        position: sticky; top: 0; left: 0; width: 100%; height: auto; 
-        max-height: none; z-index: 105; border-radius: 0 0 12px 12px; 
-        box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
-        padding: 8px 10px;       /* ← giảm padding */
-        margin-bottom: 5px; background: #fff; transition: transform 0.3s ease;
-    }
-    .sidebar.sidebar-hidden { transform: translateY(-100%); }
-    
-    .close-sidebar-btn { display: none; } 
-    .sidebar > .filter-title:first-child { display: none; } 
-    
-    /* ✅ FIX: cuộn ngang thay vì xuống dòng → sidebar không phình cao */
-    .filter-list { 
-        flex-direction: row; 
-        flex-wrap: nowrap;        /* ← không xuống dòng */
-        overflow-x: auto;         /* ← cuộn ngang */
-        gap: 6px; 
-        padding-bottom: 4px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-    .filter-list::-webkit-scrollbar { display: none; }
+        /* =============================================
+           CSS RIÊNG CHO ĐIỆN THOẠI
+           ============================================= */
+        @media (max-width: 900px) {
 
-    .filter-item { 
-        white-space: nowrap;      /* ← giữ trên 1 dòng */
-        flex-shrink: 0;
-        border: 1px solid #ddd; border-radius: 20px; 
-        padding: 4px 12px; font-size: 12px;
-    }
-    .filter-item.active { background: #111; color: #fff; border-color: #111;}
-    
-    /* ✅ FIX: Size cũng cuộn ngang */
-    .size-grid-filter { 
-        display: flex; 
-        flex-wrap: nowrap;        /* ← không xuống dòng */
-        overflow-x: auto;
-        gap: 6px; 
-        padding-bottom: 4px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-    .size-grid-filter::-webkit-scrollbar { display: none; }
-    .size-filter-btn { 
-        flex-shrink: 0;
-        min-width: 40px; border-radius: 20px; font-size: 11px; padding: 4px 10px;
-    }
-    
-    .filter-group { margin-bottom: 6px; }   /* ← giảm khoảng cách giữa các nhóm */
-    .filter-group:last-child { margin-bottom: 0; }
-    .filter-title { font-size: 11px; margin-bottom: 4px; padding-bottom: 0; border: none; }
-    
-    .btn-open-filter { display: none !important; }
-    .sidebar-overlay { display: none !important; }
+            /* --- HEADER --- */
+            header { position: relative !important; transform: none !important; z-index: 1; }
 
-    .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .product-card { padding: 8px; border-radius: 10px; }
-    .product-img-wrapper { height: 160px; margin-bottom: 8px;}
-    .brand-tag { font-size: 8.5px; padding: 2px 7px; margin-bottom: 5px; }
-    .product-name { font-size: 11.5px; min-height: 34px; line-height: 1.3; margin-bottom: 2px;}
-    .price { font-size: 14px; }
-    .size-btn { padding: 4px 6px; font-size: 10px; }
-    .order-btn { padding: 8px; font-size: 11px; }
-    
-    /* ✅ FIX: Social buttons → nút tròn icon-only, nhỏ gọn */
-    .floating-social { bottom: 15px; right: 12px; gap: 8px; }
-    .social-btn { 
-        height: 38px; 
-        width: 38px; 
-        padding: 0; 
-        border-radius: 50%;       /* ← hình tròn */
-        font-size: 0;             /* ← ẩn chữ */
-        justify-content: center;
-    }
-    .social-icon { 
-        width: 17px; height: 17px; 
-        margin-right: 0;          /* ← không cần margin khi không có chữ */
-    }
+            /* --- LAYOUT CHÍNH --- */
+            .layout-wrapper { flex-direction: column; padding: 0; margin: 0; gap: 0; }
 
-    #backToTopBtn { bottom: 15px; left: 15px; width: 38px; height: 38px; font-size: 16px; }
-    .share-btn { width: 28px; height: 28px; font-size: 13px; top: 5px; left: 5px; }
+            /* --- SIDEBAR: thanh lọc compact phía trên --- */
+            .sidebar {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                height: auto;
+                max-height: none;
+                z-index: 105;
+                border-radius: 0;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+                /* Padding gọn hơn: trên-dưới 8px, trái-phải 10px */
+                padding: 8px 10px 6px 10px;
+                margin-bottom: 0;
+                background: #fff;
+                transition: transform 0.3s ease;
+            }
+            .sidebar.sidebar-hidden { transform: translateY(-100%); }
 
-    .search-box {
-        position: relative;
-        top: 0;
-        z-index: 1;
-        background: transparent;
-        padding: 0;
-    }
-}
+            /* Ẩn tiêu đề lớn của sidebar */
+            .sidebar > .filter-title:first-child { display: none; }
+            .close-sidebar-btn { display: none; }
+
+            /* --- TỪNG NHÓM LỌC --- */
+            .filter-group {
+                margin-bottom: 0;
+                padding: 5px 0;
+                /* Ngăn cách bằng đường kẻ nhẹ */
+                border-bottom: 1px solid #f0f0f0;
+            }
+            .filter-group:last-child { border-bottom: none; padding-bottom: 2px; }
+
+            /* Tiêu đề nhóm: nhỏ, nằm ngang với items */
+            .filter-title {
+                font-size: 9px;
+                font-weight: 900;
+                letter-spacing: 0.8px;
+                color: #aaa;
+                margin-bottom: 5px;
+                padding-bottom: 0;
+                border-bottom: none;
+                text-transform: uppercase;
+            }
+
+            /* --- PILLS THƯƠNG HIỆU & GIÁ: hiển thị hết, xuống dòng --- */
+            .filter-list {
+                flex-direction: row;
+                flex-wrap: wrap;      /* xuống dòng thay vì scroll */
+                gap: 4px;
+                padding-bottom: 0;
+            }
+
+            .filter-item {
+                white-space: nowrap;
+                flex-shrink: 0;
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                /* Rất compact: padding nhỏ, chữ nhỏ */
+                padding: 3px 9px;
+                font-size: 11px;
+                font-weight: 700;
+                color: #555;
+                background: #fafafa;
+            }
+            .filter-item.active { background: #111; color: #fff; border-color: #111; }
+            .filter-item:hover { background: #f0f0f0; color: #111; }
+
+            /* --- GRID SIZE: dàn nhiều cột, ô nhỏ --- */
+            .size-grid-filter {
+                display: flex;
+                flex-wrap: wrap;   /* hiển thị hết */
+                gap: 4px;
+            }
+            .size-filter-btn {
+                flex: 0 0 auto;
+                /* Kích thước cố định nhỏ */
+                min-width: 36px;
+                padding: 3px 5px;
+                border-radius: 8px;
+                font-size: 10px;
+                font-weight: 700;
+                text-align: center;
+            }
+            .size-filter-btn.active { background: #111; color: #fff; border-color: #111; }
+
+            /* --- MAIN CONTENT --- */
+            .main-content { padding: 10px; }
+
+            /* --- SEARCH --- */
+            .search-box { position: relative; top: 0; z-index: 1; background: transparent; padding: 0; }
+            .btn-open-filter { display: none !important; }
+            .sidebar-overlay { display: none !important; }
+
+            /* --- LƯỚI SẢN PHẨM --- */
+            .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .product-card { padding: 8px; border-radius: 10px; }
+            .product-img-wrapper { height: 160px; margin-bottom: 8px; }
+            .brand-tag { font-size: 8.5px; padding: 2px 7px; margin-bottom: 5px; }
+            .product-name { font-size: 11.5px; min-height: 34px; line-height: 1.3; margin-bottom: 2px; }
+            .price { font-size: 14px; }
+            .size-btn { padding: 4px 6px; font-size: 10px; }
+            .order-btn { padding: 8px; font-size: 11px; }
+
+            /* --- SOCIAL BUTTONS: nút tròn icon-only, nhỏ gọn --- */
+            .floating-social { bottom: 14px; right: 12px; gap: 8px; }
+            .social-btn {
+                height: 36px;
+                width: 36px;
+                padding: 0;
+                border-radius: 50%;   /* tròn */
+                font-size: 0;         /* ẩn chữ */
+                animation: pulse 2s infinite;
+            }
+            .btn-fb { animation-delay: 1s; }
+            .social-icon { width: 16px; height: 16px; margin-right: 0; }
+
+            /* --- NÚT LÊN ĐẦU --- */
+            #backToTopBtn { bottom: 14px; left: 12px; width: 36px; height: 36px; font-size: 15px; }
+
+            /* --- SHARE BUTTON --- */
+            .share-btn { width: 28px; height: 28px; font-size: 13px; top: 5px; left: 5px; }
+        }
     </style>
 </head>
 <body>
@@ -243,8 +279,8 @@
                 <div class="filter-title">Mức Giá</div>
                 <div class="filter-list" id="price-filters">
                     <button class="filter-item price-btn active" onclick="filterPrice('ALL', this)">Tất cả giá</button>
-                    <button class="filter-item price-btn" onclick="filterPrice('1-2', this)">Từ 1tr - 2tr</button>
-                    <button class="filter-item price-btn" onclick="filterPrice('2-3', this)">Từ 2tr - 3tr</button>
+                    <button class="filter-item price-btn" onclick="filterPrice('1-2', this)">1tr - 2tr</button>
+                    <button class="filter-item price-btn" onclick="filterPrice('2-3', this)">2tr - 3tr</button>
                     <button class="filter-item price-btn" onclick="filterPrice('3+', this)">Trên 3tr</button>
                 </div>
             </div>
@@ -309,20 +345,17 @@
         let lastScrollTop = 0;
         let backToTopBtn = document.getElementById("backToTopBtn");
         
-        // SỰ KIỆN CUỘN TRANG CẬP NHẬT THÊM VIỆC ẨN HIỆN SIDEBAR MOBILE
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             let header = document.getElementById("main-header");
             let sidebar = document.getElementById("sidebar");
             
-            // Nếu cuộn xuống
             if (currentScroll > lastScrollTop && currentScroll > 150) {
                 header.classList.add("header-hidden");
-                // Ẩn thêm sidebar nếu ở giao diện mobile
                 if(window.innerWidth <= 900) {
                     sidebar.classList.add("sidebar-hidden");
                 }
-            } else { // Nếu cuộn lên
+            } else {
                 header.classList.remove("header-hidden");
                 if(window.innerWidth <= 900) {
                     sidebar.classList.remove("sidebar-hidden");
@@ -537,7 +570,7 @@
             
             const brandContainer = document.getElementById('brand-filters');
             brandContainer.innerHTML = allBrands.map(b => {
-                let label = b === 'Tất cả' ? '🛒 Tất cả Thương hiệu' : (b === 'Khác' ? '📦 Chưa cập nhật Ảnh' : '🔸 ' + b);
+                let label = b === 'Tất cả' ? '🛒 Tất cả' : (b === 'Khác' ? '📦 Khác' : b);
                 return `<button class="filter-item brand-btn ${currentBrand === b ? 'active' : ''}" onclick="filterBrand('${b}', this)">${label}</button>`;
             }).join('');
 
@@ -564,7 +597,6 @@
             currentBrand = brand;
             document.querySelectorAll('.brand-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active'); 
-            if(window.innerWidth <= 900) toggleSidebar(); 
             renderGrid();
         }
 
