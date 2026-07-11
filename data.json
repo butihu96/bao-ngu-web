@@ -55,17 +55,12 @@
                 "price_display": "2,500,000đ"
             },
             {
-                "size": "42",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "43",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1782496337
+        "updated_at": 1783762876
     },
     {
         "name": "Air Jordan 1 Low ‘Rattan’ 553558-153",
@@ -275,17 +270,12 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "41",
-                "price": 2050000,
-                "price_display": "2,050,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2050000,
                 "price_display": "2,050,000đ"
             }
         ],
-        "updated_at": 1783236636
+        "updated_at": 1783762876
     },
     {
         "name": "FB3146-100",
@@ -1259,14 +1249,9 @@
                 "size": "40.5",
                 "price": 2700000,
                 "price_display": "2,700,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
             }
         ],
-        "updated_at": 1782496337
+        "updated_at": 1783762876
     },
     {
         "name": "Giày Nike Air Jordan 1 Low GS 'Mystic Green' 553560-113",
@@ -2010,6 +1995,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 3600000,
+                "price_display": "3,600,000đ"
+            },
+            {
                 "size": "41",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
@@ -2025,7 +2015,7 @@
                 "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1783595519
+        "updated_at": 1783762876
     },
     {
         "name": "IB6555-100",
@@ -2151,6 +2141,48 @@
             }
         ],
         "updated_at": 1783327088
+    },
+    {
+        "name": "IF7052-403",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2250000,
+                "price_display": "2,250,000đ"
+            }
+        ],
+        "updated_at": 1783762876
     },
     {
         "name": "IH4052-530",
@@ -3210,7 +3242,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "JH7038",
@@ -3222,7 +3254,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "JH7038",
@@ -3901,8 +3933,8 @@
             },
             {
                 "size": "42",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             },
             {
                 "size": "42.5",
@@ -3925,7 +3957,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1783669153
+        "updated_at": 1783762876
     },
     {
         "name": "1041A481-700",
@@ -4069,18 +4101,6 @@
         "updated_at": 1782642611
     },
     {
-        "name": "1042A237-300",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "40",
-                "price": 1980000,
-                "price_display": "1,980,000đ"
-            }
-        ],
-        "updated_at": 1778507633
-    },
-    {
         "name": "1042A237-702-22,75",
         "brand": "Asics",
         "variants": [
@@ -4179,23 +4199,6 @@
             }
         ],
         "updated_at": 1781499107
-    },
-    {
-        "name": "1042A279-250",
-        "brand": "Asics",
-        "variants": [
-            {
-                "size": "36",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
-            }
-        ],
-        "updated_at": 1783435522
     },
     {
         "name": "1042A281-300",
@@ -5195,12 +5198,12 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "44.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
+                "size": "44",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
             },
             {
-                "size": "44",
+                "size": "44.5",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             },
@@ -5210,7 +5213,7 @@
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1782706789
+        "updated_at": 1783762876
     },
     {
         "name": "game FF WHITE/MAKO BLUE 1041A488-102",
@@ -5341,6 +5344,38 @@
             }
         ],
         "updated_at": 1782756644
+    },
+    {
+        "name": "gel x trắng  tím 1042a279-250",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "36",
+                "price": 2800000,
+                "price_display": "2,800,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "38",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "39",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            }
+        ],
+        "updated_at": 1783762876
     },
     {
         "name": "gel x trắng tím 1042A279-105",
@@ -5628,11 +5663,6 @@
                 "price_display": "2,690,000đ"
             },
             {
-                "size": "37.5",
-                "price": 2690000,
-                "price_display": "2,690,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2690000,
                 "price_display": "2,690,000đ"
@@ -5648,7 +5678,7 @@
                 "price_display": "2,690,000đ"
             }
         ],
-        "updated_at": 1783410173
+        "updated_at": 1783762876
     },
     {
         "name": "1183A437-252",
@@ -6653,11 +6683,6 @@
                 "price_display": "4,350,000đ"
             },
             {
-                "size": "42.5",
-                "price": 4350000,
-                "price_display": "4,350,000đ"
-            },
-            {
                 "size": "43",
                 "price": 4350000,
                 "price_display": "4,350,000đ"
@@ -6668,7 +6693,7 @@
                 "price_display": "4,350,000đ"
             }
         ],
-        "updated_at": 1783246740
+        "updated_at": 1783762876
     },
     {
         "name": "The roger pro Fine đen xám 3mf30820106",
@@ -6987,11 +7012,6 @@
         "brand": "Babolat",
         "variants": [
             {
-                "size": "40",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -7005,19 +7025,9 @@
                 "size": "42",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
-                "size": "43",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "Babolat jemach đen men 30S26629B-2036",
@@ -7752,14 +7762,9 @@
                 "size": "38",
                 "price": 1490000,
                 "price_display": "1,490,000đ"
-            },
-            {
-                "size": "39",
-                "price": 1490000,
-                "price_display": "1,490,000đ"
             }
         ],
-        "updated_at": 1783327088
+        "updated_at": 1783762876
     },
     {
         "name": "1074A045-103",
@@ -8118,7 +8123,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "371951-07",
@@ -8130,7 +8135,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "371951-07",
@@ -8142,7 +8147,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "371951-07",
@@ -8154,7 +8159,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "371951-07",
@@ -8166,7 +8171,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "371951-07",
@@ -8190,7 +8195,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "384139-02",
@@ -8202,7 +8207,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "384139-02",
@@ -8214,7 +8219,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "384139-02",
@@ -8238,7 +8243,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "384139-45",
@@ -8250,7 +8255,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "384139-45",
@@ -8262,7 +8267,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "384139-45",
@@ -8274,7 +8279,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "384139-45",
@@ -8298,7 +8303,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8310,7 +8315,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8322,7 +8327,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8334,7 +8339,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8346,7 +8351,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8358,7 +8363,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8370,7 +8375,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8382,7 +8387,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8394,7 +8399,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1783750634
+        "updated_at": 1783762876
     },
     {
         "name": "394251-06",
@@ -8601,18 +8606,6 @@
             }
         ],
         "updated_at": 1783506118
-    },
-    {
-        "name": "Giày PUMA Speedcat 'Pink' 406329-52",
-        "brand": "Puma",
-        "variants": [
-            {
-                "size": "37",
-                "price": 2400000,
-                "price_display": "2,400,000đ"
-            }
-        ],
-        "updated_at": 1782496337
     },
     {
         "name": "Giày Puma Speedcat Ballet 'Dark Chocolate' 406758-02",
