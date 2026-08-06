@@ -271,9 +271,19 @@
                 "size": "42.5",
                 "price": 1850000,
                 "price_display": "1,850,000đ"
+            },
+            {
+                "size": "43",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
+            },
+            {
+                "size": "44",
+                "price": 1850000,
+                "price_display": "1,850,000đ"
             }
         ],
-        "updated_at": 1784788375
+        "updated_at": 1786012957
     },
     {
         "name": "FD6575-107",
@@ -419,12 +429,42 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
+                "size": "41",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
                 "size": "42",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
+                "size": "43",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3250000,
+                "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1785825025
+        "updated_at": 1786012957
     },
     {
         "name": "FV5552-108",
@@ -923,6 +963,11 @@
                 "price_display": "2,600,000đ"
             },
             {
+                "size": "40",
+                "price": 2650000,
+                "price_display": "2,650,000đ"
+            },
+            {
                 "size": "41",
                 "price": 2650000,
                 "price_display": "2,650,000đ"
@@ -943,7 +988,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1785898106
+        "updated_at": 1786012957
     },
     {
         "name": "FZ2161-102",
@@ -1703,18 +1748,6 @@
         "updated_at": 1785379226
     },
     {
-        "name": "HQ2602-400",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "41",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            }
-        ],
-        "updated_at": 1785379226
-    },
-    {
         "name": "HV1449-100",
         "brand": "Nike",
         "variants": [
@@ -2054,17 +2087,12 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "39",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "40",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1785939464
+        "updated_at": 1786012957
     },
     {
         "name": "JH7038-255  1/2",
@@ -3055,7 +3083,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "JH7038",
@@ -3067,7 +3095,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "JH7038",
@@ -3393,14 +3421,9 @@
                 "size": "40",
                 "price": 1700000,
                 "price_display": "1,700,000đ"
-            },
-            {
-                "size": "40.6",
-                "price": 1700000,
-                "price_display": "1,700,000đ"
             }
         ],
-        "updated_at": 1785984684
+        "updated_at": 1786012957
     },
     {
         "name": "KI3438",
@@ -3469,11 +3492,6 @@
                 "price_display": "1,700,000đ"
             },
             {
-                "size": "42",
-                "price": 1700000,
-                "price_display": "1,700,000đ"
-            },
-            {
                 "size": "42.6",
                 "price": 1700000,
                 "price_display": "1,700,000đ"
@@ -3489,7 +3507,7 @@
                 "price_display": "1,700,000đ"
             }
         ],
-        "updated_at": 1785911462
+        "updated_at": 1786012957
     },
     {
         "name": "KI3598",
@@ -3580,6 +3598,11 @@
                 "price_display": "1,700,000đ"
             },
             {
+                "size": "38",
+                "price": 1700000,
+                "price_display": "1,700,000đ"
+            },
+            {
                 "size": "38.6",
                 "price": 1700000,
                 "price_display": "1,700,000đ"
@@ -3588,9 +3611,19 @@
                 "size": "39.3",
                 "price": 1700000,
                 "price_display": "1,700,000đ"
+            },
+            {
+                "size": "40",
+                "price": 1700000,
+                "price_display": "1,700,000đ"
+            },
+            {
+                "size": "40.6",
+                "price": 1700000,
+                "price_display": "1,700,000đ"
             }
         ],
-        "updated_at": 1785742269
+        "updated_at": 1786012957
     },
     {
         "name": "KI8418",
@@ -3598,11 +3631,6 @@
         "variants": [
             {
                 "size": "40",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            },
-            {
-                "size": "40.6",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
             },
@@ -3617,7 +3645,7 @@
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1785379226
+        "updated_at": 1786012957
     },
     {
         "name": "KK3834",
@@ -3864,16 +3892,46 @@
         "updated_at": 1785853455
     },
     {
-        "name": "1041A481-100",
+        "name": "1041A481-100-25.25",
         "brand": "Asics",
         "variants": [
             {
+                "size": "40",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
                 "size": "42",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1785379226
+        "updated_at": 1786012957
     },
     {
         "name": "1041A481-103",
@@ -4264,6 +4322,11 @@
                 "price_display": "3,300,000đ"
             },
             {
+                "size": "41.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
                 "size": "42",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
@@ -4272,9 +4335,19 @@
                 "size": "42.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
+            },
+            {
+                "size": "43.5",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1785742269
+        "updated_at": 1786012957
     },
     {
         "name": "1041a405-104",
@@ -4625,6 +4698,16 @@
                 "price_display": "2,890,000đ"
             },
             {
+                "size": "37",
+                "price": 2890000,
+                "price_display": "2,890,000đ"
+            },
+            {
+                "size": "37.5",
+                "price": 2890000,
+                "price_display": "2,890,000đ"
+            },
+            {
                 "size": "38",
                 "price": 2890000,
                 "price_display": "2,890,000đ"
@@ -4638,9 +4721,14 @@
                 "size": "39.5",
                 "price": 2890000,
                 "price_display": "2,890,000đ"
+            },
+            {
+                "size": "40",
+                "price": 2890000,
+                "price_display": "2,890,000đ"
             }
         ],
-        "updated_at": 1785742269
+        "updated_at": 1786012957
     },
     {
         "name": "Asic court FF3 tím 1042A220-500 Ko hoàn",
@@ -5289,13 +5377,13 @@
             },
             {
                 "size": "37",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             },
             {
                 "size": "37.5",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             },
             {
                 "size": "38",
@@ -5304,21 +5392,21 @@
             },
             {
                 "size": "39",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             },
             {
                 "size": "39.5",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             },
             {
                 "size": "40",
-                "price": 2350000,
-                "price_display": "2,350,000đ"
+                "price": 2300000,
+                "price_display": "2,300,000đ"
             }
         ],
-        "updated_at": 1785853455
+        "updated_at": 1786012957
     },
     {
         "name": "clg 15 trắng xanh 1042A294-102",
@@ -5527,6 +5615,11 @@
                 "price_display": "3,100,000đ"
             },
             {
+                "size": "37",
+                "price": 3190000,
+                "price_display": "3,190,000đ"
+            },
+            {
                 "size": "38",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
@@ -5535,9 +5628,14 @@
                 "size": "39",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 3190000,
+                "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1785742269
+        "updated_at": 1786012957
     },
     {
         "name": "ff4 trắng hồng wm 1042A307.102",
@@ -5617,6 +5715,33 @@
             }
         ],
         "updated_at": 1785853455
+    },
+    {
+        "name": "ff4 đen đỏ 1042A307-001",
+        "brand": "Asics",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "41.5",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2700000,
+                "price_display": "2,700,000đ"
+            }
+        ],
+        "updated_at": 1786012957
     },
     {
         "name": "game FF trang xanh wm 1042A280-102 Ko hoàn",
@@ -5732,16 +5857,16 @@
             },
             {
                 "size": "39.5",
-                "price": 2790000,
-                "price_display": "2,790,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             },
             {
                 "size": "40",
-                "price": 2790000,
-                "price_display": "2,790,000đ"
+                "price": 2750000,
+                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1785840178
+        "updated_at": 1786012957
     },
     {
         "name": "gel x trắng tím 1042A279-105",
@@ -5774,11 +5899,6 @@
         "name": "gel x trắng xanh 1041a481-104",
         "brand": "Asics",
         "variants": [
-            {
-                "size": "39.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
             {
                 "size": "40.5",
                 "price": 2750000,
@@ -5815,7 +5935,7 @@
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1785379226
+        "updated_at": 1786012957
     },
     {
         "name": "gelx xanh nữ 1042a279-402",
@@ -6095,11 +6215,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 3450000,
-                "price_display": "3,450,000đ"
-            },
-            {
                 "size": "37",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
@@ -6125,7 +6240,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1785578529
+        "updated_at": 1786012957
     },
     {
         "name": "1183A746-751",
@@ -6851,18 +6966,6 @@
         "updated_at": 1784367412
     },
     {
-        "name": "On aldv Ko hoàn",
-        "brand": "On",
-        "variants": [
-            {
-                "size": "38.5",
-                "price": 2250000,
-                "price_display": "2,250,000đ"
-            }
-        ],
-        "updated_at": 1780805953
-    },
-    {
         "name": "On file tím 3WF30594692",
         "brand": "On",
         "variants": [
@@ -7415,9 +7518,19 @@
                 "size": "41",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2150000,
+                "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1785420630
+        "updated_at": 1786012957
     },
     {
         "name": "Propulse storm trắng bạc 31F26447A-1019",
@@ -7658,6 +7771,11 @@
                 "price_display": "1,900,000đ"
             },
             {
+                "size": "40.6",
+                "price": 1900000,
+                "price_display": "1,900,000đ"
+            },
+            {
                 "size": "41.3",
                 "price": 1900000,
                 "price_display": "1,900,000đ"
@@ -7678,7 +7796,7 @@
                 "price_display": "1,900,000đ"
             }
         ],
-        "updated_at": 1785811882
+        "updated_at": 1786012957
     },
     {
         "name": "WRS333220",
@@ -7686,11 +7804,6 @@
         "variants": [
             {
                 "size": "40",
-                "price": 1950000,
-                "price_display": "1,950,000đ"
-            },
-            {
-                "size": "41.3",
                 "price": 1950000,
                 "price_display": "1,950,000đ"
             },
@@ -7715,7 +7828,7 @@
                 "price_display": "1,950,000đ"
             }
         ],
-        "updated_at": 1785578529
+        "updated_at": 1786012957
     },
     {
         "name": "WRS333540",
@@ -8203,7 +8316,17 @@
                 "price_display": "3,450,000đ"
             },
             {
+                "size": "42",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
                 "size": "42.6",
+                "price": 3450000,
+                "price_display": "3,450,000đ"
+            },
+            {
+                "size": "43.3",
                 "price": 3450000,
                 "price_display": "3,450,000đ"
             },
@@ -8213,7 +8336,7 @@
                 "price_display": "3,450,000đ"
             }
         ],
-        "updated_at": 1785926363
+        "updated_at": 1786012957
     },
     {
         "name": "WRS338520",
@@ -9052,7 +9175,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "371951-07",
@@ -9064,7 +9187,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "371951-07",
@@ -9076,7 +9199,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "371951-07",
@@ -9088,7 +9211,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "371951-07",
@@ -9112,7 +9235,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "384139-02",
@@ -9124,7 +9247,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "384139-02",
@@ -9136,7 +9259,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "384139-02",
@@ -9160,7 +9283,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "384139-45",
@@ -9172,7 +9295,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "384139-45",
@@ -9184,7 +9307,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "384139-45",
@@ -9208,7 +9331,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9220,7 +9343,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9232,7 +9355,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9244,7 +9367,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9256,7 +9379,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9268,7 +9391,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9280,7 +9403,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9292,7 +9415,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1785998068
+        "updated_at": 1786012957
     },
     {
         "name": "394251-06",
@@ -9446,18 +9569,6 @@
         "updated_at": 1785379226
     },
     {
-        "name": "3WD30050202",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 2700000,
-                "price_display": "2,700,000đ"
-            }
-        ],
-        "updated_at": 1785379226
-    },
-    {
         "name": "3WE10333602",
         "brand": "Khác",
         "variants": [
@@ -9470,23 +9581,6 @@
                 "size": "38",
                 "price": 4300000,
                 "price_display": "4,300,000đ"
-            }
-        ],
-        "updated_at": 1785379226
-    },
-    {
-        "name": "3YE10010852",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
-            },
-            {
-                "size": "38.5",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
             }
         ],
         "updated_at": 1785379226
