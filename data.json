@@ -2485,14 +2485,9 @@
                 "size": "44",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
-            },
-            {
-                "size": "45",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1788151178
+        "updated_at": 1788236434
     },
     {
         "name": "Vapor 3 xanh ngọc IM4336-300",
@@ -2567,18 +2562,6 @@
             }
         ],
         "updated_at": 1788151178
-    },
-    {
-        "name": "Vp12 hypersmash HV1488-001",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "42",
-                "price": 3750000,
-                "price_display": "3,750,000đ"
-            }
-        ],
-        "updated_at": 1788097248
     },
     {
         "name": "Vp12 xanh trắng IR0651-100",
@@ -2908,17 +2891,12 @@
         "brand": "Adidas",
         "variants": [
             {
-                "size": "38.5",
-                "price": 1890000,
-                "price_display": "1,890,000đ"
-            },
-            {
                 "size": "39",
                 "price": 1890000,
                 "price_display": "1,890,000đ"
             }
         ],
-        "updated_at": 1787984686
+        "updated_at": 1788236434
     },
     {
         "name": "IH8158",
@@ -2954,7 +2932,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "JH7038",
@@ -2966,7 +2944,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "JH7038",
@@ -3674,6 +3652,11 @@
                 "price_display": "3,300,000đ"
             },
             {
+                "size": "42",
+                "price": 3300000,
+                "price_display": "3,300,000đ"
+            },
+            {
                 "size": "42.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
@@ -3689,7 +3672,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1788191947
+        "updated_at": 1788236434
     },
     {
         "name": "1041A370-100",
@@ -6115,17 +6098,12 @@
                 "price_display": "2,900,000đ"
             },
             {
-                "size": "41.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1787868057
+        "updated_at": 1788236434
     },
     {
         "name": "gelx xanh nữ 1042a279-106",
@@ -9490,7 +9468,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "371951-07",
@@ -9502,7 +9480,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "371951-07",
@@ -9514,7 +9492,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "371951-07",
@@ -9526,7 +9504,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "371951-07",
@@ -9550,7 +9528,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "384139-02",
@@ -9562,7 +9540,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "384139-02",
@@ -9574,7 +9552,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "384139-02",
@@ -9598,7 +9576,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "384139-45",
@@ -9610,7 +9588,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "384139-45",
@@ -9622,7 +9600,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "384139-45",
@@ -9646,7 +9624,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "394251-06",
@@ -9658,7 +9636,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "394251-06",
@@ -9670,7 +9648,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "394251-06",
@@ -9682,7 +9660,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "394251-06",
@@ -9694,7 +9672,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "394251-06",
@@ -9706,7 +9684,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788211551
+        "updated_at": 1788236434
     },
     {
         "name": "394251-06",
