@@ -2023,18 +2023,6 @@
         "updated_at": 1788151178
     },
     {
-        "name": "IR3542-100",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "37.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            }
-        ],
-        "updated_at": 1788191947
-    },
-    {
         "name": "JH7038-255  1/2",
         "brand": "Nike",
         "variants": [
@@ -2287,12 +2275,17 @@
                 "price_display": "2,000,000đ"
             },
             {
+                "size": "39",
+                "price": 2000000,
+                "price_display": "2,000,000đ"
+            },
+            {
                 "size": "40",
                 "price": 2800000,
                 "price_display": "2,800,000đ"
             }
         ],
-        "updated_at": 1787749118
+        "updated_at": 1789012414
     },
     {
         "name": "Nike ReactX Rejuven8 Light Orewood Brown HV5060-100",
@@ -2887,7 +2880,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "JH7038",
@@ -3396,11 +3389,6 @@
                 "price_display": "4,200,000đ"
             },
             {
-                "size": "40",
-                "price": 4200000,
-                "price_display": "4,200,000đ"
-            },
-            {
                 "size": "41",
                 "price": 4200000,
                 "price_display": "4,200,000đ"
@@ -3416,7 +3404,7 @@
                 "price_display": "4,200,000đ"
             }
         ],
-        "updated_at": 1788884353
+        "updated_at": 1789012414
     },
     {
         "name": "Vp12 tím",
@@ -4047,11 +4035,6 @@
                 "price_display": "2,790,000đ"
             },
             {
-                "size": "41.5",
-                "price": 2790000,
-                "price_display": "2,790,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2790000,
                 "price_display": "2,790,000đ"
@@ -4067,7 +4050,7 @@
                 "price_display": "2,790,000đ"
             }
         ],
-        "updated_at": 1788943816
+        "updated_at": 1789012414
     },
     {
         "name": "1041A543-100",
@@ -4850,6 +4833,11 @@
         "brand": "Asics",
         "variants": [
             {
+                "size": "39.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
                 "size": "40",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
@@ -4883,9 +4871,24 @@
                 "size": "44",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "45",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
+            },
+            {
+                "size": "46",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1788884353
+        "updated_at": 1789012414
     },
     {
         "name": "FF3 night energy 1041A569-020",
@@ -5610,9 +5613,14 @@
                 "size": "39",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
+            },
+            {
+                "size": "39.5",
+                "price": 3100000,
+                "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1788943816
+        "updated_at": 1789012414
     },
     {
         "name": "ff3 trắng tím 1042a220-250",
@@ -6070,11 +6078,6 @@
                 "price_display": "3,150,000đ"
             },
             {
-                "size": "37.5",
-                "price": 3150000,
-                "price_display": "3,150,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3150000,
                 "price_display": "3,150,000đ"
@@ -6090,7 +6093,7 @@
                 "price_display": "3,150,000đ"
             }
         ],
-        "updated_at": 1788129119
+        "updated_at": 1789012414
     },
     {
         "name": "1183A201-127",
@@ -6363,11 +6366,6 @@
         "brand": "Onitsuka Tiger",
         "variants": [
             {
-                "size": "36",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
                 "size": "37.5",
                 "price": 3500000,
                 "price_display": "3,500,000đ"
@@ -6388,7 +6386,7 @@
                 "price_display": "3,500,000đ"
             }
         ],
-        "updated_at": 1788425073
+        "updated_at": 1789012414
     },
     {
         "name": "1183A872-752",
@@ -7372,17 +7370,12 @@
                 "price_display": "2,950,000đ"
             },
             {
-                "size": "38",
-                "price": 2950000,
-                "price_display": "2,950,000đ"
-            },
-            {
                 "size": "40",
                 "price": 2950000,
                 "price_display": "2,950,000đ"
             }
         ],
-        "updated_at": 1788926074
+        "updated_at": 1789012414
     },
     {
         "name": "Babolat jemach đen men 30S26629B-2036",
@@ -7769,21 +7762,21 @@
         "variants": [
             {
                 "size": "40",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
+                "price": 3190000,
+                "price_display": "3,190,000đ"
             },
             {
                 "size": "42",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
+                "price": 3190000,
+                "price_display": "3,190,000đ"
             },
             {
                 "size": "43",
-                "price": 3290000,
-                "price_display": "3,290,000đ"
+                "price": 3190000,
+                "price_display": "3,190,000đ"
             }
         ],
-        "updated_at": 1788752697
+        "updated_at": 1789012414
     },
     {
         "name": "WRS332710",
@@ -9323,7 +9316,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "371951-07",
@@ -9335,7 +9328,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "371951-07",
@@ -9347,7 +9340,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "371951-07",
@@ -9359,7 +9352,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "371951-07",
@@ -9383,7 +9376,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "384139-02",
@@ -9395,7 +9388,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "384139-02",
@@ -9407,7 +9400,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "384139-02",
@@ -9431,7 +9424,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "384139-45",
@@ -9443,7 +9436,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "384139-45",
@@ -9455,7 +9448,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "384139-45",
@@ -9479,7 +9472,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "394251-06",
@@ -9491,7 +9484,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "394251-06",
@@ -9503,7 +9496,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "394251-06",
@@ -9515,7 +9508,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "394251-06",
@@ -9527,7 +9520,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "394251-06",
@@ -9539,7 +9532,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1788992517
+        "updated_at": 1789012414
     },
     {
         "name": "394251-06",
@@ -10093,18 +10086,6 @@
         "updated_at": 1782496337
     },
     {
-        "name": "Jeep đế cao P740W14555SX nâu",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "35",
-                "price": 750000,
-                "price_display": "750,000đ"
-            }
-        ],
-        "updated_at": 1788839377
-    },
-    {
         "name": "Jeep đế cao P740W14555SX đen",
         "brand": "Khác",
         "variants": [
@@ -10214,12 +10195,17 @@
                 "price_display": "750,000đ"
             },
             {
+                "size": "39",
+                "price": 750000,
+                "price_display": "750,000đ"
+            },
+            {
                 "size": "41",
                 "price": 750000,
                 "price_display": "750,000đ"
             }
         ],
-        "updated_at": 1787819013
+        "updated_at": 1789012414
     },
     {
         "name": "P230MTX362-3 dep jeep màu flax",
