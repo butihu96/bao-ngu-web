@@ -550,17 +550,12 @@
                 "price_display": "3,500,000đ"
             },
             {
-                "size": "36.5",
-                "price": 3500000,
-                "price_display": "3,500,000đ"
-            },
-            {
                 "size": "38",
                 "price": 3500000,
                 "price_display": "3,500,000đ"
             }
         ],
-        "updated_at": 1789478315
+        "updated_at": 1789586796
     },
     {
         "name": "FV5554-301",
@@ -1978,6 +1973,53 @@
         "updated_at": 1788268614
     },
     {
+        "name": "IO3836-300",
+        "brand": "Nike",
+        "variants": [
+            {
+                "size": "40",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "40.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "41",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "42.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "43",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "44",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            },
+            {
+                "size": "44.5",
+                "price": 2850000,
+                "price_display": "2,850,000đ"
+            }
+        ],
+        "updated_at": 1789586796
+    },
+    {
         "name": "JH7038-255  1/2",
         "brand": "Nike",
         "variants": [
@@ -2335,9 +2377,14 @@
                 "size": "39",
                 "price": 3900000,
                 "price_display": "3,900,000đ"
+            },
+            {
+                "size": "44",
+                "price": 3900000,
+                "price_display": "3,900,000đ"
             }
         ],
-        "updated_at": 1789478315
+        "updated_at": 1789586796
     },
     {
         "name": "Vapor 12 trắng đỏ hv1149-100 Ko hoàn Vp12 xanh min",
@@ -2397,53 +2444,6 @@
             }
         ],
         "updated_at": 1789358942
-    },
-    {
-        "name": "Vapor 3 camo IO3836-300",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "40.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "41",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "43",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "44",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            },
-            {
-                "size": "44.5",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
-            }
-        ],
-        "updated_at": 1789564559
     },
     {
         "name": "Vapor 3 xanh ngọc IM4336-300",
@@ -2834,7 +2834,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "JH7038",
@@ -6773,12 +6773,17 @@
                 "price_display": "4,100,000đ"
             },
             {
+                "size": "42",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            },
+            {
                 "size": "43",
                 "price": 4100000,
                 "price_display": "4,100,000đ"
             }
         ],
-        "updated_at": 1786193694
+        "updated_at": 1789586796
     },
     {
         "name": "The roger pro clay Ko hoàn",
@@ -9138,7 +9143,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "371951-07",
@@ -9150,7 +9155,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "371951-07",
@@ -9162,7 +9167,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "371951-07",
@@ -9174,7 +9179,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "371951-07",
@@ -9198,7 +9203,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "384139-02",
@@ -9210,7 +9215,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "384139-02",
@@ -9222,7 +9227,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "384139-02",
@@ -9246,7 +9251,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "384139-45",
@@ -9258,7 +9263,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "384139-45",
@@ -9270,7 +9275,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "384139-45",
@@ -9294,7 +9299,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "394251-06",
@@ -9306,7 +9311,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "394251-06",
@@ -9318,7 +9323,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "394251-06",
@@ -9330,7 +9335,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "394251-06",
@@ -9342,7 +9347,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1789564559
+        "updated_at": 1789586796
     },
     {
         "name": "394251-06",
@@ -9723,33 +9728,6 @@
             }
         ],
         "updated_at": 1782496337
-    },
-    {
-        "name": "Gp1.5 Đỏ",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "42",
-                "price": 3650000,
-                "price_display": "3,650,000đ"
-            },
-            {
-                "size": "42.5",
-                "price": 3650000,
-                "price_display": "3,650,000đ"
-            },
-            {
-                "size": "44",
-                "price": 3650000,
-                "price_display": "3,650,000đ"
-            },
-            {
-                "size": "44.5",
-                "price": 3650000,
-                "price_display": "3,650,000đ"
-            }
-        ],
-        "updated_at": 1789416748
     },
     {
         "name": "Jeep 2 day màu hồng P651w13112",
