@@ -245,18 +245,6 @@
         "updated_at": 1791249161
     },
     {
-        "name": "FB3148-101",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "40.5",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
-            }
-        ],
-        "updated_at": 1791349709
-    },
-    {
         "name": "FD0736-100",
         "brand": "Nike",
         "variants": [
@@ -440,17 +428,12 @@
                 "price_display": "3,600,000đ"
             },
             {
-                "size": "43",
-                "price": 3600000,
-                "price_display": "3,600,000đ"
-            },
-            {
                 "size": "44",
                 "price": 3600000,
                 "price_display": "3,600,000đ"
             }
         ],
-        "updated_at": 1792261039
+        "updated_at": 1792337784
     },
     {
         "name": "FV5552-101",
@@ -1348,11 +1331,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 3550000,
-                "price_display": "3,550,000đ"
-            },
-            {
                 "size": "41",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
@@ -1368,7 +1346,7 @@
                 "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1792167616
+        "updated_at": 1792337784
     },
     {
         "name": "HF3631-100",
@@ -2166,14 +2144,9 @@
                 "size": "41",
                 "price": 3800000,
                 "price_display": "3,800,000đ"
-            },
-            {
-                "size": "42",
-                "price": 3800000,
-                "price_display": "3,800,000đ"
             }
         ],
-        "updated_at": 1792295230
+        "updated_at": 1792337784
     },
     {
         "name": "JA4395-041",
@@ -2358,18 +2331,6 @@
             }
         ],
         "updated_at": 1790867695
-    },
-    {
-        "name": "Nike Air Jordan 1 Low 'Grey White' 553558-044",
-        "brand": "Nike",
-        "variants": [
-            {
-                "size": "41",
-                "price": 2600000,
-                "price_display": "2,600,000đ"
-            }
-        ],
-        "updated_at": 1788451538
     },
     {
         "name": "Nike Air Jordan 1 Low 'Panda' DC0774-101",
@@ -2626,17 +2587,12 @@
                 "price_display": "3,650,000đ"
             },
             {
-                "size": "38",
-                "price": 3650000,
-                "price_display": "3,650,000đ"
-            },
-            {
                 "size": "40",
                 "price": 3700000,
                 "price_display": "3,700,000đ"
             }
         ],
-        "updated_at": 1792225365
+        "updated_at": 1792337784
     },
     {
         "name": "Vp3 trắng xanh FZ2161-108",
@@ -3017,7 +2973,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "JH7038",
@@ -3448,11 +3404,6 @@
                 "price_display": "3,300,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3300000,
-                "price_display": "3,300,000đ"
-            },
-            {
                 "size": "43.5",
                 "price": 3300000,
                 "price_display": "3,300,000đ"
@@ -3463,7 +3414,7 @@
                 "price_display": "3,300,000đ"
             }
         ],
-        "updated_at": 1791826446
+        "updated_at": 1792337784
     },
     {
         "name": "1041A370-106",
@@ -5400,14 +5351,9 @@
                 "size": "37.5",
                 "price": 2850000,
                 "price_display": "2,850,000đ"
-            },
-            {
-                "size": "39",
-                "price": 2850000,
-                "price_display": "2,850,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "ff4 xamh đen 1041a532-401",
@@ -6781,6 +6727,18 @@
         "updated_at": 1788151178
     },
     {
+        "name": "Pro 3 trắng nâu On roger pro fire lime 3WF30034744",
+        "brand": "On",
+        "variants": [
+            {
+                "size": "40.5",
+                "price": 4100000,
+                "price_display": "4,100,000đ"
+            }
+        ],
+        "updated_at": 1792337784
+    },
+    {
         "name": "The roger pro 2 pink 3ME10303602 Ko hoàn",
         "brand": "On",
         "variants": [
@@ -7248,8 +7206,8 @@
             },
             {
                 "size": "44",
-                "price": 2800000,
-                "price_display": "2,800,000đ"
+                "price": 2900000,
+                "price_display": "2,900,000đ"
             },
             {
                 "size": "44.5",
@@ -7257,7 +7215,7 @@
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1792225365
+        "updated_at": 1792337784
     },
     {
         "name": "WRS0076500",
@@ -8970,7 +8928,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "371951-07",
@@ -8982,7 +8940,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "371951-07",
@@ -8994,7 +8952,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "371951-07",
@@ -9006,7 +8964,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "371951-07",
@@ -9030,7 +8988,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "384139-02",
@@ -9042,7 +9000,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "384139-02",
@@ -9054,7 +9012,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "384139-02",
@@ -9078,7 +9036,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "384139-45",
@@ -9090,7 +9048,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "384139-45",
@@ -9102,7 +9060,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "384139-45",
@@ -9126,7 +9084,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "394251-06",
@@ -9138,7 +9096,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "394251-06",
@@ -9150,7 +9108,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1792312940
+        "updated_at": 1792337784
     },
     {
         "name": "394251-06",
@@ -9831,18 +9789,6 @@
             }
         ],
         "updated_at": 1790002633
-    },
-    {
-        "name": "Pro 3 trắng nâu",
-        "brand": "Khác",
-        "variants": [
-            {
-                "size": "38.5",
-                "price": 4100000,
-                "price_display": "4,100,000đ"
-            }
-        ],
-        "updated_at": 1791891166
     },
     {
         "name": "Pro 3 tím 3MG10366243",
