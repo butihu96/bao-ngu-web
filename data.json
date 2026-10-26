@@ -809,11 +809,6 @@
         "brand": "Nike",
         "variants": [
             {
-                "size": "40",
-                "price": 2450000,
-                "price_display": "2,450,000đ"
-            },
-            {
                 "size": "41",
                 "price": 2450000,
                 "price_display": "2,450,000đ"
@@ -844,7 +839,7 @@
                 "price_display": "2,450,000đ"
             }
         ],
-        "updated_at": 1792814148
+        "updated_at": 1793039333
     },
     {
         "name": "FZ2161-101",
@@ -1247,6 +1242,11 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 3650000,
+                "price_display": "3,650,000đ"
+            },
+            {
                 "size": "41",
                 "price": 3650000,
                 "price_display": "3,650,000đ"
@@ -1257,7 +1257,7 @@
                 "price_display": "3,650,000đ"
             }
         ],
-        "updated_at": 1792641496
+        "updated_at": 1793039333
     },
     {
         "name": "HF3631-100",
@@ -2769,31 +2769,21 @@
                 "size": "41",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
-            },
-            {
-                "size": "42",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "vapor 12 xanh ná FV5554-300",
         "brand": "Nike",
         "variants": [
             {
-                "size": "37.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "38.5",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1792295230
+        "updated_at": 1793039333
     },
     {
         "name": "Adidas Samba Jane Cloud White Pink (Women's) jr4482",
@@ -3073,7 +3063,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "JH7038",
@@ -7160,8 +7150,8 @@
             },
             {
                 "size": "44",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
+                "price": 2100000,
+                "price_display": "2,100,000đ"
             },
             {
                 "size": "45",
@@ -7169,7 +7159,7 @@
                 "price_display": "2,100,000đ"
             }
         ],
-        "updated_at": 1792856271
+        "updated_at": 1793039333
     },
     {
         "name": "Jetere 2 trắng hồng 31F26975C-1120",
@@ -9200,7 +9190,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "371951-07",
@@ -9212,7 +9202,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "371951-07",
@@ -9224,7 +9214,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "371951-07",
@@ -9236,7 +9226,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "371951-07",
@@ -9260,7 +9250,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "384139-02",
@@ -9272,7 +9262,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "384139-02",
@@ -9284,7 +9274,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "384139-02",
@@ -9308,7 +9298,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "384139-45",
@@ -9320,7 +9310,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "384139-45",
@@ -9332,7 +9322,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "384139-45",
@@ -9356,7 +9346,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "394251-06",
@@ -9368,7 +9358,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "394251-06",
@@ -9380,7 +9370,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1793039333
     },
     {
         "name": "394251-06",
