@@ -755,17 +755,12 @@
                 "price_display": "2,750,000đ"
             },
             {
-                "size": "37.5",
-                "price": 2750000,
-                "price_display": "2,750,000đ"
-            },
-            {
                 "size": "38",
                 "price": 2750000,
                 "price_display": "2,750,000đ"
             }
         ],
-        "updated_at": 1794313124
+        "updated_at": 1794374793
     },
     {
         "name": "FZ2158-301",
@@ -1167,12 +1162,27 @@
         "brand": "Nike",
         "variants": [
             {
+                "size": "40.5",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
                 "size": "41",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "42",
+                "price": 2600000,
+                "price_display": "2,600,000đ"
+            },
+            {
+                "size": "43",
                 "price": 2600000,
                 "price_display": "2,600,000đ"
             }
         ],
-        "updated_at": 1793008835
+        "updated_at": 1794374793
     },
     {
         "name": "Giày Nike Air Jordan 1 Low Smoke Grey V3 553558-040",
@@ -2764,8 +2774,8 @@
             },
             {
                 "size": "43",
-                "price": 2000000,
-                "price_display": "2,000,000đ"
+                "price": 2650000,
+                "price_display": "2,650,000đ"
             },
             {
                 "size": "44",
@@ -2773,7 +2783,7 @@
                 "price_display": "2,650,000đ"
             }
         ],
-        "updated_at": 1794278177
+        "updated_at": 1794374793
     },
     {
         "name": "Vp3 white black neon FZ2161-125",
@@ -2847,14 +2857,9 @@
                 "size": "38.5",
                 "price": 2550000,
                 "price_display": "2,550,000đ"
-            },
-            {
-                "size": "38",
-                "price": 2550000,
-                "price_display": "2,550,000đ"
             }
         ],
-        "updated_at": 1794278177
+        "updated_at": 1794374793
     },
     {
         "name": "Adidas Samba Jane Cloud White Pink (Women's) jr4482",
@@ -2882,13 +2887,13 @@
             },
             {
                 "size": "38.5",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             },
             {
                 "size": "39",
-                "price": 2290000,
-                "price_display": "2,290,000đ"
+                "price": 1800000,
+                "price_display": "1,800,000đ"
             },
             {
                 "size": "44.5",
@@ -2896,7 +2901,7 @@
                 "price_display": "2,000,000đ"
             }
         ],
-        "updated_at": 1793596312
+        "updated_at": 1794374793
     },
     {
         "name": "Adidas Samba OG White Gum",
@@ -2935,17 +2940,12 @@
                 "price_display": "2,300,000đ"
             },
             {
-                "size": "39.3",
-                "price": 2500000,
-                "price_display": "2,500,000đ"
-            },
-            {
                 "size": "40",
                 "price": 2500000,
                 "price_display": "2,500,000đ"
             }
         ],
-        "updated_at": 1794313124
+        "updated_at": 1794374793
     },
     {
         "name": "Das barricade 14 trắng cam KK3834",
@@ -3119,7 +3119,7 @@
                 "price_display": "990,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "JH7038",
@@ -4802,11 +4802,6 @@
                 "price_display": "3,100,000đ"
             },
             {
-                "size": "41.5",
-                "price": 3100000,
-                "price_display": "3,100,000đ"
-            },
-            {
                 "size": "42",
                 "price": 3100000,
                 "price_display": "3,100,000đ"
@@ -4827,7 +4822,7 @@
                 "price_display": "3,100,000đ"
             }
         ],
-        "updated_at": 1794149588
+        "updated_at": 1794374793
     },
     {
         "name": "FF3 xanh 1041A370-404 Ko hoàn",
@@ -6583,11 +6578,6 @@
         "brand": "Skechers",
         "variants": [
             {
-                "size": "41",
-                "price": 2150000,
-                "price_display": "2,150,000đ"
-            },
-            {
                 "size": "42",
                 "price": 2150000,
                 "price_display": "2,150,000đ"
@@ -6603,7 +6593,7 @@
                 "price_display": "2,150,000đ"
             }
         ],
-        "updated_at": 1794115000
+        "updated_at": 1794374793
     },
     {
         "name": "ON runing On Cloudtilt biscuit 3we10055221",
@@ -6711,11 +6701,6 @@
                 "price_display": "3,250,000đ"
             },
             {
-                "size": "40",
-                "price": 3250000,
-                "price_display": "3,250,000đ"
-            },
-            {
                 "size": "40.5",
                 "price": 3250000,
                 "price_display": "3,250,000đ"
@@ -6726,7 +6711,7 @@
                 "price_display": "3,250,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "On Cloudtilt glacier ice 3me10103740",
@@ -6743,11 +6728,6 @@
                 "price_display": "3,200,000đ"
             },
             {
-                "size": "42.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
-            },
-            {
                 "size": "43",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
@@ -6756,14 +6736,9 @@
                 "size": "44",
                 "price": 3200000,
                 "price_display": "3,200,000đ"
-            },
-            {
-                "size": "44.5",
-                "price": 3200000,
-                "price_display": "3,200,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "On Cloudtilt pearl ice 3m310102531",
@@ -7671,14 +7646,9 @@
                 "size": "42.6",
                 "price": 1800000,
                 "price_display": "1,800,000đ"
-            },
-            {
-                "size": "43.3",
-                "price": 1800000,
-                "price_display": "1,800,000đ"
             }
         ],
-        "updated_at": 1793642437
+        "updated_at": 1794374793
     },
     {
         "name": "WRS333220",
@@ -8667,22 +8637,12 @@
         "brand": "Wilson",
         "variants": [
             {
-                "size": "40.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
                 "size": "42.5",
-                "price": 2900000,
-                "price_display": "2,900,000đ"
-            },
-            {
-                "size": "43",
                 "price": 2900000,
                 "price_display": "2,900,000đ"
             }
         ],
-        "updated_at": 1794313124
+        "updated_at": 1794374793
     },
     {
         "name": "Wilson rush lite 5 white WRS336360",
@@ -9177,7 +9137,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "371951-07",
@@ -9189,7 +9149,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "371951-07",
@@ -9201,7 +9161,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "371951-07",
@@ -9213,7 +9173,7 @@
                 "price_display": "1,090,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "371951-07",
@@ -9237,7 +9197,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "384139-02",
@@ -9249,7 +9209,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "384139-02",
@@ -9261,7 +9221,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "384139-02",
@@ -9285,7 +9245,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "384139-45",
@@ -9297,7 +9257,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "384139-45",
@@ -9309,7 +9269,7 @@
                 "price_display": "690,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "384139-45",
@@ -9333,7 +9293,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "394251-06",
@@ -9345,7 +9305,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "394251-06",
@@ -9357,7 +9317,7 @@
                 "price_display": "890,000đ"
             }
         ],
-        "updated_at": 1794346954
+        "updated_at": 1794374793
     },
     {
         "name": "394251-06",
@@ -9537,26 +9497,26 @@
         "variants": [
             {
                 "size": "35",
-                "price": 1200000,
-                "price_display": "1,200,000đ"
+                "price": 1150000,
+                "price_display": "1,150,000đ"
             },
             {
                 "size": "36",
-                "price": 1200000,
-                "price_display": "1,200,000đ"
+                "price": 1150000,
+                "price_display": "1,150,000đ"
             },
             {
                 "size": "37",
-                "price": 1200000,
-                "price_display": "1,200,000đ"
+                "price": 1150000,
+                "price_display": "1,150,000đ"
             },
             {
                 "size": "39",
-                "price": 1200000,
-                "price_display": "1,200,000đ"
+                "price": 1150000,
+                "price_display": "1,150,000đ"
             }
         ],
-        "updated_at": 1792382214
+        "updated_at": 1794374793
     },
     {
         "name": "Jeep 2 dây qoai màu be P651w13112",
